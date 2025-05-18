@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>lainのAIと創作ブログ</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on lainのAIと創作ブログ</description>
+    <generator>Hugo -- 0.147.3</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 17 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自己紹介</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;こんにちは、lainです。&lt;br&gt;
+AI、画像生成、動画、コマンドラインが大好きです。&lt;/p&gt;
+&lt;p&gt;このブログでは学習したこと、役に立ったTipsを発信しています。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ダミー記事1</title>
+      <link>http://localhost:1313/posts/first/</link>
+      <pubDate>Sat, 17 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/first/</guid>
+      <description>&lt;p&gt;（本文はまだありません）&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>はじめての投稿</title>
+      <link>http://localhost:1313/posts/first-post/</link>
+      <pubDate>Sat, 17 May 2025 00:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/posts/first-post/</guid>
+      <description>&lt;p&gt;こんにちは、これは私の最初のHugo記事です！&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Second</title>
+      <link>http://localhost:1313/posts/second/</link>
+      <pubDate>Thu, 15 May 2025 16:11:54 +0900</pubDate>
+      <guid>http://localhost:1313/posts/second/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>３つ目の投稿</title>
+      <link>http://localhost:1313/posts/third/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/third/</guid>
+      <description>&lt;p&gt;（本文はまだありません）&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

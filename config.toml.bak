@@ -1,0 +1,10 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'ja'
+title = 'TEST CSS'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = "auto"
+
+[params.assets]
+  customCSS = ["css/custom.css"]

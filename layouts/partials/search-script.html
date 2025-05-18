@@ -1,0 +1,57 @@
+<!-- 検索ロジック JSだけ抽出 -->
+<script src="/js/lunr.min.js"></script>
+<script src="/js/lunr.stemmer.support.js"></script>
+<script src="/js/tinyseg.js"></script>
+<script src="/js/lunr.ja.js"></script>
+<script src="/js/fuse.min.js"></script>
+
+<script>
+fetch('/index.json')
+  .then(response => response.json())
+  .then(data => {
+    const lunrIndex = lunr(function () {
+      this.use(lunr.ja);
+      this.field('title');
+      this.field('content');
+      this.ref('url');
+      data.forEach(doc => this.add(doc));
+    });
+
+    const fuseIndex = new Fuse(data, {
+      keys: ['title', 'content', 'summary'],
+      includeScore: true,
+      threshold: 0.4
+    });
+
+    const input = document.getElementById('searchInput');
+    const engineSwitch = document.getElementById('engineSwitch');
+    const results = document.getElementById('searchResults');
+
+    input.addEventListener('input', () => {
+      const query = input.value.trim();
+      const engine = engineSwitch.value;
+      let hits = [];
+
+      if (!query) {
+        results.innerHTML = '';
+        return;
+      }
+
+      if (engine === 'lunr') {
+        hits = lunrIndex.search(query).map(hit =>
+          data.find(d => d.url === hit.ref)
+        );
+      } else if (engine === 'fuse') {
+        hits = fuseIndex.search(query).map(hit => hit.item);
+      }
+
+      results.innerHTML = '';
+      hits.forEach(item => {
+        if (!item) return;
+        const li = document.createElement('li');
+        li.innerHTML = `<a href="${item.url}">${item.title}</a>`;
+        results.appendChild(li);
+      });
+    });
+  });
+</script>

@@ -1,0 +1,42 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'ja'
+title = 'lainのAIと創作ブログ'
+theme = 'PaperMod'
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  author = "lain"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowShareButtons = true
+  disableThemeToggle = false
+
+[params.label]
+  text = ""
+  icon = ""
+
+[params.profileMode]
+  enabled = false
+
+[params.homeInfoParams]
+  disable = true
+
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "ホーム"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "about"
+    name = "自己紹介"
+    url = "/about/"
+    weight = 2
+
+[params.assets]
+   customCSS = ["css/custom.css"]
