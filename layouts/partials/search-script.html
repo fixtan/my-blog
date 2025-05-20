@@ -6,7 +6,7 @@
 <script src="/js/fuse.min.js"></script>
 
 <script>
-fetch('/index.json')
+fetch("{{ "index.json" | absURL  }}")
   .then(response => response.json())
   .then(data => {
     const lunrIndex = lunr(function () {

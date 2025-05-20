@@ -144,7 +144,9 @@ svg path[d="M12 6H0l6-6z"] {
 
 
 .hero {
+  
   background-image: url("/images/header.jpg");
+  
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -199,7 +201,7 @@ svg path[d="M12 6H0l6-6z"] {
 
 
 .post-list {
-  margin: 2% auto; /* ブロック型用 */
+  margin: 1.5rem auto 2rem; /* 上1.5 下2.0 */
   padding: 0 20px;
   max-width: 1200px;
   display: grid;

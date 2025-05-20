@@ -17,7 +17,7 @@
         {{ $page_url := $currentPage.Permalink | absLangURL }}
         {{ $is_search := eq (site.GetPage .KeyName).Layout "search" }}
         <li>
-          <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }}{{ if $is_search }} (Alt + /){{ end }}"
+          <a href="{{ .URL | relLangURL }}" title="{{ .Title | default .Name }}{{ if $is_search }} (Alt + /){{ end }}"
             {{ if $is_search }} accesskey="/"{{ end }}>
             <span{{ if eq $menu_item_url $page_url }} class="active"{{ end }}>
               {{ .Pre }}{{ .Name }}{{ .Post }}

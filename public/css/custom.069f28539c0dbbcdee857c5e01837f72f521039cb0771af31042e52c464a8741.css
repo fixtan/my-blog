@@ -144,7 +144,9 @@ svg path[d="M12 6H0l6-6z"] {
 
 
 .hero {
-  background-image: url("/images/header.jpg");
+  
+  background-image: url("/my-blog/images/header.jpg");
+  
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -199,8 +201,12 @@ svg path[d="M12 6H0l6-6z"] {
 
 
 .post-list {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+  margin: 1.5rem auto 2rem; /* 上1.5 下2.0 */
+  padding: 0 20px;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
 }
 
 .post-list article {

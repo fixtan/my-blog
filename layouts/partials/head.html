@@ -1,3 +1,2 @@
-{{- /* 自動バージョン付きCSS読み込み */ -}}
-{{ $css := resources.Get "css/custom.css" | fingerprint }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}?v={{ now.Unix }}">
+{{ $css := resources.Get "css/custom.css.html" | resources.ExecuteAsTemplate "css/custom.css" . | fingerprint }}
+<link rel="stylesheet" href="{{ $css.Permalink }}">

@@ -144,7 +144,7 @@ svg path[d="M12 6H0l6-6z"] {
 
 
 .hero {
-  background-image: url("/images/header.jpg");
+  background-image: url("/my-blog/images/header.jpg");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -199,7 +199,7 @@ svg path[d="M12 6H0l6-6z"] {
 
 
 .post-list {
-  margin: 4rem auto; /* ブロック型用 */
+  margin: 1.5rem auto 2rem; /* 上1.5 下2.0 */
   padding: 0 20px;
   max-width: 1200px;
   display: grid;
@@ -227,8 +227,10 @@ svg path[d="M12 6H0l6-6z"] {
 
 /* 検索バーを右寄せ */
 .search-bar-wrapper {
-  margin: 0 !important;
-  padding: 0 !important;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;  /* ← 余白を減らす */
+  margin-bottom: 0 !important;
 }
 
 .search-bar-form {

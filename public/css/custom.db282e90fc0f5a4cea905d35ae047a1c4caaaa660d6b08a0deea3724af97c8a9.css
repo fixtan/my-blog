@@ -144,7 +144,11 @@ svg path[d="M12 6H0l6-6z"] {
 
 
 .hero {
-  background-image: url("/images/header.jpg");
+  {{ if eq hugo.Environment "production" }}
+    background-image: url("/my-blog/images/header.jpg");
+  {{ else }}
+    background-image: url("/images/header.jpg");
+  {{ end }}
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -199,7 +203,7 @@ svg path[d="M12 6H0l6-6z"] {
 
 
 .post-list {
-  margin: 4rem auto; /* ブロック型用 */
+  margin: 1.5rem auto 2rem; /* 上1.5 下2.0 */
   padding: 0 20px;
   max-width: 1200px;
   display: grid;
@@ -225,7 +229,6 @@ svg path[d="M12 6H0l6-6z"] {
   transform: translateY(-4px);
 }
 
-
 /* 検索バーを右寄せ */
 .search-bar-wrapper {
   display: flex;
@@ -235,17 +238,21 @@ svg path[d="M12 6H0l6-6z"] {
 }
 
 .search-bar-form {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-/* 検索結果を右寄せ表示＋装飾 */
-.search-results {
   margin: 0 !important;
   padding: 0 !important;
+}
+
+#searchForm {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* 検索結果を右寄せ表示＋装飾 */
+.search-results {
   list-style: none;
-  display: none; /* ← 最初は非表示 */
+  padding: 0;
+  margin: 0.5rem 0 1rem auto; /* 上下余白を少なく */
+  max-width: 400px;
+  text-align: left;
 }
 
 .search-results:empty {

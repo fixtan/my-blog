@@ -1,4 +1,15 @@
-baseURL = 'http://localhost:1313/'
+# --- baseURL設定 ---
+# ローカル用（必要な場合のみ切り替え）
+#baseURL = 'http://localhost:1313/'
+
+# 公開用（GitHub Pages）
+baseURL = "https://fixtan.github.io/my-blog/"
+
+# --- URL出力スタイル ---
+relativeURLs = false       # 相対URLは使わない（← baseURLが活きる） false true
+canonifyURLs = true        # 出力されるURLに baseURL を明示的に付ける
+
+
 languageCode = 'ja'
 title = 'lainのAIと創作ブログ'
 theme = 'PaperMod'

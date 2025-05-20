@@ -144,7 +144,11 @@ svg path[d="M12 6H0l6-6z"] {
 
 
 .hero {
+  {{ if eq hugo.Environment "production" }}
+  background-image: url("/my-blog/images/header.jpg");
+  {{ else }}
   background-image: url("/images/header.jpg");
+  {{ end }}
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -199,7 +203,7 @@ svg path[d="M12 6H0l6-6z"] {
 
 
 .post-list {
-  margin: 4rem ; /* ブロック型用 */
+  margin: 1.5rem auto 2rem; /* 上1.5 下2.0 */
   padding: 0 20px;
   max-width: 1200px;
   display: grid;
