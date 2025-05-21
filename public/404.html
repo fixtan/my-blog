@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-<link rel="stylesheet" href="http://localhost:1313/css/custom.73a452030edb2f24516c30ca745785edd9c381a7796b71b3793d733b37d13dac.css">
+<head>
+<link rel="stylesheet" href="/css/custom.069f28539c0dbbcdee857c5e01837f72f521039cb0771af31042e52c464a8741.css">
 
 </head>
 
@@ -10,8 +10,8 @@
   <nav class="nav">
     
     <div class="logo">
-      <a href="http://localhost:1313/" accesskey="h" title="lainのAIと創作ブログ">
-        <img src="http://localhost:1313/images/logo-icon.png" alt="logo" class="logo-image">
+      <a href="/" accesskey="h" title="lainのAIと創作ブログ">
+        <img src="/images/logo-icon.png" alt="logo" class="logo-image">
         lainのAIと創作ブログ
       </a>
     </div>
@@ -25,7 +25,7 @@
         
         
         <li>
-          <a href="http://localhost:1313/" title="ホーム"
+          <a href="/" title="ホーム"
             >
             <span>
               ホーム
@@ -38,7 +38,7 @@
         
         
         <li>
-          <a href="http://localhost:1313/about/" title="自己紹介"
+          <a href="/about/" title="自己紹介"
             >
             <span>
               自己紹介
@@ -84,7 +84,7 @@
 	</main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">lainのAIと創作ブログ</a></span> · 
+        <span>&copy; 2025 <a href="/">lainのAIと創作ブログ</a></span> · 
 
     <span>
         Powered by
@@ -140,41 +140,27 @@
     };
 
 </script>
-
-
 <script>
-	document.addEventListener("DOMContentLoaded", function () {
-	  const toggle = document.getElementById("theme-toggle");
-	  if (!toggle) return;
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-	  toggle.addEventListener("click", () => {
-	    if (document.body.classList.contains("dark")) {
-	      document.body.classList.remove("dark");
-	      localStorage.setItem("pref-theme", "light");
-	    } else {
-	      document.body.classList.add("dark");
-	      localStorage.setItem("pref-theme", "dark");
-	    }
-	  });
-
-	  const pref = localStorage.getItem("pref-theme");
-	  if (pref === "dark") {
-	    document.body.classList.add("dark");
-	  } else if (pref === "light") {
-	    document.body.classList.remove("dark");
-	  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-	    document.body.classList.add("dark");
-	  }
-	});
 </script>
-<script src="http://localhost:1313/js/lunr.min.js"></script>
-<script src="http://localhost:1313/js/lunr.stemmer.support.js"></script>
-<script src="http://localhost:1313/js/tinyseg.js"></script>
-<script src="http://localhost:1313/js/lunr.ja.js"></script>
-<script src="http://localhost:1313/js/fuse.min.js"></script>
+
+<script src="/js/lunr.min.js"></script>
+<script src="/js/lunr.stemmer.support.js"></script>
+<script src="/js/tinyseg.js"></script>
+<script src="/js/lunr.ja.js"></script>
+<script src="/js/fuse.min.js"></script>
 
 <script>
-fetch("http:\/\/localhost:1313\/index.json")
+fetch("\/index.json")
   .then(response => response.json())
   .then(data => {
     const lunrIndex = lunr(function () {
