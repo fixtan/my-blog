@@ -144,11 +144,7 @@ svg path[d="M12 6H0l6-6z"] {
 
 
 .hero {
-  {{ if eq hugo.Environment "production" }}
-  background-image: url("/my-blog/images/header.jpg");
-  {{ else }}
-  background-image: url("/images/header.jpg");
-  {{ end }}
+  background-image: url("{{ "images/header.jpg" | relURL }}");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;

@@ -5,8 +5,6 @@
 # 公開用（GitHub Pages）
 baseURL = "https://fixtan.github.io/my-blog/"
 
- 
-
 
 # --- URL出力スタイル ---
 relativeURLs = false       # 相対URLは使わない（← baseURLが活きる） false true
