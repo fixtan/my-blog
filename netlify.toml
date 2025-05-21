@@ -6,6 +6,6 @@
   HUGO_VERSION = "0.147.3" # あなたが使ってるHugoのバージョン（例）
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/admin/*"
+  to = "/admin/index.html"
   status = 200
