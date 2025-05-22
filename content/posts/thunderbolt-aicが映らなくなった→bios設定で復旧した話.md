@@ -1,5 +1,5 @@
 ---
-title: Thunderbolt AICが映らなくなった→BIOS設定で復旧した話
+title: 【トラブル対処】Thunderbolt AICでモニタが映らない→BIOS設定とEDID問題で解決
 date: 2025-05-22T09:54:00.000Z
 draft: true
 ---
@@ -11,9 +11,9 @@ draft: true
 
 **RTX4070Ti → Thunderbolt AIC → USB-C → HDMI変換 → モニタ（L887）**
 
-という構成だったが、**突然映らなくなった**　という感じです。
+という構成でしたが、突然映らなくなりました。
 
-当初は、Thunderboltカードの故障を疑いましたが、デバイスマネージャーや、Thunderboltコントロールセンターからみると正常に動いてるように見えて異常は見当たらなかったです。
+当初は、Thunderboltカードの故障を疑いましたが、デバイスマネージャーやThunderboltコントロールセンター上では正常に動作しているように見え、異常は確認できませんでした。
 
 Microsoft Thunderbolt™ コントロール・センター 公式
 
@@ -23,7 +23,7 @@ Microsoft Thunderbolt™ コントロール・センター 公式
 
 
 
-### ① \[BIOS設定]
+## 原因①：BIOS設定
 
 
 Thunderboltサポートが有効になっているか？
@@ -35,7 +35,7 @@ Security Levelが「No Security」や「User Authorization」以外になって�
 
 
 
-### ② \[Thunderboltコントロールセンターでの認識]
+## 原因②：Thunderboltコントロールセンター
 
 
 「Thunderbolt コントロールセンター」アプリ インストールの有無と、「接続されたデバイス」や「Thunderboltポート」が表示されるか確認
@@ -45,7 +45,7 @@ Security Levelが「No Security」や「User Authorization」以外になって�
 
 
 
-### ③ \[Thunderboltケーブル／ヘッダー接続の確認]
+## 原因③：ケーブル・接続不良
 
 
 Thunderbolt 4 AICカードはマザーボードのTBTヘッダーと必ず接続する必要があり接続に問題がないかどうか。（チェック済み）
@@ -54,7 +54,7 @@ Thunderbolt 4 AICカードはマザーボードのTBTヘッダーと必ず接続
 
 
 
-### ④ \[DisplayPortケーブルの確認]
+## 原因④：DisplayPortの接触
 
 
 基礎的な事としてグラボ（RTX 4070Ti）→ Thunderbolt AICカードへの DisplayPort INケーブルはきちんと接続されているか？（チェック済み）
@@ -134,11 +134,16 @@ EDIDはPCやGPUが接続されたモニタの仕様（解像度、リフレッ�
 **CONNECTPRO 3D対応HDMI EDID信号保持機 TMDS-EDID**
 <https://www.amazon.co.jp/dp/B00HX3DK18>
 
+
 ## ★ 結論
 
-うちのようにややこしい接続にせず、グラフィックボードからモニターへの接続は極力変換コネクタやあだぶたーを利用せず、シンプルな構成にすることが望ましいです。
+グラフィックボードとモニターの接続は、可能な限り変換アダプタを使わず、
+シンプルな構成にすることで、EDIDに起因する問題を回避できます。
 
-ただ、環境によりうちのような面倒な接続をしたい場合は、EDID保持装置の購入を検討されるのが宜しいかと思いましす。
+今回のように特殊な接続が必要な場合は、
+EDIDキャッシュ保持装置の導入が有効です。
 
+また、Thunderbolt AICを利用する構成では、BIOS設定が予期せず変更されている可能性もあるため、
+**起動トラブル時はまずBIOS設定を確認することが有効**です。
 
 
