@@ -130,3 +130,7 @@ EDIDはPCやGPUが接続されたモニタの仕様（解像度、リフレッ�
 ■ EDID保持装置「CONNECTPRO TMDS-EDID」などを使うと解消される？
 
 今回のような変換ケーブルや、Thunderbolt4、USB-C経由によるHDMI変換から、DVIへの変換など多重な映像変換をする事で、EDIDが不安定になったのが主な要因だと思われます。
+
+
+**CONNECTPRO 3D対応HDMI EDID信号保持機 TMDS-EDID**
+<https://www.amazon.co.jp/dp/B00HX3DK18>
