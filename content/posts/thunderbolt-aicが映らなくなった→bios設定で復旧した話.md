@@ -1,7 +1,7 @@
 ---
 title: 【トラブル対処】Thunderbolt AICでモニタが映らない→BIOS設定とEDID問題で解決
 date: 2025-05-22T09:54:00.000Z
-draft: true
+draft: false
 ---
 朝、PCを起動したらメインモニターが真っ暗。
 
