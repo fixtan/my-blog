@@ -1,5 +1,10 @@
-import CMS from "netlify-cms-app";
-import React from "react";
+// 旧　未対応？
+//import CMS from "netlify-cms-app";
+//import React from "react";
+
+// 新　対応？
+const CMS = window.CMS;
+const React = window.React;
 
 // カスタムCSS読み込み（確認済）
 if (typeof CMS !== 'undefined') {
