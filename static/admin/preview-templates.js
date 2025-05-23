@@ -1,4 +1,4 @@
 import CMS from "netlify-cms-app";
 
-// ✅ 正しい書き方
-CMS.registerPreviewStyle("/css/custom-preview.css", { raw: true });
+// 既存の CSS を読み込む
+CMS.registerPreviewStyle("/css/custom.css", { raw: false });
