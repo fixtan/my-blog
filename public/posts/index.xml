@@ -13,7 +13,7 @@
       <link>https://fixtan.github.io/my-blog/posts/thunderbolt-bios-fix/</link>
       <pubDate>Thu, 22 May 2025 15:00:00 +0900</pubDate>
       <guid>https://fixtan.github.io/my-blog/posts/thunderbolt-bios-fix/</guid>
-      <description>&lt;p&gt;朝、PCを起動したらメインモニターが真っ暗。&lt;/p&gt;
+      <description>&lt;p&gt;朝、PCを起動したらメインモニターが真っ暗…。&lt;/p&gt;
 &lt;p&gt;現在のグラフィックボードからモニタへの接続は、やや特殊で、ASRockのThunderbolt4 AICカードに、DisplayPortでGPUとケーブル接続し、Thunderbolt4 AICカード側はノーブランド（中華製）の「USB-C -&amp;gt; HDMI 変換 2 ポート」を繋ぎ、HDMIケーブルでモニタに繋ぐというややこしいつなぎ方をしてます。&lt;/p&gt;
 &lt;p&gt;つまり&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;RTX4070Ti → Thunderbolt AIC → USB-C → HDMI変換 → モニタ（L887）&lt;/strong&gt;&lt;/p&gt;
@@ -45,7 +45,8 @@
 &lt;p&gt;&lt;a href=&#34;https://download.asrock.com/Manual/Z690%20Steel%20Legend.pdf&#34;&gt;&lt;/a&gt;マニュアルの７９ページにBIOSの「Advanced&lt;a href=&#34;https://download.asrock.com/Manual/Z690%20Steel%20Legend.pdf&#34;&gt;&lt;/a&gt;」に関する項目がありますが、ここで&lt;br&gt;
 4.6.4 Intel(R) Thunderbolt（８６ページ）&lt;br&gt;
 にカードの有効化にする項目があるので、これが無効になってる場合「有効化」。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://fixtan.github.io/my-blog/images/uploads/%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B815913.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://fixtan.github.io/my-blog/images/uploads/%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B815913.jpg&#34;&gt;
+&lt;a href=&#34;https://fixtan.github.io/my-blog/images/uploads/イメージ15913.jpg&#34;&gt;&lt;img src=&#34;https://fixtan.github.io/my-blog/images/uploads/イメージ15913.jpg&#34; width=&#34;300&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://fixtan.github.io/my-blog/images/uploads/%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B815914.jpg&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
