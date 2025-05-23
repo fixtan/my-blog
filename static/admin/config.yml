@@ -7,6 +7,22 @@ backend:
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
+# ↓ この行で JS を読み込む
+local_backend: true
+
+editor:
+  preview: true
+
+# プレビュー用 JS を読み込む
+load_config_file: false
+
+# ↓ Netlify CMS に preview script を登録
+#    preview-templates.js のパスに注意！
+#    ビルド後に public/admin/ に配置されてる必要あり
+
+# Hugo の場合、次を追記
+custom_script: "/admin/preview-templates.js"
+
 collections:
   - name: "blog"
     label: "Blog"
