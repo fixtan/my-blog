@@ -3,7 +3,7 @@ import React from "react";
 
 // カスタムCSS読み込み（確認済）
 if (typeof CMS !== 'undefined') {
-  CMS.registerPreviewStyle("/admin/custom.css", { raw: true  });
+  CMS.registerPreviewStyle("/admin/stylesCMS.css", { raw: true  });
 }
 
 // プレビュー用のテンプレートコンポーネントを定義
