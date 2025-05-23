@@ -2,7 +2,9 @@ import CMS from "netlify-cms-app";
 import React from "react";
 
 // カスタムCSS読み込み（確認済）
-CMS.registerPreviewStyle("/css/custom.css", { raw: false });
+if (typeof CMS !== 'undefined') {
+  CMS.registerPreviewStyle("/admin/custom.css", { raw: false });
+}
 
 // プレビュー用のテンプレートコンポーネントを定義
 const BlogPostPreview = ({ entry }) => {
