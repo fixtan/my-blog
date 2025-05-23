@@ -3,7 +3,7 @@ title: 【トラブル対処】Thunderbolt AICでモニタが映らない→BIOS
 date: 2025-05-22T15:00:00+09:00
 draft: false
 ---
-朝、PCを起動したらメインモニターが真っ暗。
+朝、PCを起動したらメインモニターが真っ暗…。
 
 現在のグラフィックボードからモニタへの接続は、やや特殊で、ASRockのThunderbolt4 AICカードに、DisplayPortでGPUとケーブル接続し、Thunderbolt4 AICカード側はノーブランド（中華製）の「USB-C -> HDMI 変換 2 ポート」を繋ぎ、HDMIケーブルでモニタに繋ぐというややこしいつなぎ方をしてます。
 
