@@ -1,3 +1,80 @@
+/* 記事ページの装飾 */
+.post-content p {
+  margin-bottom: 1.25em;
+  line-height: 1.8;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  border-left: 4px solid #3498db;
+  padding-left: 0.75em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+h2::before {
+  margin-right: 0.5em;
+  color: #3498db;
+}
+h3::before {
+  content: "▶";
+  margin-right: 0.4em;
+  color: #2ecc71;
+}
+blockquote {
+  border-left: 6px solid #ccc;
+  background-color: #f0f0f0;
+  padding: 1em;
+  margin: 1.5em 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+pre, code {
+  background-color: #f3f3f3;
+  padding: 0.5em 0.75em;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  color: #333;
+  display: block;
+  overflow-x: auto;
+}
+a {
+  color: #007acc;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+a::after {
+  font-size: 0.85em;
+  color: #888;
+}
+a:hover {
+  color: #005f99;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 0.75em;
+  text-align: left;
+}
+table th {
+  background-color: #f0f0f0;
+}
+
+/* ===== ヘッダー全体の見栄え改善 ===== */
+.header {
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
 .main {
   background-image: url("/images/header.jpg");
   background-size: cover;
