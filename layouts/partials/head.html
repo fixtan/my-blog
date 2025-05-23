@@ -1,2 +1,3 @@
+<!-- test: custom head loaded -->
 {{ $css := resources.Get "css/custom.css.html" | resources.ExecuteAsTemplate "css/custom.css" . | fingerprint }}
 <link rel="stylesheet" href="{{ $css.Permalink }}">
