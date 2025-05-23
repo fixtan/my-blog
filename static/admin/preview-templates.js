@@ -1,5 +1,22 @@
 import CMS from "netlify-cms-app";
+import React from "react";
 
-// 既存の CSS を読み込む
-// ダミーCSS文字列（これで読み込まれてるか確認）
-CMS.registerPreviewStyle("* { outline: 5px dashed magenta !important; }", { raw: true });
+// カスタムCSS読み込み（確認済）
+CMS.registerPreviewStyle("/css/custom.css", { raw: false });
+
+// プレビュー用のテンプレートコンポーネントを定義
+const BlogPostPreview = ({ entry }) => {
+  const title = entry.getIn(["data", "title"]);
+  const body = entry.getIn(["data", "body"]);
+  return (
+    <main className="main">
+      <h1>{title}</h1>
+      <div className="profile_inner">
+        <div dangerouslySetInnerHTML={{ __html: body }} />
+      </div>
+    </main>
+  );
+};
+
+// "blog" コレクションにプレビューを登録
+CMS.registerPreviewTemplate("blog", BlogPostPreview);
