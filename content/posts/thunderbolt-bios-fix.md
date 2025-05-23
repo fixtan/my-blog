@@ -1,5 +1,5 @@
 ---
-title: "【トラブル対処】Thunderbolt AICでモニタが映らない→BIOS設定とEDID問題で解決"
+title: 【トラブル対処】Thunderbolt AICでモニタが映らない→BIOS設定とEDID問題で解決
 date: 2025-05-22T15:00:00+09:00
 draft: false
 ---
@@ -77,6 +77,7 @@ Thunderbolt 4 AICカードはマザーボードのTBTヘッダーと必ず接続
 
 
 ![](/images/uploads/イメージ15913.jpg)
+  <a href="/images/uploads/イメージ15913.jpg"><img src="/images/uploads/イメージ15913.jpg" width="300"></a>
 
 ![](/images/uploads/イメージ15914.jpg)
 
