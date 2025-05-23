@@ -52,3 +52,9 @@ theme = 'PaperMod'
 
 [params.assets]
    customCSS = ["css/custom.css"]
+
+## 記事の中でタグを有効にする
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
