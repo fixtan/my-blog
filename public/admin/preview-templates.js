@@ -6,12 +6,44 @@
 const CMS = window.CMS;
 const React = window.React;
 
-// カスタムCSS読み込み（確認済）
+// ✅ stylesCMS.css の内容をここに直接書く
+const customStyles = `
+  main.main {
+    margin-top: 0;
+    padding-top: 10px !important;
+  }
+  body, html {
+    font-family: sans-serif;
+  }
+  .post-content p {
+    margin-bottom: 1.25em;
+    line-height: 1.8;
+  }
+  h1, h2, h3 {
+    font-weight: bold;
+    border-left: 4px solid #3498db;
+    padding-left: 0.75em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    line-height: 1.5;
+  }
+  h2::before {
+    margin-right: 0.5em;
+    color: #3498db;
+  }
+  h3::before {
+    content: "◆";
+    margin-right: 0.4em;
+    color: #2ecc71;
+  }
+`;
+
+// ✅ 生CSSを直接 iframe に適用
 if (typeof CMS !== 'undefined') {
-  CMS.registerPreviewStyle("/admin/stylesCMS.css", { raw: true  });
+  CMS.registerPreviewStyle(customStyles, { raw: true });
 }
 
-// プレビュー用のテンプレートコンポーネントを定義
+// プレビュー用テンプレート
 const BlogPostPreview = ({ entry }) => {
   const title = entry.getIn(["data", "title"]);
   const body = entry.getIn(["data", "body"]);
@@ -25,5 +57,4 @@ const BlogPostPreview = ({ entry }) => {
   );
 };
 
-// "blog" コレクションにプレビューを登録
 CMS.registerPreviewTemplate("blog", BlogPostPreview);
