@@ -1,5 +1,5 @@
 import CMS from "netlify-cms-app";
 
 // 既存の CSS を読み込む
-//CMS.registerPreviewStyle("/css/custom.css", { raw: false });
-CMS.registerPreviewStyle("/css/custom.css");
+// ダミーCSS文字列（これで読み込まれてるか確認）
+CMS.registerPreviewStyle("* { outline: 5px dashed magenta !important; }", { raw: true });
