@@ -12,7 +12,7 @@ categories:
 tags:
   - Decap CMS
 ---
-![](/images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-3-.png)
+<center><img src="/images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-3-.png" width="80%"></center>
 
 
 
