@@ -1,4 +1,5 @@
 const CMS = window.CMS;
 
-CMS.registerPreviewStyle('/css/custom.css'); // 必要に応じてパス変更
-CMS.init(); // 最後に呼び出し
+// 最小限のスタイルのみ追加
+CMS.registerPreviewStyle("/css/custom.css");  // public/css/custom.css に合わせてパス指定
+CMS.init();
