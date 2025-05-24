@@ -2,10 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on lainのAIと創作ブログ</title>
-    <link>http://localhost:1313/my-blog/categories/</link>
+    <link>https://fixtan.github.io/my-blog/categories/</link>
     <description>Recent content in Categories on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <atom:link href="http://localhost:1313/my-blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 May 2025 14:08:00 +0000</lastBuildDate>
+    <atom:link href="https://fixtan.github.io/my-blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>https://fixtan.github.io/my-blog/categories/hugo/</link>
+      <pubDate>Fri, 23 May 2025 14:08:00 +0000</pubDate>
+      <guid>https://fixtan.github.io/my-blog/categories/hugo/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

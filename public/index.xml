@@ -2,110 +2,76 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>lainのAIと創作ブログ</title>
-    <link>http://localhost:1313/my-blog/</link>
+    <link>https://fixtan.github.io/my-blog/</link>
     <description>Recent content on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 23 May 2025 14:08:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/my-blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://fixtan.github.io/my-blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>自己紹介</title>
-      <link>http://localhost:1313/my-blog/about/</link>
+      <link>https://fixtan.github.io/my-blog/about/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/my-blog/about/</guid>
+      <guid>https://fixtan.github.io/my-blog/about/</guid>
       <description>&lt;p&gt;こんにちは、lainです。&lt;br&gt;
 AI、画像生成、動画、コマンドラインが大好きです。&lt;/p&gt;
 &lt;p&gt;このブログでは学習したこと、役に立ったTipsを発信しています。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugoで使われているテンプレートを確認する方法</title>
-      <link>http://localhost:1313/my-blog/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</link>
+      <link>https://fixtan.github.io/my-blog/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</link>
       <pubDate>Fri, 23 May 2025 14:08:00 +0000</pubDate>
-      <guid>http://localhost:1313/my-blog/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://fixtan.github.io/my-blog/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</guid>
       <description>Hugoで現在使用中のテンプレートリストを確認する方法の紹介。</description>
     </item>
     <item>
       <title>【トラブル対処】Thunderbolt AICでモニタが映らない→BIOS設定とEDID問題で解決</title>
-      <link>http://localhost:1313/my-blog/posts/thunderbolt-bios-fix/</link>
+      <link>https://fixtan.github.io/my-blog/posts/thunderbolt-bios-fix/</link>
       <pubDate>Thu, 22 May 2025 15:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/my-blog/posts/thunderbolt-bios-fix/</guid>
-      <description>&lt;p&gt;朝、PCを起動したらメインモニターが真っ暗…。&lt;/p&gt;
-&lt;p&gt;現在のグラフィックボードからモニタへの接続は、やや特殊で、ASRockのThunderbolt4 AICカードに、DisplayPortでGPUとケーブル接続し、Thunderbolt4 AICカード側はノーブランド（中華製）の「USB-C -&amp;gt; HDMI 変換 2 ポート」を繋ぎ、HDMIケーブルでモニタに繋ぐというややこしいつなぎ方をしてます。&lt;/p&gt;
-&lt;p&gt;つまり&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;RTX4070Ti → Thunderbolt AIC → USB-C → HDMI変換 → モニタ（L887）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;という構成でしたが、突然映らなくなりました。&lt;/p&gt;
-&lt;p&gt;当初は、Thunderboltカードの故障を疑いましたが、デバイスマネージャーやThunderboltコントロールセンター上では正常に動作しているように見え、異常は確認できませんでした。&lt;/p&gt;
-&lt;p&gt;Microsoft Thunderbolt™ コントロール・センター 公式&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://apps.microsoft.com/detail/9n6f0jv38ph1?hl=ja-JP&amp;amp;gl=JP&#34;&gt;https://apps.microsoft.com/detail/9n6f0jv38ph1?hl=ja-JP&amp;amp;gl=JP&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;ここで、故障原因として考えられるのは・・&lt;/p&gt;
-&lt;h2 id=&#34;原因bios設定&#34;&gt;原因①：BIOS設定&lt;/h2&gt;
-&lt;p&gt;Thunderboltサポートが有効になっているか？
-（ASRockマザーの場合、TBT設定がBIOSにあり）&lt;/p&gt;
-&lt;p&gt;Security Levelが「No Security」や「User Authorization」以外になっていないか&lt;/p&gt;
-&lt;p&gt;「認証待ち」状態で止まっていると、表示されないことがあります&lt;/p&gt;
-&lt;h2 id=&#34;原因thunderboltコントロールセンター&#34;&gt;原因②：Thunderboltコントロールセンター&lt;/h2&gt;
-&lt;p&gt;「Thunderbolt コントロールセンター」アプリ インストールの有無と、「接続されたデバイス」や「Thunderboltポート」が表示されるか確認&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;※Microsoft Storeからインストール可能&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;原因ケーブル接続不良&#34;&gt;原因③：ケーブル・接続不良&lt;/h2&gt;
-&lt;p&gt;Thunderbolt 4 AICカードはマザーボードのTBTヘッダーと必ず接続する必要があり接続に問題がないかどうか。（チェック済み）&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;⚠ これが接続されていないと Thunderbolt コントローラーが無効化される&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;原因displayportの接触&#34;&gt;原因④：DisplayPortの接触&lt;/h2&gt;
-&lt;p&gt;基礎的な事としてグラボ（RTX 4070Ti）→ Thunderbolt AICカードへの DisplayPort INケーブルはきちんと接続されているか？（チェック済み）&lt;/p&gt;
-&lt;p&gt;これが未接続、もしくは接触不良だと映像信号がカードに届かず映像出力できません。&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-■とりあえず、BIOSの項目をチェック・・・&lt;/p&gt;
-&lt;p&gt;カードの接触不良を確認する前に、とりあえず、BIOS設定の「Thunderbolt Support」が有効になっているかを確認。&lt;/p&gt;
-&lt;p&gt;オンラインマニュアル（PDF）&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://download.asrock.com/Manual/Z690%20Steel%20Legend.pdf&#34;&gt;https://download.asrock.com/Manual/Z690%20Steel%20Legend.pdf&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://download.asrock.com/Manual/Z690%20Steel%20Legend.pdf&#34;&gt;&lt;/a&gt;マニュアルの７９ページにBIOSの「Advanced&lt;a href=&#34;https://download.asrock.com/Manual/Z690%20Steel%20Legend.pdf&#34;&gt;&lt;/a&gt;」に関する項目がありますが、ここで&lt;br&gt;
-4.6.4 Intel(R) Thunderbolt（８６ページ）&lt;br&gt;
-にカードの有効化にする項目があるので、これが無効になってる場合「有効化」。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/my-blog/images/uploads/%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B815913.jpg&#34;&gt;
-&lt;a href=&#34;http://localhost:1313/my-blog/images/uploads/イメージ15913.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/my-blog/images/uploads/イメージ15913.jpg&#34; width=&#34;300&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/my-blog/images/uploads/%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B815914.jpg&#34;&gt;&lt;/p&gt;</description>
+      <guid>https://fixtan.github.io/my-blog/posts/thunderbolt-bios-fix/</guid>
+      <description>モニタに映像出力されなくなった問題について、Thunderbolt4 、EDID問題を踏まえトラブル情報をまとめてみました</description>
     </item>
     <item>
       <title>CMS からテスト投稿２</title>
-      <link>http://localhost:1313/my-blog/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</link>
+      <link>https://fixtan.github.io/my-blog/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</link>
       <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/my-blog/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</guid>
+      <guid>https://fixtan.github.io/my-blog/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</guid>
       <description>&lt;p&gt;Draft　テスト投稿&lt;/p&gt;</description>
     </item>
     <item>
       <title>Decap CMS導入テスト投稿</title>
-      <link>http://localhost:1313/my-blog/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</link>
+      <link>https://fixtan.github.io/my-blog/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</link>
       <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/my-blog/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</guid>
+      <guid>https://fixtan.github.io/my-blog/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</guid>
       <description>&lt;p&gt;日本語入力テスト。&lt;/p&gt;
 &lt;p&gt;問題なく入力できるようです。&lt;/p&gt;</description>
     </item>
     <item>
       <title>ダミー記事12</title>
-      <link>http://localhost:1313/my-blog/posts/first/</link>
+      <link>https://fixtan.github.io/my-blog/posts/first/</link>
       <pubDate>Sat, 17 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/my-blog/posts/first/</guid>
+      <guid>https://fixtan.github.io/my-blog/posts/first/</guid>
       <description>&lt;p&gt;（本文はまだありません）&lt;/p&gt;</description>
     </item>
     <item>
       <title>はじめての投稿</title>
-      <link>http://localhost:1313/my-blog/posts/first-post/</link>
+      <link>https://fixtan.github.io/my-blog/posts/first-post/</link>
       <pubDate>Sat, 17 May 2025 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/my-blog/posts/first-post/</guid>
+      <guid>https://fixtan.github.io/my-blog/posts/first-post/</guid>
       <description>&lt;p&gt;こんにちは、これは私の最初のHugo記事です！&lt;/p&gt;</description>
     </item>
     <item>
       <title>Second</title>
-      <link>http://localhost:1313/my-blog/posts/second/</link>
+      <link>https://fixtan.github.io/my-blog/posts/second/</link>
       <pubDate>Thu, 15 May 2025 16:11:54 +0900</pubDate>
-      <guid>http://localhost:1313/my-blog/posts/second/</guid>
+      <guid>https://fixtan.github.io/my-blog/posts/second/</guid>
       <description>&lt;p&gt;テスト&lt;/p&gt;</description>
     </item>
     <item>
       <title>３つ目の投稿</title>
-      <link>http://localhost:1313/my-blog/posts/third/</link>
+      <link>https://fixtan.github.io/my-blog/posts/third/</link>
       <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/my-blog/posts/third/</guid>
+      <guid>https://fixtan.github.io/my-blog/posts/third/</guid>
       <description>&lt;p&gt;（本文はまだありません）&lt;/p&gt;</description>
     </item>
   </channel>

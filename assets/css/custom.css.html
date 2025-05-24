@@ -272,23 +272,6 @@ svg path[d="M12 6H0l6-6z"] {
   gap: 1.5rem;
 }
 
-.post-list article {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 360px; /* 👈 ここを調整して正方形に近づけます */
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  padding: 0;
-  align-items: stretch;
-}
-
-.post-list article:hover {
-  transform: translateY(-4px);
-}
 
 /* 検索バーを右寄せ */
 .search-bar-wrapper {
@@ -359,77 +342,6 @@ svg path[d="M12 6H0l6-6z"] {
   text-align: right;
   font-size: 0.85rem;
   color: #666;
-}
-
-
-
-/* --- タイトル・日付・概要 --- */
-.post-list h2 {
-  font-size: 1.1rem;
-  margin: 0.5rem 0 0.2rem; /* 下の余白を縮小 */
-  text-align: center;
-}
-.post-list h2 a {
-  color: #3366cc;
-  text-decoration: none;
-}
-/* 日付のスタイルを整え、余白を調整 */
-.post-list time {
-  font-size: 0.75rem;
-  color: #777;
-  margin: 0;              /* ← 余白を完全になくす */
-  padding: 0;             /* ← 念のため */
-  display: block;
-  text-align: center;
-  line-height: 1.2;
-}
-
-.post-list p {
-  margin-top: 0.6em;
-  margin-bottom: auto;
-  
-
-  font-size: 0.85rem;
-  line-height: 1.4;
-  
-  padding: 0 1rem 0.8rem;
-  text-align: center;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-
-/* --- サムネイル画像 --- */
-.post-thumb {
-  width: 100%;
-  height: 160px;
-  object-fit: contain;
-  background-color: #f5f5f5;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.post-thumb:hover {
-  transform: scale(1.03);
-}
-
-.thumb-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-
-.featured-badge {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 70px; /* 必要に応じて調整 */
-  height: auto;
-  z-index: 5;
 }
 
 
@@ -563,17 +475,74 @@ body.dark .share-buttons li a:hover {
 
 /* --- カード内部のレイアウトを調整（高さ固定＆抜粋制限） --- */
 
-/* カード本体 */
+/* === 抜粋（summary）専用スタイル === */
+.post-list p.summary {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-align: center;
+  padding: 0 1rem;
+  margin: 0.5rem auto 0.5rem;
+  
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* === 通常の段落・日時など（省略せず表示） === */
+.post-list p {
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* === メタ情報（タグ・カテゴリ） === */
+.meta-wrapper {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  text-align: center;
+  min-height: auto; /* ← もしくは削除してOK */
+}
+
+.post-meta {
+  font-size: 0.75rem;
+  color: #555;
+  margin: 0.25rem 0;
+}
+
+.post-meta .tag {
+  max-width: 80px;
+  font-size: 0.65rem;
+  padding: 2px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ }
+
+/* === カードレイアウト全体 === */
 .post-list article {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 360px;         /* 高さを固定 */
-  padding-bottom: 1rem;
-  overflow: hidden;      /* 内容はみ出し防止 */
+  height: auto;
+  max-height: 460px;
+  overflow-y: auto;
+
+  padding: 1rem 1rem 2.0rem; /* 上・左右・下の余白を調整（特に下） */
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
-/* タイトル */
+.post-list article:hover {
+  transform: translateY(-4px);
+}
+
+/* === タイトル・日付 === */
 .post-list h2 {
   font-size: 1.1rem;
   margin: 0.75rem auto 0.25rem;
@@ -581,7 +550,11 @@ body.dark .share-buttons li a:hover {
   padding: 0 1rem;
 }
 
-/* 日付 */
+.post-list h2 a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
 .post-list time {
   font-size: 0.75rem;
   color: #777;
@@ -589,35 +562,32 @@ body.dark .share-buttons li a:hover {
   margin-bottom: 0.4rem;
 }
 
-/* 抜粋 */
-.post-list p {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  text-align: center;
-  padding: 0 1rem;
-  margin: 0.5rem auto 0.5rem;
-
-  /* 2行で切り詰めて省略表示 */
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+/* === サムネイル画像 === */
+.post-thumb {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  background-color: #f5f5f5;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
-.post-meta {
-  font-size: 0.75rem;
-  color: #666;
-  margin-top: 0.5rem;
-  text-align: center;
+.post-thumb:hover {
+  transform: scale(1.03);
 }
 
-.post-meta .tag {
+.thumb-wrapper {
+  position: relative;
   display: inline-block;
-  background-color: #eef;
-  color: #336;
-  padding: 2px 6px;
-  margin: 2px;
-  border-radius: 10px;
-  font-size: 0.7rem;
+  width: 100%;
+}
+
+.featured-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 70px;
+  height: auto;
+  z-index: 5;
 }

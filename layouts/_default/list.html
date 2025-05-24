@@ -6,7 +6,6 @@
     </div>
   </section>
 
-  <!-- 最適化された検索フォーム構造 -->
   <div id="searchForm" role="search" class="search-bar-wrapper search-bar-form">
     <input id="searchInput" type="text" placeholder="検索…" />
     <select id="engineSwitch">
@@ -14,11 +13,8 @@
       <option value="fuse">Fuse.js</option>
     </select>
   </div>
-  <!-- 検索結果表示 -->
   <ul id="searchResults" class="search-results"></ul>
 
-
-  {{/* おすすめ記事を weight で抽出し、.RelPermalink を取得 */}}
   {{ $featured := first 3 (sort (where .Site.RegularPages "Weight" "lt" 10) "Weight") }}
   {{ $featuredLinks := slice }}
   {{ range $featured }}
@@ -40,38 +36,32 @@
               <img src="/images/badge-featured.png" alt="おすすめ" class="featured-badge">
             </div>
           {{ end }}
-  
+
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           <p>{{ .Date.Format "2006-01-02" }} | {{ .Params.author }}</p>
+
           {{ if and (.Params.summary) (ne (.Params.summary | plainify | trim " \n\r\t") "") }}
-            <p>{{ .Params.summary }}</p>
+            <p class="summary">{{ .Params.summary }}</p>
           {{ else }}
-            <p>(抜粋がありません)</p>
+            <p class="summary">(抜粋がありません)</p>
           {{ end }}
+
+          <div class="meta-wrapper">
+            {{ with .Params.categories }}
+              <p class="post-meta">カテゴリ：
+                {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+              </p>
+            {{ end }}
+            {{ with .Params.tags }}
+              <p class="post-meta">タグ：
+                {{ range . }}<span class="tag">#{{ . }}</span>{{ end }}
+              </p>
+            {{ end }}
+          </div>
         </article>
-
-        <!-- カテゴリ表示 -->
-        {{ with .Params.categories }}
-          <p class="post-meta">カテゴリ：
-            {{ range . }}
-              <span class="tag">{{ . }}</span>
-            {{ end }}
-          </p>
-        {{ end }}
-
-        <!-- タグ表示 -->
-        {{ with .Params.tags }}
-          <p class="post-meta">タグ：
-            {{ range . }}
-              <span class="tag">#{{ . }}</span>
-            {{ end }}
-          </p>
-        {{ end }}
-
       {{ end }}
     </div>
   </section>
-  
 
   <section class="post-list">
     {{ range .Site.RegularPages }}
@@ -82,35 +72,30 @@
           {{ else }}
             <img src="/images/noimage.jpg" alt="No image" class="post-thumb">
           {{ end }}
+
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           <p>{{ .Date.Format "2006-01-02" }} | {{ .Params.author }}</p>
+
           {{ if and (.Params.description) (ne .Params.description "") }}
-            <p>{{ .Params.description }}</p>
+            <p class="summary">{{ .Params.description }}</p>
           {{ else }}
-            <p>{{ .Summary | default "(抜粋がありません)" }}</p>
+            <p class="summary">{{ .Summary | default "(抜粋がありません)" }}</p>
           {{ end }}
+
+          <div class="meta-wrapper">
+            {{ with .Params.categories }}
+              <p class="post-meta">カテゴリ：
+                {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+              </p>
+            {{ end }}
+            {{ with .Params.tags }}
+              <p class="post-meta">タグ：
+                {{ range . }}<span class="tag">#{{ . }}</span>{{ end }}
+              </p>
+            {{ end }}
+          </div>
         </article>
-
-        <!-- カテゴリ表示 -->
-        {{ with .Params.categories }}
-          <p class="post-meta">カテゴリ：
-            {{ range . }}
-              <span class="tag">{{ . }}</span>
-            {{ end }}
-          </p>
-        {{ end }}
-
-        <!-- タグ表示 -->
-        {{ with .Params.tags }}
-          <p class="post-meta">タグ：
-            {{ range . }}
-              <span class="tag">#{{ . }}</span>
-            {{ end }}
-          </p>
-        {{ end }}
-
       {{ end }}
     {{ end }}
   </section>
 {{ end }}
-

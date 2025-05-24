@@ -4,7 +4,7 @@ date: 2025-05-22T15:00:00+09:00
 draft: false
 image: /images/thumb1.jpg
 author: lain
-summary: ""
+summary: "モニタに映像出力されなくなった問題について、Thunderbolt4 、EDID問題を踏まえトラブル情報をまとめてみました"
 ---
 
 朝、PCを起動したらメインモニターが真っ暗…。
