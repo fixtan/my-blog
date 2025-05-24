@@ -39,3 +39,13 @@ collections:
       - { label: "カテゴリ", name: "categories", widget: "list", required: false, default: ["その他"] }
       - { label: "タグ", name: "tags", widget: "list", required: false }
       - { label: "本文", name: "body", widget: "markdown" }
+      
+      - label: "カテゴリ"
+        name: "categories"
+        widget: "list"
+        required: false
+
+      - label: "タグ"
+        name: "tags"
+        widget: "list"
+        required: false

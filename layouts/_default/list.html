@@ -49,6 +49,25 @@
             <p>(抜粋がありません)</p>
           {{ end }}
         </article>
+
+        <!-- カテゴリ表示 -->
+        {{ with .Params.categories }}
+          <p class="post-meta">カテゴリ：
+            {{ range . }}
+              <span class="tag">{{ . }}</span>
+            {{ end }}
+          </p>
+        {{ end }}
+
+        <!-- タグ表示 -->
+        {{ with .Params.tags }}
+          <p class="post-meta">タグ：
+            {{ range . }}
+              <span class="tag">#{{ . }}</span>
+            {{ end }}
+          </p>
+        {{ end }}
+
       {{ end }}
     </div>
   </section>
@@ -71,6 +90,25 @@
             <p>{{ .Summary | default "(抜粋がありません)" }}</p>
           {{ end }}
         </article>
+
+        <!-- カテゴリ表示 -->
+        {{ with .Params.categories }}
+          <p class="post-meta">カテゴリ：
+            {{ range . }}
+              <span class="tag">{{ . }}</span>
+            {{ end }}
+          </p>
+        {{ end }}
+
+        <!-- タグ表示 -->
+        {{ with .Params.tags }}
+          <p class="post-meta">タグ：
+            {{ range . }}
+              <span class="tag">#{{ . }}</span>
+            {{ end }}
+          </p>
+        {{ end }}
+
       {{ end }}
     {{ end }}
   </section>

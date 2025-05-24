@@ -209,7 +209,7 @@ svg path[d="M12 6H0l6-6z"] {
 
 
 .hero {
-  background-image: url("{{ "images/header.jpg" | absURL }}");
+  background-image: url("http://localhost:1313/my-blog/images/header.jpg");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -603,21 +603,4 @@ body.dark .share-buttons li a:hover {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.post-meta {
-  font-size: 0.75rem;
-  color: #666;
-  margin-top: 0.5rem;
-  text-align: center;
-}
-
-.post-meta .tag {
-  display: inline-block;
-  background-color: #eef;
-  color: #336;
-  padding: 2px 6px;
-  margin: 2px;
-  border-radius: 10px;
-  font-size: 0.7rem;
 }
