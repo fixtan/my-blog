@@ -3,7 +3,7 @@
 
 <head>
 
-<link rel="stylesheet" href="https://fixtan.github.io/my-blog/css/custom.a36c00f71db99efd07ba93a9e4dab0bca68afac4d55a1c6460ef5e3bf1d4b5ae.css">
+<link rel="stylesheet" href="https://fixtan.github.io/my-blog/css/custom.cda3dd27dcfb90fee1515840edf1587d9cabae7b935e8a219e3392ce7ac5c6c5.css">
 
 </head>
 
@@ -117,48 +117,31 @@
         <article class="featured-article">
           
             <div class="thumb-wrapper">
-              <img src="https://fixtan.github.io/my-blog/images/noimage.jpg" alt="No image" class="post-thumb">
+              <img src="https://fixtan.github.io/my-blog/images/thumb1.jpg" alt="【トラブル対処】Thunderbolt AICでモニタが映らない→BIOS設定とEDID問題で解決" class="post-thumb">
               <img src="https://fixtan.github.io/my-blog/images/badge-featured.png" alt="おすすめ" class="featured-badge">
             </div>
           
   
           <h2><a href="https://fixtan.github.io/my-blog/posts/thunderbolt-bios-fix/">【トラブル対処】Thunderbolt AICでモニタが映らない→BIOS設定とEDID問題で解決</a></h2>
-          <p>2025-05-22 | </p>
-          <p><p>朝、PCを起動したらメインモニターが真っ暗…。</p>
-<p>現在のグラフィックボードからモニタへの接続は、やや特殊で、ASRockのThunderbolt4 AICカードに、DisplayPortでGPUとケーブル接続し、Thunderbolt4 AICカード側はノーブランド（中華製）の「USB-C -&gt; HDMI 変換 2 ポート」を繋ぎ、HDMIケーブルでモニタに繋ぐというややこしいつなぎ方をしてます。</p>
-<p>つまり</p>
-<p><strong>RTX4070Ti → Thunderbolt AIC → USB-C → HDMI変換 → モニタ（L887）</strong></p>
-<p>という構成でしたが、突然映らなくなりました。</p>
-<p>当初は、Thunderboltカードの故障を疑いましたが、デバイスマネージャーやThunderboltコントロールセンター上では正常に動作しているように見え、異常は確認できませんでした。</p>
-<p>Microsoft Thunderbolt™ コントロール・センター 公式</p>
-<p><a href="https://apps.microsoft.com/detail/9n6f0jv38ph1?hl=ja-JP&amp;gl=JP">https://apps.microsoft.com/detail/9n6f0jv38ph1?hl=ja-JP&amp;gl=JP</a></p>
-<p>ここで、故障原因として考えられるのは・・</p>
-<h2 id="原因bios設定">原因①：BIOS設定</h2>
-<p>Thunderboltサポートが有効になっているか？
-（ASRockマザーの場合、TBT設定がBIOSにあり）</p>
-<p>Security Levelが「No Security」や「User Authorization」以外になっていないか</p>
-<p>「認証待ち」状態で止まっていると、表示されないことがあります</p>
-<h2 id="原因thunderboltコントロールセンター">原因②：Thunderboltコントロールセンター</h2>
-<p>「Thunderbolt コントロールセンター」アプリ インストールの有無と、「接続されたデバイス」や「Thunderboltポート」が表示されるか確認</p>
-<p><em><strong>※Microsoft Storeからインストール可能</strong></em></p>
-<h2 id="原因ケーブル接続不良">原因③：ケーブル・接続不良</h2>
-<p>Thunderbolt 4 AICカードはマザーボードのTBTヘッダーと必ず接続する必要があり接続に問題がないかどうか。（チェック済み）</p>
-<p><strong>⚠ これが接続されていないと Thunderbolt コントローラーが無効化される</strong></p>
-<h2 id="原因displayportの接触">原因④：DisplayPortの接触</h2>
-<p>基礎的な事としてグラボ（RTX 4070Ti）→ Thunderbolt AICカードへの DisplayPort INケーブルはきちんと接続されているか？（チェック済み）</p>
-<p>これが未接続、もしくは接触不良だと映像信号がカードに届かず映像出力できません。<br>
-<br>
-<br>
-■とりあえず、BIOSの項目をチェック・・・</p>
-<p>カードの接触不良を確認する前に、とりあえず、BIOS設定の「Thunderbolt Support」が有効になっているかを確認。</p>
-<p>オンラインマニュアル（PDF）</p>
-<p><a href="https://download.asrock.com/Manual/Z690%20Steel%20Legend.pdf">https://download.asrock.com/Manual/Z690%20Steel%20Legend.pdf</a></p>
-<p><a href="https://download.asrock.com/Manual/Z690%20Steel%20Legend.pdf"></a>マニュアルの７９ページにBIOSの「Advanced<a href="https://download.asrock.com/Manual/Z690%20Steel%20Legend.pdf"></a>」に関する項目がありますが、ここで<br>
-4.6.4 Intel(R) Thunderbolt（８６ページ）<br>
-にカードの有効化にする項目があるので、これが無効になってる場合「有効化」。</p>
-<p><img loading="lazy" src="https://fixtan.github.io/my-blog/images/uploads/%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B815913.jpg">
-<a href="https://fixtan.github.io/my-blog/images/uploads/イメージ15913.jpg"><img src="https://fixtan.github.io/my-blog/images/uploads/イメージ15913.jpg" width="300"></a></p>
-<p><img loading="lazy" src="https://fixtan.github.io/my-blog/images/uploads/%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B815914.jpg"></p></p>
+          <p>2025-05-22 | lain</p>
+          
+            <p>(抜粋がありません)</p>
+          
+        </article>
+      
+        <article class="featured-article">
+          
+            <div class="thumb-wrapper">
+              <img src="https://fixtan.github.io/my-blog/images/thumb1.jpg" alt="CMS からテスト投稿２" class="post-thumb">
+              <img src="https://fixtan.github.io/my-blog/images/badge-featured.png" alt="おすすめ" class="featured-badge">
+            </div>
+          
+  
+          <h2><a href="https://fixtan.github.io/my-blog/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/">CMS からテスト投稿２</a></h2>
+          <p>2025-05-21 | lain</p>
+          
+            <p>(抜粋がありません)</p>
+          
         </article>
       
         <article class="featured-article">
@@ -171,55 +154,9 @@
   
           <h2><a href="https://fixtan.github.io/my-blog/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/">Decap CMS導入テスト投稿</a></h2>
           <p>2025-05-21 | lain</p>
-          <p><p>日本語入力テスト。</p>
-<p>問題なく入力できるようです。</p>
-<p><strong>マークダウン入力テスト 太字もOK？</strong></p>
-<p>画像アップロードテスト：Stable Diffusion version: v1.10.1</p>
-<p><img alt="Stable Diffusion version: v1.10.1 " loading="lazy" src="https://fixtan.github.io/my-blog/images/uploads/00011-524648632.png" title="Stable Diffusion version: v1.10.1 "></p>
-<p>コード入力：HTML</p>
-<pre tabindex="0"><code class="language-chuck" data-lang="chuck">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset=&#34;utf-8&#34; /&gt;
-    &lt;title&gt;Netlify CMS&lt;/title&gt;
-    &lt;script src=&#34;https://identity.netlify.com/v1/netlify-identity-widget.js&#34;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      window.CMS_MANUAL_INIT = true;
-    &lt;/script&gt;
-    &lt;script src=&#34;https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js&#34;&gt;&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;script&gt;
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on(&#34;init&#34;, (user) =&gt; {
-          if (!user) {
-            window.netlifyIdentity.on(&#34;login&#34;, () =&gt; {
-              document.location.href = &#34;/admin/&#34;;
-            });
-          }
-        });
-
-        window.netlifyIdentity.init();
-      }
-      window.CMS.init();
-    &lt;/script&gt;
-    &lt;div id=&#34;nc-root&#34;&gt;&lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre></p>
-        </article>
-      
-        <article class="featured-article">
           
-            <div class="thumb-wrapper">
-              <img src="https://fixtan.github.io/my-blog/images/thumb1.jpg" alt="ダミー記事12" class="post-thumb">
-              <img src="https://fixtan.github.io/my-blog/images/badge-featured.png" alt="おすすめ" class="featured-badge">
-            </div>
+            <p>(抜粋がありません)</p>
           
-  
-          <h2><a href="https://fixtan.github.io/my-blog/posts/first/">ダミー記事12</a></h2>
-          <p>2025-05-17 | lain</p>
-          <p><p>（本文はまだありません）</p></p>
         </article>
       
     </div>
@@ -236,9 +173,9 @@
           <h2><a href="https://fixtan.github.io/my-blog/about/">自己紹介</a></h2>
           <p>2025-05-16 | </p>
           
-            <p>こんにちは、lainです。<br>
+            <p><p>こんにちは、lainです。<br>
 AI、画像生成、動画、コマンドラインが大好きです。</p>
-<p>このブログでは学習したこと、役に立ったTipsを発信しています。</p>
+<p>このブログでは学習したこと、役に立ったTipsを発信しています。</p></p>
           
         </article>
       
@@ -252,12 +189,25 @@ AI、画像生成、動画、コマンドラインが大好きです。</p>
       
         <article>
           
+            <img src="https://fixtan.github.io/my-blog/images/thumb1.jpg" alt="ダミー記事12" class="post-thumb">
+          
+          <h2><a href="https://fixtan.github.io/my-blog/posts/first/">ダミー記事12</a></h2>
+          <p>2025-05-17 | lain</p>
+          
+            <p><p>（本文はまだありません）</p></p>
+          
+        </article>
+      
+    
+      
+        <article>
+          
             <img src="https://fixtan.github.io/my-blog/images/noimage.jpg" alt="No image" class="post-thumb">
           
           <h2><a href="https://fixtan.github.io/my-blog/posts/first-post/">はじめての投稿</a></h2>
           <p>2025-05-17 | </p>
           
-            <p>こんにちは、これは私の最初のHugo記事です！</p>
+            <p><p>こんにちは、これは私の最初のHugo記事です！</p></p>
           
         </article>
       
@@ -270,7 +220,7 @@ AI、画像生成、動画、コマンドラインが大好きです。</p>
           <h2><a href="https://fixtan.github.io/my-blog/posts/second/">Second</a></h2>
           <p>2025-05-15 | </p>
           
-            
+            <p><p>テスト</p></p>
           
         </article>
       
@@ -283,7 +233,7 @@ AI、画像生成、動画、コマンドラインが大好きです。</p>
           <h2><a href="https://fixtan.github.io/my-blog/posts/third/">３つ目の投稿</a></h2>
           <p>2025-05-15 | lain</p>
           
-            <p>（本文はまだありません）</p>
+            <p><p>（本文はまだありません）</p></p>
           
         </article>
       

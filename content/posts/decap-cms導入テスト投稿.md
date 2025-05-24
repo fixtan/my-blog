@@ -7,7 +7,7 @@ author: "lain"
 日本語入力テスト。
 
 問題なく入力できるようです。
-
+<!--more-->
 **マークダウン入力テスト 太字もOK？**
 
 画像アップロードテスト：Stable Diffusion version: v1.10.1 

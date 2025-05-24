@@ -43,7 +43,11 @@
   
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           <p>{{ .Date.Format "2006-01-02" }} | {{ .Params.author }}</p>
-          <p>{{ .Summary }}</p>
+          {{ if and (.Params.summary) (ne (.Params.summary | plainify | trim " \n\r\t") "") }}
+            <p>{{ .Params.summary }}</p>
+          {{ else }}
+            <p>(抜粋がありません)</p>
+          {{ end }}
         </article>
       {{ end }}
     </div>
@@ -61,10 +65,10 @@
           {{ end }}
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           <p>{{ .Date.Format "2006-01-02" }} | {{ .Params.author }}</p>
-          {{ if .Params.description }}
+          {{ if and (.Params.description) (ne .Params.description "") }}
             <p>{{ .Params.description }}</p>
           {{ else }}
-            {{ .Summary }}
+            <p>{{ .Summary | default "(抜粋がありません)" }}</p>
           {{ end }}
         </article>
       {{ end }}

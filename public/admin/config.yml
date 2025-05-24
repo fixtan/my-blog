@@ -24,13 +24,16 @@ load_config_file: false
 custom_script: "/admin/preview-templates.js"
 
 collections:
-  - name: "blog"
-    label: "Blog"
+  - name: "posts"
+    label: "記事"
     folder: "content/posts"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "タイトル", name: "title", widget: "string" }
+      - { label: "日付", name: "date", widget: "datetime" }
+      - { label: "下書き", name: "draft", widget: "boolean", default: false }
+      - { label: "著者", name: "author", widget: "string", default: "lain" }
+      - { label: "アイキャッチ画像", name: "image", widget: "image", required: false }
+      - { label: "概要（抜粋）", name: "summary", widget: "string", required: false, default: "（抜粋がありません）" }
+      - { label: "本文", name: "body", widget: "markdown" }
