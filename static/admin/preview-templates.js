@@ -23,17 +23,17 @@ CMS.registerPreviewStyle(rawCSS, { raw: true });
 CMS.registerPreviewTemplate("blog", (entry) => {
   setTimeout(applyPreviewStyles, 500);
 
-  const title = entry.getIn(["data", "title"]);
-  const body = entry.getIn(["data", "body"]);
+  const title = entry.data.title;
+  const body = entry.data.body;
 
-  return `
-    <main class="main">
-      <h1>${title}</h1>
-      <div class="profile_inner">
-        ${body}
+  return (
+    <main className="main">
+      <h1>{title}</h1>
+      <div className="profile_inner">
+        <div dangerouslySetInnerHTML={{ __html: body }} />
       </div>
     </main>
-  `;
+  );
 });
 
 CMS.init();  // 必ず registerPreviewTemplate の後
