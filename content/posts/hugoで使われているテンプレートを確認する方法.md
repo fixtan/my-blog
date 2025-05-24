@@ -5,6 +5,10 @@ draft: false
 author: lain
 image: /images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-2-.png
 summary: Hugoで現在使用中のテンプレートリストを確認する方法の紹介。
+categories:
+  - Hugo
+tags:
+  - テンプレート
 ---
 Hugoで現在使用されているテンプレートリストを確認する方法の紹介。
 
