@@ -1,7 +1,7 @@
 ---
 title: "[Decap CMS] Config Errors: 'collections[0].fields' fields names must be
   unique"
-date: 2025-05-24T18:17:00.000Z
+date: 2025-05-24T03:17:00.000Z
 draft: false
 author: lain
 summary: "[Decap CMS] Config Errors: 'collections[0].fields' fields names must
