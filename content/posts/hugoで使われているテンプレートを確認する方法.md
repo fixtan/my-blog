@@ -1,6 +1,6 @@
 ---
 title: Hugoで使われているテンプレートを確認する方法
-date: 2025-05-24T13:51:00.000Z
+date: 2025-05-23T14:08:00.000Z
 draft: false
 author: lain
 image: /images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-2-.png
