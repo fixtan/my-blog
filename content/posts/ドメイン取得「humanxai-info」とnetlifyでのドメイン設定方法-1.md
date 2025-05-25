@@ -1,7 +1,7 @@
 ---
 title: ドメイン取得「humanxai.info」とnetlifyでのドメイン設定方法
 date: 2025-05-25T21:02:00.000Z
-draft: true
+draft: false
 author: lain
 summary: humanxai.infoドメインを取得したので、netlifyでのドメイン設定方法の紹介
 categories:
