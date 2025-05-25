@@ -1,5 +1,5 @@
 ---
-title: netlifyでのドメイン設定方法（ムームードメイン）
+title: netlifyでのドメイン設定方法
 date: 2025-05-25T20:02:00.000Z
 draft: false
 author: lain
@@ -80,10 +80,7 @@ Add domainをクリック
 
 ※設定反映には１時間以上、最大２日ぐらいかかる場合があります。
 
-![](/images/uploads/イメージ16124.jpg)
-
-
-<a href="/images/images/uploads/イメージ16103.jpg" target="_blank">
+<a href="/images/uploads/イメージ16124.jpg" target="_blank">
   <img src="/images/uploads/イメージ16124.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
 
@@ -95,3 +92,6 @@ netlifyの設定画面に戻り、Verift DNS　configration をクリックし�
 <a href="/images/images/uploads/イメージ16114.jpg" target="_blank">
   <img src="/images/uploads/イメージ16114.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
+
+
+
