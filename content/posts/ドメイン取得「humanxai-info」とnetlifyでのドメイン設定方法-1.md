@@ -24,14 +24,18 @@ Add a domain you already ownを選択
 
 ![](/images/uploads/イメージ16096.jpg)
 
-
-
 Verifyをクリック。
 
 ![](/images/uploads/イメージ16098.jpg)
 
-
-
 Add domainをクリック
 
 ![](/images/uploads/イメージ16100.jpg)
+
+
+
+ここまで来たらドメイン管理画面の方で設定。
+
+
+
+![](/images/uploads/イメージ16101.jpg)
