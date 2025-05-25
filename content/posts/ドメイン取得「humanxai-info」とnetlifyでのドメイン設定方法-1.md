@@ -34,31 +34,31 @@ Netlify のダッシュボードにアクセス
 
 humanxai.info を入力し「Verify」→「Add domain」
 
-<a href="/images/images/uploads/イメージ16094.jpg" target="_blank">
+<a href="/images/uploads/イメージ16094.jpg" target="_blank">
   <img src="/images/uploads/イメージ16094.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
 
 Add a domain you already ownを選択
 
-<a href="/images/images/uploads/イメージ16096.jpg" target="_blank">
+<a href="/images/uploads/イメージ16096.jpg" target="_blank">
   <img src="/images/uploads/イメージ16096.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
 
 Verifyをクリック。
 
-<a href="/images/images/uploads/イメージ16098.jpg" target="_blank">
+<a href="/images/uploads/イメージ16098.jpg" target="_blank">
   <img src="/images/uploads/イメージ16098.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
 
 Add domainをクリック
 
-<a href="/images/images/uploads/イメージ16100.jpg" target="_blank">
+<a href="/images/uploads/イメージ16100.jpg" target="_blank">
   <img src="/images/uploads/イメージ16100.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
 
 ここまで来たらドメイン管理画面の方で設定。
 
-<a href="/images/images/uploads/イメージ16101.jpg" target="_blank">
+<a href="/images/uploads/イメージ16101.jpg" target="_blank">
   <img src="/images/uploads/イメージ16101.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
 
@@ -72,7 +72,7 @@ Add domainをクリック
 
 表の一番下にある「カスタム設定」→「カスタム設定２」→「設定を追加する」
 
-<a href="/images/images/uploads/イメージ16103.jpg" target="_blank">
+<a href="/images/uploads/イメージ16103.jpg" target="_blank">
   <img src="/images/uploads/イメージ16103.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
 
@@ -84,14 +84,8 @@ Add domainをクリック
   <img src="/images/uploads/イメージ16124.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
 
-
-
-
 netlifyの設定画面に戻り、Verift DNS　configration をクリックして反映されれば成功です。
 
-<a href="/images/images/uploads/イメージ16114.jpg" target="_blank">
+<a href="/images/uploads/イメージ16114.jpg" target="_blank">
   <img src="/images/uploads/イメージ16114.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
-
-
-
