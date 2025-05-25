@@ -1,6 +1,6 @@
 ---
 title: netlifyでのドメイン設定方法
-date: 2025-05-25 22:57:00
+date: 2025-05-26 08:17:00
 draft: false
 author: lain
 summary: netlifyでのドメイン設定方法の紹介
