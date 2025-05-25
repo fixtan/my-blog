@@ -37,6 +37,10 @@ collections:
       - label: "日付"
         name: "date"
         widget: "datetime"
+        date_format: "YYYY-MM-DD HH:mm"
+        time_format: "HH:mm"
+        format: "YYYY-MM-DD HH:mm:ss"
+        picker_utc: false   # false → 2025-05-26 16:45:00 のようなローカル形式（JST扱いされやすい）true（デフォルト） → 2025-05-26T07:45:00.000Z 形式（UTC）
 
       - label: "下書き"
         name: "draft"
