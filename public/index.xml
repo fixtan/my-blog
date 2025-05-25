@@ -6,7 +6,7 @@
     <description>Recent content on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 23 May 2025 14:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 May 2025 03:17:00 +0000</lastBuildDate>
     <atom:link href="https://fixtan.github.io/my-blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>自己紹介</title>
@@ -16,6 +16,13 @@
       <description>&lt;p&gt;こんにちは、lainです。&lt;br&gt;
 AI、画像生成、動画、コマンドラインが大好きです。&lt;/p&gt;
 &lt;p&gt;このブログでは学習したこと、役に立ったTipsを発信しています。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Decap CMS] Config Errors: &#39;collections[0].fields&#39; fields names must be unique</title>
+      <link>https://fixtan.github.io/my-blog/posts/decap-cms-config-errors-collections-0-fields-fields-names-must-be-unique/</link>
+      <pubDate>Sat, 24 May 2025 03:17:00 +0000</pubDate>
+      <guid>https://fixtan.github.io/my-blog/posts/decap-cms-config-errors-collections-0-fields-fields-names-must-be-unique/</guid>
+      <description>[Decap CMS] Config Errors: &amp;lsquo;collections[0].fields&amp;rsquo; fields names must be unique</description>
     </item>
     <item>
       <title>Hugoで使われているテンプレートを確認する方法</title>

@@ -6,13 +6,20 @@
     <description>Recent content in Tags on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 23 May 2025 14:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 May 2025 03:17:00 +0000</lastBuildDate>
     <atom:link href="https://fixtan.github.io/my-blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>テンプレート</title>
-      <link>https://fixtan.github.io/my-blog/tags/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88/</link>
+      <title>Decap CMS</title>
+      <link>https://fixtan.github.io/my-blog/tags/decap-cms/</link>
+      <pubDate>Sat, 24 May 2025 03:17:00 +0000</pubDate>
+      <guid>https://fixtan.github.io/my-blog/tags/decap-cms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>コマンド</title>
+      <link>https://fixtan.github.io/my-blog/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</link>
       <pubDate>Fri, 23 May 2025 14:08:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/tags/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88/</guid>
+      <guid>https://fixtan.github.io/my-blog/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</guid>
       <description></description>
     </item>
   </channel>

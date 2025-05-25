@@ -2,6 +2,13 @@ main.main {
   margin-top: 0;
   padding-top: 10px;
 }
+/* ヒーロー画像上のタイトル（H1）*/
+.no-border {
+  border-left: none !important;
+  padding-left: 0 !important;
+}
+
+
 
 /* 記事ページの装飾 */
 .post-content p {
@@ -208,6 +215,8 @@ svg path[d="M12 6H0l6-6z"] {
 }
 
 
+/* ヒーロー画像 */
+/* ヒーロー画像 */
 .hero {
   background-image: url("{{ "images/header.jpg" | absURL }}");
   background-size: cover;
@@ -220,11 +229,13 @@ svg path[d="M12 6H0l6-6z"] {
   position: relative;
   color: white;
   border-radius: 12px;
-  margin-bottom: 1.0rem; /* ← もしくは 0 */
+  margin-bottom: 1rem;
+  overflow: hidden; /* ← 擬似要素がはみ出ないように */
   opacity: 0;
   transform: translateY(-10px);
   animation: fadeInHero 1s ease forwards;
 }
+
 @keyframes fadeInHero {
   0% {
     opacity: 0;
@@ -241,15 +252,18 @@ svg path[d="M12 6H0l6-6z"] {
   padding-top: 0 !important;
 }
 
+/* グラデーションの追加：画像の上にレイヤーで重ねる */
 .hero::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0));
   z-index: 1;
-  border-radius: 12px;
 }
 
+/* テキストとグラデが重ならないように前面に出す */
 .hero-inner {
   position: relative;
   z-index: 2;
@@ -257,9 +271,24 @@ svg path[d="M12 6H0l6-6z"] {
   text-align: center;
 }
 
+/* テキストがより読みやすくなる */
 .hero-inner h1,
 .hero-inner p {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.featured-article {
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-article .full-link {
+  position: absolute;
+  inset: 0; /* 上下左右を0で埋める */
+  z-index: 10;
+  text-indent: -9999px; /* テキスト非表示 */
+  background: transparent;
+  cursor: pointer;
 }
 
 
@@ -366,20 +395,24 @@ svg path[d="M12 6H0l6-6z"] {
       justify-content: flex-start;
       height: 340px; /* コンパクト化 */
       background-color: #fff;
-      border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       overflow: hidden;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
       padding: 0;
       text-align: center;
     }
     .post-list article:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
 }
 
-
+/* カードのタイトルからHタグの装飾を外す */
+.post-list h2 {
+  border-left: none !important;
+  padding-left: 0 !important;
+}
 
 
 /* アイコン整列  */
@@ -551,10 +584,20 @@ body.dark .share-buttons li a:hover {
 }
 
 .post-list h2 a {
-  color: #3366cc;
+  display: inline-block;
+  color: #007acc;
   text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid #007acc;
+  padding: 0.2rem 0.4rem;
+  transition: all 0.3s ease;
 }
 
+.post-list h2 a:hover {
+  color: #005fa3;
+  border-bottom-color: #005fa3;
+  background-color: rgba(0, 122, 204, 0.05);
+}
 .post-list time {
   font-size: 0.75rem;
   color: #777;
@@ -583,9 +626,10 @@ body.dark .share-buttons li a:hover {
   width: 100%;
 }
 
+/* おすすめラベルの位置 */
 .featured-badge {
   position: absolute;
-  top: 8px;
+  top: -8px;
   left: 8px;
   width: 70px;
   height: auto;

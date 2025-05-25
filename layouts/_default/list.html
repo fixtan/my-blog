@@ -1,7 +1,8 @@
 {{ define "main" }}
   <section class="hero">
     <div class="hero-inner">
-      <h1>AIと創作の記録をここに。</h1>
+      <h1 class="no-border">AIと創作の記録をここに。</h1>
+      <p class="blog-subtitle">「AIと人が、共に学び、創る場所」</p>
       <p>学びと再出発の旅路へ。</p>
     </div>
   </section>
@@ -25,17 +26,18 @@
     <div class="post-list">
       {{ range $featured }}
         <article class="featured-article">
-          {{ if .Params.image }}
-            <div class="thumb-wrapper">
+          <!-- 透明リンクを記事全体に被せる -->
+          <a href="{{ .RelPermalink }}" class="full-link" aria-label="{{ .Title }}"></a>
+
+          <div class="thumb-wrapper">
+            {{ if .Params.image }}
               <img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-thumb">
               <img src="/images/badge-featured.png" alt="おすすめ" class="featured-badge">
-            </div>
-          {{ else }}
-            <div class="thumb-wrapper">
+            {{ else }}
               <img src="/images/noimage.jpg" alt="No image" class="post-thumb">
               <img src="/images/badge-featured.png" alt="おすすめ" class="featured-badge">
-            </div>
-          {{ end }}
+            {{ end }}
+          </div>
 
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           <p>{{ .Date.Format "2006-01-02" }} | {{ .Params.author }}</p>

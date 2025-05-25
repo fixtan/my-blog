@@ -5,8 +5,26 @@
     <loc>https://fixtan.github.io/my-blog/about/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://fixtan.github.io/my-blog/</loc>
+    <lastmod>2025-05-25T07:09:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fixtan.github.io/my-blog/posts/</loc>
+    <lastmod>2025-05-25T07:09:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fixtan.github.io/my-blog/posts/decap-cms-config-errors-collections-0-fields-fields-names-must-be-unique/</loc>
+    <lastmod>2025-05-24T03:17:00+00:00</lastmod>
+  </url><url>
     <loc>https://fixtan.github.io/my-blog/categories/</loc>
-    <lastmod>2025-05-23T14:08:00+00:00</lastmod>
+    <lastmod>2025-05-24T03:17:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fixtan.github.io/my-blog/tags/decap-cms/</loc>
+    <lastmod>2025-05-24T03:17:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fixtan.github.io/my-blog/tags/</loc>
+    <lastmod>2025-05-24T03:17:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fixtan.github.io/my-blog/categories/%E3%83%96%E3%83%AD%E3%82%B0/</loc>
+    <lastmod>2025-05-24T03:17:00+00:00</lastmod>
   </url><url>
     <loc>https://fixtan.github.io/my-blog/categories/hugo/</loc>
     <lastmod>2025-05-23T14:08:00+00:00</lastmod>
@@ -14,16 +32,7 @@
     <loc>https://fixtan.github.io/my-blog/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2025-05-23T14:08:00+00:00</lastmod>
   </url><url>
-    <loc>https://fixtan.github.io/my-blog/</loc>
-    <lastmod>2025-05-23T14:08:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fixtan.github.io/my-blog/posts/</loc>
-    <lastmod>2025-05-23T14:08:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fixtan.github.io/my-blog/tags/</loc>
-    <lastmod>2025-05-23T14:08:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fixtan.github.io/my-blog/tags/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88/</loc>
+    <loc>https://fixtan.github.io/my-blog/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</loc>
     <lastmod>2025-05-23T14:08:00+00:00</lastmod>
   </url><url>
     <loc>https://fixtan.github.io/my-blog/posts/thunderbolt-bios-fix/</loc>

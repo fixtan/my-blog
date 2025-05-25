@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Decap CMS on lainのAIと創作ブログ</title>
+    <link>https://fixtan.github.io/my-blog/tags/decap-cms/</link>
+    <description>Recent content in Decap CMS on lainのAIと創作ブログ</description>
+    <generator>Hugo -- 0.147.3</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 24 May 2025 03:17:00 +0000</lastBuildDate>
+    <atom:link href="https://fixtan.github.io/my-blog/tags/decap-cms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Decap CMS] Config Errors: &#39;collections[0].fields&#39; fields names must be unique</title>
+      <link>https://fixtan.github.io/my-blog/posts/decap-cms-config-errors-collections-0-fields-fields-names-must-be-unique/</link>
+      <pubDate>Sat, 24 May 2025 03:17:00 +0000</pubDate>
+      <guid>https://fixtan.github.io/my-blog/posts/decap-cms-config-errors-collections-0-fields-fields-names-must-be-unique/</guid>
+      <description>[Decap CMS] Config Errors: &amp;lsquo;collections[0].fields&amp;rsquo; fields names must be unique</description>
+    </item>
+  </channel>
+</rss>
