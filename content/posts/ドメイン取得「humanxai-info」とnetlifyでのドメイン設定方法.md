@@ -19,3 +19,11 @@ Netlify のダッシュボードにアクセス
 humanxai.info を入力し「Verify」→「Add domain」
 
 ![](/images/uploads/イメージ16094.jpg)
+
+
+
+Add a domain you already ownを選択
+
+
+
+![](/images/uploads/イメージ16096.jpg)
