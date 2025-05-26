@@ -14,7 +14,6 @@ tags:
   <img src="/images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-4-.png" alt="NetlifyのDNS設定" style="max-width:100%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
 
-
 ## はじめに
 
 Netlifyで、静的ジェネレーター、Hugoを使いブログ作成をはじめ、形になってきたので、ドメインを取得してみました。
@@ -94,4 +93,20 @@ netlifyの設定画面に戻り、Verift DNS　configration をクリックし�
 
 <a href="/images/uploads/イメージ16114.jpg" target="_blank">
   <img src="/images/uploads/イメージ16114.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+
+上の画像が下の様になれば成功。
+
+<a href="/images/uploads/netlify-dns-setting.jpg" target="_blank">
+  <img src="/images/uploads/netlify-dns-setting.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+
+## DNS checker
+
+序にDNS checkerサイトでドメインを確認しておくと安心。
+
+https://dnschecker.org/#A/humanxai.info
+
+<a href="/images/uploads/netlify-dns-setting-dnschecker.jpg" target="_blank">
+  <img src="/images/uploads/netlify-dns-setting-dnschecker.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
