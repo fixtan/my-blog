@@ -119,21 +119,36 @@ https://dnschecker.org/#A/humanxai.info
   <img src="/images/uploads/ssl-warning.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
 
-
 🔐 警告の理由：「SSL証明書の発行プロセスがまだ完全に完了していない」
 Netlify の「SSL/TLS certificate」セクションに：
 
-✅ DNS verification was successful
-
-🚫 でも証明書がまだ provision（発行）されていない
+> ✅ DNS verification was successful
+>
+> 🚫 でも証明書がまだ provision（発行）されていない
 
 という状態なので、https 通信が有効化される前段階です。
 
-✅ 解決方法
+### ✅ 解決方法
 
 SSL証明書の発行には数分～最大24時間ほどかかる場合がありますので暫く待つ必要があります。
 
 ちなみにうちの場合は１時間ぐらいで警告が消え表示されるようになりました。
+
+## ドメインにアクセスできなくなる
+
+暫くするとドメインにアクセスできなくなる不都合が出た為、netlify側でDNSの設定をするように変更
+
+ドメインマネージメントの画面から、optionss -> Set up Netlify DNS
+
+を選択。画像では、www.humanxai.info になってますが、正確には、.humanxai.info の方。
+
+
+<a href="/images/uploads/netlify-domain-dns.jpg" target="_blank">
+  <img src="/images/uploads/netlify-domain-dns.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+
+
+
 
 以上、ドメイン取得からnetlifyでのドメイン設定や、ドメインサイトでのCNAME設定など、一連の流れを紹介しました。
 
