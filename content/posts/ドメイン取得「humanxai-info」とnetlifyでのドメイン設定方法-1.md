@@ -3,12 +3,18 @@ title: netlifyでのドメイン設定方法
 date: 2025-05-26 08:17:00
 draft: false
 author: lain
+image: /images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-4-.png
 summary: netlifyでのドメイン設定方法の紹介
 categories:
   - netlify
 tags:
   - カスタマイズ
 ---
+<a href="/images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-4-.png" target="_blank">
+  <img src="/images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-4-.png" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+
+
 ## はじめに
 
 Netlifyで、静的ジェネレーター、Hugoを使いブログ作成をはじめ、形になってきたので、ドメインを取得してみました。
