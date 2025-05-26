@@ -136,17 +136,30 @@ SSL証明書の発行には数分～最大24時間ほどかかる場合があり
 
 ## ドメインにアクセスできなくなる
 
-暫くするとドメインにアクセスできなくなる不都合が出た為、netlify側でDNSの設定をするように変更
+暫くするとドメインにアクセスできなくなる不都合が出た為、netlify側でDNSの設定をするように変更。
 
-ドメインマネージメントの画面から、optionss -> Set up Netlify DNS
+ドメインマネージメントの画面から、
 
-を選択。画像では、www.humanxai.info になってますが、正確には、.humanxai.info の方。
+> optionss -> Set up Netlify DNS
 
+を選択。画像では、www.humanxai.info になってますが、正確には、**.humanxai.info** の方。
 
 <a href="/images/uploads/netlify-domain-dns.jpg" target="_blank">
   <img src="/images/uploads/netlify-domain-dns.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
 
+<a href="/images/uploads/netlify-domain-dns2.jpg" target="_blank">
+  <img src="/images/uploads/netlify-domain-dns2.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+
+<a href="/images/uploads/netlify-domain-dns3.jpg" target="_blank">
+  <img src="/images/uploads/netlify-domain-dns3.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+
+
+<a href="/images/uploads/netlify-domain-dns4.jpg" target="_blank">
+  <img src="/images/uploads/netlify-domain-dns4.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
 
 
 
