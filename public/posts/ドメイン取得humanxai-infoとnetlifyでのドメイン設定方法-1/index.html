@@ -3,7 +3,13 @@
 
 <head>
 
-<link rel="stylesheet" href="https://fixtan.github.io/my-blog/css/custom.d40d233e3dd3ea01eb58a61ff4048d8f5a30896187805ec1d8cfa3a6ef16ebe8.css">
+<link rel="stylesheet" href="https://fixtan.github.io/my-blog/css/custom.38b4e2ba2e79dca56d18641383651747f96b23add89f21482f96deefa3a53c66.css">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 
@@ -88,11 +94,14 @@
     <h1 class="post-title entry-hint-parent">
       netlifyでのドメイン設定方法
     </h1>
-    <div class="post-meta"><span title='2025-05-25 22:57:00 +0000 UTC'>May 25, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;lain
+    <div class="post-meta"><span title='2025-05-26 08:17:00 +0000 UTC'>May 26, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;lain
 
 </div>
   </header> 
-  <div class="post-content"><h2 id="はじめに">はじめに<a hidden class="anchor" aria-hidden="true" href="#はじめに">#</a></h2>
+  <div class="post-content"><a href="https://fixtan.github.io/my-blog/images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-4-.png" target="_blank">
+  <img src="https://fixtan.github.io/my-blog/images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-4-.png" alt="NetlifyのDNS設定" style="max-width:100%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+<h2 id="はじめに">はじめに<a hidden class="anchor" aria-hidden="true" href="#はじめに">#</a></h2>
 <p>Netlifyで、静的ジェネレーター、Hugoを使いブログ作成をはじめ、形になってきたので、ドメインを取得してみました。</p>
 <p>ドメイン取得には、以前契約したムームードメインを使いましたが、契約時にレンタルサーバーの契約が６か月発生するので、ご注意ください。
 ドメインだけ取得したい場合は別のサイトを検討された方が良いかもしれません。</p>
@@ -141,6 +150,57 @@
 <a href="https://fixtan.github.io/my-blog/images/uploads/イメージ16114.jpg" target="_blank">
   <img src="https://fixtan.github.io/my-blog/images/uploads/イメージ16114.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
+<p>上の画像が下の様になれば成功。</p>
+<a href="https://fixtan.github.io/my-blog/images/uploads/netlify-dns-setting.jpg" target="_blank">
+  <img src="https://fixtan.github.io/my-blog/images/uploads/netlify-dns-setting.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+<h2 id="dns-checker">DNS checker<a hidden class="anchor" aria-hidden="true" href="#dns-checker">#</a></h2>
+<p>序にDNS checkerサイトでドメインを確認しておくと安心。</p>
+<p><a href="https://dnschecker.org/#A/humanxai.info">https://dnschecker.org/#A/humanxai.info</a></p>
+<a href="https://fixtan.github.io/my-blog/images/uploads/netlify-dns-setting-dnschecker.jpg" target="_blank">
+  <img src="https://fixtan.github.io/my-blog/images/uploads/netlify-dns-setting-dnschecker.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+<h2 id="ドメインにアクセスすると警告ssl証明書">ドメインにアクセスすると警告（SSL証明書）<a hidden class="anchor" aria-hidden="true" href="#ドメインにアクセスすると警告ssl証明書">#</a></h2>
+<p>一連の設定が完了するとドメインでWEBにアクセスできるようになりますが、初期段階では以下のような警告画面が出る場合があります。</p>
+<a href="https://fixtan.github.io/my-blog/images/uploads/ssl-warning.jpg" target="_blank">
+  <img src="https://fixtan.github.io/my-blog/images/uploads/ssl-warning.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+<p>🔐 警告の理由：「SSL証明書の発行プロセスがまだ完全に完了していない」
+Netlify の「SSL/TLS certificate」セクションに：</p>
+<blockquote>
+<p>✅ DNS verification was successful</p>
+<p>🚫 でも証明書がまだ provision（発行）されていない</p></blockquote>
+<p>という状態なので、https 通信が有効化される前段階です。</p>
+<h3 id="-解決方法">✅ 解決方法<a hidden class="anchor" aria-hidden="true" href="#-解決方法">#</a></h3>
+<p>SSL証明書の発行には数分～最大24時間ほどかかる場合がありますので暫く待つ必要があります。</p>
+<p>ちなみにうちの場合は１時間ぐらいで警告が消え表示されるようになりました。</p>
+<h2 id="ドメインにアクセスできなくなる">ドメインにアクセスできなくなる<a hidden class="anchor" aria-hidden="true" href="#ドメインにアクセスできなくなる">#</a></h2>
+<p>暫くするとドメインにアクセスできなくなる不都合が出た為、netlify側でDNSの設定をするように変更。</p>
+<p>ドメインマネージメントの画面から、</p>
+<blockquote>
+<p>optionss -&gt; Set up Netlify DNS</p></blockquote>
+<p>を選択。画像では、www.humanxai.info になってますが、正確には、<strong>.humanxai.info</strong> の方。</p>
+<a href="https://fixtan.github.io/my-blog/images/uploads/netlify-domain-dns.jpg" target="_blank">
+  <img src="https://fixtan.github.io/my-blog/images/uploads/netlify-domain-dns.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+<a href="https://fixtan.github.io/my-blog/images/uploads/netlify-domain-dns2.jpg" target="_blank">
+  <img src="https://fixtan.github.io/my-blog/images/uploads/netlify-domain-dns2.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+<a href="https://fixtan.github.io/my-blog/images/uploads/netlify-domain-dn3.jpg" target="_blank">
+  <img src="https://fixtan.github.io/my-blog/images/uploads/netlify-domain-dn3.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+<a href="https://fixtan.github.io/my-blog/images/uploads/netlify-domain-dns4.jpg" target="_blank">
+  <img src="https://fixtan.github.io/my-blog/images/uploads/netlify-domain-dns4.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+<p>Update your domain&rsquo;s name servers まで進めたらネームサーバリストをメモ。</p>
+<p>ムームードメインの「ネームサーバ設定変更」を選択し「GMOペパポ以外のネームサーバを使用する」を選択するとネームサーバ入力欄が出るので、先程メモしたネームサーバを設定。</p>
+<a href="https://fixtan.github.io/my-blog/images/uploads/mu-mu-domein-namesever.jpg" target="_blank">
+  <img src="https://fixtan.github.io/my-blog/images/uploads/mu-mu-domein-namesever.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+<p>設定保存したら、Netlifyのドメイン設定画面に戻りRetry DNS verification をクリック。</p>
+<p>設定反映されるまで最小で１時間、最大で２日ぐらいかかるようなので、更新完了するまで暫く待ちます。</p>
+<p>以上、ドメイン取得からnetlifyでのドメイン設定や、ドメインサイトでのCNAME設定など、一連の流れを紹介しました。</p>
+<p>ご参考になれば幸いです。</p>
 
 
   </div>
@@ -220,122 +280,27 @@
   </footer>
 </article>
 	</main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="https://fixtan.github.io/my-blog/">lainのAIと創作ブログ</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: { slidesPerView: 1.2 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }
     });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
+  });
 </script>
 
 <script src="https://fixtan.github.io/my-blog/js/lunr.min.js"></script>

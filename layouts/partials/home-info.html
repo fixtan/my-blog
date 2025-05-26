@@ -1,0 +1,63 @@
+<div class="home-info">
+  <div class="container">
+    <h2 class="section-title">注目のプロジェクト</h2>
+    <!-- Swiper -->
+    <div class="swiper featured-swiper">
+      <div class="swiper-wrapper">
+        {{ range .Site.Pages }}
+          {{ if and .File (in $.Site.Params.homeInfoParams.featured.items .File.BaseFileName) }}
+            <div class="swiper-slide">
+              <div class="card">
+                <span class="card-badge">注目</span>
+                <div class="card-content">
+                  <img src="{{ .Params.image }}" alt="{{ .Title }}" class="card-thumb" />
+                  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                  <p>
+                    {{ with .Params.summary }}
+                      {{ . }}
+                    {{ else }}
+                      {{ .Plain | truncate 100 }}
+                    {{ end }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <!-- Swiper init script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        new Swiper('.featured-swiper', {
+          loop: true,
+          slidesPerView: 3,
+          spaceBetween: 20,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          autoplay: {
+            delay: 3000, //スライド待ち時間 3 秒
+            disableOnInteraction: false,
+          },
+          breakpoints: {
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+          }
+        });
+      });
+    </script>
+  </div>
+</div>

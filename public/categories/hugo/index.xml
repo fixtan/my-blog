@@ -6,14 +6,21 @@
     <description>Recent content in Hugo on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 23 May 2025 14:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 May 2025 10:20:00 +0000</lastBuildDate>
     <atom:link href="https://fixtan.github.io/my-blog/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugoで未来記事を表示させるには？ </title>
+      <link>https://fixtan.github.io/my-blog/posts/hugo%E3%81%A7%E6%9C%AA%E6%9D%A5%E8%A8%98%E4%BA%8B%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF/</link>
+      <pubDate>Mon, 26 May 2025 10:20:00 +0000</pubDate>
+      <guid>https://fixtan.github.io/my-blog/posts/hugo%E3%81%A7%E6%9C%AA%E6%9D%A5%E8%A8%98%E4%BA%8B%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF/</guid>
+      <description>Hugoで未来記事を表示させる方法の紹介（config.toml）</description>
+    </item>
     <item>
       <title>Hugoで使われているテンプレートを確認する方法</title>
       <link>https://fixtan.github.io/my-blog/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</link>
       <pubDate>Fri, 23 May 2025 14:08:00 +0000</pubDate>
       <guid>https://fixtan.github.io/my-blog/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</guid>
-      <description>Hugoで現在使用中のテンプレートリストを確認する方法の紹介。</description>
+      <description>使用中のテンプレートリスト確認方法</description>
     </item>
   </channel>
 </rss>

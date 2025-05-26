@@ -35,6 +35,12 @@ theme = 'PaperMod'
 
 [params.homeInfoParams]
   disable = true
+  Title = "lainのAIと創作ブログ"
+  Content = "AIと創作の記録。生成AI、ブログ技術、システム開発の軌跡をまとめています。"
+
+  [params.homeInfoParams.featured]
+    enabled = true
+    items = ["project1", "project2", "project3", "project4", "project5"]
 
 
 [menu]

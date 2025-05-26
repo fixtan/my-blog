@@ -22,6 +22,8 @@
     {{ $featuredLinks = $featuredLinks | append .RelPermalink }}
   {{ end }}
 
+  {{ partial "home-info.html" . }}
+
   <section class="featured-posts">
     <div class="post-list">
       {{ range $featured }}

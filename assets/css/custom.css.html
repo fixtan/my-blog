@@ -635,3 +635,82 @@ body.dark .share-buttons li a:hover {
   height: auto;
   z-index: 5;
 }
+
+
+/* home-info: ポートフォリオ表示用スタイル */
+/* featured cards セクションのスタイル */
+.main .home-info {
+  padding: 1rem 1rem;  /* ← 上余白を減らす */
+  margin: 1rem 0;
+
+  background: #f9f9f9;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #f0faff, #ffffff);
+}
+
+.card-thumb {
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  margin-top: 0;  /* ← タイトルの上余白をなくす */
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  border-left: 6px solid #007acc;
+  padding-left: 0.5rem;
+}
+
+.featured-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.card {
+  position: relative; /* ← これが必要（親要素として） */
+  flex: 1 1 300px;
+  max-width: 320px;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+@media (max-width: 768px) {
+  .featured-cards {
+    flex-direction: column;
+  }
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+.card-content h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* 注目 */
+.card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #007acc;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  z-index: 2;
+}
