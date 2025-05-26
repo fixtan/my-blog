@@ -3,7 +3,7 @@ title: netlifyでのドメイン設定方法
 date: 2025-05-26 08:17:00
 draft: false
 author: lain
-image: /images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-4-.png
+image: /images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-8-.png
 summary: netlifyでのドメイン設定方法の紹介
 categories:
   - netlify
