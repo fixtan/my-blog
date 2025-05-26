@@ -152,16 +152,27 @@ SSL証明書の発行には数分～最大24時間ほどかかる場合があり
   <img src="/images/uploads/netlify-domain-dns2.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
 
-<a href="/images/uploads/netlify-domain-dns3.jpg" target="_blank">
-  <img src="/images/uploads/netlify-domain-dns3.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+<a href="/images/uploads/netlify-domain-dn3.jpg" target="_blank">
+  <img src="/images/uploads/netlify-domain-dn3.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
-
 
 <a href="/images/uploads/netlify-domain-dns4.jpg" target="_blank">
   <img src="/images/uploads/netlify-domain-dns4.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
 
+Update your domain's name servers まで進めたらネームサーバリストをメモ。
 
+ムームードメインの「ネームサーバ設定変更」を選択し「GMOペパポ以外のネームサーバを使用する」を選択するとネームサーバ入力欄が出るので、先程メモしたネームサーバを設定。
+
+<a href="/images/uploads/mu-mu-domein-namesever.jpg" target="_blank">
+  <img src="/images/uploads/mu-mu-domein-namesever.jpg" alt="NetlifyのDNS設定" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+
+設定保存したら、Netlifyのドメイン設定画面に戻りRetry DNS verification をクリック。
+
+
+
+設定反映されるまで最小で１時間、最大で２日ぐらいかかるようなので、更新完了するまで暫く待ちます。
 
 以上、ドメイン取得からnetlifyでのドメイン設定や、ドメインサイトでのCNAME設定など、一連の流れを紹介しました。
 
