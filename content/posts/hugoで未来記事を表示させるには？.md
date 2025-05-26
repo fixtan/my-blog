@@ -8,7 +8,9 @@ summary: Hugoで未来記事を表示させる方法の紹介（config.toml）
 categories:
   - その他
 ---
-![](/images/uploads/hugo-futurearticle.png "Hugoで未来記事を表示させる方法の紹介（config.toml）")
+<a href="/images/uploads/hugo-futurearticle.png" target="_blank">
+  <img src="/images/uploads/hugo-futurearticle.png" alt="NetlifyのDNS設定" style="max-width:100%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
 
 ## はじめに
 
