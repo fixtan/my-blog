@@ -6,7 +6,9 @@ author: lain
 image: /images/uploads/hugo-futurearticle.png
 summary: Hugoで未来記事を表示させる方法の紹介（config.toml）
 categories:
-  - その他
+  - Hugo
+tags:
+  - カスタマイズ
 ---
 <a href="/images/uploads/hugo-futurearticle.png" target="_blank">
   <img src="/images/uploads/hugo-futurearticle.png" alt="NetlifyのDNS設定" style="max-width:100%; height:auto; border:1px solid #ccc; border-radius:6px;" />
