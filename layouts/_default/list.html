@@ -30,7 +30,7 @@
   {{ end }}
 
   <!-- ✅ おすすめ記事 -->
-  <h2 class="section-heading">おすすめ記事</h2>
+  <h2 class="section-heading section-heading--recommended">おすすめ記事</h2>
   <section class="post-grid">
     {{ range $featured }}
       {{ partial "post-card.html" . }}
@@ -38,7 +38,7 @@
   </section>
 
   <!-- ✅ 最新記事（Type無視、すべて対象） -->
-  <h2 class="section-heading">最新記事</h2>
+  <h2 class="section-heading section-heading--recent">最新記事</h2>
   <section class="post-grid">
     {{ range first 6 (sort .Site.RegularPages "Date" "desc") }}
       {{ partial "post-card.html" . }}
@@ -46,7 +46,7 @@
   </section>
 
   <!-- ✅ カテゴリ別 -->
-  <h2 class="section-heading">カテゴリ別の記事</h2>
+  <h2 class="section-heading section-heading--category">カテゴリ別の記事</h2>
   {{ range $name, $pages := .Site.Taxonomies.categories }}
     <h3 class="category-heading">{{ $name }}</h3>
     <section class="post-grid">

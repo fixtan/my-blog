@@ -725,10 +725,33 @@ body.dark .share-buttons li a:hover {
 
 .section-heading {
   font-size: 1.8rem;
-  border-left: 5px solid #4ecdc4;
   padding-left: 1rem;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
+  border-left: 5px solid #ccc;
+}
+/* 色分け */
+.section-heading--featured { border-color: #007acc; }  /* 注目 */
+.section-heading--recommended { border-color: #4ecdc4; }  /* おすすめ */
+.section-heading--recent { border-color: #f39c12; }  /* 最新 */
+.section-heading--category { 
+  background: #f5e6ff;              /* 背景を淡く紫に */
+  border-left: 6px solid #8e44ad;   /* 縦線の強調 */
+  padding: 0.6em 1em;
+  font-size: 1.6rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06); /* 立体感 */
+  border-radius: 4px;
+}  /* カテゴリ別 */
+
+.card-badge--recommended {
+  background-color: #4ecdc4;
+  color: white;
+}
+
+.card-badge--featured {
+  background-color: #007acc;
 }
 
 .category-heading {
