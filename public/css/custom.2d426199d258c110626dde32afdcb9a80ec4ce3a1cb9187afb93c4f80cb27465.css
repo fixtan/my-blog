@@ -218,7 +218,7 @@ svg path[d="M12 6H0l6-6z"] {
 /* ヒーロー画像 */
 /* ヒーロー画像 */
 .hero {
-  background-image: url("{{ "images/header.jpg" | absURL }}");
+  background-image: url("http://localhost:1313/my-blog/images/header.jpg");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -732,43 +732,8 @@ body.dark .share-buttons li a:hover {
 }
 /* 色分け */
 .section-heading--featured { border-color: #007acc; }  /* 注目 */
- /* おすすめ */
-.section-heading--recommended {
-  background: #d3f7f2;              /* ミントグリーン背景 */
-  border-left: 6px solid #4ecdc4;
-  padding: 0.6em 1em;
-  font-size: 1.6rem;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-  border-radius: 4px;
-} 
-.section-block--recommended {
-  background-color: #e8fdfa;  /* 同系色の淡い背景 */
-  padding: 1rem 1.5rem;
-  border-radius: 6px;
-  margin-bottom: 2rem;
-}
-
-
-/* 最新 */
-.section-heading--recent {
-  background: #ffe7bb;              /* 薄いオレンジ背景 */
-  border-left: 6px solid #f39c12;
-  padding: 0.6em 1em;
-  font-size: 1.6rem;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-  border-radius: 4px;
-}
-.section-block--recent {
-  background-color: #fff6e5;  /* オレンジ系の淡い背景 */
-  padding: 1rem 1.5rem;
-  border-radius: 6px;
-  margin-bottom: 2rem;
-}
-
+.section-heading--recommended { border-color: #4ecdc4; }  /* おすすめ */
+.section-heading--recent { border-color: #f39c12; }  /* 最新 */
 /* カテゴリ別:タイトル装飾 */
 .section-heading--category { 
   background: #f5e6ff;              /* 背景を淡く紫に */
@@ -779,14 +744,7 @@ body.dark .share-buttons li a:hover {
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.06); /* 立体感 */
   border-radius: 4px;
-} 
-/* カテゴリ別:背景装飾 */
-.section-block--category {
-  background-color: #faf3ff;  /* カテゴリ全体を薄い背景で囲う */
-  padding: 1rem 1.5rem;
-  border-radius: 6px;
-  margin-bottom: 2rem;
-}
+}  
 
 .card-badge--recommended {
   background-color: #4ecdc4;

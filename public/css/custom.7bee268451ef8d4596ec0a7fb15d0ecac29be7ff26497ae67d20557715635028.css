@@ -218,7 +218,7 @@ svg path[d="M12 6H0l6-6z"] {
 /* ヒーロー画像 */
 /* ヒーロー画像 */
 .hero {
-  background-image: url("{{ "images/header.jpg" | absURL }}");
+  background-image: url("http://localhost:1313/my-blog/images/header.jpg");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -771,7 +771,7 @@ body.dark .share-buttons li a:hover {
 
 /* カテゴリ別:タイトル装飾 */
 .section-heading--category { 
-  background: #f5e6ff;              /* 背景を淡く紫に */
+  background: #faf3ff;              /* 背景を淡く紫に */
   border-left: 6px solid #8e44ad;   /* 縦線の強調 */
   padding: 0.6em 1em;
   font-size: 1.6rem;
