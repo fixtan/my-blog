@@ -24,56 +24,20 @@ load_config_file: false
 custom_script: "/admin/preview-templates.js"
 
 collections:
-  - name: "posts"
+  - name: "post"
     label: "記事"
     folder: "content/posts"
     create: true
     slug: "{{slug}}"
     fields:
-      - label: "タイトル"
-        name: "title"
-        widget: "string"
+      - { label: "タイトル", name: "title", widget: "string" }
+      - { label: "日付", name: "date", widget: "datetime" }
+      - { label: "下書き", name: "draft", widget: "boolean", default: false }
+      - { label: "著者", name: "author", widget: "string", default: "lain" }
+      - { label: "画像", name: "image", widget: "image" }
+      - { label: "概要", name: "summary", widget: "text", required: false }
+      - { label: "カテゴリ", name: "categories", widget: "list", default: ["未分類"] }
+      - { label: "タグ", name: "tags", widget: "list" }
 
-      - label: "日付"
-        name: "date"
-        widget: "datetime"
-        date_format: "YYYY-MM-DD HH:mm"
-        time_format: "HH:mm"
-        format: "YYYY-MM-DD HH:mm:ss"
-        picker_utc: false   # false → 2025-05-26 16:45:00 のようなローカル形式（JST扱いされやすい）true（デフォルト） → 2025-05-26T07:45:00.000Z 形式（UTC）
-
-      - label: "下書き"
-        name: "draft"
-        widget: "boolean"
-        default: false
-
-      - label: "著者"
-        name: "author"
-        widget: "string"
-        default: "lain"
-
-      - label: "アイキャッチ画像"
-        name: "image"
-        widget: "image"
-        required: false
-
-      - label: "概要（抜粋）"
-        name: "summary"
-        widget: "string"
-        required: false
-        default: "（抜粋がありません）"
-
-      - label: "カテゴリ"
-        name: "categories"
-        widget: "list"
-        required: false
-        default: ["その他"]
-
-      - label: "タグ"
-        name: "tags"
-        widget: "list"
-        required: false
-
-      - label: "本文"
-        name: "body"
-        widget: "markdown"
+      # ✅ 追加するweightフィールド
+      - { label: "表示順（weight）", name: "weight", widget: "number", required: false, default: 20 }

@@ -9,6 +9,7 @@ categories:
   - netlify
 tags:
   - カスタマイズ
+weight: 4
 ---
 <a href="/images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-4-.png" target="_blank">
   <img src="/images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-4-.png" alt="NetlifyのDNS設定" style="max-width:100%; height:auto; border:1px solid #ccc; border-radius:6px;" />

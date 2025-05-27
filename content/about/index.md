@@ -1,7 +1,7 @@
 ---
 title: "自己紹介"
 date: 2025-05-16
-weight: 1 
+weight: 10
 ---
 
 こんにちは、lainです。  

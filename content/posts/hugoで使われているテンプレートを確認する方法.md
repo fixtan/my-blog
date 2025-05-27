@@ -9,6 +9,7 @@ categories:
   - Hugo
 tags:
   - コマンド
+weight: 20
 ---
 ![](/images/uploads/blog-i-cach_hugo-template.png "Hugoで現在使用中のテンプレートリストを確認する方")
 

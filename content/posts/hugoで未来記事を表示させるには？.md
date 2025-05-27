@@ -9,6 +9,7 @@ categories:
   - Hugo
 tags:
   - カスタマイズ
+weight: 20
 ---
 <a href="/images/uploads/hugo-futurearticle.png" target="_blank">
   <img src="/images/uploads/hugo-futurearticle.png" alt="NetlifyのDNS設定" style="max-width:100%; height:auto; border:1px solid #ccc; border-radius:6px;" />

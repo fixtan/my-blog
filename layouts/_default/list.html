@@ -16,90 +16,46 @@
   </div>
   <ul id="searchResults" class="search-results"></ul>
 
-  {{ $featured := first 3 (sort (where .Site.RegularPages "Weight" "lt" 10) "Weight") }}
+  {{ partial "home-info.html" . }}
+
+  {{/* すべての注目記事のBaseFileNameを取得 */}}
+  {{ $highlighted := $.Site.Params.homeInfoParams.featured.items }}
+
+  {{/* ✅ featured記事の抽出とリンク記録 */}}
+  {{/* 注目記事以外かつ Weight < 10 のものだけを featured に */}}
+  {{ $featured := first 3 (where (where .Site.RegularPages "Weight" "lt" 10) "File.BaseFileName" "not in" $highlighted) }}
   {{ $featuredLinks := slice }}
   {{ range $featured }}
     {{ $featuredLinks = $featuredLinks | append .RelPermalink }}
   {{ end }}
 
-  {{ partial "home-info.html" . }}
-
-  <section class="featured-posts">
-    <div class="post-list">
-      {{ range $featured }}
-        <article class="featured-article">
-          <!-- 透明リンクを記事全体に被せる -->
-          <a href="{{ .RelPermalink }}" class="full-link" aria-label="{{ .Title }}"></a>
-
-          <div class="thumb-wrapper">
-            {{ if .Params.image }}
-              <img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-thumb">
-              <img src="/images/badge-featured.png" alt="おすすめ" class="featured-badge">
-            {{ else }}
-              <img src="/images/noimage.jpg" alt="No image" class="post-thumb">
-              <img src="/images/badge-featured.png" alt="おすすめ" class="featured-badge">
-            {{ end }}
-          </div>
-
-          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-          <p>{{ .Date.Format "2006-01-02" }} | {{ .Params.author }}</p>
-
-          {{ if and (.Params.summary) (ne (.Params.summary | plainify | trim " \n\r\t") "") }}
-            <p class="summary">{{ .Params.summary }}</p>
-          {{ else }}
-            <p class="summary">(抜粋がありません)</p>
-          {{ end }}
-
-          <div class="meta-wrapper">
-            {{ with .Params.categories }}
-              <p class="post-meta">カテゴリ：
-                {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
-              </p>
-            {{ end }}
-            {{ with .Params.tags }}
-              <p class="post-meta">タグ：
-                {{ range . }}<span class="tag">#{{ . }}</span>{{ end }}
-              </p>
-            {{ end }}
-          </div>
-        </article>
-      {{ end }}
-    </div>
-  </section>
-
-  <section class="post-list">
-    {{ range .Site.RegularPages }}
-      {{ if not (in $featuredLinks .RelPermalink) }}
-        <article>
-          {{ if .Params.image }}
-            <img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-thumb">
-          {{ else }}
-            <img src="/images/noimage.jpg" alt="No image" class="post-thumb">
-          {{ end }}
-
-          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-          <p>{{ .Date.Format "2006-01-02" }} | {{ .Params.author }}</p>
-
-          {{ if and (.Params.description) (ne .Params.description "") }}
-            <p class="summary">{{ .Params.description }}</p>
-          {{ else }}
-            <p class="summary">{{ .Summary | default "(抜粋がありません)" }}</p>
-          {{ end }}
-
-          <div class="meta-wrapper">
-            {{ with .Params.categories }}
-              <p class="post-meta">カテゴリ：
-                {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
-              </p>
-            {{ end }}
-            {{ with .Params.tags }}
-              <p class="post-meta">タグ：
-                {{ range . }}<span class="tag">#{{ . }}</span>{{ end }}
-              </p>
-            {{ end }}
-          </div>
-        </article>
-      {{ end }}
+  <!-- ✅ おすすめ記事 -->
+  <h2 class="section-heading">おすすめ記事</h2>
+  <section class="post-grid">
+    {{ range $featured }}
+      {{ partial "post-card.html" . }}
     {{ end }}
   </section>
+
+  <!-- ✅ 最新記事（Type無視、すべて対象） -->
+  <h2 class="section-heading">最新記事</h2>
+  <section class="post-grid">
+    {{ range first 6 (sort .Site.RegularPages "Date" "desc") }}
+      {{ partial "post-card.html" . }}
+    {{ end }}
+  </section>
+
+  <!-- ✅ カテゴリ別 -->
+  <h2 class="section-heading">カテゴリ別の記事</h2>
+  {{ range $name, $pages := .Site.Taxonomies.categories }}
+    <h3 class="category-heading">{{ $name }}</h3>
+    <section class="post-grid">
+      {{ range $pages }}
+        {{ if not (in $featuredLinks .RelPermalink) }}
+          {{ partial "post-card.html" . }}
+        {{ end }}
+      {{ end }}
+    </section>
+  {{ end }}
+
 {{ end }}

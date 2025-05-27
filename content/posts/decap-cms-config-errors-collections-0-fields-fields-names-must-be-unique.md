@@ -11,6 +11,7 @@ categories:
   - ブログ
 tags:
   - Decap CMS
+weight: 9
 ---
 <center><img src="/images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-3-.png" width="80%"></center>
 

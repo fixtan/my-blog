@@ -3,6 +3,7 @@ title: Decap CMS導入テスト投稿
 date: 2025-05-21
 draft: false
 author: "lain"
+weight: 20
 ---
 日本語入力テスト。
 

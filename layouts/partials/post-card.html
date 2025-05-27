@@ -1,0 +1,36 @@
+<article class="post-card">
+  <a href="{{ .RelPermalink }}" class="full-link" aria-label="{{ .Title }}"></a>
+
+  <div class="thumb-wrapper">
+    {{ if .Params.image }}
+      <img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-thumb">
+    {{ else }}
+      <img src="/images/noimage.jpg" alt="No image" class="post-thumb">
+    {{ end }}
+  </div>
+
+  <h3 class="post-title">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </h3>
+
+  <p class="post-date">{{ .Date.Format "2006-01-02" }} | {{ .Params.author }}</p>
+
+  {{ if and (.Params.summary) (ne (.Params.summary | plainify | trim " \n\r\t") "") }}
+    <p class="summary">{{ .Params.summary }}</p>
+  {{ else }}
+    <p class="summary">{{ .Summary | default "(抜粋がありません)" }}</p>
+  {{ end }}
+
+  <div class="meta-wrapper">
+    {{ with .Params.categories }}
+      <p class="post-meta">カテゴリ：
+        {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+      </p>
+    {{ end }}
+    {{ with .Params.tags }}
+      <p class="post-meta">タグ：
+        {{ range . }}<span class="tag">#{{ . }}</span>{{ end }}
+      </p>
+    {{ end }}
+  </div>
+</article>
