@@ -4,7 +4,7 @@
 
 [context.production.environment]
   HUGO_VERSION = "0.147.3" # あなたが使ってるHugoのバージョン（例）
-  HUGO_BASEURL = "https://steady-malasada-321e32.netlify.app/"
+  HUGO_BASEURL = "https://humanxai.info/"
 
 [[redirects]]
   from = "/admin/*"
