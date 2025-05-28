@@ -2,6 +2,13 @@ main.main {
   margin-top: 0;
   padding-top: 10px;
 }
+/* ヒーロー画像上のタイトル（H1）*/
+.no-border {
+  border-left: none !important;
+  padding-left: 0 !important;
+}
+
+
 
 /* 記事ページの装飾 */
 .post-content p {
@@ -208,8 +215,10 @@ svg path[d="M12 6H0l6-6z"] {
 }
 
 
+/* ヒーロー画像 */
+/* ヒーロー画像 */
 .hero {
-  background-image: url("{{ "images/header.jpg" | absURL }}");
+  background-image: url("http://localhost:1313/images/header.jpg");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -220,11 +229,13 @@ svg path[d="M12 6H0l6-6z"] {
   position: relative;
   color: white;
   border-radius: 12px;
-  margin-bottom: 1.0rem; /* ← もしくは 0 */
+  margin-bottom: 1rem;
+  overflow: hidden; /* ← 擬似要素がはみ出ないように */
   opacity: 0;
   transform: translateY(-10px);
   animation: fadeInHero 1s ease forwards;
 }
+
 @keyframes fadeInHero {
   0% {
     opacity: 0;
@@ -241,15 +252,18 @@ svg path[d="M12 6H0l6-6z"] {
   padding-top: 0 !important;
 }
 
+/* グラデーションの追加：画像の上にレイヤーで重ねる */
 .hero::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0));
   z-index: 1;
-  border-radius: 12px;
 }
 
+/* テキストとグラデが重ならないように前面に出す */
 .hero-inner {
   position: relative;
   z-index: 2;
@@ -257,9 +271,24 @@ svg path[d="M12 6H0l6-6z"] {
   text-align: center;
 }
 
+/* テキストがより読みやすくなる */
 .hero-inner h1,
 .hero-inner p {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.featured-article {
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-article .full-link {
+  position: absolute;
+  inset: 0; /* 上下左右を0で埋める */
+  z-index: 10;
+  text-indent: -9999px; /* テキスト非表示 */
+  background: transparent;
+  cursor: pointer;
 }
 
 
@@ -272,23 +301,6 @@ svg path[d="M12 6H0l6-6z"] {
   gap: 1.5rem;
 }
 
-.post-list article {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 360px; /* 👈 ここを調整して正方形に近づけます */
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  padding: 0;
-  align-items: stretch;
-}
-
-.post-list article:hover {
-  transform: translateY(-4px);
-}
 
 /* 検索バーを右寄せ */
 .search-bar-wrapper {
@@ -362,77 +374,6 @@ svg path[d="M12 6H0l6-6z"] {
 }
 
 
-
-/* --- タイトル・日付・概要 --- */
-.post-list h2 {
-  font-size: 1.1rem;
-  margin: 0.5rem 0 0.2rem; /* 下の余白を縮小 */
-  text-align: center;
-}
-.post-list h2 a {
-  color: #3366cc;
-  text-decoration: none;
-}
-/* 日付のスタイルを整え、余白を調整 */
-.post-list time {
-  font-size: 0.75rem;
-  color: #777;
-  margin: 0;              /* ← 余白を完全になくす */
-  padding: 0;             /* ← 念のため */
-  display: block;
-  text-align: center;
-  line-height: 1.2;
-}
-
-.post-list p {
-  margin-top: 0.6em;
-  margin-bottom: auto;
-  
-
-  font-size: 0.85rem;
-  line-height: 1.4;
-  
-  padding: 0 1rem 0.8rem;
-  text-align: center;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-
-/* --- サムネイル画像 --- */
-.post-thumb {
-  width: 100%;
-  height: 160px;
-  object-fit: contain;
-  background-color: #f5f5f5;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.post-thumb:hover {
-  transform: scale(1.03);
-}
-
-.thumb-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-
-.featured-badge {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 70px; /* 必要に応じて調整 */
-  height: auto;
-  z-index: 5;
-}
-
-
 @media (max-width: 600px) {
     .hero {
       padding: 40px 15px;
@@ -454,20 +395,24 @@ svg path[d="M12 6H0l6-6z"] {
       justify-content: flex-start;
       height: 340px; /* コンパクト化 */
       background-color: #fff;
-      border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       overflow: hidden;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
       padding: 0;
       text-align: center;
     }
     .post-list article:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
 }
 
-
+/* カードのタイトルからHタグの装飾を外す */
+.post-list h2 {
+  border-left: none !important;
+  padding-left: 0 !important;
+}
 
 
 /* アイコン整列  */
@@ -563,53 +508,35 @@ body.dark .share-buttons li a:hover {
 
 /* --- カード内部のレイアウトを調整（高さ固定＆抜粋制限） --- */
 
-/* カード本体 */
-.post-list article {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 360px;         /* 高さを固定 */
-  padding-bottom: 1rem;
-  overflow: hidden;      /* 内容はみ出し防止 */
-}
-
-/* タイトル */
-.post-list h2 {
-  font-size: 1.1rem;
-  margin: 0.75rem auto 0.25rem;
-  text-align: center;
-  padding: 0 1rem;
-}
-
-/* 日付 */
-.post-list time {
-  font-size: 0.75rem;
-  color: #777;
-  text-align: center;
-  margin-bottom: 0.4rem;
-}
-
-/* 抜粋 */
-.post-list p {
+/* === 抜粋（summary）専用スタイル === */
+.post-list p.summary {
   font-size: 0.85rem;
   line-height: 1.5;
   text-align: center;
   padding: 0 1rem;
   margin: 0.5rem auto 0.5rem;
-
-  /* 2行で切り詰めて省略表示 */
+  
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 2;  /* 抜粋行数 */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+/* === 通常の段落・日時など（省略せず表示） === */
+.post-list p {
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* === メタ情報（タグ・カテゴリ） === */
 .meta-wrapper {
   margin-top: auto;
-  text-align: center;
   padding-top: 0.5rem;
-  min-height: 2.5em;
+  text-align: center;
+  min-height: auto; /* ← もしくは削除してOK */
 }
 
 .post-meta {
@@ -619,12 +546,306 @@ body.dark .share-buttons li a:hover {
 }
 
 .post-meta .tag {
+  max-width: 80px;
+  font-size: 0.65rem;
+  padding: 2px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ }
+
+/* === カードレイアウト全体 === */
+.post-list article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: auto;
+  max-height: 460px;
+  overflow-y: auto;
+
+  padding: 1rem 1rem 2.0rem; /* 上・左右・下の余白を調整（特に下） */
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.post-list article:hover {
+  transform: translateY(-4px);
+}
+
+/* === タイトル・日付 === */
+.post-list h2 {
+  font-size: 1.1rem;
+  margin: 0.75rem auto 0.25rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.post-list h2 a {
   display: inline-block;
-  background-color: #eef;
-  color: #336;
-  padding: 2px 6px;
-  margin: 2px 4px;
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid #007acc;
+  padding: 0.2rem 0.4rem;
+  transition: all 0.3s ease;
+}
+
+.post-list h2 a:hover {
+  color: #005fa3;
+  border-bottom-color: #005fa3;
+  background-color: rgba(0, 122, 204, 0.05);
+}
+.post-list time {
+  font-size: 0.75rem;
+  color: #777;
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+
+/* === サムネイル画像 === */
+.post-thumb {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  background-color: #f5f5f5;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.post-thumb:hover {
+  transform: scale(1.03);
+}
+
+.thumb-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* おすすめラベルの位置 */
+.featured-badge {
+  position: absolute;
+  top: -8px;
+  left: 8px;
+  width: 70px;
+  height: auto;
+  z-index: 5;
+}
+
+
+/* home-info: ポートフォリオ表示用スタイル */
+/* featured cards セクションのスタイル */
+.main .home-info {
+  padding: 1rem 1rem;  /* ← 上余白を減らす */
+  margin: 1rem 0;
+
+  background: #f9f9f9;
   border-radius: 12px;
-  font-size: 0.7rem;
+  background: linear-gradient(145deg, #f0faff, #ffffff);
+}
+
+.card-thumb {
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  margin-top: 0;  /* ← タイトルの上余白をなくす */
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  border-left: 6px solid #007acc;
+  padding-left: 0.5rem;
+}
+
+.featured-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.card {
+  position: relative; /* ← これが必要（親要素として） */
+  flex: 1 1 300px;
+  max-width: 320px;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+@media (max-width: 768px) {
+  .featured-cards {
+    flex-direction: column;
+  }
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+.card-content h3 {
+  font-size: 1rem;
   line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* 注目 */
+.card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #007acc;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  z-index: 2;
+}
+
+.swiper-slide .card {
+  transform: scale(0.95);
+  transition: transform 0.2s ease;
+}
+.swiper-slide-active .card {
+  transform: scale(1);
+}
+
+.section-heading {
+  font-size: 1.8rem;
+  padding-left: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #ccc;
+}
+/* 色分け */
+.section-heading--featured { border-color: #007acc; }  /* 注目 */
+ /* おすすめ */
+.section-heading--recommended {
+  background: #d3f7f2;              /* ミントグリーン背景 */
+  border-left: 6px solid #4ecdc4;
+  padding: 0.6em 1em;
+  font-size: 1.6rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  border-radius: 4px;
+} 
+.section-block--recommended {
+  background-color: #e8fdfa;  /* 同系色の淡い背景 */
+  padding: 0.1rem 1.5rem 0.1rem 1.5rem ; /* padding: 1rem 1.5rem; */
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+
+/* 最新 */
+.section-heading--recent {
+  background: #ffe7bb;              /* 薄いオレンジ背景 */
+  border-left: 6px solid #f39c12;
+  padding: 0.6em 1em;
+  font-size: 1.6rem;
+  margin-top: 20px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  border-radius: 4px;
+}
+.section-block--recent {
+  background-color: #fff6e5;  /* オレンジ系の淡い背景 */
+  padding: 0.1rem 1.5rem 0.1rem 1.5rem ; /* padding: 1rem 1.5rem; */
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+/* カテゴリ別:タイトル装飾 */
+.section-heading--category { 
+  background: #f5e6ff;              /* 背景を淡く紫に */
+  border-left: 6px solid #8e44ad;   /* 縦線の強調 */
+  padding: 0.6em 1em;
+  font-size: 1.6rem;
+  margin-top: 20px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06); /* 立体感 */
+  border-radius: 4px;
+} 
+/* カテゴリ別:背景装飾 */
+.section-block--category {
+  background-color: #faf3ff;  /* カテゴリ全体を薄い背景で囲う */
+  padding: 0.1rem 1.5rem 0.1rem 1.5rem ; /* padding: 1rem 1.5rem; */
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+.card-badge--recommended {
+  background-color: #4ecdc4;
+  color: white;
+}
+
+.card-badge--featured {
+  background-color: #007acc;
+}
+
+.category-heading {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  border-bottom: 1px dashed #ccc;
+}
+
+.post-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.post-card {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: calc(33% - 1rem);
+  box-sizing: border-box;
+  transition: transform 0.2s;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+}
+
+
+/* ビデオ装飾 */
+.video-frame {
+  position: relative;
+  background: #222;
+  border-radius: 20px;
+  border: 5px solid #444;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.video-frame::before {
+  content: "CH1";
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-family: monospace;
+  color: #0f0;
+  background: #000;
+  padding: 2px 6px;
+  font-size: 14px;
+  border-radius: 3px;
 }

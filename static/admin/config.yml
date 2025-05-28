@@ -38,7 +38,24 @@ collections:
       - { label: "著者", name: "author", widget: "string", default: "lain" }
       - { label: "画像", name: "image", widget: "image" }
       - { label: "概要", name: "summary", widget: "text", required: false }
-      - { label: "本文", name: "body", widget: "markdown" }  # ← 追加！
+      - { label: "本文", name: "body", widget: "markdown" }  
+      - { label: "カテゴリ", name: "categories", widget: "list", default: ["未分類"] }
+      - { label: "タグ", name: "tags", widget: "list" , field: { name: "tag", widget: "string" } }
+      - { label: "表示順（weight）", name: "weight", widget: "number", required: false, default: 20 }
+
+  - name: "featured"
+    label: "注目プロジェクト"
+    folder: "content/featured"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "タイトル", name: "title", widget: "string" }
+      - { label: "日付", name: "date", widget: "datetime" }
+      - { label: "下書き", name: "draft", widget: "boolean", default: false }
+      - { label: "著者", name: "author", widget: "string", default: "lain" }
+      - { label: "画像", name: "image", widget: "image" }
+      - { label: "概要", name: "summary", widget: "text", required: false }
+      - { label: "本文", name: "body", widget: "markdown" }  
       - { label: "カテゴリ", name: "categories", widget: "list", default: ["未分類"] }
       - { label: "タグ", name: "tags", widget: "list" , field: { name: "tag", widget: "string" } }
       - { label: "表示順（weight）", name: "weight", widget: "number", required: false, default: 20 }

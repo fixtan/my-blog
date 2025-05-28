@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 
-<link rel="stylesheet" href="https://humanxai.info/css/custom.99548d9b77162ba7db1f399eddc0c32d124a5447643e4ce769f338b1fcd0cde5.css">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.53374d1debb476b851591f06d8e5eeade57e0d1eed1da4972dae056e84841954.css">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -17,8 +17,8 @@
   <nav class="nav">
     
     <div class="logo">
-      <a href="https://humanxai.info/" accesskey="h" title="lainのAIと創作ブログ">
-        <img src="https://humanxai.info/images/logo-icon.png" alt="logo" class="logo-image">
+      <a href="http://localhost:1313/" accesskey="h" title="lainのAIと創作ブログ">
+        <img src="http://localhost:1313/images/logo-icon.png" alt="logo" class="logo-image">
         lainのAIと創作ブログ
       </a>
     </div>
@@ -32,7 +32,7 @@
         
         
         <li>
-          <a href="https://humanxai.info/" title="ホーム"
+          <a href="http://localhost:1313/" title="ホーム"
             >
             <span>
               ホーム
@@ -45,7 +45,7 @@
         
         
         <li>
-          <a href="https://humanxai.info/about/" title="自己紹介"
+          <a href="http://localhost:1313/about/" title="自己紹介"
             >
             <span>
               自己紹介
@@ -112,11 +112,11 @@
   });
 </script>
 
-<script src="https://humanxai.info/js/lunr.min.js"></script>
-<script src="https://humanxai.info/js/lunr.stemmer.support.js"></script>
-<script src="https://humanxai.info/js/tinyseg.js"></script>
-<script src="https://humanxai.info/js/lunr.ja.js"></script>
-<script src="https://humanxai.info/js/fuse.min.js"></script>
+<script src="http://localhost:1313/js/lunr.min.js"></script>
+<script src="http://localhost:1313/js/lunr.stemmer.support.js"></script>
+<script src="http://localhost:1313/js/tinyseg.js"></script>
+<script src="http://localhost:1313/js/lunr.ja.js"></script>
+<script src="http://localhost:1313/js/fuse.min.js"></script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const results = document.getElementById('searchResults');
   if (!input || !engineSwitch || !results) return;
 
-  fetch("https:\/\/humanxai.info\/index.json")
+  fetch("http:\/\/localhost:1313\/index.json")
     .then(response => response.json())
     .then(data => {
       const lunrIndex = lunr(function () {
