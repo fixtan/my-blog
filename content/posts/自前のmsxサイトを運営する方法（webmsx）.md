@@ -79,7 +79,7 @@ GitHub上で空のリポジトリを作成（例：webmsx-netlify）
   <img src="/images/uploads/image-16284.jpg" alt="NetlifyのDNS設定" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
 
-###  ② コマンドでローカルセットアップ（手動でも可）
+### ② コマンドでローカルセットアップ（手動でも可）
 
 ```
 git clone https://github.com/ppeccin/WebMSX.git
@@ -127,11 +127,70 @@ mkdir ../webmsx-netlify/roms
 
 作成した webmsx-netlify を GitHub に push
 
-Netlify にログイン → 「New Site from Git」→ GitHub連携
-
-ビルドコマンドなし、パブリッシュディレクトリは「/」
-
 アップロードされたROMを読み込んで遊べるようになります。
 
+## 問題発生
+
+と、ここまでは、AIの指示通りにやったのですが、この方法だとwebmsx.jsが見つからない為、起動する事が出来ないように見えました。
+
+改めて、git cloneしたフォルダ内を確認すると、
+
+\WebMSX\release\stable\6.0\embedded
+
+フォルダ内に、
+
+・wmsx.js
+
+・index.html
+
+というファイルがあり、これをブラウザで実行するとMSXエミュレーターが起動するようです。
+
+## 改めて整理
+
+wmsx.jsがコアファイルのようなので、これを使う事にします。
+ディレクトリ内で配置する場所についてですが、今まで、ダウンロードした、jsファイルは、
+
+> /blog/static/js/
+
+に全て配置しています。（検索用に使う lunr.min.js など）
+
+なので、ここに配置してはどうかとAIに聞くと  **管理の一貫性**  的に考えてもベターなので、ここへ配置します。
+
+そうすると、
+
+```
+
+<!DOCTYPE html>
+<html>
+
+    <headlang="en">
+
+    ...
+
+    </head>
+
+    <body>
+
+        <div id="wmsx" style="text-align: center; margin: 20px auto 0;">
+            <div id="wmsx-screen" style="box-shadow: 2px 2px 10px rgba(0, 0, 0, .7);"></div>
+        </div>
+
+        <script src="wmsx.js"></script>
+
+    </body>
+
+</html>
+```
+
+で動くようになると思います。
 
 
+
+![](/images/uploads/wmsx.js.jpg)
+
+
+
+
+## AIの支持が上手く行かない時は自分で考える
+
+AIの指示が上手く行かない事は殆どないのですが、今回は上手く行かないレアケースで、自分でトラブル対処しました。
