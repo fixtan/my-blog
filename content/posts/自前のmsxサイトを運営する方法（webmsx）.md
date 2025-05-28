@@ -148,13 +148,14 @@ mkdir ../webmsx-netlify/roms
 ## 改めて整理
 
 wmsx.jsがコアファイルのようなので、これを使う事にします。
+
 ディレクトリ内で配置する場所についてですが、今まで、ダウンロードした、jsファイルは、
 
-> /blog/static/js/
+> /(blog name)/static/js/
 
 に全て配置しています。（検索用に使う lunr.min.js など）
 
-なので、ここに配置してはどうかとAIに聞くと  **管理の一貫性**  的に考えてもベターなので、ここへ配置します。
+なので、ここにしてはどうかAIに聞くと  **管理の一貫性**  的に考えてもベターなので、ここへ配置します。
 
 そうすると、
 
@@ -190,6 +191,10 @@ wmsx.jsがコアファイルのようなので、これを使う事にします�
 
 
 
+<div id="wmsx" style="text-align: center; margin: 20px auto 0;">
+<div id="wmsx-screen" style="box-shadow: 2px 2px 10px rgba(0, 0, 0, .7);"></div>
+</div>
+<script src="/js/wmsx.js"></script>
 
 ## AIの支持が上手く行かない時は自分で考える
 
