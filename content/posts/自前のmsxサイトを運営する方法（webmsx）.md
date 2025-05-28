@@ -214,7 +214,7 @@ wmsx.jsがコアファイルのようなので、これを使う事にします�
 とやれば以下のような感じで起動します。
 
 <iframe
-  src="/webmsx/index.html?ROM=/roms/MSXdev23_PentacornQuest_v1.1.rom"
+  src="/webmsx/index.html"
   width="640"
   height="480"
   style="border: none; box-shadow: 2px 2px 10px rgba(0,0,0,0.5); margin: auto; display: block;">
