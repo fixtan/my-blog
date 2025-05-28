@@ -242,9 +242,9 @@ layouts/shortcodes/msx.html に以下のように記述：
 ```
 
 以後
-
-
-
+```
+ {{< msx rom="hello.rom" >}}
+```
 で上記のHTMLファイルを読み込めるようになります。
 
 ## 余談：著作権フリーのMSX向けROM・DISK素材
