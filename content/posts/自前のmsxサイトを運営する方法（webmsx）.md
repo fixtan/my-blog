@@ -9,6 +9,7 @@ categories:
   - Hugo
 tags:
   - カスタマイ
+  weight: 5
 ---
 
 <a href="/images/uploads/i-catch_webmsx.png" target="_blank">
