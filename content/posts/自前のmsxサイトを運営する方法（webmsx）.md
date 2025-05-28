@@ -3,12 +3,19 @@ title: 自前でMSXサイトを作成（WebMSX）
 date: 2025-05-28 09:01:00
 draft: false
 author: lain
-summary: WebMSXを活用しWEBサイトでMSXを動かす方法の紹介
+image: /images/uploads/i-catch_webmsx.png
+summary: WebMSXを活用しWEBサイトでMSXを動作させる方法を紹介
 categories:
   - Hugo
 tags:
   - カスタマイ
 ---
+
+<a href="/images/uploads/i-catch_webmsx.png" target="_blank">
+  <img src="/images/uploads/i-catch_webmsx.png" alt="NetlifyのDNS設定" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+
+
 ## はじめに
 
 GitHUBでWebMSXが公開されてるのを見て、自前のWEBサイトでWebMSXをカスタムし動かせないか？と思い立ち、実践してみた備忘録的メモです。
@@ -160,7 +167,6 @@ wmsx.jsがコアファイルのようなので、これを使う事にします�
 そうすると、
 
 ```
-
 <!DOCTYPE html>
 <html>
 
@@ -176,7 +182,7 @@ wmsx.jsがコアファイルのようなので、これを使う事にします�
             <div id="wmsx-screen" style="box-shadow: 2px 2px 10px rgba(0, 0, 0, .7);"></div>
         </div>
 
-        <script src="wmsx.js"></script>
+        <script src="/js/wmsx.js"></script>
 
     </body>
 
@@ -185,14 +191,39 @@ wmsx.jsがコアファイルのようなので、これを使う事にします�
 
 で動くようになると思います。
 
-
-
 ![](/images/uploads/wmsx.js.jpg)
 
+## 完成
 
+以下のURLにアクセスするとwebmsxが起動します。
 
+<https://humanxai.info/webmsx/>
+
+ブログに埋め込むことも可能で、
+
+```
+<iframe
+  src="/webmsx/index.html"
+  width="640"
+  height="480"
+  style="border: none; box-shadow: 2px 2px 10px rgba(0,0,0,0.5); margin: auto; display: block;">
+</iframe>
+```
+
+とやれば以下のような感じで起動します。
+
+<iframe
+  src="/webmsx/index.html"
+  width="640"
+  height="480"
+  style="border: none; box-shadow: 2px 2px 10px rgba(0,0,0,0.5); margin: auto; display: block;">
+</iframe>
+
+ただ、ブログ記事内に以下のように書く場合、スクリプトコードが安全の為、無効化されるので無理なようです。
+
+```
 <div id="wmsx" style="text-align: center; margin: 20px auto 0;">
-<div id="wmsx-screen" style="box-shadow: 2px 2px 10px rgba(0, 0, 0, .7);"></div>
+  <div id="wmsx-screen" style="box-shadow: 2px 2px 10px rgba(0,0,0,0.5);"></div>
 </div>
 <script src="/js/wmsx.js"></script>
-
+```
