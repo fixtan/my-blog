@@ -1,9 +1,9 @@
 ---
-title: 自前のMSXサイトを運営する方法（WebMSX）
+title: 自前でMSXサイトを作成（WebMSX）
 date: 2025-05-28 09:01:00
 draft: false
 author: lain
-summary: WebMSXを活用しWEBサイトでMSXを動かす手順
+summary: WebMSXを活用しWEBサイトでMSXを動かす方法の紹介
 categories:
   - Hugo
 tags:
