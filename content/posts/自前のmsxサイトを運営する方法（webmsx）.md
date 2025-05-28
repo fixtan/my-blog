@@ -212,7 +212,7 @@ wmsx.jsがコアファイルのようなので、これを使う事にします�
 
 とやれば以下のような感じで起動します。
 
-<frame
+<iframe
   src="/webmsx/index.html"
   width="640"
   height="480"
@@ -243,7 +243,7 @@ layouts/shortcodes/msx.html に以下のように記述：
 
 以後
 
-> {{< msx rom="hello.rom" >}}
+
 
 で上記のHTMLファイルを読み込めるようになります。
 
