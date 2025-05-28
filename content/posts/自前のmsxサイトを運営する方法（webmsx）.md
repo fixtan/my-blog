@@ -247,6 +247,27 @@ layouts/shortcodes/msx.html に以下のように記述：
 ```
 で上記のHTMLファイルを読み込めるようになります。
 
+
+## 📁 WebMSXの読み込み形式について（参考）
+
+>　?ROM=filename.rom → ROMイメージ（カセット）
+>
+>　?DISK=filename.dsk → ディスクイメージ
+>
+>　?TAPE=filename.cas → テープ（カセット）イメージ
+
+## WebMSXコードを貼り付ける方法
+
+自作や公開されているBASICコードを、WebMSXで動かしたい場合。
+
+> [Alt] + V
+
+でペーストモードになるので、その際に、
+
+> [Ctrl] + V
+
+で貼り付けできます。
+
 ## 余談：著作権フリーのMSX向けROM・DISK素材
 
 
