@@ -8,7 +8,7 @@ summary: WebMSXを活用しWEBサイトでMSXを動作させる方法を紹介
 categories:
   - Hugo
 tags:
-  - カスタマイ
+  - WebMSX
 weight: 5
 ---
 
