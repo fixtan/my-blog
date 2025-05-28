@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>コマンド on lainのAIと創作ブログ</title>
-    <link>https://fixtan.github.io/my-blog/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</link>
+    <link>https://humanxai.info/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</link>
     <description>Recent content in コマンド on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 23 May 2025 14:08:00 +0000</lastBuildDate>
-    <atom:link href="https://fixtan.github.io/my-blog/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://humanxai.info/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugoで使われているテンプレートを確認する方法</title>
-      <link>https://fixtan.github.io/my-blog/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</link>
+      <link>https://humanxai.info/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</link>
       <pubDate>Fri, 23 May 2025 14:08:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://humanxai.info/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</guid>
       <description>使用中のテンプレートリスト確認方法</description>
     </item>
   </channel>

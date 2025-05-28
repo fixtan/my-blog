@@ -2,140 +2,140 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>lainのAIと創作ブログ</title>
-    <link>https://fixtan.github.io/my-blog/</link>
+    <link>https://humanxai.info/</link>
     <description>Recent content on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 28 May 2025 09:01:00 +0000</lastBuildDate>
-    <atom:link href="https://fixtan.github.io/my-blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://humanxai.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FramePackによるAIアニメーション</title>
-      <link>https://fixtan.github.io/my-blog/featured/project1/</link>
+      <link>https://humanxai.info/featured/project1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/featured/project1/</guid>
+      <guid>https://humanxai.info/featured/project1/</guid>
       <description>FramePack-eichi を活用したAIアニメーションの制作事例と手順。</description>
     </item>
     <item>
       <title>FramePackによるAIアニメーション</title>
-      <link>https://fixtan.github.io/my-blog/featured/project2/</link>
+      <link>https://humanxai.info/featured/project2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/featured/project2/</guid>
+      <guid>https://humanxai.info/featured/project2/</guid>
       <description>FramePack-eichi を活用したAIアニメーションの制作事例と手順。</description>
     </item>
     <item>
       <title>FramePackによるAIアニメーション</title>
-      <link>https://fixtan.github.io/my-blog/featured/project3/</link>
+      <link>https://humanxai.info/featured/project3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/featured/project3/</guid>
+      <guid>https://humanxai.info/featured/project3/</guid>
       <description>FramePack-eichi を活用したAIアニメーションの制作事例と手順。</description>
     </item>
     <item>
       <title>FramePackによるAIアニメーション</title>
-      <link>https://fixtan.github.io/my-blog/featured/project4/</link>
+      <link>https://humanxai.info/featured/project4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/featured/project4/</guid>
+      <guid>https://humanxai.info/featured/project4/</guid>
       <description>FramePack-eichi を活用したAIアニメーションの制作事例と手順。</description>
     </item>
     <item>
       <title>FramePackによるAIアニメーション</title>
-      <link>https://fixtan.github.io/my-blog/featured/project5/</link>
+      <link>https://humanxai.info/featured/project5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/featured/project5/</guid>
+      <guid>https://humanxai.info/featured/project5/</guid>
       <description>FramePack-eichi を活用したAIアニメーションの制作事例と手順。</description>
     </item>
     <item>
       <title>netlifyでのドメイン設定方法</title>
-      <link>https://fixtan.github.io/my-blog/posts/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%8F%96%E5%BE%97humanxai-info%E3%81%A8netlify%E3%81%A7%E3%81%AE%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95-1/</link>
+      <link>https://humanxai.info/posts/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%8F%96%E5%BE%97humanxai-info%E3%81%A8netlify%E3%81%A7%E3%81%AE%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95-1/</link>
       <pubDate>Mon, 26 May 2025 08:17:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/posts/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%8F%96%E5%BE%97humanxai-info%E3%81%A8netlify%E3%81%A7%E3%81%AE%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95-1/</guid>
+      <guid>https://humanxai.info/posts/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%8F%96%E5%BE%97humanxai-info%E3%81%A8netlify%E3%81%A7%E3%81%AE%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95-1/</guid>
       <description>netlifyでのドメイン設定方法の紹介</description>
     </item>
     <item>
       <title>【トラブル対処】Thunderbolt AICでモニタが映らない→BIOS設定とEDID問題で解決</title>
-      <link>https://fixtan.github.io/my-blog/posts/thunderbolt-bios-fix/</link>
+      <link>https://humanxai.info/posts/thunderbolt-bios-fix/</link>
       <pubDate>Thu, 22 May 2025 15:00:00 +0900</pubDate>
-      <guid>https://fixtan.github.io/my-blog/posts/thunderbolt-bios-fix/</guid>
+      <guid>https://humanxai.info/posts/thunderbolt-bios-fix/</guid>
       <description>モニタに映像出力されなくなった問題について、Thunderbolt4 、EDID問題を踏まえトラブル情報をまとめてみました</description>
     </item>
     <item>
       <title>[Decap CMS] Config Errors: &#39;collections[0].fields&#39; fields names must be unique</title>
-      <link>https://fixtan.github.io/my-blog/posts/decap-cms-config-errors-collections-0-fields-fields-names-must-be-unique/</link>
+      <link>https://humanxai.info/posts/decap-cms-config-errors-collections-0-fields-fields-names-must-be-unique/</link>
       <pubDate>Sat, 24 May 2025 03:17:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/posts/decap-cms-config-errors-collections-0-fields-fields-names-must-be-unique/</guid>
+      <guid>https://humanxai.info/posts/decap-cms-config-errors-collections-0-fields-fields-names-must-be-unique/</guid>
       <description>[Decap CMS] Config Errors: &amp;lsquo;collections[0].fields&amp;rsquo; fields names must be unique</description>
     </item>
     <item>
       <title>自己紹介</title>
-      <link>https://fixtan.github.io/my-blog/about/</link>
+      <link>https://humanxai.info/about/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/about/</guid>
+      <guid>https://humanxai.info/about/</guid>
       <description>&lt;p&gt;こんにちは、lainです。&lt;br&gt;
 AI、画像生成、動画、コマンドラインが大好きです。&lt;/p&gt;
 &lt;p&gt;このブログでは学習したこと、役に立ったTipsを発信しています。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugoで未来記事を表示させるには？ </title>
-      <link>https://fixtan.github.io/my-blog/posts/hugo%E3%81%A7%E6%9C%AA%E6%9D%A5%E8%A8%98%E4%BA%8B%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF/</link>
+      <link>https://humanxai.info/posts/hugo%E3%81%A7%E6%9C%AA%E6%9D%A5%E8%A8%98%E4%BA%8B%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF/</link>
       <pubDate>Mon, 26 May 2025 10:20:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/posts/hugo%E3%81%A7%E6%9C%AA%E6%9D%A5%E8%A8%98%E4%BA%8B%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF/</guid>
+      <guid>https://humanxai.info/posts/hugo%E3%81%A7%E6%9C%AA%E6%9D%A5%E8%A8%98%E4%BA%8B%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF/</guid>
       <description>Hugoで未来記事を表示させる方法の紹介（config.toml）</description>
     </item>
     <item>
       <title>Hugoで使われているテンプレートを確認する方法</title>
-      <link>https://fixtan.github.io/my-blog/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</link>
+      <link>https://humanxai.info/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</link>
       <pubDate>Fri, 23 May 2025 14:08:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://humanxai.info/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</guid>
       <description>使用中のテンプレートリスト確認方法</description>
     </item>
     <item>
       <title>CMS からテスト投稿２</title>
-      <link>https://fixtan.github.io/my-blog/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</link>
+      <link>https://humanxai.info/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</link>
       <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</guid>
+      <guid>https://humanxai.info/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</guid>
       <description>&lt;p&gt;Draft　テスト投稿&lt;/p&gt;</description>
     </item>
     <item>
       <title>Decap CMS導入テスト投稿</title>
-      <link>https://fixtan.github.io/my-blog/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</link>
+      <link>https://humanxai.info/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</link>
       <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</guid>
+      <guid>https://humanxai.info/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</guid>
       <description>&lt;p&gt;日本語入力テスト。&lt;/p&gt;
 &lt;p&gt;問題なく入力できるようです。&lt;/p&gt;</description>
     </item>
     <item>
       <title>ダミー記事12</title>
-      <link>https://fixtan.github.io/my-blog/posts/first/</link>
+      <link>https://humanxai.info/posts/first/</link>
       <pubDate>Sat, 17 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/posts/first/</guid>
+      <guid>https://humanxai.info/posts/first/</guid>
       <description>&lt;p&gt;（本文はまだありません）&lt;/p&gt;</description>
     </item>
     <item>
       <title>はじめての投稿</title>
-      <link>https://fixtan.github.io/my-blog/posts/first-post/</link>
+      <link>https://humanxai.info/posts/first-post/</link>
       <pubDate>Sat, 17 May 2025 00:00:00 +0900</pubDate>
-      <guid>https://fixtan.github.io/my-blog/posts/first-post/</guid>
+      <guid>https://humanxai.info/posts/first-post/</guid>
       <description>&lt;p&gt;こんにちは、これは私の最初のHugo記事です！&lt;/p&gt;</description>
     </item>
     <item>
       <title>Second</title>
-      <link>https://fixtan.github.io/my-blog/posts/second/</link>
+      <link>https://humanxai.info/posts/second/</link>
       <pubDate>Thu, 15 May 2025 16:11:54 +0900</pubDate>
-      <guid>https://fixtan.github.io/my-blog/posts/second/</guid>
+      <guid>https://humanxai.info/posts/second/</guid>
       <description>&lt;p&gt;テスト&lt;/p&gt;</description>
     </item>
     <item>
       <title>３つ目の投稿</title>
-      <link>https://fixtan.github.io/my-blog/posts/third/</link>
+      <link>https://humanxai.info/posts/third/</link>
       <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/posts/third/</guid>
+      <guid>https://humanxai.info/posts/third/</guid>
       <description>&lt;p&gt;（本文はまだありません）&lt;/p&gt;</description>
     </item>
     <item>
       <title>自前でMSXサイトを作成（WebMSX）</title>
-      <link>https://fixtan.github.io/my-blog/posts/%E8%87%AA%E5%89%8D%E3%81%AEmsx%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E9%81%8B%E5%96%B6%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95webmsx/</link>
+      <link>https://humanxai.info/posts/%E8%87%AA%E5%89%8D%E3%81%AEmsx%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E9%81%8B%E5%96%B6%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95webmsx/</link>
       <pubDate>Wed, 28 May 2025 09:01:00 +0000</pubDate>
-      <guid>https://fixtan.github.io/my-blog/posts/%E8%87%AA%E5%89%8D%E3%81%AEmsx%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E9%81%8B%E5%96%B6%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95webmsx/</guid>
-      <description>WebMSXを活用しWEBサイトでMSXを動かす方法の紹介</description>
+      <guid>https://humanxai.info/posts/%E8%87%AA%E5%89%8D%E3%81%AEmsx%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E9%81%8B%E5%96%B6%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95webmsx/</guid>
+      <description>WebMSXを活用しWEBサイトでMSXを動作させる方法を紹介</description>
     </item>
   </channel>
 </rss>

@@ -2,7 +2,8 @@ backend:
   name: git-gateway
   repo: fixtan/my-blog
   branch: main
-  site_url: "https://steady-malasada-321e32.netlify.app/"
+#  site_url: "https://steady-malasada-321e32.netlify.app/"
+  site_url: "https://humanxai.info/"
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
