@@ -212,7 +212,7 @@ wmsx.jsがコアファイルのようなので、これを使う事にします�
 
 とやれば以下のような感じで起動します。
 
-<iframe
+<frame
   src="/webmsx/index.html"
   width="640"
   height="480"
@@ -227,3 +227,61 @@ wmsx.jsがコアファイルのようなので、これを使う事にします�
 </div>
 <script src="/js/wmsx.js"></script>
 ```
+
+## iframe ラッパーを Hugo の shortcode にする（埋め込み簡略化）
+
+layouts/shortcodes/msx.html に以下のように記述：
+
+```
+<iframe
+  src="/webmsx/index.html?ROM=/roms/{{ .Get "rom" }}"
+  width="640"
+  height="480"
+  style="border:none; box-shadow: 2px 2px 10px rgba(0,0,0,0.5); margin: auto;">
+</iframe>
+```
+
+以後
+
+> {{< msx rom="hello.rom" >}}
+
+で上記のHTMLファイルを読み込めるようになります。
+
+## 余談：著作権フリーのMSX向けROM・DISK素材
+
+
+### 🕹 1. 【MSXdev】公式コンテスト作品
+
+MSXdev（https://msxdev.org） は、毎年行われるMSXゲーム開発コンテストです。
+
+多くの作品は 無料でROM形式で公開 されており、合法的にWebMSXなどで遊べます。
+
+
+#### 🎮 おすすめ作品例（全てフリー）
+
+- "The Menace from Triton"
+
+  - 横スクロールのシューティング（2018年 MSXdev）
+
+- "Lilly's Saga"
+  - ドットアートが美しいアクションRPG（2021年）
+
+- "Wing Warriors"
+  - 2人対戦シューティング（2015年）
+
+
+#### 🔗 ダウンロードページ
+- <https://msxdev.org/msxdev23/>
+- <https://msxdev.org/download/>
+
+<br>
+
+### 🗂 2. 【MSX Resource Center（MRC）】
+
+<https://www.msx.org/>
+
+古くからあるコミュニティ。
+
+Homebrew（自作ソフト）作品多数あり、合法的に再配布可能なものが多いです。
+
+検索で "ROM", "BAS", "Homebrew" などを入れて探すと見つかります。
