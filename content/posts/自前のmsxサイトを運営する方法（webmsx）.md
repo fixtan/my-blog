@@ -242,7 +242,7 @@ layouts/shortcodes/msx.html に以下のように記述：
 ```
 
 以後
-```
+```markdown
  {{< msx rom="MSXdev23_PentacornQuest_v1.1.rom" >}}
 ```
 で上記のHTMLファイルを読み込めるようになります。
