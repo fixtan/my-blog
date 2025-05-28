@@ -75,9 +75,63 @@ ROMを読み込んで起動する事も可能です。
 
 GitHub上で空のリポジトリを作成（例：webmsx-netlify）
 
-
 <a href="/images/uploads/image-16284.jpg" target="_blank">
   <img src="/images/uploads/image-16284.jpg" alt="NetlifyのDNS設定" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
 
-a
+###  ② コマンドでローカルセットアップ（手動でも可）
+
+```
+git clone https://github.com/ppeccin/WebMSX.git
+cd WebMSX
+
+# public向けに最低限のファイルをコピー
+mkdir ../webmsx-netlify
+cp index.html ../webmsx-netlify/
+cp -r src ../webmsx-netlify/assets/webmsx
+
+# ROMフォルダ作成
+mkdir ../webmsx-netlify/roms
+# game.rom を入れる（任意）
+```
+
+### ③ index.html の編集
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WebMSX Starter</title>
+    <script src="assets/webmsx/webmsx.js"></script>
+    <style>body { margin: 0; }</style>
+  </head>
+  <body>
+    <script>
+      WebMSX.run({
+        'rom': 'roms/game.rom'
+      });
+    </script>
+  </body>
+</html>
+```
+
+### ④ netlify.toml 例（ルートを指定したい場合）
+
+```
+[build]
+  publish = "."
+```
+
+## 🚀 デプロイ
+
+作成した webmsx-netlify を GitHub に push
+
+Netlify にログイン → 「New Site from Git」→ GitHub連携
+
+ビルドコマンドなし、パブリッシュディレクトリは「/」
+
+アップロードされたROMを読み込んで遊べるようになります。
+
+
+
