@@ -3,12 +3,19 @@ title: 自前でMSXサイトを作成（WebMSX）
 date: 2025-05-28 09:01:00
 draft: false
 author: lain
+image: /images/uploads/i-catch_webmsx.png
 summary: WebMSXを活用しWEBサイトでMSXを動作させる方法を紹介
 categories:
   - Hugo
 tags:
   - カスタマイ
 ---
+
+<a href="/images/uploads/i-catch_webmsx.png" target="_blank">
+  <img src="/images/uploads/i-catch_webmsx.png" alt="NetlifyのDNS設定" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</a>
+
+
 ## はじめに
 
 GitHUBでWebMSXが公開されてるのを見て、自前のWEBサイトでWebMSXをカスタムし動かせないか？と思い立ち、実践してみた備忘録的メモです。
@@ -193,7 +200,6 @@ wmsx.jsがコアファイルのようなので、これを使う事にします�
 <https://humanxai.info/webmsx/>
 
 ブログに埋め込むことも可能で、
-
 
 ```
 <iframe
