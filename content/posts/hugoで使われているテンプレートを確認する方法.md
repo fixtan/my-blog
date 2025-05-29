@@ -1,5 +1,6 @@
 ---
 title: Hugoで使われているテンプレートを確認する方法
+slug: Hugo-Template
 date: 2025-05-23T14:08:00.000Z
 draft: false
 author: lain
