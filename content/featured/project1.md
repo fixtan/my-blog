@@ -1,10 +1,22 @@
 ---
-title: "FramePackによるAIアニメーション"
-image: "/images/uploads/FramePack-eichi-01.png"
-description: "FramePack-eichi を活用したAIアニメーションの制作事例と手順。"
-link: "/posts/framepack-intro/"
+title: FramePackによるAIアニメーション
+date: 2025-05-27T22:01:00.000Z
+draft: true
+author: lain
+image: /images/uploads/FramePack-eichi-01.png
+summary: FramePackでAIアニメーションを作成する方法の紹介、及び、画像生成AIの活用方法
+categories:
+  - AI
+tags:
+  - FramePack
+  - Stable Diffusion
 weight: 1
+link: /posts/framepack-intro/
+description: FramePack-eichi を活用したAIアニメーションの制作事例と手順。
 ---
+<center>
+<img src="/images/uploads/framepack-eichi-01.png" alt="FramePackによるAIアニメーション" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</center>
 
 ## AIアニメーションのデモ
 
