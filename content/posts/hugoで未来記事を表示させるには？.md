@@ -1,6 +1,7 @@
 ---
 title: "Hugoで未来記事を表示させるには？ "
-date: 2025-05-26T10:21:00.000Z
+slug: Hugo-custom-article-future
+date: 2025-05-26T19:22:00.000Z
 draft: false
 author: lain
 image: /images/uploads/hugo-futurearticle.png
