@@ -33,6 +33,7 @@ collections:
 
     fields:
       - { label: "タイトル", name: "title", widget: "string" }
+      - { label: "スラッグ", name: "slug", widget: "string", required: false }
       - { label: "日付", name: "date", widget: "datetime" }
       - { label: "下書き", name: "draft", widget: "boolean", default: false }
       - { label: "著者", name: "author", widget: "string", default: "lain" }
@@ -50,6 +51,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "タイトル", name: "title", widget: "string" }
+      - { label: "スラッグ", name: "slug", widget: "string", required: false }
       - { label: "日付", name: "date", widget: "datetime" }
       - { label: "下書き", name: "draft", widget: "boolean", default: false }
       - { label: "著者", name: "author", widget: "string", default: "lain" }
