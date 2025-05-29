@@ -1,9 +1,9 @@
 ---
 title: CMS からテスト投稿２
-date: 2025-05-21
+date: 2025-05-21T17:00:00.000Z
 draft: false
-image: /images/thumb1.jpg
 author: lain
+image: /images/thumb1.jpg
 weight: 20
 ---
 
