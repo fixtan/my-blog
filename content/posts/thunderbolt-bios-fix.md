@@ -1,12 +1,16 @@
 ---
-title: 【トラブル対処】Thunderbolt AICでモニタが映らない→BIOS設定とEDID問題で解決
+title: "[自作PC] Thunderbolt AIC モニタが映らない トラブル＆解決方法"
+slug: computer-trouble-Thunderbolt4
 date: 2025-05-22T15:00:00+09:00
 draft: false
-image: /images/thumb1.jpg
 author: lain
-summary: "モニタに映像出力されなくなった問題について、Thunderbolt4 、EDID問題を踏まえトラブル情報をまとめてみました"
+image: /images/uploads/computer-trouble-thunderbolt4.png
+summary: モニタに映像出力されなくなった問題について、Thunderbolt4 、EDID問題を踏まえトラブル情報をまとめてみました
 weight: 5
 ---
+<center>
+<img src="/images/uploads/computer-trouble-thunderbolt4.png" alt="" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</center>
 
 朝、PCを起動したらメインモニターが真っ暗…。
 
@@ -26,10 +30,7 @@ Microsoft Thunderbolt™ コントロール・センター 公式
 
 ここで、故障原因として考えられるのは・・
 
-
-
 ## 原因①：BIOS設定
-
 
 Thunderboltサポートが有効になっているか？
 （ASRockマザーの場合、TBT設定がBIOSにあり）
@@ -38,29 +39,19 @@ Security Levelが「No Security」や「User Authorization」以外になって�
 
 「認証待ち」状態で止まっていると、表示されないことがあります
 
-
-
 ## 原因②：Thunderboltコントロールセンター
-
 
 「Thunderbolt コントロールセンター」アプリ インストールの有無と、「接続されたデバイス」や「Thunderboltポート」が表示されるか確認
 
-
 ***※Microsoft Storeからインストール可能***
 
-
-
 ## 原因③：ケーブル・接続不良
-
 
 Thunderbolt 4 AICカードはマザーボードのTBTヘッダーと必ず接続する必要があり接続に問題がないかどうか。（チェック済み）
 
 **⚠ これが接続されていないと Thunderbolt コントローラーが無効化される**
 
-
-
 ## 原因④：DisplayPortの接触
-
 
 基礎的な事としてグラボ（RTX 4070Ti）→ Thunderbolt AICカードへの DisplayPort INケーブルはきちんと接続されているか？（チェック済み）
 
@@ -79,18 +70,12 @@ Thunderbolt 4 AICカードはマザーボードのTBTヘッダーと必ず接続
 4.6.4 Intel(R) Thunderbolt（８６ページ）\
 にカードの有効化にする項目があるので、これが無効になってる場合「有効化」。
 
-
-
 ![](/images/uploads/イメージ15913.jpg)
   <a href="/images/uploads/イメージ15913.jpg"><img src="/images/uploads/イメージ15913.jpg" width="300"></a>
 
 ![](/images/uploads/イメージ15914.jpg)
 
-
-
 ここを確認したところ、無効化されていたので、有効化する事で復活しました。
-
-
 
 ## ■ 何故、無効化されたのか？
 
@@ -102,19 +87,13 @@ Thunderbolt 4 AICカードはマザーボードのTBTヘッダーと必ず接続
 \
 液晶タブレットなど別の機器に接続すると何故か復活し、元のモニタ（L８８７）を接続すると完全に復旧し、再起動後も症状が出なくなりました。
 
-
-
 ## ■ 本当の原因は「EDID」？
-
 
 EDIDはPCやGPUが接続されたモニタの仕様（解像度、リフレッシュレート、音声出力の有無など）を読み取るために使われており、電源を切ったことでキャッシュデータがリセットされた事で、映像信号の読み取りが上手くできなくなり、今回のような症状が出たと思われます。
 
 ※EDID読み込み失敗（信号が不安 or キャッシュが壊れる）
 
-
-
 ## ⚠️ よくあるEDIDトラブルの例
-
 
 モニタが映らない・一瞬ついて消える：\
 　EDID読み込み失敗（信号が不安定、キャッシュが壊れている）\
@@ -127,8 +106,6 @@ EDIDはPCやGPUが接続されたモニタの仕様（解像度、リフレッ�
 
 　OS側にEDIDがキャッシュされている（Windowsが引きずってる）
 
-
-
 ## ■ EDID保持装置を使うと問題が解消されやすい
 
 今回のような変換ケーブル、Thunderbolt4、USB-C経由によるHDMI変換から、DVIへの変換と、多重な映像変換をする事で、EDIDが不安定になったのが主な要因だと思われます。
@@ -140,7 +117,6 @@ EDIDはPCやGPUが接続されたモニタの仕様（解像度、リフレッ�
 **CONNECTPRO 3D対応HDMI EDID信号保持機 TMDS-EDID**
 <https://www.amazon.co.jp/dp/B00HX3DK18>
 
-
 ## ★ まとめ
 
 グラフィックボードとモニターの接続は、可能な限り変換アダプタを使わず、
@@ -151,5 +127,3 @@ EDIDキャッシュ保持装置の導入が有効です。
 
 また、Thunderbolt AICを利用する構成では、BIOS設定が予期せず変更されている可能性もあるため、
 **起動トラブル時はまずBIOS設定を確認することが有効**です。
-
-
