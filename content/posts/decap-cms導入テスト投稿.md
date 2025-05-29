@@ -1,8 +1,9 @@
 ---
 title: Decap CMS導入テスト投稿
-date: 2025-05-21
+date: 2025-05-21T01:01:00.000Z
 draft: false
-author: "lain"
+author: lain
+image: /images/uploads/00011-524648632.png
 weight: 20
 ---
 日本語入力テスト。
