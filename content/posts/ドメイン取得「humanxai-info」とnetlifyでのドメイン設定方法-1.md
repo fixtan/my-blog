@@ -1,6 +1,7 @@
 ---
 title: netlifyでのドメイン設定方法
-date: 2025-05-26 08:17:00
+slug: netlify-Domain-settings
+date: 2025-05-26T08:18:00.000Z
 draft: false
 author: lain
 image: /images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-8-.png
