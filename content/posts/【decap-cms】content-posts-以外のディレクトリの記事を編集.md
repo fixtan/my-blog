@@ -1,5 +1,6 @@
 ---
 title: 【Decap CMS】content/posts 以外のディレクトリの記事を編集
+slug: decap-directory-edit
 date: 2025-05-29T08:55:00.000Z
 draft: false
 author: lain
