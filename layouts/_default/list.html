@@ -42,12 +42,39 @@
   <!-- ✅ 最新記事 -->
   <div class="section-block section-block--recent">
     <h2 class="section-heading section-heading--recent">最新記事</h2>
+
+    <!-- ✅ おすすめ記事を weight で抽出 -->
+    {{ $featured := where .Site.RegularPages "Params.weight" "gt" 0 }}
+
+    <!-- ✅ 最新記事の一覧から除外してページネーション -->
+    {{ $posts := where .Site.RegularPages "Section" "posts" }}
+    {{ $recent := where $posts "Params.weight" "not in" (slice 1 2 3 4 5) }} <!-- weightが1〜5などのおすすめ -->
+
+    {{ $paginator := .Paginate $recent }}
     <section class="post-grid">
-      {{ range first 9 (sort .Site.RegularPages "Date" "desc") }}
+      {{ range $paginator.Pages }}
         {{ partial "post-card.html" . }}
       {{ end }}
     </section>
+
+    <!-- ✅ ページネーションナビ -->
+    {{ if gt $paginator.TotalPages 1 }}
+      <nav class="pagination">
+        {{ with $paginator.First }}
+          <a class="page-link" href="{{ .URL }}">&laquo; 最初</a>
+        {{ end }}
+
+        {{ range $paginator.Pagers }}
+          <a class="page-number {{ if eq . $paginator }}active{{ end }}" href="{{ .URL }}">{{ .PageNumber }}</a>
+        {{ end }}
+
+        {{ with $paginator.Next }}
+          <a class="page-link" href="{{ .URL }}">次へ &raquo;</a>
+        {{ end }}
+      </nav>
+    {{ end }}
   </div>
+
 
   <!-- ✅ カテゴリ別 -->
   <div class="section-block--category">

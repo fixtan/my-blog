@@ -15,6 +15,10 @@ languageCode = 'ja'
 title = 'lainのAIと創作ブログ'
 theme = 'PaperMod'
 
+### １ページに表示する件数
+[pagination]
+  pagerSize = 9
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
