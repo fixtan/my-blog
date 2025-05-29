@@ -1,7 +1,8 @@
 ---
 title: "[Decap CMS] Config Errors: 'collections[0].fields' fields names must be
   unique"
-date: 2025-05-24T03:17:00.000Z
+slug: DecapCMS-Error-01
+date: 2025-05-24T12:18:00.000Z
 draft: false
 author: lain
 image: /images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-3-.png
