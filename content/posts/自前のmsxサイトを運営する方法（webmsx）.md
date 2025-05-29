@@ -1,20 +1,23 @@
 ---
 title: 自前でMSXサイトを作成（WebMSX）
+slug: WebMSX-Hugo-Netlify
 date: 2025-05-28 09:01:00
 draft: false
 author: lain
 image: /images/uploads/i-catch_webmsx.png
-summary: WebMSXを活用しWEBサイトでMSXを動作させる方法を紹介
+summary: WebMSXを活用しWEBサイトでMSXを動作させる方法の紹介
 categories:
-  - Hugo
+  - MSX
 tags:
   - WebMSX
-weight: 5
+  - Hugo
+  - GitHub
+  - Netlify
+weight: 2
 ---
-
-<a href="/images/uploads/i-catch_webmsx.png" target="_blank">
+<center>
   <img src="/images/uploads/i-catch_webmsx.png" alt="NetlifyのDNS設定" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
-</a>
+</center>
 
 
 ## はじめに
