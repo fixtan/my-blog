@@ -1,7 +1,7 @@
 ---
 title: 自前でMSXサイトを作成（WebMSX）
 slug: WebMSX-Hugo-Netlify
-date: 2025-05-28 09:01:00
+date: 2025-05-28T09:02:00.000Z
 draft: false
 author: lain
 image: /images/uploads/i-catch_webmsx.png
