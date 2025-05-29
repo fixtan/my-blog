@@ -1,8 +1,9 @@
 ---
 title: AIは使い方ではなく、生き方と関係している
-date: 2025-05-25T07:09:00.000Z
+date: 2025-05-25T16:10:00.000Z
 draft: true
 author: lain
+image: /images/uploads/avatar.png
 summary: （抜粋がありません）
 categories:
   - その他
