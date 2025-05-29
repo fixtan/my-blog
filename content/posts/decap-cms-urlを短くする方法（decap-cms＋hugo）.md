@@ -7,8 +7,11 @@ author: lain
 image: /images/uploads/decapcms-custom-slug.png
 summary: デフォルトで記事タイトルがURLになり長くなってしまう為、短くする方法の紹介
 categories:
-  - 未分類
-weight: 8
+  - Decap CMS
+tags:
+  - カスタム
+  - スラッグ
+weight: 7
 ---
 <center>
 <a href="/images/uploads/decapcms-custom-slug.png" target="_blank">
@@ -37,15 +40,15 @@ fields:
   - { label: "スラッグ", name: "slug", widget: "string", required: false }
 ```
 
+変更後、git push -> netlifyでデプロイすると、下の画像のようにDecap CMS画面にスラッグの項目が出現します。
 
 
-<a href="/images/uploads/decapcms-custom-slug.jpg" target="_blank">
-<img src="/images/uploads/decapcms-custom-slug.jpg" alt="" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px" />
-</a>
 
-そして slug を "decap-directory-edit" のように英語で入力すれば：
-text
-コピーする
-編集する
-https://humanxai.info/posts/decap-directory-edit/
+<img src="/images/uploads/decapcms-custom-slug.jpg" alt="" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+
+
+そして slug を "DecapCMS-custom-slug" のように英語で入力すれば：
+
+https://humanxai.info/posts/DecapCMS-custom-slug/
+
 のような 短くてシンプルなURL にできます。
