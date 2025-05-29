@@ -6,6 +6,12 @@ draft: false
 author: lain
 image: /images/uploads/computer-trouble-thunderbolt4.png
 summary: モニタに映像出力されなくなった問題について、Thunderbolt4 、EDID問題を踏まえトラブル情報をまとめてみました
+categories:
+  - パソコン
+tags:
+  - Thunderbolt
+  - EDID
+  - BIOS
 weight: 5
 ---
 <center>
