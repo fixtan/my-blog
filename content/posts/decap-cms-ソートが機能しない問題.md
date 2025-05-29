@@ -88,3 +88,64 @@ collections:
       - { label: "表示順（weight）", name: "weight", widget: "number", required: false, default: 20 }
 
 ```
+
+これで git push し、netlifyでクリーンデプロイ。
+
+## 日付をISO 8601形式に統一
+
+上手く行くと思ったのですが、まだ解決しなかったので、さらに調べると、記事の日付のフォーマットがバラバラになっていたようなので、仕方なく ISO 8601形式（または YYYY-MM-DD）に統一しました。
+
+これで一応、最新記事が一番上に表示されるようになりました。
+
+ただ、やや動作は不安定で、何度かソートすると記事がバラバラになり、その後に昇順で並ぶようです…。
+
+## Githubのソートに関するトラブルTip
+
+
+githubにソート問題のトラブルTipがありました。
+
+>Sorting with custom date format seems wrong #4637
+><https://github.com/decaporg/decap-cms/issues/4637>
+
+やや古い情報ですが、
+
+>So is what I'm seeing that the current workaround would be for me to convert all my dates to YYYY-MM-DD so that sorting as a string works as expected? I currently have everything as MM/DD/YYYY, but I could run a regex replace on my date fields if that will solve my sorting problem.
+>
+>Yeah that seems to be the case. Don't mix and match the format. Either use ISO format or custom format (e.g. YYYY-MM-DD HH:mm:ss)
+
+との事で、一応、ISO 8601形式に統一して、それっぽく動いてるようなので一応これで行きたいと思います。
+
+
+
+## ✅ Decap CMSのソートの裏側（ざっくり技術構造）
+
+※Decap CMSのソート技術に関するAIの回答内容の引用です
+
+です。つまり：
+
+🔄 データ取得方法
+- 記事ファイル（Markdown）を [GitHub API or Git Gateway] で取得
+- JavaScript（React）で一覧を生成して表示
+- ソートは 内部的にJavaScriptで配列をソート
+
+🧠 ソート処理の実情
+JavaScriptの Array.prototype.sort() に近い処理をしており、
+
+```
+posts.sort((a, b) => new Date(a.date) - new Date(b.date))
+```
+
+…みたいな処理を内部でしてると考えられます。
+
+💥 問題になるのは？
+- 日付が混在（ISO形式・"YYYY-MM-DD"・"2025/05/01"など）
+- 日付が string 型として比較されるケース
+- 内部で Date.parse() が失敗するフォーマットがある
+- 言語設定・ローカライズの影響（en-US vs ja-JP）
+
+❗だから「文字列としての安定比較」が必要
+あなたが引用されたGitHubの回答がまさにそれです：
+
+> 「すべての date を YYYY-MM-DD か YYYY-MM-DDTHH:mm:ss に揃えれば、文字列として安定にソートできる」
+
+
