@@ -1,6 +1,6 @@
 ---
 title: "Hugoで未来記事を表示させるには？ "
-date: 2025-05-26 10:20:00
+date: 2025-05-26T10:21:00.000Z
 draft: false
 author: lain
 image: /images/uploads/hugo-futurearticle.png
