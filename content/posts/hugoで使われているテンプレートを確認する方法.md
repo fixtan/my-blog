@@ -1,7 +1,7 @@
 ---
 title: Hugoで使われているテンプレートを確認する方法
 slug: Hugo-Template
-date: 2025-05-23T14:08:00.000Z
+date: 2025-05-24T23:08:00.000Z
 draft: false
 author: lain
 image: /images/uploads/blog-i-cach_hugo-template.png
