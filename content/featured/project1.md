@@ -1,7 +1,7 @@
 ---
 title: FramePackによるAIアニメーション
 date: 2025-05-27T22:01:00.000Z
-draft: true
+draft: false
 author: lain
 image: /images/uploads/FramePack-eichi-01.png
 summary: FramePackでAIアニメーションを作成する方法の紹介、及び、画像生成AIの活用方法
