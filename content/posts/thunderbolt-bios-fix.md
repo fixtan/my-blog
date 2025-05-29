@@ -9,7 +9,7 @@ summary: モニタに映像出力されなくなった問題について、Thund
 weight: 5
 ---
 <center>
-<img src="/images/uploads/computer-trouble-thunderbolt4.png" alt="" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+<img src="/images/uploads/computer-trouble-thunderbolt4.png" alt="[自作PC] Thunderbolt AIC モニタが映らない トラブル＆解決方法" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; " />
 </center>
 
 朝、PCを起動したらメインモニターが真っ暗…。
