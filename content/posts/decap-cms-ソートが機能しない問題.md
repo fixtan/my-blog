@@ -119,9 +119,8 @@ githubにソート問題のトラブルTipがありました。
 
 ## ✅ Decap CMSのソートの裏側（ざっくり技術構造）
 
-※Decap CMSのソート技術に関するAIの回答内容の引用です
+※Decap CMSのソート技術に関するAIの回答内容の引用。
 
-です。つまり：
 
 🔄 データ取得方法
 - 記事ファイル（Markdown）を [GitHub API or Git Gateway] で取得
