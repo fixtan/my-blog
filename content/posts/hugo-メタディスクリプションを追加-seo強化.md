@@ -1,5 +1,6 @@
 ---
 title: "[Hugo] メタディスクリプションを追加 (SEO強化)"
+description: Hugoでメタディスクリプション(meta description)を追加する方法の紹介（SEO強化）
 slug: hugo-meta-description
 date: 2025-05-30T12:20:00.000Z
 draft: false
