@@ -24,6 +24,13 @@ image: /images/uploads/hugo-404-favicon.png
 
 Hugoをローカル環境で動かし度々テストしてて、chromeのDeveloperToolを開くと度々表示される favicon.ico の 404 エラーを消すために、アイコンを作成してみました。
 
+
+<a href="/images/uploads/developertool-favicon-error.jpg" target="_blank">
+<img src="/images/uploads/developertool-favicon-error.jpg" alt=""  loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+
 ## アイコン作成方法
 
 今回は、此方のWEBサイトを利用させていただきました。
