@@ -2,192 +2,204 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://humanxai.info/featured/project1/</loc>
+    <loc>http://localhost:1313/featured/project1/</loc>
     <lastmod>2025-05-27T22:01:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/featured/project2/</loc>
+    <loc>http://localhost:1313/featured/project2/</loc>
   </url><url>
-    <loc>https://humanxai.info/featured/project3/</loc>
+    <loc>http://localhost:1313/featured/project3/</loc>
   </url><url>
-    <loc>https://humanxai.info/featured/project4/</loc>
+    <loc>http://localhost:1313/featured/project4/</loc>
   </url><url>
-    <loc>https://humanxai.info/featured/project5/</loc>
+    <loc>http://localhost:1313/featured/project5/</loc>
   </url><url>
-    <loc>https://humanxai.info/posts/webmsx-hugo-netlify/</loc>
+    <loc>http://localhost:1313/posts/webmsx-hugo-netlify/</loc>
     <lastmod>2025-05-28T20:02:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/netlify-domain-settings/</loc>
+    <loc>http://localhost:1313/posts/netlify-domain-settings/</loc>
     <lastmod>2025-05-26T08:18:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/computer-trouble-thunderbolt4/</loc>
+    <loc>http://localhost:1313/posts/computer-trouble-thunderbolt4/</loc>
     <lastmod>2025-05-22T16:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/hugo-lazy-loading/</loc>
+    <loc>http://localhost:1313/posts/decapcms-add-description/</loc>
+    <lastmod>2025-05-30T13:07:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/hugo-lazy-loading/</loc>
     <lastmod>2025-05-30T11:09:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/decapcms-custom-slug/</loc>
+    <loc>http://localhost:1313/posts/decapcms-custom-slug/</loc>
     <lastmod>2025-05-29T10:48:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/ai-dialogue-2025-05-30/</loc>
+    <loc>http://localhost:1313/posts/ai-dialogue-2025-05-30/</loc>
     <lastmod>2025-05-30T08:21:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/decapcms-sort-trouble/</loc>
+    <loc>http://localhost:1313/posts/hugo-meta-description/</loc>
+    <lastmod>2025-05-30T12:20:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/decapcms-sort-trouble/</loc>
     <lastmod>2025-05-29T18:03:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/hugo-page-transition-button/</loc>
+    <loc>http://localhost:1313/posts/hugo-page-transition-button/</loc>
     <lastmod>2025-05-29T16:45:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/decap-directory-edit/</loc>
+    <loc>http://localhost:1313/posts/decap-directory-edit/</loc>
     <lastmod>2025-05-29T08:55:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/decapcms-error-01/</loc>
+    <loc>http://localhost:1313/posts/decapcms-error-01/</loc>
     <lastmod>2025-05-24T12:18:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/hugo-meta-description/</loc>
-    <lastmod>2025-05-30T12:20:00+00:00</lastmod>
-  </url><url>
-    <loc>https://humanxai.info/posts/hugo-custom-article-future/</loc>
+    <loc>http://localhost:1313/posts/hugo-custom-article-future/</loc>
     <lastmod>2025-05-26T19:22:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/hugo-template/</loc>
+    <loc>http://localhost:1313/posts/hugo-template/</loc>
     <lastmod>2025-05-24T23:08:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</loc>
+    <loc>http://localhost:1313/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</loc>
     <lastmod>2025-05-21T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</loc>
+    <loc>http://localhost:1313/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</loc>
     <lastmod>2025-05-21T01:01:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/first/</loc>
+    <loc>http://localhost:1313/posts/first/</loc>
     <lastmod>2025-05-17T00:01:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/first-post/</loc>
+    <loc>http://localhost:1313/posts/first-post/</loc>
     <lastmod>2025-05-17T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/second/</loc>
+    <loc>http://localhost:1313/posts/second/</loc>
     <lastmod>2025-05-15T17:11:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/third/</loc>
+    <loc>http://localhost:1313/posts/third/</loc>
     <lastmod>2025-05-15T01:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-05-30T13:07:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/decap-cms/</loc>
+    <lastmod>2025-05-30T13:07:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/description/</loc>
+    <lastmod>2025-05-30T13:07:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/hugo/</loc>
+    <lastmod>2025-05-30T13:07:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-05-30T13:07:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-05-30T13:07:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/seo/</loc>
+    <lastmod>2025-05-30T13:07:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-05-30T13:07:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E3%83%A1%E3%82%BF%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3/</loc>
+    <lastmod>2025-05-30T13:07:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/hugo/</loc>
     <lastmod>2025-05-30T12:20:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/</loc>
+    <loc>http://localhost:1313/tags/meta-description/</loc>
     <lastmod>2025-05-30T12:20:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/posts/</loc>
-    <lastmod>2025-05-30T12:20:00+00:00</lastmod>
-  </url><url>
-    <loc>https://humanxai.info/categories/%E6%9C%AA%E5%88%86%E9%A1%9E/</loc>
-    <lastmod>2025-05-30T12:20:00+00:00</lastmod>
-  </url><url>
-    <loc>https://humanxai.info/categories/hugo/</loc>
+    <loc>http://localhost:1313/tags/lazy-loading/</loc>
     <lastmod>2025-05-30T11:09:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/lazy-loading/</loc>
+    <loc>http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0/</loc>
     <lastmod>2025-05-30T11:09:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/</loc>
+    <loc>http://localhost:1313/tags/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88/</loc>
     <lastmod>2025-05-30T11:09:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0/</loc>
+    <loc>http://localhost:1313/tags/%E9%81%85%E5%BB%B6%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF/</loc>
     <lastmod>2025-05-30T11:09:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88/</loc>
-    <lastmod>2025-05-30T11:09:00+00:00</lastmod>
-  </url><url>
-    <loc>https://humanxai.info/tags/%E9%81%85%E5%BB%B6%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF/</loc>
-    <lastmod>2025-05-30T11:09:00+00:00</lastmod>
-  </url><url>
-    <loc>https://humanxai.info/tags/ai%E5%AF%BE%E8%A9%B1/</loc>
+    <loc>http://localhost:1313/tags/ai%E5%AF%BE%E8%A9%B1/</loc>
     <lastmod>2025-05-30T08:21:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/categories/human--ai-%E5%AF%BE%E8%A9%B1%E9%8C%B2/</loc>
+    <loc>http://localhost:1313/categories/human--ai-%E5%AF%BE%E8%A9%B1%E9%8C%B2/</loc>
     <lastmod>2025-05-30T08:21:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/%E3%82%A8%E3%83%83%E3%82%BB%E3%82%A4/</loc>
+    <loc>http://localhost:1313/tags/%E3%82%A8%E3%83%83%E3%82%BB%E3%82%A4/</loc>
     <lastmod>2025-05-30T08:21:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%83%BC%E3%82%B0/</loc>
+    <loc>http://localhost:1313/tags/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%83%BC%E3%82%B0/</loc>
     <lastmod>2025-05-30T08:21:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/%E5%AF%BE%E8%A9%B1/</loc>
+    <loc>http://localhost:1313/tags/%E5%AF%BE%E8%A9%B1/</loc>
     <lastmod>2025-05-30T08:21:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/%E8%87%AA%E5%B7%B1%E6%8E%A2%E6%B1%82/</loc>
+    <loc>http://localhost:1313/tags/%E8%87%AA%E5%B7%B1%E6%8E%A2%E6%B1%82/</loc>
     <lastmod>2025-05-30T08:21:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/categories/decap-cms/</loc>
+    <loc>http://localhost:1313/tags/%E3%82%BD%E3%83%BC%E3%83%88/</loc>
     <lastmod>2025-05-29T18:03:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/%E3%82%BD%E3%83%BC%E3%83%88/</loc>
-    <lastmod>2025-05-29T18:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://humanxai.info/tags/%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/</loc>
+    <loc>http://localhost:1313/tags/%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/</loc>
     <lastmod>2025-05-29T16:45:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B0/</loc>
+    <loc>http://localhost:1313/tags/%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B0/</loc>
     <lastmod>2025-05-29T10:48:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/%E3%83%96%E3%83%AD%E3%82%B0/</loc>
+    <loc>http://localhost:1313/tags/%E3%83%96%E3%83%AD%E3%82%B0/</loc>
     <lastmod>2025-05-29T08:55:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/github/</loc>
+    <loc>http://localhost:1313/tags/github/</loc>
     <lastmod>2025-05-28T20:02:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/hugo/</loc>
+    <loc>http://localhost:1313/categories/msx/</loc>
     <lastmod>2025-05-28T20:02:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/categories/msx/</loc>
+    <loc>http://localhost:1313/tags/netlify/</loc>
     <lastmod>2025-05-28T20:02:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/netlify/</loc>
+    <loc>http://localhost:1313/tags/webmsx/</loc>
     <lastmod>2025-05-28T20:02:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/webmsx/</loc>
-    <lastmod>2025-05-28T20:02:00+00:00</lastmod>
-  </url><url>
-    <loc>https://humanxai.info/categories/ai/</loc>
+    <loc>http://localhost:1313/categories/ai/</loc>
     <lastmod>2025-05-27T22:01:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/featured/</loc>
+    <loc>http://localhost:1313/featured/</loc>
     <lastmod>2025-05-27T22:01:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/framepack/</loc>
+    <loc>http://localhost:1313/tags/framepack/</loc>
     <lastmod>2025-05-27T22:01:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/stable-diffusion/</loc>
+    <loc>http://localhost:1313/tags/stable-diffusion/</loc>
     <lastmod>2025-05-27T22:01:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</loc>
+    <loc>http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</loc>
     <lastmod>2025-05-26T19:22:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/categories/netlify/</loc>
+    <loc>http://localhost:1313/categories/netlify/</loc>
     <lastmod>2025-05-26T08:18:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</loc>
+    <loc>http://localhost:1313/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</loc>
     <lastmod>2025-05-24T23:08:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/decap-cms/</loc>
+    <loc>http://localhost:1313/tags/decap-cms/</loc>
     <lastmod>2025-05-24T12:18:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/categories/%E3%83%96%E3%83%AD%E3%82%B0/</loc>
+    <loc>http://localhost:1313/categories/%E3%83%96%E3%83%AD%E3%82%B0/</loc>
     <lastmod>2025-05-24T12:18:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/bios/</loc>
+    <loc>http://localhost:1313/tags/bios/</loc>
     <lastmod>2025-05-22T16:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/edid/</loc>
+    <loc>http://localhost:1313/tags/edid/</loc>
     <lastmod>2025-05-22T16:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/tags/thunderbolt/</loc>
+    <loc>http://localhost:1313/tags/thunderbolt/</loc>
     <lastmod>2025-05-22T16:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://humanxai.info/categories/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3/</loc>
+    <loc>http://localhost:1313/categories/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3/</loc>
     <lastmod>2025-05-22T16:00:00+00:00</lastmod>
   </url>
 </urlset>

@@ -2,38 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Hugo on lainのAIと創作ブログ</title>
-    <link>https://humanxai.info/categories/hugo/</link>
+    <link>http://localhost:1313/categories/hugo/</link>
     <description>Recent content in Hugo on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 30 May 2025 11:09:00 +0000</lastBuildDate>
-    <atom:link href="https://humanxai.info/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 May 2025 12:20:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Hugo] 遅延読み込み (Lazy loading)  をテンプレートに追加</title>
-      <link>https://humanxai.info/posts/hugo-lazy-loading/</link>
+      <link>http://localhost:1313/posts/hugo-lazy-loading/</link>
       <pubDate>Fri, 30 May 2025 11:09:00 +0000</pubDate>
-      <guid>https://humanxai.info/posts/hugo-lazy-loading/</guid>
+      <guid>http://localhost:1313/posts/hugo-lazy-loading/</guid>
       <description>Hugo &#43; PaperMod テーマで画像の遅延読み込みを実装して表示速度を向上させる方法を紹介します。</description>
     </item>
     <item>
+      <title>[Hugo] メタディスクリプションを追加 (SEO強化)</title>
+      <link>http://localhost:1313/posts/hugo-meta-description/</link>
+      <pubDate>Fri, 30 May 2025 12:20:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-meta-description/</guid>
+      <description>Hugoでメタディスクリプション(meta description)を追加する方法の紹介（SEO強化）</description>
+    </item>
+    <item>
       <title>[Hugo] ページ推移用のボタンを作成</title>
-      <link>https://humanxai.info/posts/hugo-page-transition-button/</link>
+      <link>http://localhost:1313/posts/hugo-page-transition-button/</link>
       <pubDate>Thu, 29 May 2025 16:45:00 +0000</pubDate>
-      <guid>https://humanxai.info/posts/hugo-page-transition-button/</guid>
+      <guid>http://localhost:1313/posts/hugo-page-transition-button/</guid>
       <description>hugo のデフォルト機能であるページネーション機能を実装した備忘録的メモです</description>
     </item>
     <item>
       <title>[Hugo] Hugoで未来記事を表示させるには？ </title>
-      <link>https://humanxai.info/posts/hugo-custom-article-future/</link>
+      <link>http://localhost:1313/posts/hugo-custom-article-future/</link>
       <pubDate>Mon, 26 May 2025 19:22:00 +0000</pubDate>
-      <guid>https://humanxai.info/posts/hugo-custom-article-future/</guid>
+      <guid>http://localhost:1313/posts/hugo-custom-article-future/</guid>
       <description>Hugoで未来記事を表示させる方法の紹介（config.toml）</description>
     </item>
     <item>
       <title>[Hugo] Hugoで使われているテンプレートを確認する方法</title>
-      <link>https://humanxai.info/posts/hugo-template/</link>
+      <link>http://localhost:1313/posts/hugo-template/</link>
       <pubDate>Sat, 24 May 2025 23:08:00 +0000</pubDate>
-      <guid>https://humanxai.info/posts/hugo-template/</guid>
+      <guid>http://localhost:1313/posts/hugo-template/</guid>
       <description>使用中のテンプレートリスト確認方法</description>
     </item>
   </channel>

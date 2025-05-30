@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>BIOS on lainのAIと創作ブログ</title>
-    <link>https://humanxai.info/tags/bios/</link>
+    <link>http://localhost:1313/tags/bios/</link>
     <description>Recent content in BIOS on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 22 May 2025 16:00:00 +0000</lastBuildDate>
-    <atom:link href="https://humanxai.info/tags/bios/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/bios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[自作PC] Thunderbolt AIC モニタが映らない トラブル＆解決方法</title>
-      <link>https://humanxai.info/posts/computer-trouble-thunderbolt4/</link>
+      <link>http://localhost:1313/posts/computer-trouble-thunderbolt4/</link>
       <pubDate>Thu, 22 May 2025 16:00:00 +0000</pubDate>
-      <guid>https://humanxai.info/posts/computer-trouble-thunderbolt4/</guid>
+      <guid>http://localhost:1313/posts/computer-trouble-thunderbolt4/</guid>
       <description>モニタに映像出力されなくなった問題について、Thunderbolt4 、EDID問題を踏まえトラブル情報をまとめてみました</description>
     </item>
   </channel>

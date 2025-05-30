@@ -2,31 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Decap CMS on lainのAIと創作ブログ</title>
-    <link>https://humanxai.info/categories/decap-cms/</link>
+    <link>http://localhost:1313/categories/decap-cms/</link>
     <description>Recent content in Decap CMS on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 29 May 2025 18:03:00 +0000</lastBuildDate>
-    <atom:link href="https://humanxai.info/categories/decap-cms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 May 2025 13:07:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/decap-cms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Decap CMS]  description を編集できるようにする</title>
+      <link>http://localhost:1313/posts/decapcms-add-description/</link>
+      <pubDate>Fri, 30 May 2025 13:07:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/decapcms-add-description/</guid>
+      <description>[Decap CMS]で description を編集できるようにする方法の紹介</description>
+    </item>
     <item>
       <title>[Decap CMS] URLを短くする方法（Decap CMS＋Hugo）</title>
-      <link>https://humanxai.info/posts/decapcms-custom-slug/</link>
+      <link>http://localhost:1313/posts/decapcms-custom-slug/</link>
       <pubDate>Thu, 29 May 2025 10:48:00 +0000</pubDate>
-      <guid>https://humanxai.info/posts/decapcms-custom-slug/</guid>
+      <guid>http://localhost:1313/posts/decapcms-custom-slug/</guid>
       <description>デフォルトで記事タイトルがURLになり長くなってしまう為、短くする方法の紹介</description>
     </item>
     <item>
       <title>[Decap CMS] ソートが機能しない問題</title>
-      <link>https://humanxai.info/posts/decapcms-sort-trouble/</link>
+      <link>http://localhost:1313/posts/decapcms-sort-trouble/</link>
       <pubDate>Thu, 29 May 2025 18:03:00 +0000</pubDate>
-      <guid>https://humanxai.info/posts/decapcms-sort-trouble/</guid>
+      <guid>http://localhost:1313/posts/decapcms-sort-trouble/</guid>
       <description>Decap CMSでソート機能が上手く動かない原因と解決方法の紹介</description>
     </item>
     <item>
       <title>[Decap CMS] content/posts 以外のディレクトリの記事を編集</title>
-      <link>https://humanxai.info/posts/decap-directory-edit/</link>
+      <link>http://localhost:1313/posts/decap-directory-edit/</link>
       <pubDate>Thu, 29 May 2025 08:55:00 +0000</pubDate>
-      <guid>https://humanxai.info/posts/decap-directory-edit/</guid>
+      <guid>http://localhost:1313/posts/decap-directory-edit/</guid>
       <description>Decap CMSでcontent/posts 以外のディレクトリ記事を編集する方法の紹介</description>
     </item>
   </channel>

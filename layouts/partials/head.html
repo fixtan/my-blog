@@ -3,6 +3,9 @@
 <meta name="description" content="{{ . | plainify | truncate 130 }}">
 {{- end -}}
 
+<!-- favicon.ico -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
 <!-- test: custom head loaded -->
 {{ $css := resources.Get "css/custom.css.html" | resources.ExecuteAsTemplate "css/custom.css" . | fingerprint }}
 <link rel="stylesheet" href="{{ $css.Permalink }}">
