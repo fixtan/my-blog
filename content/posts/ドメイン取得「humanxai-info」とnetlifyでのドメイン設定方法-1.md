@@ -1,5 +1,5 @@
 ---
-title: netlifyでのドメイン設定方法
+title: "[NETLIFY] netlifyでのドメイン設定方法"
 slug: netlify-Domain-settings
 date: 2025-05-26T08:18:00.000Z
 draft: false
