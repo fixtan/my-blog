@@ -116,12 +116,12 @@ link-card.html は以下のようにカスタム：
 あとは、記事内に以下のような形式で貼り付ければ、自動でリンクカードが作成されます。
 
 ```go
-{{< link-card 
+{ {< link-card 
     url="https://example.com" 
     title="外部記事のタイトル" 
     description="記事の説明" 
     image="https://example.com/image.jpg"
->}}
+>} }
 ```
 
 それで、このコードを出力するPythonスクリプトが以下
@@ -164,12 +164,12 @@ if __name__ == "__main__":
 ```
 python ogp_fetcher.py "https://humanxai.info/"
 
-{{< link-card
+{ {< link-card
     url="https://humanxai.info/"
     title="lainのAIと創作ブログ"
     description="Human × AI の対話を通じて、AI活用やブログ制作、技術実験の軌跡を記録しています。"
     image="https://humanxai.info/images/default-ogp.png"
->}}
+>} }
 ```
 
 ただ、この方法だと毎回、コマンドプロンプトの入力が必要で、コピーするのも面倒なので、改良したGUIバージョンが、以下。（AIが作ってます）
