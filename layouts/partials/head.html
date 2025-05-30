@@ -15,3 +15,28 @@
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- OGP (Open Graph Protocol) -->
+<meta property="og:title" content="{{ .Title | default site.Title }}">
+{{- with .Description | default .Summary | default site.Params.description -}}
+  <meta property="og:description" content="{{ . | plainify | truncate 130 }}">
+{{- end }}
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+
+{{ with .Params.image }}
+  <meta property="og:image" content="{{ . | absURL }}">
+{{ else }}
+  <meta property="og:image" content="{{ "images/default-ogp.png" | absURL }}">
+{{ end }}
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title | default site.Title }}">
+<meta name="twitter:description" content="{{ .Description | default .Summary | default site.Params.description | plainify | truncate 130 }}">
+{{ with .Params.image }}
+  <meta name="twitter:image" content="{{ . | absURL }}">
+{{ else }}
+  <meta name="twitter:image" content="{{ "images/default-ogp.png" | absURL }}">
+{{ end }}

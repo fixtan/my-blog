@@ -34,6 +34,9 @@
     <loc>http://localhost:1313/posts/ai-dialogue-2025-05-30/</loc>
     <lastmod>2025-05-30T08:21:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/hugo-404-favicon/</loc>
+    <lastmod>2025-05-30T13:42:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/hugo-meta-description/</loc>
     <lastmod>2025-05-30T12:20:00+00:00</lastmod>
   </url><url>
@@ -76,8 +79,29 @@
     <loc>http://localhost:1313/posts/third/</loc>
     <lastmod>2025-05-15T01:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/404/</loc>
+    <lastmod>2025-05-30T13:42:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-05-30T13:07:00+00:00</lastmod>
+    <lastmod>2025-05-30T13:42:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/favicon/</loc>
+    <lastmod>2025-05-30T13:42:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/favicon.ico/</loc>
+    <lastmod>2025-05-30T13:42:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/hugo/</loc>
+    <lastmod>2025-05-30T13:42:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-05-30T13:42:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-05-30T13:42:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-05-30T13:42:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/decap-cms/</loc>
     <lastmod>2025-05-30T13:07:00+00:00</lastmod>
@@ -88,23 +112,11 @@
     <loc>http://localhost:1313/tags/hugo/</loc>
     <lastmod>2025-05-30T13:07:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-05-30T13:07:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-05-30T13:07:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/seo/</loc>
-    <lastmod>2025-05-30T13:07:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-05-30T13:07:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E3%83%A1%E3%82%BF%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3/</loc>
     <lastmod>2025-05-30T13:07:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/hugo/</loc>
-    <lastmod>2025-05-30T12:20:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/meta-description/</loc>
     <lastmod>2025-05-30T12:20:00+00:00</lastmod>
