@@ -70,4 +70,61 @@ Chromeのデベロッパーツール → 「Elements」タブ で画像を確認
 
 画像を .webp 形式などに変換しておくとさらに高速化できます。
 
+## ブログのアイキャッチ画像に対応（PaperMod）
+
+PaperModではブログ記事カード（おすすめ記事など）に使われるアイキャッチ画像は、Markdownとは別のテンプレートからHTMLが出力されているため、render-image.html では対応されません。
+
+### 対応すべき箇所：カードUIでのアイキャッチ画像（例：おすすめ記事）
+
+投稿一覧やおすすめ記事などに表示される img タグは、PaperModのこのあたりのテンプレートから出力されています：
+
+```
+themes/PaperMod/layouts/partials/
+├── li.html               ← 記事一覧のカード用
+├── featured.html         ← featured（おすすめ）セクション用（カスタムしてる場合あり）
+```
+
+
+### ① li.html や featured.html に loading="lazy" を追加
+
+themes/PaperMod/layouts/partials/li.html か、カスタマイズ済なら 
+layouts/partials/li.html などを開いて、以下のような行を探してください：
+
+```
+<img src="{{ .Params.images | first }}" alt="{{ .Title }}" class="post-thumb">
+```
+もしくは：
+```
+<img src="{{ $img }}" alt="{{ .Title }}" class="post-thumb">
+```
+
+これを次のように変更：
+
+```
+<img src="{{ .Params.images | first }}" alt="{{ .Title }}" class="post-thumb" loading="lazy" decoding="async">
+```
+
+### ② layouts/_default/baseof.html や single.html などのヒーロー画像もチェック（必要に応じて）
+
+Hero画像にも loading="lazy" を追加できますが、最初に表示される1枚だけは敢えてlazyにしない方がUX的にはベターです（ページ上部の画像なので即読み込みした方がよいため）。
+
+### ③ 反映確認
+
+```
+hugo server
+```
+
+## おまけ：CSSで .lazy-img を活かす
+
+は読み込み中は薄く、表示時にフェードインさせる効果を加えるテクニック。
+
+```
+.lazy-img {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+.lazy-img[loading="lazy"]:not([src=""]) {
+  opacity: 1;
+}
+```
 
