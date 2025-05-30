@@ -1,5 +1,5 @@
 ---
-title: "Hugoで未来記事を表示させるには？ "
+title: "[Hugo] Hugoで未来記事を表示させるには？ "
 slug: Hugo-custom-article-future
 date: 2025-05-26T19:22:00.000Z
 draft: false
