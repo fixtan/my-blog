@@ -1,5 +1,5 @@
 ---
-title: "[Hugo] favicon.ico の 404 対策 作成 [ERROR]"
+title: "[Hugo] favicon.ico の 404 対策  [ERROR]"
 slug: hugo-404-favicon
 summary: DeveloperToolで favicon.ico の 404 が出るのでアイコンを作成してみました
 description: |
