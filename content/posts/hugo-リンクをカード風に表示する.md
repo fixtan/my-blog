@@ -106,7 +106,7 @@ link-card.html は以下のようにカスタム：
     <div class="link-card-thumb">
       <img src="{ { $img } }" alt="{ { $title } }">
     </div>
-    <div class="link-card-body">
+    <div class="link-card-text">
       <h3>{ { $title } }</h3>
       <p>{ { $desc } }</p>
       <span class="link-card-url">{ { $url } }</span>
@@ -114,6 +114,86 @@ link-card.html は以下のようにカスタム：
   </a>
 </article>
 ```
+<br>
+CSSファイルに以下を追記。<br>
+
+PATH:  ** \assets\css\custom.css.html **
+
+```
+/* リンクカード：ここから*/
+.link-card {
+  display: flex;
+  max-width: 500px;
+  height: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  margin: 1em 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s;
+}
+
+.link-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.link-card a {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-card-thumb {
+  flex: 0 0 120px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.link-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ← cover から変更 */
+  display: block;
+  background-color: #f8f8f8; /* 余白が出るときの背景対策 */
+}
+
+.link-card-text {
+  flex: 1;
+  padding: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.link-card-text h3 {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+  color: #333;
+}
+
+.link-card-text p {
+  margin: 0.5em 0 0.5em;
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 最大3行で切る */
+  -webkit-box-orient: vertical;
+}
+
+.link-card-url {
+  font-size: 0.75em;
+  color: #999;
+  margin-top: auto;
+}
+
+/* リンクカード：ここまで*/
+```
+
 
 あとは、記事内に以下のような形式で貼り付ければ、自動でリンクカードが作成されます。
 
