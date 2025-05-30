@@ -7,8 +7,12 @@ author: lain
 image: /images/uploads/hugo-meta-description.png
 summary: Hugoでメタディスクリプション(meta description)を追加する方法の紹介（SEO強化）
 categories:
-  - 未分類
-weight: 20
+  - Hugo
+tags:
+  - メタディスクリプション
+  - SEO
+  - meta description
+weight: 9
 ---
 <center>
 <img src="/images/uploads/hugo-meta-description.png" alt=""  loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; "/>
