@@ -1,0 +1,9 @@
+{{ $url := .Get "url" }}
+<article class="link-card">
+  <a href="{{ $url }}" target="_blank" rel="noopener">
+    <div class="link-card-content">
+      <strong>{{ $url }}</strong><br>
+      <span>リンクのOGPタイトルをここに</span>
+    </div>
+  </a>
+</article>
