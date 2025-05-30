@@ -160,16 +160,3 @@ if __name__ == "__main__":
         fetch_ogp(sys.argv[1])
 ```
 
-コマンドプロンプトから以下のように実行するとテンプレート形式で結果が出力されるのでそれをコピー＆ペースト
-
-```
-python ogp_fetcher.py "https://humanxai.info/"
-
-{ {< link-card
-    url="https://humanxai.info/"
-    title="lainのAIと創作ブログ"
-    description="Human × AI の対話を通じて、AI活用やブログ制作、技術実験の軌跡を記録しています。"
-    image="https://humanxai.info/images/default-ogp.png"
->} }
-```
-
