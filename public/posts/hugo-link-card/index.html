@@ -6,7 +6,7 @@
 
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/custom.6f3ca0597935e73d979d4c8116b1b396e1f9934eef2f64608a68c983b5ed27e1.css">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.8aa9cdb7ed6cf950de1a20cbdf364c5d7fe0b26016c6eb2d06d1a808892dabae.css">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -118,7 +118,7 @@
     <div class="post-description">
       Hugoのショートコードを使って、リンクをカード風に表示する方法の紹介。
     </div>
-    <div class="post-meta"><span title='2025-05-30 15:49:00 +0000 UTC'>May 30, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;lain
+    <div class="post-meta"><span title='2025-05-30 15:49:00 +0000 UTC'>May 30, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
 
 </div>
   </header> 
@@ -156,18 +156,10 @@
 <h2 id="代替策できること">代替策・できること<a hidden class="anchor" aria-hidden="true" href="#代替策できること">#</a></h2>
 <p>CMSエディタで「リンクをカード風に表示する」機能はないが、自作できる<br></p>
 <p>Hugoのショートコードを使って、こんな感じのカードを表示可能：</p>
-<pre tabindex="0"><code>
-<article class="link-card">
-  <a href="https://humanxai.info/posts/hugo-meta-description/" target="_blank" rel="noopener">
-    <div class="link-card-content">
-      <strong>https://humanxai.info/posts/hugo-meta-description/</strong><br>
-      <span>リンクのOGPタイトルをここに</span>
-    </div>
-  </a>
-</article>
+<pre tabindex="0"><code>{ {&lt; link-card url=&#34;https://humanxai.info/posts/hugo-meta-description/&#34; &gt;} }
 </code></pre><p>shortcodes/link-card.html を作ることで、リンクカード風のHTMLを生成できます（OpenGraph取得含む）。</p>
 <h2 id="自作ショートコードでogpカード風リンクを作る例">自作ショートコードでOGPカード風リンクを作る（例）<a hidden class="anchor" aria-hidden="true" href="#自作ショートコードでogpカード風リンクを作る例">#</a></h2>
-<p>** layouts/shortcodes/link-card.html** を作成：</p>
+<p><strong>layouts/shortcodes/link-card.html</strong> を作成：</p>
 <pre tabindex="0"><code>{{ $url := .Get &#34;url&#34; }}
 &lt;article class=&#34;link-card&#34;&gt;
   &lt;a href=&#34;{{ $url }}&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
@@ -177,7 +169,156 @@
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/article&gt;
-</code></pre>
+</code></pre><h2 id="外部サイトからogp情報を取得する方法">外部サイトからOGP情報を取得する方法<a hidden class="anchor" aria-hidden="true" href="#外部サイトからogp情報を取得する方法">#</a></h2>
+<h3 id="方法decap-cms-カスタムウィジェット">方法①：Decap CMS カスタムウィジェット<a hidden class="anchor" aria-hidden="true" href="#方法decap-cms-カスタムウィジェット">#</a></h3>
+<p>AIの意見：</p>
+<blockquote>
+<p>たとえば、以下のような Decap CMS UI が理想です：<br>
+URL入力欄（https://example.com）<br>
+⬇ 自動的に…<br></p>
+<ul>
+<li>タイトル → og:title</li>
+<li>説明文 → og:description</li>
+<li>画像URL → og:image</li>
+<li>それぞれの欄に反映</li>
+</ul>
+<p>このようなUIを実現するには：</p>
+<ul>
+<li>Decap CMS の widget を JavaScript で自作</li>
+<li>registerWidget を使ってリアルタイムに入力欄を生成・更新</li>
+<li>外部URLにアクセス（CORS注意）</li>
+</ul>
+<p>必要なら Microlink API や独自Proxyで CORS回避</p></blockquote>
+<p>Decap CMS カスタムウィジェットを実装して、URLを入力すると自動的にリンクカードが作成される仕組みが理想なのですが、AIに聞くと、やや難しい事が分かり将来的にチャレンジしてもいい気はしますが、今は、ブログ作成メインで進めているので提案を見送りました。</p>
+<h3 id="方法2pythonスクリプトでogp情報を取得してショートコード化テンプレ提供">方法2：PythonスクリプトでOGP情報を取得してショートコード化（テンプレ提供）<a hidden class="anchor" aria-hidden="true" href="#方法2pythonスクリプトでogp情報を取得してショートコード化テンプレ提供">#</a></h3>
+<p>やや手間がかかる方法ですが、ローカル環境でPythonのコードを動かしOGP情報を取得してショートコード化し、その内容をクリップボードにコピーし、記事に貼り付けるという方法。</p>
+<p>やや手間はかかりますが、ワンステップ入れるだけで、リンクカードが作れるお手軽さがあり、面倒な時は普通にリンクを作って逃げる事も出来るので、この方法で今回は妥協しました。</p>
+<h2 id="実装してみる">実装してみる<a hidden class="anchor" aria-hidden="true" href="#実装してみる">#</a></h2>
+<p>link-card.html は以下のようにカスタム：</p>
+<p>※注意※Goテンプレート構文が実行されないように{{ を{ {にしてます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{ { <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">url</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;url&#34;</span> } }
+</span></span><span style="display:flex;"><span>{ { <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">title</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;title&#34;</span> } }
+</span></span><span style="display:flex;"><span>{ { <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">desc</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;description&#34;</span> } }
+</span></span><span style="display:flex;"><span>{ { <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">img</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;image&#34;</span> } }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#a6e22e">article</span> <span style="color:#a6e22e">class</span>=<span style="color:#e6db74">&#34;link-card&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#a6e22e">a</span> <span style="color:#a6e22e">href</span>=<span style="color:#e6db74">&#34;{{ $url }}&#34;</span> <span style="color:#a6e22e">target</span>=<span style="color:#e6db74">&#34;_blank&#34;</span> <span style="color:#a6e22e">rel</span>=<span style="color:#e6db74">&#34;noopener&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#a6e22e">div</span> <span style="color:#a6e22e">class</span>=<span style="color:#e6db74">&#34;link-card-thumb&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#a6e22e">img</span> <span style="color:#a6e22e">src</span>=<span style="color:#e6db74">&#34;{ { $img } }&#34;</span> <span style="color:#a6e22e">alt</span>=<span style="color:#e6db74">&#34;{ { $title } }&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#a6e22e">div</span> <span style="color:#a6e22e">class</span>=<span style="color:#e6db74">&#34;link-card-body&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#a6e22e">h3</span>&gt;{ { <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">title</span> } }&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">h3</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#a6e22e">p</span>&gt;{ { <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">desc</span> } }&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">p</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#a6e22e">span</span> <span style="color:#a6e22e">class</span>=<span style="color:#e6db74">&#34;link-card-url&#34;</span>&gt;{ { <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">url</span> } }&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">span</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">a</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">article</span>&gt;
+</span></span></code></pre></div><p>あとは、記事内に以下のような形式で貼り付ければ、自動でリンクカードが作成されます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{ {&lt; <span style="color:#a6e22e">link</span><span style="color:#f92672">-</span><span style="color:#a6e22e">card</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span>=<span style="color:#e6db74">&#34;https://example.com&#34;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">title</span>=<span style="color:#e6db74">&#34;外部記事のタイトル&#34;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">description</span>=<span style="color:#e6db74">&#34;記事の説明&#34;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">image</span>=<span style="color:#e6db74">&#34;https://example.com/image.jpg&#34;</span>
+</span></span><span style="display:flex;"><span>&gt;} }
+</span></span></code></pre></div><p>それで、このコードを出力するPythonスクリプトが以下</p>
+<p>CUIバージョン</p>
+<pre tabindex="0"><code>import requests
+from bs4 import BeautifulSoup
+import sys
+
+def fetch_ogp(url):
+    try:
+        res = requests.get(url, timeout=5, headers={&#34;User-Agent&#34;: &#34;Mozilla/5.0&#34;})
+        res.raise_for_status()
+        soup = BeautifulSoup(res.text, &#34;html.parser&#34;)
+        ogp = {
+            &#34;title&#34;: soup.find(&#34;meta&#34;, property=&#34;og:title&#34;),
+            &#34;description&#34;: soup.find(&#34;meta&#34;, property=&#34;og:description&#34;),
+            &#34;image&#34;: soup.find(&#34;meta&#34;, property=&#34;og:image&#34;)
+        }
+        print(&#34;{ {&lt; link-card&#34;)
+        print(f&#39;    url=&#34;{url}&#34;&#39;)
+        print(f&#39;    title=&#34;{ogp[&#34;title&#34;][&#34;content&#34;] if ogp[&#34;title&#34;] else &#34;タイトル未取得&#34;}&#34;&#39;)
+        print(f&#39;    description=&#34;{ogp[&#34;description&#34;][&#34;content&#34;] if ogp[&#34;description&#34;] else &#34;説明なし&#34;}&#34;&#39;)
+        print(f&#39;    image=&#34;{ogp[&#34;image&#34;][&#34;content&#34;] if ogp[&#34;image&#34;] else &#34;&#34;}&#34;&#39;)
+        print(&#34;&gt;`} }&#34;)
+    except Exception as e:
+        print(f&#34;エラー: {e}&#34;)
+
+if __name__ == &#34;__main__&#34;:
+    if len(sys.argv) != 2:
+        print(&#34;使い方: python ogp_fetcher.py [URL]&#34;)
+    else:
+        fetch_ogp(sys.argv[1])
+</code></pre><p>コマンドプロンプトから以下のように実行するとテンプレート形式で結果が出力されるのでそれをコピー＆ペースト</p>
+<pre tabindex="0"><code>python ogp_fetcher.py &#34;https://humanxai.info/&#34;
+
+{ {&lt; link-card
+    url=&#34;https://humanxai.info/&#34;
+    title=&#34;lainのAIと創作ブログ&#34;
+    description=&#34;Human × AI の対話を通じて、AI活用やブログ制作、技術実験の軌跡を記録しています。&#34;
+    image=&#34;https://humanxai.info/images/default-ogp.png&#34;
+&gt;} }
+</code></pre><p>ただ、この方法だと毎回、コマンドプロンプトの入力が必要で、コピーするのも面倒なので、改良したGUIバージョンが、以下。（AIが作ってます）</p>
+<pre tabindex="0"><code>import requests
+from bs4 import BeautifulSoup
+import tkinter as tk
+from tkinter import simpledialog
+import pyperclip
+
+def fetch_ogp(url):
+    res = requests.get(url, timeout=5, headers={&#34;User-Agent&#34;: &#34;Mozilla/5.0&#34;})
+    res.encoding = res.apparent_encoding
+    #res.encoding = &#39;utf-8&#39;
+    soup = BeautifulSoup(res.text, &#34;html.parser&#34;)
+    title = soup.find(&#34;meta&#34;, property=&#34;og:title&#34;)
+    desc = soup.find(&#34;meta&#34;, property=&#34;og:description&#34;)
+    image = soup.find(&#34;meta&#34;, property=&#34;og:image&#34;)
+
+    shortcode = f&#39;&#39;&#39;{ { { {&lt; link-card
+    url=&#34;{url}&#34;
+    title=&#34;{title[&#39;content&#39;] if title else &#39;タイトル未取得&#39;}&#34;
+    description=&#34;{desc[&#39;content&#39;] if desc else &#39;説明なし&#39;}&#34;
+    image=&#34;{image[&#39;content&#39;] if image else &#39;&#39;}&#34;
+&gt;} } } }&#39;&#39;&#39;
+
+    pyperclip.copy(shortcode)
+    print(&#34;✅ クリップボードにコピーされました！&#34;)
+    print(shortcode)
+
+# GUIポップアップ
+root = tk.Tk()
+root.withdraw()
+url = simpledialog.askstring(&#34;OGPカード生成&#34;, &#34;URLを入力してください：&#34;)
+if url:
+    try:
+        fetch_ogp(url)
+    except Exception as e:
+        print(&#34;エラー:&#34;, e)
+</code></pre><p>※「} }」は「}}」に、「{ {」は「{{」に置き換えてください。</p>
+<p>実行すると、このような入力ボックスが出現するのでURLを入力すれば、結果を自動でクリップボードにコピーしてくれます。</p>
+<img src="http://localhost:1313/images/uploads/image-16425.jpg" alt=""  loading="lazy" decoding="async" style="max-width:70%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+<h2 id="実行テスト">実行テスト<a hidden class="anchor" aria-hidden="true" href="#実行テスト">#</a></h2>
+<p>PythonでURLを入力し、出力した結果、このように表示されればOKです。</p>
+<p><a href="https://gochiusa.com/bloom/">https://gochiusa.com/bloom/</a></p>
+
+
+
+
+
+<article class="link-card">
+  <a href="https://gochiusa.com/bloom/" target="_blank" rel="noopener">
+    <div class="link-card-thumb">
+      <img src="https://gochiusa.com/bloom/core_sys/images/others/ogp.jpg" alt="TVアニメ「ご注文はうさぎですか？ BLOOM」公式サイト">
+    </div>
+    <div class="link-card-text">
+      <h3>TVアニメ「ご注文はうさぎですか？ BLOOM」公式サイト</h3>
+      <p>ココアが木組みの街で過ごす二度目の夏ももうすぐ終わり、季節はイベント盛りだくさんの秋へと移り変わろうとしています。学校にもラビットハウスにも、楽しいことが今日もいっぱい！ココア、チノ、そしてみんなの未来へのわくわくが止まりません……！</p>
+      <span class="link-card-url">https://gochiusa.com/bloom/</span>
+    </div>
+  </a>
+</article>
+
 
   </div>
 

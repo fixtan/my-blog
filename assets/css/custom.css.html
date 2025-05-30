@@ -877,47 +877,74 @@ body.dark .share-buttons li a:hover {
 
 /* リンクカード：ここから*/
 .link-card {
-  border: 1px solid #ccc;
+  display: flex;
+  max-width: 500px;
+  height: auto;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
   overflow: hidden;
-  margin: 1em 0;
-  transition: box-shadow 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #fff;
+  margin: 1em 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s;
+}
+
+.link-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .link-card a {
   display: flex;
+  width: 100%;
   text-decoration: none;
   color: inherit;
 }
 
+.link-card-thumb {
+  flex: 0 0 120px;
+  height: 100%;
+  overflow: hidden;
+}
+
 .link-card-thumb img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ← cover から変更 */
   display: block;
+  background-color: #f8f8f8; /* 余白が出るときの背景対策 */
 }
 
 .link-card-text {
-  padding: 0.5em 1em;
   flex: 1;
+  padding: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .link-card-text h3 {
-  margin: 0 0 0.3em;
-  font-size: 1.1em;
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+  color: #333;
 }
 
 .link-card-text p {
-  margin: 0;
+  margin: 0.5em 0 0.5em;
   font-size: 0.9em;
-  color: #555;
+  color: #666;
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 最大3行で切る */
+  -webkit-box-orient: vertical;
 }
 
 .link-card-url {
-  display: block;
   font-size: 0.75em;
   color: #999;
-  margin-top: 0.5em;
+  margin-top: auto;
 }
+
 /* リンクカード：ここまで*/
+
