@@ -16,7 +16,7 @@ tags:
 weight: 7
 ---
 <center>
-<img src="/images/uploads/hugo-lazy-loading.png" alt="" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+<img src="/images/uploads/hugo-lazy-loading.png" alt="[Hugo] 遅延読み込み (Lazy loading)  をテンプレートに追加" loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </center>
 
 ## はじめに
