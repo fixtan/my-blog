@@ -7,8 +7,13 @@ author: lain
 image: /images/uploads/hugo-lazy-loading.png
 summary: 表示速度改善に効果的な画像の遅延読み込み (loading="lazy") をHugoのテンプレートに追加してみました
 categories:
-  - 未分類
-weight: 20
+  - Hugo
+tags:
+  - カスタム
+  - Lazy loading
+  - 遅延読み込み
+  - テンプレート
+weight: 7
 ---
 <center>
 <img src="/images/uploads/hugo-lazy-loading.png" alt="" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
