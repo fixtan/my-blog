@@ -66,3 +66,6 @@ shortcodes/link-card.html を作ることで、リンクカード風のHTMLを�
 ```
 
 
+## TEST
+
+{{< link-card url="https://humanxai.info/posts/hugo-meta-description/" >}}
