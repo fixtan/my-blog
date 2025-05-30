@@ -1,5 +1,5 @@
 ---
-title: 自前でMSXサイトを作成（WebMSX）
+title: "[WebMSX] 自前でMSXサイトを作成"
 slug: WebMSX-Hugo-Netlify
 date: 2025-05-28T20:02:00.000Z
 draft: false
