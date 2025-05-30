@@ -6,20 +6,34 @@
     <description>Recent content in Hugo on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 26 May 2025 10:20:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 May 2025 11:09:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugoで未来記事を表示させるには？ </title>
-      <link>http://localhost:1313/posts/hugo%E3%81%A7%E6%9C%AA%E6%9D%A5%E8%A8%98%E4%BA%8B%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF/</link>
-      <pubDate>Mon, 26 May 2025 10:20:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo%E3%81%A7%E6%9C%AA%E6%9D%A5%E8%A8%98%E4%BA%8B%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF/</guid>
+      <title>[Hugo] 遅延読み込み (Lazy loading)  をテンプレートに追加</title>
+      <link>http://localhost:1313/posts/hugo-lazy-loading/</link>
+      <pubDate>Fri, 30 May 2025 11:09:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-lazy-loading/</guid>
+      <description>表示速度改善に効果的な画像の遅延読み込み (loading=&amp;ldquo;lazy&amp;rdquo;) をHugoのテンプレートに追加してみました</description>
+    </item>
+    <item>
+      <title>[Hugo] ページ推移用のボタンを作成</title>
+      <link>http://localhost:1313/posts/hugo-page-transition-button/</link>
+      <pubDate>Thu, 29 May 2025 16:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-page-transition-button/</guid>
+      <description>hugo のデフォルト機能であるページネーション機能を実装した備忘録的メモです</description>
+    </item>
+    <item>
+      <title>[Hugo] Hugoで未来記事を表示させるには？ </title>
+      <link>http://localhost:1313/posts/hugo-custom-article-future/</link>
+      <pubDate>Mon, 26 May 2025 19:22:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-custom-article-future/</guid>
       <description>Hugoで未来記事を表示させる方法の紹介（config.toml）</description>
     </item>
     <item>
-      <title>Hugoで使われているテンプレートを確認する方法</title>
-      <link>http://localhost:1313/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Fri, 23 May 2025 14:08:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</guid>
+      <title>[Hugo] Hugoで使われているテンプレートを確認する方法</title>
+      <link>http://localhost:1313/posts/hugo-template/</link>
+      <pubDate>Sat, 24 May 2025 23:08:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-template/</guid>
       <description>使用中のテンプレートリスト確認方法</description>
     </item>
   </channel>

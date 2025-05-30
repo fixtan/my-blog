@@ -3,9 +3,9 @@
 
   <div class="thumb-wrapper">
     {{ if .Params.image }}
-      <img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-thumb">
+      <img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-thumb" loading="lazy" decoding="async">
     {{ else }}
-      <img src="/images/noimage.jpg" alt="No image" class="post-thumb">
+      <img src="/images/noimage.jpg" alt="No image" class="post-thumb" loading="lazy" decoding="async">
     {{ end }}
   </div>
 

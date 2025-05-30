@@ -6,28 +6,35 @@
     <description>Recent content in Posts on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 29 May 2025 10:48:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 May 2025 11:09:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>自前でMSXサイトを作成（WebMSX）</title>
+      <title>[WebMSX] 自前でMSXサイトを作成</title>
       <link>http://localhost:1313/posts/webmsx-hugo-netlify/</link>
-      <pubDate>Wed, 28 May 2025 09:01:00 +0000</pubDate>
+      <pubDate>Wed, 28 May 2025 20:02:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/webmsx-hugo-netlify/</guid>
       <description>WebMSXを活用しWEBサイトでMSXを動作させる方法の紹介</description>
     </item>
     <item>
-      <title>netlifyでのドメイン設定方法</title>
-      <link>http://localhost:1313/posts/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%8F%96%E5%BE%97humanxai-info%E3%81%A8netlify%E3%81%A7%E3%81%AE%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95-1/</link>
-      <pubDate>Mon, 26 May 2025 08:17:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%8F%96%E5%BE%97humanxai-info%E3%81%A8netlify%E3%81%A7%E3%81%AE%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95-1/</guid>
+      <title>[NETLIFY] netlifyでのドメイン設定方法</title>
+      <link>http://localhost:1313/posts/netlify-domain-settings/</link>
+      <pubDate>Mon, 26 May 2025 08:18:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/netlify-domain-settings/</guid>
       <description>netlifyでのドメイン設定方法の紹介</description>
     </item>
     <item>
       <title>[自作PC] Thunderbolt AIC モニタが映らない トラブル＆解決方法</title>
       <link>http://localhost:1313/posts/computer-trouble-thunderbolt4/</link>
-      <pubDate>Thu, 22 May 2025 15:00:00 +0900</pubDate>
+      <pubDate>Thu, 22 May 2025 16:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/computer-trouble-thunderbolt4/</guid>
       <description>モニタに映像出力されなくなった問題について、Thunderbolt4 、EDID問題を踏まえトラブル情報をまとめてみました</description>
+    </item>
+    <item>
+      <title>[Hugo] 遅延読み込み (Lazy loading)  をテンプレートに追加</title>
+      <link>http://localhost:1313/posts/hugo-lazy-loading/</link>
+      <pubDate>Fri, 30 May 2025 11:09:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-lazy-loading/</guid>
+      <description>表示速度改善に効果的な画像の遅延読み込み (loading=&amp;ldquo;lazy&amp;rdquo;) をHugoのテンプレートに追加してみました</description>
     </item>
     <item>
       <title>[Decap CMS] URLを短くする方法（Decap CMS＋Hugo）</title>
@@ -35,6 +42,27 @@
       <pubDate>Thu, 29 May 2025 10:48:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/decapcms-custom-slug/</guid>
       <description>デフォルトで記事タイトルがURLになり長くなってしまう為、短くする方法の紹介</description>
+    </item>
+    <item>
+      <title>[AI] ChatGPTとの対話  (2025/05/30)</title>
+      <link>http://localhost:1313/posts/ai-dialogue-2025-05-30/</link>
+      <pubDate>Fri, 30 May 2025 08:21:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ai-dialogue-2025-05-30/</guid>
+      <description>ChatGPT(4o)とたまに会話をしてるのですが、その内容の一部を公開してみます</description>
+    </item>
+    <item>
+      <title>[Decap CMS] ソートが機能しない問題</title>
+      <link>http://localhost:1313/posts/decapcms-sort-trouble/</link>
+      <pubDate>Thu, 29 May 2025 18:03:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/decapcms-sort-trouble/</guid>
+      <description>Decap CMSでソート機能が上手く動かない原因と解決方法の紹介</description>
+    </item>
+    <item>
+      <title>[Hugo] ページ推移用のボタンを作成</title>
+      <link>http://localhost:1313/posts/hugo-page-transition-button/</link>
+      <pubDate>Thu, 29 May 2025 16:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-page-transition-button/</guid>
+      <description>hugo のデフォルト機能であるページネーション機能を実装した備忘録的メモです</description>
     </item>
     <item>
       <title>[Decap CMS] content/posts 以外のディレクトリの記事を編集</title>
@@ -45,36 +73,36 @@
     </item>
     <item>
       <title>[Decap CMS] Config Errors: &#39;collections[0].fields&#39; fields names must be unique</title>
-      <link>http://localhost:1313/posts/decap-cms-config-errors-collections-0-fields-fields-names-must-be-unique/</link>
-      <pubDate>Sat, 24 May 2025 03:17:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/decap-cms-config-errors-collections-0-fields-fields-names-must-be-unique/</guid>
-      <description>[Decap CMS] Config Errors: &amp;lsquo;collections[0].fields&amp;rsquo; fields names must be unique</description>
+      <link>http://localhost:1313/posts/decapcms-error-01/</link>
+      <pubDate>Sat, 24 May 2025 12:18:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/decapcms-error-01/</guid>
+      <description>Netlify CMS/Decap CMSのカスタム中、ログインしようとするとエラーメッセージがでた際のトラブルTip</description>
     </item>
     <item>
-      <title>Hugoで未来記事を表示させるには？ </title>
-      <link>http://localhost:1313/posts/hugo%E3%81%A7%E6%9C%AA%E6%9D%A5%E8%A8%98%E4%BA%8B%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF/</link>
-      <pubDate>Mon, 26 May 2025 10:20:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo%E3%81%A7%E6%9C%AA%E6%9D%A5%E8%A8%98%E4%BA%8B%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF/</guid>
+      <title>[Hugo] Hugoで未来記事を表示させるには？ </title>
+      <link>http://localhost:1313/posts/hugo-custom-article-future/</link>
+      <pubDate>Mon, 26 May 2025 19:22:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-custom-article-future/</guid>
       <description>Hugoで未来記事を表示させる方法の紹介（config.toml）</description>
     </item>
     <item>
-      <title>Hugoで使われているテンプレートを確認する方法</title>
-      <link>http://localhost:1313/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Fri, 23 May 2025 14:08:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</guid>
+      <title>[Hugo] Hugoで使われているテンプレートを確認する方法</title>
+      <link>http://localhost:1313/posts/hugo-template/</link>
+      <pubDate>Sat, 24 May 2025 23:08:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-template/</guid>
       <description>使用中のテンプレートリスト確認方法</description>
     </item>
     <item>
       <title>CMS からテスト投稿２</title>
       <link>http://localhost:1313/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</link>
-      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 21 May 2025 17:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</guid>
       <description>&lt;p&gt;Draft　テスト投稿&lt;/p&gt;</description>
     </item>
     <item>
       <title>Decap CMS導入テスト投稿</title>
       <link>http://localhost:1313/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</link>
-      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 21 May 2025 01:01:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</guid>
       <description>&lt;p&gt;日本語入力テスト。&lt;/p&gt;
 &lt;p&gt;問題なく入力できるようです。&lt;/p&gt;</description>
@@ -82,7 +110,7 @@
     <item>
       <title>ダミー記事12</title>
       <link>http://localhost:1313/posts/first/</link>
-      <pubDate>Sat, 17 May 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 17 May 2025 00:01:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/first/</guid>
       <description>&lt;p&gt;（本文はまだありません）&lt;/p&gt;</description>
     </item>
@@ -96,14 +124,14 @@
     <item>
       <title>Second</title>
       <link>http://localhost:1313/posts/second/</link>
-      <pubDate>Thu, 15 May 2025 16:11:54 +0900</pubDate>
+      <pubDate>Thu, 15 May 2025 17:11:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/second/</guid>
       <description>&lt;p&gt;テスト&lt;/p&gt;</description>
     </item>
     <item>
       <title>３つ目の投稿</title>
       <link>http://localhost:1313/posts/third/</link>
-      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 May 2025 01:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/third/</guid>
       <description>&lt;p&gt;（本文はまだありません）&lt;/p&gt;</description>
     </item>

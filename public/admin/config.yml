@@ -30,7 +30,7 @@ collections:
     folder: "content/posts"
     create: true
     slug: "{{slug}}"
-
+    sortable_fields: ["date", "title", "author"]
     fields:
       - { label: "タイトル", name: "title", widget: "string" }
       - { label: "スラッグ", name: "slug", widget: "string", required: false }
@@ -49,6 +49,7 @@ collections:
     folder: "content/featured"
     create: true
     slug: "{{slug}}"
+    sortable_fields: ["date", "title", "author"]
     fields:
       - { label: "タイトル", name: "title", widget: "string" }
       - { label: "スラッグ", name: "slug", widget: "string", required: false }

@@ -6,7 +6,7 @@
     <description>Recent content in Decap CMS on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 29 May 2025 10:48:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 May 2025 18:03:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/decap-cms/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Decap CMS] URLを短くする方法（Decap CMS＋Hugo）</title>
@@ -14,6 +14,13 @@
       <pubDate>Thu, 29 May 2025 10:48:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/decapcms-custom-slug/</guid>
       <description>デフォルトで記事タイトルがURLになり長くなってしまう為、短くする方法の紹介</description>
+    </item>
+    <item>
+      <title>[Decap CMS] ソートが機能しない問題</title>
+      <link>http://localhost:1313/posts/decapcms-sort-trouble/</link>
+      <pubDate>Thu, 29 May 2025 18:03:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/decapcms-sort-trouble/</guid>
+      <description>Decap CMSでソート機能が上手く動かない原因と解決方法の紹介</description>
     </item>
     <item>
       <title>[Decap CMS] content/posts 以外のディレクトリの記事を編集</title>

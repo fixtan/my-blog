@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>遅延読み込み on lainのAIと創作ブログ</title>
+    <link>http://localhost:1313/tags/%E9%81%85%E5%BB%B6%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF/</link>
+    <description>Recent content in 遅延読み込み on lainのAIと創作ブログ</description>
+    <generator>Hugo -- 0.147.3</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 30 May 2025 11:09:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E9%81%85%E5%BB%B6%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Hugo] 遅延読み込み (Lazy loading)  をテンプレートに追加</title>
+      <link>http://localhost:1313/posts/hugo-lazy-loading/</link>
+      <pubDate>Fri, 30 May 2025 11:09:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-lazy-loading/</guid>
+      <description>表示速度改善に効果的な画像の遅延読み込み (loading=&amp;ldquo;lazy&amp;rdquo;) をHugoのテンプレートに追加してみました</description>
+    </item>
+  </channel>
+</rss>
