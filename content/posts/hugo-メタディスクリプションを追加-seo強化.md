@@ -15,7 +15,7 @@ tags:
 weight: 9
 ---
 <center>
-<img src="/images/uploads/hugo-meta-description.png" alt=""  loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; "/>
+<img src="/images/uploads/hugo-meta-description.png" alt="[Hugo] メタディスクリプションを追加 (SEO強化)"  loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; "/>
 </center>
 
 ## はじめに
