@@ -11,7 +11,7 @@ categories:
 tags:
   - リンクカード
   - ショートコード
-weight: 20
+weight: 5
 image: /images/uploads/hugo-link-card.png
 ---
 <center>
