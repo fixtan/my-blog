@@ -116,4 +116,60 @@ link-card.html は以下のようにカスタム：
 あとは、記事内に以下のような形式で貼り付ければ、自動でリンクカードが作成されます。
 
 ※スクリプトが実行されないように{{ を{ {にしてます。
+```go
+{ {< link-card 
+    url="https://example.com" 
+    title="外部記事のタイトル" 
+    description="記事の説明" 
+    image="https://example.com/image.jpg"
+>} }
+```
+
+それで、このコードを出力するPythonスクリプトが以下
+
+CUIバージョン
+
+```python
+import requests
+from bs4 import BeautifulSoup
+import sys
+
+def fetch_ogp(url):
+    try:
+        res = requests.get(url, timeout=5, headers={"User-Agent": "Mozilla/5.0"})
+        res.raise_for_status()
+        soup = BeautifulSoup(res.text, "html.parser")
+        ogp = {
+            "title": soup.find("meta", property="og:title"),
+            "description": soup.find("meta", property="og:description"),
+            "image": soup.find("meta", property="og:image")
+        }
+        print("{{< link-card")
+        print(f'    url="{url}"')
+        print(f'    title="{ogp["title"]["content"] if ogp["title"] else "タイトル未取得"}"')
+        print(f'    description="{ogp["description"]["content"] if ogp["description"] else "説明なし"}"')
+        print(f'    image="{ogp["image"]["content"] if ogp["image"] else ""}"')
+        print(">}}")
+    except Exception as e:
+        print(f"エラー: {e}")
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("使い方: python ogp_fetcher.py [URL]")
+    else:
+        fetch_ogp(sys.argv[1])
+```
+
+コマンドプロンプトから以下のように実行するとテンプレート形式で結果が出力されるのでそれをコピー＆ペースト
+
+```
+python ogp_fetcher.py "https://humanxai.info/"
+
+{ {< link-card
+    url="https://humanxai.info/"
+    title="lainのAIと創作ブログ"
+    description="Human × AI の対話を通じて、AI活用やブログ制作、技術実験の軌跡を記録しています。"
+    image="https://humanxai.info/images/default-ogp.png"
+>} }
+```
 
