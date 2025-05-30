@@ -26,6 +26,9 @@ weight: 7
 
 同じような悩みを抱えている方がありましたら、ご参考ください。
 
+ [Hugo] メタディスクリプションを追加 (SEO強化) [2025-05-30] <br>
+<https://humanxai.info/posts/hugo-meta-description/>
+
 ## Decap CMS から description を編集できるようにする
 
 これを実現するには、config.yml に description フィールドを追加すればOKです。
