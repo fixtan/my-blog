@@ -15,7 +15,7 @@ weight: 8
 image: /images/uploads/hugo-ogp.png
 ---
 <center>
-<img src="/images/uploads/Hugo-OGP.png" alt="\[Hugo] でOGP用のメタタグを設定する方法の紹介。"  loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; " />
+<img src="/images/uploads/Hugo-OGP.png" alt="\\[Hugo] でOGP用のメタタグを設定する方法の紹介。"  loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; " />
 </center>
 
 ## はじめに
@@ -67,9 +67,7 @@ SNSなどでリンクをシェアする際に挿入されるOGP（Open Graph Pro
 {{ end }}
 ```
 
-
 ## OGP画像の作成方法
-
 
 私は、オンラインサービスのcanvaを利用しました。
 
@@ -79,4 +77,13 @@ OGP画像のサイズは、「1200 x　630px」で、新規デザイン作成の
 
 作成した画像は、default-ogp.png　にリネームし、static/images/へ配置します。
 
+## Twitter（X）で確認
+
+上手く行けば以下のような感じで画像とメッセージ付きで表示されます。
+
+
+
+<a href="/images/uploads/hugo-ogp-twitter.jpg" target="_blank">
+<img src="/images/uploads/hugo-ogp-twitter.jpg" alt=""  loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
 
