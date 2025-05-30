@@ -114,6 +114,33 @@ Hero画像にも loading="lazy" を追加できますが、最初に表示され
 hugo server
 ```
 
+## post-card.html のimgタグを編集
+
+うちのサイトでは、post-card.htmlを作成して独自にカードを作成してるので、このファイル内にある、カードのアイキャッチ画像に該当する部分を編集します。
+
+> \layouts\partials\post-card.html
+
+修正前：
+```
+<img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-thumb">
+
+...
+
+<img src="/images/noimage.jpg" alt="No image" class="post-thumb">
+
+```
+
+ 修正後：
+
+```
+<img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-thumb" loading="lazy" decoding="async">
+
+...
+
+<img src="/images/noimage.jpg" alt="No image" class="post-thumb" loading="lazy" decoding="async">
+```
+
+
 ## おまけ：CSSで .lazy-img を活かす
 
 は読み込み中は薄く、表示時にフェードインさせる効果を加えるテクニック。
