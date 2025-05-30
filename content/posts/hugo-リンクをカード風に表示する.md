@@ -215,6 +215,7 @@ if url:
 
 
 
- <a href="/images/uploads/image-16425.jpg" target="_blank">
+
 <img src="/images/uploads/image-16425.jpg" alt=""  loading="lazy" decoding="async" style="max-width:; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
-</a>
+
+ああ
