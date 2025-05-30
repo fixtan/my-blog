@@ -37,7 +37,7 @@ CMSエディタで「リンクをカード風に表示する」機能はない�
  Hugoのショートコードを使って、こんな感じのカードを表示可能：
 
 ```
-{{< link-card url="https://humanxai.info/posts/hugo-meta-description/" >}}
+{ {< link-card url="https://humanxai.info/posts/hugo-meta-description/" >} }
 ```
 
 shortcodes/link-card.html を作ることで、リンクカード風のHTMLを生成できます（OpenGraph取得含む）。
@@ -94,10 +94,10 @@ Decap CMS カスタムウィジェットを実装して、URLを入力すると�
 link-card.html は以下のようにカスタム：
 
 ```go
-{{ $url := .Get "url" }}
-{{ $title := .Get "title" }}
-{{ $desc := .Get "description" }}
-{{ $img := .Get "image" }}
+{ { $url := .Get "url" } }
+{ { $title := .Get "title" } }
+{ { $desc := .Get "description" } }
+{ { $img := .Get "image" } }
 
 <article class="link-card">
   <a href="{{ $url }}" target="_blank" rel="noopener">
@@ -114,6 +114,8 @@ link-card.html は以下のようにカスタム：
 ```
 
 あとは、記事内に以下のような形式で貼り付ければ、自動でリンクカードが作成されます。
+
+※スクリプトが実行されないように{{ を{ {にしてます。
 
 ```go
 { {< link-card 
