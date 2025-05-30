@@ -93,6 +93,8 @@ Decap CMS カスタムウィジェットを実装して、URLを入力すると�
 
 link-card.html は以下のようにカスタム：
 
+※注意※Goテンプレート構文が実行されないように{{ を{ {にしてます。
+
 ```go
 { { $url := .Get "url" } }
 { { $title := .Get "title" } }
@@ -115,7 +117,7 @@ link-card.html は以下のようにカスタム：
 
 あとは、記事内に以下のような形式で貼り付ければ、自動でリンクカードが作成されます。
 
-※スクリプトが実行されないように{{ を{ {にしてます。
+
 ```go
 { {< link-card 
     url="https://example.com" 
@@ -212,12 +214,12 @@ if url:
     except Exception as e:
         print("エラー:", e)
 ```
+※「} }」は「}}」に、「{ {」は「{{」に置き換えてください。
+
+実行すると、このような入力ボックスが出現するのでURLを入力すれば、結果を自動でクリップボードにコピーしてくれます。
 
 
-
-
-
-<img src="/images/uploads/image-16425.jpg" alt=""  loading="lazy" decoding="async" style="max-width:; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+<img src="/images/uploads/image-16425.jpg" alt=""  loading="lazy" decoding="async" style="max-width:70%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 
 ああ
 
