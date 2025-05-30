@@ -2,185 +2,185 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on lainのAIと創作ブログ</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://humanxai.info/tags/</link>
     <description>Recent content in Tags on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 30 May 2025 11:09:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://humanxai.info/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lazy Loading</title>
-      <link>http://localhost:1313/tags/lazy-loading/</link>
+      <link>https://humanxai.info/tags/lazy-loading/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/lazy-loading/</guid>
+      <guid>https://humanxai.info/tags/lazy-loading/</guid>
       <description></description>
     </item>
     <item>
       <title>カスタム</title>
-      <link>http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0/</link>
+      <link>https://humanxai.info/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0/</link>
       <pubDate>Thu, 29 May 2025 18:03:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0/</guid>
+      <guid>https://humanxai.info/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0/</guid>
       <description></description>
     </item>
     <item>
       <title>テンプレート</title>
-      <link>http://localhost:1313/tags/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88/</link>
+      <link>https://humanxai.info/tags/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88/</guid>
+      <guid>https://humanxai.info/tags/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88/</guid>
       <description></description>
     </item>
     <item>
       <title>遅延読み込み</title>
-      <link>http://localhost:1313/tags/%E9%81%85%E5%BB%B6%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF/</link>
+      <link>https://humanxai.info/tags/%E9%81%85%E5%BB%B6%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E9%81%85%E5%BB%B6%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF/</guid>
+      <guid>https://humanxai.info/tags/%E9%81%85%E5%BB%B6%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF/</guid>
       <description></description>
     </item>
     <item>
       <title>AI対話</title>
-      <link>http://localhost:1313/tags/ai%E5%AF%BE%E8%A9%B1/</link>
+      <link>https://humanxai.info/tags/ai%E5%AF%BE%E8%A9%B1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ai%E5%AF%BE%E8%A9%B1/</guid>
+      <guid>https://humanxai.info/tags/ai%E5%AF%BE%E8%A9%B1/</guid>
       <description></description>
     </item>
     <item>
       <title>エッセイ</title>
-      <link>http://localhost:1313/tags/%E3%82%A8%E3%83%83%E3%82%BB%E3%82%A4/</link>
+      <link>https://humanxai.info/tags/%E3%82%A8%E3%83%83%E3%82%BB%E3%82%A4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%82%A8%E3%83%83%E3%82%BB%E3%82%A4/</guid>
+      <guid>https://humanxai.info/tags/%E3%82%A8%E3%83%83%E3%82%BB%E3%82%A4/</guid>
       <description></description>
     </item>
     <item>
       <title>オープンダイアローグ</title>
-      <link>http://localhost:1313/tags/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%83%BC%E3%82%B0/</link>
+      <link>https://humanxai.info/tags/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%83%BC%E3%82%B0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%83%BC%E3%82%B0/</guid>
+      <guid>https://humanxai.info/tags/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%83%BC%E3%82%B0/</guid>
       <description></description>
     </item>
     <item>
       <title>対話</title>
-      <link>http://localhost:1313/tags/%E5%AF%BE%E8%A9%B1/</link>
+      <link>https://humanxai.info/tags/%E5%AF%BE%E8%A9%B1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E5%AF%BE%E8%A9%B1/</guid>
+      <guid>https://humanxai.info/tags/%E5%AF%BE%E8%A9%B1/</guid>
       <description></description>
     </item>
     <item>
       <title>自己探求</title>
-      <link>http://localhost:1313/tags/%E8%87%AA%E5%B7%B1%E6%8E%A2%E6%B1%82/</link>
+      <link>https://humanxai.info/tags/%E8%87%AA%E5%B7%B1%E6%8E%A2%E6%B1%82/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E8%87%AA%E5%B7%B1%E6%8E%A2%E6%B1%82/</guid>
+      <guid>https://humanxai.info/tags/%E8%87%AA%E5%B7%B1%E6%8E%A2%E6%B1%82/</guid>
       <description></description>
     </item>
     <item>
       <title>ソート</title>
-      <link>http://localhost:1313/tags/%E3%82%BD%E3%83%BC%E3%83%88/</link>
+      <link>https://humanxai.info/tags/%E3%82%BD%E3%83%BC%E3%83%88/</link>
       <pubDate>Thu, 29 May 2025 18:03:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%82%BD%E3%83%BC%E3%83%88/</guid>
+      <guid>https://humanxai.info/tags/%E3%82%BD%E3%83%BC%E3%83%88/</guid>
       <description></description>
     </item>
     <item>
       <title>ページネーション</title>
-      <link>http://localhost:1313/tags/%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/</link>
+      <link>https://humanxai.info/tags/%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/</link>
       <pubDate>Thu, 29 May 2025 16:45:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/</guid>
+      <guid>https://humanxai.info/tags/%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/</guid>
       <description></description>
     </item>
     <item>
       <title>スラッグ</title>
-      <link>http://localhost:1313/tags/%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B0/</link>
+      <link>https://humanxai.info/tags/%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B0/</link>
       <pubDate>Thu, 29 May 2025 10:48:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B0/</guid>
+      <guid>https://humanxai.info/tags/%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B0/</guid>
       <description></description>
     </item>
     <item>
       <title>ブログ</title>
-      <link>http://localhost:1313/tags/%E3%83%96%E3%83%AD%E3%82%B0/</link>
+      <link>https://humanxai.info/tags/%E3%83%96%E3%83%AD%E3%82%B0/</link>
       <pubDate>Thu, 29 May 2025 08:55:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%83%96%E3%83%AD%E3%82%B0/</guid>
+      <guid>https://humanxai.info/tags/%E3%83%96%E3%83%AD%E3%82%B0/</guid>
       <description></description>
     </item>
     <item>
       <title>GitHub</title>
-      <link>http://localhost:1313/tags/github/</link>
+      <link>https://humanxai.info/tags/github/</link>
       <pubDate>Wed, 28 May 2025 20:02:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/github/</guid>
+      <guid>https://humanxai.info/tags/github/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>http://localhost:1313/tags/hugo/</link>
+      <link>https://humanxai.info/tags/hugo/</link>
       <pubDate>Wed, 28 May 2025 20:02:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/hugo/</guid>
+      <guid>https://humanxai.info/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Netlify</title>
-      <link>http://localhost:1313/tags/netlify/</link>
+      <link>https://humanxai.info/tags/netlify/</link>
       <pubDate>Wed, 28 May 2025 20:02:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/netlify/</guid>
+      <guid>https://humanxai.info/tags/netlify/</guid>
       <description></description>
     </item>
     <item>
       <title>WebMSX</title>
-      <link>http://localhost:1313/tags/webmsx/</link>
+      <link>https://humanxai.info/tags/webmsx/</link>
       <pubDate>Wed, 28 May 2025 20:02:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/webmsx/</guid>
+      <guid>https://humanxai.info/tags/webmsx/</guid>
       <description></description>
     </item>
     <item>
       <title>FramePack</title>
-      <link>http://localhost:1313/tags/framepack/</link>
+      <link>https://humanxai.info/tags/framepack/</link>
       <pubDate>Tue, 27 May 2025 22:01:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/framepack/</guid>
+      <guid>https://humanxai.info/tags/framepack/</guid>
       <description></description>
     </item>
     <item>
       <title>Stable Diffusion</title>
-      <link>http://localhost:1313/tags/stable-diffusion/</link>
+      <link>https://humanxai.info/tags/stable-diffusion/</link>
       <pubDate>Tue, 27 May 2025 22:01:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/stable-diffusion/</guid>
+      <guid>https://humanxai.info/tags/stable-diffusion/</guid>
       <description></description>
     </item>
     <item>
       <title>カスタマイズ</title>
-      <link>http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</link>
+      <link>https://humanxai.info/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</link>
       <pubDate>Mon, 26 May 2025 19:22:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</guid>
+      <guid>https://humanxai.info/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</guid>
       <description></description>
     </item>
     <item>
       <title>コマンド</title>
-      <link>http://localhost:1313/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</link>
+      <link>https://humanxai.info/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</link>
       <pubDate>Sat, 24 May 2025 23:08:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</guid>
+      <guid>https://humanxai.info/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</guid>
       <description></description>
     </item>
     <item>
       <title>Decap CMS</title>
-      <link>http://localhost:1313/tags/decap-cms/</link>
+      <link>https://humanxai.info/tags/decap-cms/</link>
       <pubDate>Sat, 24 May 2025 12:18:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/decap-cms/</guid>
+      <guid>https://humanxai.info/tags/decap-cms/</guid>
       <description></description>
     </item>
     <item>
       <title>BIOS</title>
-      <link>http://localhost:1313/tags/bios/</link>
+      <link>https://humanxai.info/tags/bios/</link>
       <pubDate>Thu, 22 May 2025 16:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/bios/</guid>
+      <guid>https://humanxai.info/tags/bios/</guid>
       <description></description>
     </item>
     <item>
       <title>EDID</title>
-      <link>http://localhost:1313/tags/edid/</link>
+      <link>https://humanxai.info/tags/edid/</link>
       <pubDate>Thu, 22 May 2025 16:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/edid/</guid>
+      <guid>https://humanxai.info/tags/edid/</guid>
       <description></description>
     </item>
     <item>
       <title>Thunderbolt</title>
-      <link>http://localhost:1313/tags/thunderbolt/</link>
+      <link>https://humanxai.info/tags/thunderbolt/</link>
       <pubDate>Thu, 22 May 2025 16:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/thunderbolt/</guid>
+      <guid>https://humanxai.info/tags/thunderbolt/</guid>
       <description></description>
     </item>
   </channel>

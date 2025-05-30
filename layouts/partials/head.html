@@ -1,3 +1,8 @@
+<!-- SEO: meta description -->
+{{- with .Description | default .Summary | default site.Params.description -}}
+<meta name="description" content="{{ . | plainify | truncate 130 }}">
+{{- end -}}
+
 <!-- test: custom head loaded -->
 {{ $css := resources.Get "css/custom.css.html" | resources.ExecuteAsTemplate "css/custom.css" . | fingerprint }}
 <link rel="stylesheet" href="{{ $css.Permalink }}">

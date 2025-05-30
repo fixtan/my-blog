@@ -2,181 +2,188 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>lainのAIと創作ブログ</title>
-    <link>http://localhost:1313/</link>
+    <link>https://humanxai.info/</link>
     <description>Recent content on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 30 May 2025 11:09:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 May 2025 12:20:00 +0000</lastBuildDate>
+    <atom:link href="https://humanxai.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FramePackによるAIアニメーション</title>
-      <link>http://localhost:1313/featured/project1/</link>
+      <link>https://humanxai.info/featured/project1/</link>
       <pubDate>Tue, 27 May 2025 22:01:00 +0000</pubDate>
-      <guid>http://localhost:1313/featured/project1/</guid>
+      <guid>https://humanxai.info/featured/project1/</guid>
       <description>FramePack-eichi を活用したAIアニメーションの制作事例と手順。</description>
     </item>
     <item>
       <title>FramePackによるAIアニメーション</title>
-      <link>http://localhost:1313/featured/project2/</link>
+      <link>https://humanxai.info/featured/project2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/featured/project2/</guid>
+      <guid>https://humanxai.info/featured/project2/</guid>
       <description>FramePack-eichi を活用したAIアニメーションの制作事例と手順。</description>
     </item>
     <item>
       <title>FramePackによるAIアニメーション</title>
-      <link>http://localhost:1313/featured/project3/</link>
+      <link>https://humanxai.info/featured/project3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/featured/project3/</guid>
+      <guid>https://humanxai.info/featured/project3/</guid>
       <description>FramePack-eichi を活用したAIアニメーションの制作事例と手順。</description>
     </item>
     <item>
       <title>FramePackによるAIアニメーション</title>
-      <link>http://localhost:1313/featured/project4/</link>
+      <link>https://humanxai.info/featured/project4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/featured/project4/</guid>
+      <guid>https://humanxai.info/featured/project4/</guid>
       <description>FramePack-eichi を活用したAIアニメーションの制作事例と手順。</description>
     </item>
     <item>
       <title>FramePackによるAIアニメーション</title>
-      <link>http://localhost:1313/featured/project5/</link>
+      <link>https://humanxai.info/featured/project5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/featured/project5/</guid>
+      <guid>https://humanxai.info/featured/project5/</guid>
       <description>FramePack-eichi を活用したAIアニメーションの制作事例と手順。</description>
     </item>
     <item>
       <title>[WebMSX] 自前でMSXサイトを作成</title>
-      <link>http://localhost:1313/posts/webmsx-hugo-netlify/</link>
+      <link>https://humanxai.info/posts/webmsx-hugo-netlify/</link>
       <pubDate>Wed, 28 May 2025 20:02:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/webmsx-hugo-netlify/</guid>
+      <guid>https://humanxai.info/posts/webmsx-hugo-netlify/</guid>
       <description>WebMSXを活用しWEBサイトでMSXを動作させる方法の紹介</description>
     </item>
     <item>
       <title>[NETLIFY] netlifyでのドメイン設定方法</title>
-      <link>http://localhost:1313/posts/netlify-domain-settings/</link>
+      <link>https://humanxai.info/posts/netlify-domain-settings/</link>
       <pubDate>Mon, 26 May 2025 08:18:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/netlify-domain-settings/</guid>
+      <guid>https://humanxai.info/posts/netlify-domain-settings/</guid>
       <description>netlifyでのドメイン設定方法の紹介</description>
     </item>
     <item>
       <title>[自作PC] Thunderbolt AIC モニタが映らない トラブル＆解決方法</title>
-      <link>http://localhost:1313/posts/computer-trouble-thunderbolt4/</link>
+      <link>https://humanxai.info/posts/computer-trouble-thunderbolt4/</link>
       <pubDate>Thu, 22 May 2025 16:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/computer-trouble-thunderbolt4/</guid>
+      <guid>https://humanxai.info/posts/computer-trouble-thunderbolt4/</guid>
       <description>モニタに映像出力されなくなった問題について、Thunderbolt4 、EDID問題を踏まえトラブル情報をまとめてみました</description>
     </item>
     <item>
       <title>[Hugo] 遅延読み込み (Lazy loading)  をテンプレートに追加</title>
-      <link>http://localhost:1313/posts/hugo-lazy-loading/</link>
+      <link>https://humanxai.info/posts/hugo-lazy-loading/</link>
       <pubDate>Fri, 30 May 2025 11:09:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo-lazy-loading/</guid>
-      <description>表示速度改善に効果的な画像の遅延読み込み (loading=&amp;ldquo;lazy&amp;rdquo;) をHugoのテンプレートに追加してみました</description>
+      <guid>https://humanxai.info/posts/hugo-lazy-loading/</guid>
+      <description>Hugo &#43; PaperMod テーマで画像の遅延読み込みを実装して表示速度を向上させる方法を紹介します。</description>
     </item>
     <item>
       <title>[Decap CMS] URLを短くする方法（Decap CMS＋Hugo）</title>
-      <link>http://localhost:1313/posts/decapcms-custom-slug/</link>
+      <link>https://humanxai.info/posts/decapcms-custom-slug/</link>
       <pubDate>Thu, 29 May 2025 10:48:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/decapcms-custom-slug/</guid>
+      <guid>https://humanxai.info/posts/decapcms-custom-slug/</guid>
       <description>デフォルトで記事タイトルがURLになり長くなってしまう為、短くする方法の紹介</description>
     </item>
     <item>
       <title>[AI] ChatGPTとの対話  (2025/05/30)</title>
-      <link>http://localhost:1313/posts/ai-dialogue-2025-05-30/</link>
+      <link>https://humanxai.info/posts/ai-dialogue-2025-05-30/</link>
       <pubDate>Fri, 30 May 2025 08:21:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/ai-dialogue-2025-05-30/</guid>
+      <guid>https://humanxai.info/posts/ai-dialogue-2025-05-30/</guid>
       <description>ChatGPT(4o)とたまに会話をしてるのですが、その内容の一部を公開してみます</description>
     </item>
     <item>
       <title>[Decap CMS] ソートが機能しない問題</title>
-      <link>http://localhost:1313/posts/decapcms-sort-trouble/</link>
+      <link>https://humanxai.info/posts/decapcms-sort-trouble/</link>
       <pubDate>Thu, 29 May 2025 18:03:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/decapcms-sort-trouble/</guid>
+      <guid>https://humanxai.info/posts/decapcms-sort-trouble/</guid>
       <description>Decap CMSでソート機能が上手く動かない原因と解決方法の紹介</description>
     </item>
     <item>
       <title>[Hugo] ページ推移用のボタンを作成</title>
-      <link>http://localhost:1313/posts/hugo-page-transition-button/</link>
+      <link>https://humanxai.info/posts/hugo-page-transition-button/</link>
       <pubDate>Thu, 29 May 2025 16:45:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo-page-transition-button/</guid>
+      <guid>https://humanxai.info/posts/hugo-page-transition-button/</guid>
       <description>hugo のデフォルト機能であるページネーション機能を実装した備忘録的メモです</description>
     </item>
     <item>
       <title>[Decap CMS] content/posts 以外のディレクトリの記事を編集</title>
-      <link>http://localhost:1313/posts/decap-directory-edit/</link>
+      <link>https://humanxai.info/posts/decap-directory-edit/</link>
       <pubDate>Thu, 29 May 2025 08:55:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/decap-directory-edit/</guid>
+      <guid>https://humanxai.info/posts/decap-directory-edit/</guid>
       <description>Decap CMSでcontent/posts 以外のディレクトリ記事を編集する方法の紹介</description>
     </item>
     <item>
       <title>[Decap CMS] Config Errors: &#39;collections[0].fields&#39; fields names must be unique</title>
-      <link>http://localhost:1313/posts/decapcms-error-01/</link>
+      <link>https://humanxai.info/posts/decapcms-error-01/</link>
       <pubDate>Sat, 24 May 2025 12:18:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/decapcms-error-01/</guid>
+      <guid>https://humanxai.info/posts/decapcms-error-01/</guid>
       <description>Netlify CMS/Decap CMSのカスタム中、ログインしようとするとエラーメッセージがでた際のトラブルTip</description>
     </item>
     <item>
       <title>自己紹介</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://humanxai.info/about/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://humanxai.info/about/</guid>
       <description>&lt;p&gt;こんにちは、lainです。&lt;br&gt;
 AI、画像生成、動画、コマンドラインが大好きです。&lt;/p&gt;
 &lt;p&gt;このブログでは学習したこと、役に立ったTipsを発信しています。&lt;/p&gt;</description>
     </item>
     <item>
+      <title>[Hugo] メタディスクリプションを追加 (SEO強化)</title>
+      <link>https://humanxai.info/posts/hugo-meta-description/</link>
+      <pubDate>Fri, 30 May 2025 12:20:00 +0000</pubDate>
+      <guid>https://humanxai.info/posts/hugo-meta-description/</guid>
+      <description>Hugoでメタディスクリプション(meta description)を追加する方法の紹介（SEO強化）</description>
+    </item>
+    <item>
       <title>[Hugo] Hugoで未来記事を表示させるには？ </title>
-      <link>http://localhost:1313/posts/hugo-custom-article-future/</link>
+      <link>https://humanxai.info/posts/hugo-custom-article-future/</link>
       <pubDate>Mon, 26 May 2025 19:22:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo-custom-article-future/</guid>
+      <guid>https://humanxai.info/posts/hugo-custom-article-future/</guid>
       <description>Hugoで未来記事を表示させる方法の紹介（config.toml）</description>
     </item>
     <item>
       <title>[Hugo] Hugoで使われているテンプレートを確認する方法</title>
-      <link>http://localhost:1313/posts/hugo-template/</link>
+      <link>https://humanxai.info/posts/hugo-template/</link>
       <pubDate>Sat, 24 May 2025 23:08:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo-template/</guid>
+      <guid>https://humanxai.info/posts/hugo-template/</guid>
       <description>使用中のテンプレートリスト確認方法</description>
     </item>
     <item>
       <title>CMS からテスト投稿２</title>
-      <link>http://localhost:1313/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</link>
+      <link>https://humanxai.info/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</link>
       <pubDate>Wed, 21 May 2025 17:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</guid>
+      <guid>https://humanxai.info/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</guid>
       <description>&lt;p&gt;Draft　テスト投稿&lt;/p&gt;</description>
     </item>
     <item>
       <title>Decap CMS導入テスト投稿</title>
-      <link>http://localhost:1313/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</link>
+      <link>https://humanxai.info/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</link>
       <pubDate>Wed, 21 May 2025 01:01:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</guid>
+      <guid>https://humanxai.info/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</guid>
       <description>&lt;p&gt;日本語入力テスト。&lt;/p&gt;
 &lt;p&gt;問題なく入力できるようです。&lt;/p&gt;</description>
     </item>
     <item>
       <title>ダミー記事12</title>
-      <link>http://localhost:1313/posts/first/</link>
+      <link>https://humanxai.info/posts/first/</link>
       <pubDate>Sat, 17 May 2025 00:01:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/first/</guid>
+      <guid>https://humanxai.info/posts/first/</guid>
       <description>&lt;p&gt;（本文はまだありません）&lt;/p&gt;</description>
     </item>
     <item>
       <title>はじめての投稿</title>
-      <link>http://localhost:1313/posts/first-post/</link>
+      <link>https://humanxai.info/posts/first-post/</link>
       <pubDate>Sat, 17 May 2025 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/first-post/</guid>
+      <guid>https://humanxai.info/posts/first-post/</guid>
       <description>&lt;p&gt;こんにちは、これは私の最初のHugo記事です！&lt;/p&gt;</description>
     </item>
     <item>
       <title>Second</title>
-      <link>http://localhost:1313/posts/second/</link>
+      <link>https://humanxai.info/posts/second/</link>
       <pubDate>Thu, 15 May 2025 17:11:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/second/</guid>
+      <guid>https://humanxai.info/posts/second/</guid>
       <description>&lt;p&gt;テスト&lt;/p&gt;</description>
     </item>
     <item>
       <title>３つ目の投稿</title>
-      <link>http://localhost:1313/posts/third/</link>
+      <link>https://humanxai.info/posts/third/</link>
       <pubDate>Thu, 15 May 2025 01:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/third/</guid>
+      <guid>https://humanxai.info/posts/third/</guid>
       <description>&lt;p&gt;（本文はまだありません）&lt;/p&gt;</description>
     </item>
   </channel>

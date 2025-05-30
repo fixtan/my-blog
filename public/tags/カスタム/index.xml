@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>カスタム on lainのAIと創作ブログ</title>
-    <link>http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0/</link>
+    <link>https://humanxai.info/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0/</link>
     <description>Recent content in カスタム on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 30 May 2025 11:09:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://humanxai.info/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Hugo] 遅延読み込み (Lazy loading)  をテンプレートに追加</title>
-      <link>http://localhost:1313/posts/hugo-lazy-loading/</link>
+      <link>https://humanxai.info/posts/hugo-lazy-loading/</link>
       <pubDate>Fri, 30 May 2025 11:09:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo-lazy-loading/</guid>
-      <description>表示速度改善に効果的な画像の遅延読み込み (loading=&amp;ldquo;lazy&amp;rdquo;) をHugoのテンプレートに追加してみました</description>
+      <guid>https://humanxai.info/posts/hugo-lazy-loading/</guid>
+      <description>Hugo &#43; PaperMod テーマで画像の遅延読み込みを実装して表示速度を向上させる方法を紹介します。</description>
     </item>
     <item>
       <title>[Decap CMS] URLを短くする方法（Decap CMS＋Hugo）</title>
-      <link>http://localhost:1313/posts/decapcms-custom-slug/</link>
+      <link>https://humanxai.info/posts/decapcms-custom-slug/</link>
       <pubDate>Thu, 29 May 2025 10:48:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/decapcms-custom-slug/</guid>
+      <guid>https://humanxai.info/posts/decapcms-custom-slug/</guid>
       <description>デフォルトで記事タイトルがURLになり長くなってしまう為、短くする方法の紹介</description>
     </item>
     <item>
       <title>[Decap CMS] ソートが機能しない問題</title>
-      <link>http://localhost:1313/posts/decapcms-sort-trouble/</link>
+      <link>https://humanxai.info/posts/decapcms-sort-trouble/</link>
       <pubDate>Thu, 29 May 2025 18:03:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/decapcms-sort-trouble/</guid>
+      <guid>https://humanxai.info/posts/decapcms-sort-trouble/</guid>
       <description>Decap CMSでソート機能が上手く動かない原因と解決方法の紹介</description>
     </item>
     <item>
       <title>[Hugo] ページ推移用のボタンを作成</title>
-      <link>http://localhost:1313/posts/hugo-page-transition-button/</link>
+      <link>https://humanxai.info/posts/hugo-page-transition-button/</link>
       <pubDate>Thu, 29 May 2025 16:45:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo-page-transition-button/</guid>
+      <guid>https://humanxai.info/posts/hugo-page-transition-button/</guid>
       <description>hugo のデフォルト機能であるページネーション機能を実装した備忘録的メモです</description>
     </item>
     <item>
       <title>[Decap CMS] content/posts 以外のディレクトリの記事を編集</title>
-      <link>http://localhost:1313/posts/decap-directory-edit/</link>
+      <link>https://humanxai.info/posts/decap-directory-edit/</link>
       <pubDate>Thu, 29 May 2025 08:55:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/decap-directory-edit/</guid>
+      <guid>https://humanxai.info/posts/decap-directory-edit/</guid>
       <description>Decap CMSでcontent/posts 以外のディレクトリ記事を編集する方法の紹介</description>
     </item>
   </channel>

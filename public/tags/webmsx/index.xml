@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>WebMSX on lainのAIと創作ブログ</title>
-    <link>http://localhost:1313/tags/webmsx/</link>
+    <link>https://humanxai.info/tags/webmsx/</link>
     <description>Recent content in WebMSX on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 28 May 2025 20:02:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/webmsx/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://humanxai.info/tags/webmsx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[WebMSX] 自前でMSXサイトを作成</title>
-      <link>http://localhost:1313/posts/webmsx-hugo-netlify/</link>
+      <link>https://humanxai.info/posts/webmsx-hugo-netlify/</link>
       <pubDate>Wed, 28 May 2025 20:02:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/webmsx-hugo-netlify/</guid>
+      <guid>https://humanxai.info/posts/webmsx-hugo-netlify/</guid>
       <description>WebMSXを活用しWEBサイトでMSXを動作させる方法の紹介</description>
     </item>
   </channel>

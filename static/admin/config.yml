@@ -33,6 +33,7 @@ collections:
     sortable_fields: ["date", "title", "author"]
     fields:
       - { label: "タイトル", name: "title", widget: "string" }
+      - { label: "説明文", name: "description", widget: "text", required: false, hint: "検索エンジンに表示される要約。80〜130文字程度がおすすめ。" }
       - { label: "スラッグ", name: "slug", widget: "string", required: false }
       - { label: "日付", name: "date", widget: "datetime" }
       - { label: "下書き", name: "draft", widget: "boolean", default: false }
@@ -52,6 +53,7 @@ collections:
     sortable_fields: ["date", "title", "author"]
     fields:
       - { label: "タイトル", name: "title", widget: "string" }
+      - { label: "説明文", name: "description", widget: "text", required: false, hint: "検索エンジンに表示される要約。80〜130文字程度がおすすめ。" }
       - { label: "スラッグ", name: "slug", widget: "string", required: false }
       - { label: "日付", name: "date", widget: "datetime" }
       - { label: "下書き", name: "draft", widget: "boolean", default: false }

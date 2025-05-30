@@ -1,5 +1,6 @@
 ---
 title: "[Hugo] 遅延読み込み (Lazy loading)  をテンプレートに追加"
+description: "Hugo + PaperMod テーマで画像の遅延読み込みを実装して表示速度を向上させる方法を紹介します。"
 slug: Hugo-Lazy-loading
 date: 2025-05-30T11:09:00.000Z
 draft: false
