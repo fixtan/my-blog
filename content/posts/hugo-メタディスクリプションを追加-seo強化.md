@@ -87,3 +87,6 @@ Chromeの「検証（F12）」→「Elements」→ <head> 内でチェック
 
 Hugoとは別のカテゴリになるので、興味のある方は別途、其方の記事を参照ください。
 
+>** [Decap CMS] description を編集できるようにする** [2025-05-30]<br>
+<https://humanxai.info/posts/decapcms-add-description/><br>
+
