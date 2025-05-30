@@ -12,8 +12,13 @@ tags:
   - リンクカード
   - ショートコード
 weight: 20
-image: /images/uploads/avatar.png
+image: /images/uploads/hugo-link-card.png
 ---
+<center>
+<img src="/images/uploads/hugo-link-card.png" alt="Hugoのショートコードを使って、リンクをカード風に表示する方法の紹介。"  loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; " />
+</center>
+
+
 ## はじめに
 
 サイトをOGPに対応させたことで、Twitterでリンクを貼る際に画像を含めたOGP情報を表示できるようにしました。
