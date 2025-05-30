@@ -102,12 +102,12 @@ link-card.html は以下のようにカスタム：
 <article class="link-card">
   <a href="{{ $url }}" target="_blank" rel="noopener">
     <div class="link-card-thumb">
-      <img src="{{ $img }}" alt="{{ $title }}">
+      <img src="{ { $img } }" alt="{ { $title } }">
     </div>
     <div class="link-card-body">
-      <h3>{{ $title }}</h3>
-      <p>{{ $desc }}</p>
-      <span class="link-card-url">{{ $url }}</span>
+      <h3>{ { $title } }</h3>
+      <p>{ { $desc } }</p>
+      <span class="link-card-url">{ { $url } }</span>
     </div>
   </a>
 </article>
