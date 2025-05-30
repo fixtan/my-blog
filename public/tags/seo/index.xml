@@ -6,7 +6,7 @@
     <description>Recent content in SEO on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 30 May 2025 13:07:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 May 2025 14:19:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/seo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Decap CMS]  description を編集できるようにする</title>
@@ -14,6 +14,13 @@
       <pubDate>Fri, 30 May 2025 13:07:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/decapcms-add-description/</guid>
       <description>[Decap CMS]で description を編集できるようにする方法の紹介</description>
+    </item>
+    <item>
+      <title>[Hugo] OGP（Open Graph Protocol）対応方法 [SNS]</title>
+      <link>http://localhost:1313/posts/hugo-ogp/</link>
+      <pubDate>Fri, 30 May 2025 14:19:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-ogp/</guid>
+      <description>[Hugo] でOGP用のメタタグを設定する方法の紹介。</description>
     </item>
     <item>
       <title>[Hugo] メタディスクリプションを追加 (SEO強化)</title>

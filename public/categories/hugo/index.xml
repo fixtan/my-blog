@@ -6,7 +6,7 @@
     <description>Recent content in Hugo on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 30 May 2025 13:42:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 May 2025 15:49:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Hugo] 遅延読み込み (Lazy loading)  をテンプレートに追加</title>
@@ -16,7 +16,14 @@
       <description>Hugo &#43; PaperMod テーマで画像の遅延読み込みを実装して表示速度を向上させる方法を紹介します。</description>
     </item>
     <item>
-      <title>[Hugo] favicon.ico の 404 対策 作成 [ERROR]</title>
+      <title>[Hugo] OGP（Open Graph Protocol）対応方法 [SNS]</title>
+      <link>http://localhost:1313/posts/hugo-ogp/</link>
+      <pubDate>Fri, 30 May 2025 14:19:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-ogp/</guid>
+      <description>[Hugo] でOGP用のメタタグを設定する方法の紹介。</description>
+    </item>
+    <item>
+      <title>[Hugo] favicon.ico の 404 対策  [ERROR]</title>
       <link>http://localhost:1313/posts/hugo-404-favicon/</link>
       <pubDate>Fri, 30 May 2025 13:42:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/hugo-404-favicon/</guid>
@@ -36,6 +43,13 @@
       <pubDate>Thu, 29 May 2025 16:45:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/hugo-page-transition-button/</guid>
       <description>hugo のデフォルト機能であるページネーション機能を実装した備忘録的メモです</description>
+    </item>
+    <item>
+      <title>[Hugo] リンクをカード風に表示する</title>
+      <link>http://localhost:1313/posts/hugo-link-card/</link>
+      <pubDate>Fri, 30 May 2025 15:49:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-link-card/</guid>
+      <description>Hugoのショートコードを使って、リンクをカード風に表示する方法の紹介。</description>
     </item>
     <item>
       <title>[Hugo] Hugoで未来記事を表示させるには？ </title>
