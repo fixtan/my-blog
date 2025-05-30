@@ -4,7 +4,7 @@ slug: DecapCMS-add-description
 date: 2025-05-30T13:07:00.000Z
 draft: false
 author: lain
-image: /images/uploads/avatar.png
+image: /images/uploads/decapcms-add-description.png
 summary: "[Decap CMS]で description を編集できるようにする方法の紹介"
 categories:
   - Decap CMS
@@ -15,6 +15,10 @@ tags:
   - Hugo
 weight: 7
 ---
+<center>
+<img src="/images/uploads/decapcms-add-description.png" alt="[Decap CMS]で description を編集できるようにする方法の紹介"  loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+
+</center>
 
 ### はじめに
 
@@ -27,7 +31,6 @@ weight: 7
 これを実現するには、config.yml に description フィールドを追加すればOKです。
 
 ## 🔧 対応方法 (config.yml)
-
 
 Decap CMS 設定ファイル（通常 static/admin/config.yml）の中で、以下のような fields: に description を追加してください。
 
@@ -44,17 +47,16 @@ collections:
       - { label: "日付", name: "date", widget: "datetime" }
       - { label: "タグ", name: "tags", widget: "list", required: false }
       - { label: "本文", name: "body", widget: "markdown" }
-
 ```
 
 ✅ 効果
-- CMS画面に「説明文（description）」という入力欄が追加されます。
-- 入力した内容は記事の Front Matter に description: として保存されます。
-- 自動的に head.html に反映され、検索エンジン用の <meta> タグが生成されます。
+
+* CMS画面に「説明文（description）」という入力欄が追加されます。
+* 入力した内容は記事の Front Matter に description: として保存されます。
+* 自動的に head.html に反映され、検索エンジン用の <meta> タグが生成されます。
 
 📝 補足
-- 必須項目にする必要はありません（required: false）
-- 説明文がない場合でも .Summary や params.description が代用されるため安心
-- 複数のコレクション（featured, projects など）を使っている場合は、それぞれに追加可能です
 
-
+* 必須項目にする必要はありません（required: false）
+* 説明文がない場合でも .Summary や params.description が代用されるため安心
+* 複数のコレクション（featured, projects など）を使っている場合は、それぞれに追加可能です
