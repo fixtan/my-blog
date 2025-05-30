@@ -12,9 +12,9 @@ tags:
   - コマンド
 weight: 20
 ---
-![](/images/uploads/blog-i-cach_hugo-template.png "Hugoで現在使用中のテンプレートリストを確認する方")
-
-
+<center>
+<img src="/images/uploads/blog-i-cach_hugo-template.png" alt="" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</center>
 
 Hugoで現在使用されているテンプレートリストを確認する方法の紹介。
 
