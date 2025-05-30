@@ -89,3 +89,31 @@ Decap CMS カスタムウィジェットを実装して、URLを入力すると�
 
 やや手間はかかりますが、ワンステップ入れるだけで、リンクカードが作れるお手軽さがあり、面倒な時は普通にリンクを作って逃げる事も出来るので、この方法で今回は妥協しました。
 
+## 実装してみる
+
+link-card.html は以下のようにカスタム：
+
+```go
+{ { $url := .Get "url" } }
+{ { $title := .Get "title" } }
+{ { $desc := .Get "description" } }
+{ { $img := .Get "image" } }
+
+<article class="link-card">
+  <a href="{{ $url }}" target="_blank" rel="noopener">
+    <div class="link-card-thumb">
+      <img src="{ { $img } }" alt="{ { $title } }">
+    </div>
+    <div class="link-card-body">
+      <h3>{ { $title } }</h3>
+      <p>{ { $desc } }</p>
+      <span class="link-card-url">{ { $url } }</span>
+    </div>
+  </a>
+</article>
+```
+
+あとは、記事内に以下のような形式で貼り付ければ、自動でリンクカードが作成されます。
+
+※スクリプトが実行されないように{{ を{ {にしてます。
+
