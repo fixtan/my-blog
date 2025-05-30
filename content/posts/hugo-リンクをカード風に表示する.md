@@ -221,5 +221,17 @@ if url:
 
 <img src="/images/uploads/image-16425.jpg" alt=""  loading="lazy" decoding="async" style="max-width:70%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 
-ああ
+
+## 実行テスト
+
+PythonでURLを入力し、出力した結果、このように表示されればOKです。
+
+<https://gochiusa.com/bloom/>
+
+{{< link-card
+    url="https://gochiusa.com/bloom/"
+    title="TVアニメ「ご注文はうさぎですか？ BLOOM」公式サイト"
+    description="ココアが木組みの街で過ごす二度目の夏ももうすぐ終わり、季節はイベント盛りだくさんの秋へと移り変わろうとしています。学校にもラビットハウスにも、楽しいことが今日もいっぱい！ココア、チノ、そしてみんなの未来へのわくわくが止まりません……！"
+    image="https://gochiusa.com/bloom/core_sys/images/others/ogp.jpg"
+>}}
 
