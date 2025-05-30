@@ -10,7 +10,6 @@ categories:
   - 未分類
 weight: 20
 ---
-![](/images/uploads/hugo-meta-description.png)
 <center>
 <img src="/images/uploads/hugo-meta-description.png" alt=""  loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; />
 </center>
@@ -21,4 +20,6 @@ weight: 20
 WEBのサイト診断をした際に、指摘を受けたメタディスクリプション(meta description)をHugoで追加してみます。
 
 Google検索などの「スニペット（検索結果の要約）」に使われる説明文を明示的に指定して、検索時のクリック率UPや情報伝達力を向上させることが目的です。
+
+
 
