@@ -144,12 +144,12 @@ def fetch_ogp(url):
             "description": soup.find("meta", property="og:description"),
             "image": soup.find("meta", property="og:image")
         }
-        print("{{< link-card")
+        print("{ {< link-card")
         print(f'    url="{url}"')
         print(f'    title="{ogp["title"]["content"] if ogp["title"] else "タイトル未取得"}"')
         print(f'    description="{ogp["description"]["content"] if ogp["description"] else "説明なし"}"')
         print(f'    image="{ogp["image"]["content"] if ogp["image"] else ""}"')
-        print(">}}")
+        print(">`} }")
     except Exception as e:
         print(f"エラー: {e}")
 
@@ -175,7 +175,7 @@ python ogp_fetcher.py "https://humanxai.info/"
 
 ただ、この方法だと毎回、コマンドプロンプトの入力が必要で、コピーするのも面倒なので、改良したGUIバージョンが、以下。（AIが作ってます）
 
-```python
+```
 import requests
 from bs4 import BeautifulSoup
 import tkinter as tk
@@ -191,12 +191,12 @@ def fetch_ogp(url):
     desc = soup.find("meta", property="og:description")
     image = soup.find("meta", property="og:image")
 
-    shortcode = f'''{{{{< link-card
+    shortcode = f'''{ { { {< link-card
     url="{url}"
     title="{title['content'] if title else 'タイトル未取得'}"
     description="{desc['content'] if desc else '説明なし'}"
     image="{image['content'] if image else ''}"
->}}}}'''
+>} } } }'''
 
     pyperclip.copy(shortcode)
     print("✅ クリップボードにコピーされました！")
