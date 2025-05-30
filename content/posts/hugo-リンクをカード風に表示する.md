@@ -129,7 +129,7 @@ link-card.html は以下のようにカスタム：
 
 CUIバージョン
 
-```python
+```
 import requests
 from bs4 import BeautifulSoup
 import sys
@@ -159,4 +159,65 @@ if __name__ == "__main__":
     else:
         fetch_ogp(sys.argv[1])
 ```
+
+コマンドプロンプトから以下のように実行するとテンプレート形式で結果が出力されるのでそれをコピー＆ペースト
+
+```
+python ogp_fetcher.py "https://humanxai.info/"
+
+{ {< link-card
+    url="https://humanxai.info/"
+    title="lainのAIと創作ブログ"
+    description="Human × AI の対話を通じて、AI活用やブログ制作、技術実験の軌跡を記録しています。"
+    image="https://humanxai.info/images/default-ogp.png"
+>} }
+```
+
+ただ、この方法だと毎回、コマンドプロンプトの入力が必要で、コピーするのも面倒なので、改良したGUIバージョンが、以下。（AIが作ってます）
+
+```python
+import requests
+from bs4 import BeautifulSoup
+import tkinter as tk
+from tkinter import simpledialog
+import pyperclip
+
+def fetch_ogp(url):
+    res = requests.get(url, timeout=5, headers={"User-Agent": "Mozilla/5.0"})
+    res.encoding = res.apparent_encoding
+    #res.encoding = 'utf-8'
+    soup = BeautifulSoup(res.text, "html.parser")
+    title = soup.find("meta", property="og:title")
+    desc = soup.find("meta", property="og:description")
+    image = soup.find("meta", property="og:image")
+
+    shortcode = f'''{{{{< link-card
+    url="{url}"
+    title="{title['content'] if title else 'タイトル未取得'}"
+    description="{desc['content'] if desc else '説明なし'}"
+    image="{image['content'] if image else ''}"
+>}}}}'''
+
+    pyperclip.copy(shortcode)
+    print("✅ クリップボードにコピーされました！")
+    print(shortcode)
+
+# GUIポップアップ
+root = tk.Tk()
+root.withdraw()
+url = simpledialog.askstring("OGPカード生成", "URLを入力してください：")
+if url:
+    try:
+        fetch_ogp(url)
+    except Exception as e:
+        print("エラー:", e)
+```
+
+
+
+
+
+<img src="/images/uploads/image-16425.jpg" alt=""  loading="lazy" decoding="async" style="max-width:; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+
+ああ
 
