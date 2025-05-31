@@ -15,7 +15,6 @@ tags:
 weight: 3
 image: /images/uploads/avatar.png
 ---
-
 ## はじめに
 
 Hugoに以前から追加したかったコメント機能を追加してみましたのでその備忘録メモです。
@@ -29,35 +28,70 @@ GitHub Discussions を使った軽量なコメントシステムで、Hugoのよ
 Githubのアカウントが必要になるので、その点がネックですが、匿名での投稿防止の他、セキュリティ管理も出来る為、安心して利用できるのがメリットです。<br>
 <br>
 
-## 🧩 giscus の魅力 
-- 静的ブログでもOK（JSで動的読み込み）
-- GitHub Discussionsを使うのでスパム対策も強い
-- デザインが自然
-- コメント管理はGitHubでできる！
+## 🧩 giscus の魅力
 
+* 静的ブログでもOK（JSで動的読み込み）
+* GitHub Discussionsを使うのでスパム対策も強い
+* デザインが自然
+* コメント管理はGitHubでできる！
 
 ## 📝 giscus のコメント管理方法
 
  giscusのコメント管理は、GitHub Discussions上で行います。
-- コメント投稿 → GitHub Discussions に自動でスレッドが生成
-- 管理者は GitHub 上でそのスレッドにアクセス・返信・削除可能
-- 通知も GitHub 通知に届く（もしくはメール連携）
+
+* コメント投稿 → GitHub Discussions に自動でスレッドが生成
+* 管理者は GitHub 上でそのスレッドにアクセス・返信・削除可能
+* 通知も GitHub 通知に届く（もしくはメール連携）
 
 ## 🧩 コメントに関する課題と対策
-|課題|解決策|
-|---|---|
-|スパム対策|	GitHubアカウント必須にする（giscus/utterances）|
-|モデレーション|	GitHub Discussions で管理|
-|管理負担|	通知ON＋リンク付き一覧で簡単管理|
-|静的表示との相性|	JSで読み込むので静的でも問題なし|
 
+| 課題       | 解決策                                 |
+| -------- | ----------------------------------- |
+| スパム対策    | GitHubアカウント必須にする（giscus/utterances） |
+| モデレーション  | GitHub Discussions で管理              |
+| 管理負担     | 通知ON＋リンク付き一覧で簡単管理                   |
+| 静的表示との相性 | JSで読み込むので静的でも問題なし                   |
 
 ## 📌  Hugo + giscus 導入の流れ（概要）
+
 1. GitHub Discussions を有効化（公開リポジトリ）
 2. giscus.app でスクリプト生成（Hugo用にカスタマイズ）
 3. layouts/partials/comments.html を作成
 4. single.html の末尾で {{ partial "comments.html" . }} を読み込む
 5. custom.css でコメント部分のスタイル調整（任意）
+
+## STEP 1：GitHub Discussions を有効化（公開リポジトリ）
+
+対象のブログ用リポジトリ（例：fixxtan/my-blog）へアクセス
+
+> Settings → Features 
+
+に進む
+
+「Discussions」にチェックを入れて有効化する
+
+
+ <a href="/images/uploads/github-discussions1" target="_blank">
+<img src="/images/uploads/github-discussions1" alt="GitHub Discussions を有効化"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+
+
+✅ GitHub Discussions が https://github.com/ユーザー名/リポジトリ/discussions で利用可能になります
+
+
+<a href="/images/uploads/github-discussions2" target="_blank">
+<img src="/images/uploads/github-discussions2" alt="https://github.com/ユーザー名/リポジトリ/discussionsで利用可能に"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+
+
+
+
+
+
 
 
 
@@ -72,4 +106,3 @@ Hugoへの組み込み方（partial + single.html）
 カスタマイズ（テーマ・カテゴリなど）
 
 コメントがどこに保存され、どう管理できるのか
-
