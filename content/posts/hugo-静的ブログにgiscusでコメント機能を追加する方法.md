@@ -193,7 +193,7 @@ Githubのアカウントが必要になるので、その点がネックです�
 
 < /main > または < /article> の直前など、適切な場所に以下を追記：
 
-
+注意「｛」を半角の「{」に変換してください。
 
 
 ```go
@@ -228,32 +228,11 @@ single.htmlファイルを以下へコピー（継承）します。
 4. GitHub Discussionsにスレッドが生成されているか確認
 
 
-
-
  <a href="/images/uploads/giscus-web-test.jpg" target="_blank">
 <img src="/images/uploads/giscus-web-test.jpg" alt="giscusを記事ページで動作確認"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 </a>
 
 
 
-
-
-
-なぜDisqusではなくgiscusなのか（軽量・GitHub管理）
-
-
-GitHub Discussionsの有効化手順
-
-
-giscus.appでスクリプトを生成する方法
-
-
-Hugoへの組み込み方（partial + single.html）
-
-
-カスタマイズ（テーマ・カテゴリなど）
-
-
-コメントがどこに保存され、どう管理できるのか
 
 
