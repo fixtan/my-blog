@@ -71,8 +71,8 @@ Githubのアカウントが必要になるので、その点がネックです�
 「Discussions」にチェックを入れて有効化する
 
 
- <a href="/images/uploads/github-discussions1" target="_blank">
-<img src="/images/uploads/github-discussions1" alt="GitHub Discussions を有効化"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+ <a href="/images/uploads/github-discussions1.jpg" target="_blank">
+<img src="/images/uploads/github-discussions1.jpg" alt="GitHub Discussions を有効化"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 </a>
 
 
@@ -81,15 +81,24 @@ Githubのアカウントが必要になるので、その点がネックです�
 ✅ GitHub Discussions が https://github.com/ユーザー名/リポジトリ/discussions で利用可能になります
 
 
-<a href="/images/uploads/github-discussions2" target="_blank">
-<img src="/images/uploads/github-discussions2" alt="https://github.com/ユーザー名/リポジトリ/discussionsで利用可能に"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+<a href="/images/uploads/github-discussions2.jpg" target="_blank">
+<img src="/images/uploads/github-discussions2.jpg" alt="https://github.com/ユーザー名/リポジトリ/discussionsで利用可能に"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 </a>
 
 
 ## STEP 2：giscus.app でスクリプト生成（Hugo用にカスタマイズ）
 
+### giscusアプリをインストール
 
-** 公式サイト **
+{{< link-card
+    url="https://github.com/apps/giscus"
+    title="Build software better, together"
+    description="GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects."
+    image="https://github.githubassets.com/assets/github-logo-55c5b9a1fe52.png"
+>}}
+
+
+### giscus 公式サイトで必要情報を入力
 
 {{< link-card
     url="https://giscus.app/"
@@ -97,6 +106,16 @@ Githubのアカウントが必要になるので、その点がネックです�
     description="A comments widget built on GitHub Discussions."
     image="https://opengraph.githubassets.com/4f866d5b634e7cd5422af77f8dbfb6d48dd288b7c5c18326544c1973210320ed/giscus/giscus"
 >}}
+
+ページを開き、下記情報を入力：
+
+|項目|設定例|
+|---|---|
+|Repository|	fixxtan/my-blog（あなたのGitHub）|
+|Category|	General（Discussions内カテゴリ）|
+|Mapping|	pathname（記事URLに連動）|
+|Theme|	light または preferred_color_scheme|
+|Language|	ja（日本語対応）|
 
 
 
