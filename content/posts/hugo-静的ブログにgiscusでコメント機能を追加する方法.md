@@ -90,6 +90,8 @@ Githubのアカウントが必要になるので、その点がネックです�
 
 ### giscusアプリをインストール
 
+ブログ用に作成したリポジトリを選択した方が無難だと思います。
+
 {{< link-card
     url="https://github.com/apps/giscus"
     title="Build software better, together"
@@ -116,6 +118,98 @@ Githubのアカウントが必要になるので、その点がネックです�
 |Mapping|	pathname（記事URLに連動）|
 |Theme|	light または preferred_color_scheme|
 |Language|	ja（日本語対応）|
+
+
+必要情報入力すると下にスクリプトコードが表示されるのでコピーします。
+
+下記はサンプル
+
+```JavaScript
+<script src="https://giscus.app/client.js"
+        data-repo="fixxtan/my-blog"
+        data-repo-id="XXXXXXXXXX"
+        data-category="General"
+        data-category-id="XXXXXXXXXX"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ja"
+        crossorigin="anonymous"
+        async>
+</script>
+```
+
+## STEP 3：layouts/partials/comments.html を作成
+
+下記のHTMLファイルを編集
+
+> my-blog/layouts/partials/comments.html
+
+
+```html
+<section id="comments">
+  <h2>💬 コメント</h2>
+  <script src="https://giscus.app/client.js"
+          data-repo="fixxtan/my-blog"
+          data-repo-id="あなたのRepo ID"
+          data-category="General"
+          data-category-id="あなたのCategory ID"
+          data-mapping="pathname"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="light"
+          data-lang="ja"
+          crossorigin="anonymous"
+          async>
+  </script>
+</section>
+```
+※ Repo ID / Category ID は giscus.app に GitHub ログインすると自動取得できます。
+
+<https://giscus.app/ja>
+
+✅ カスタマイズ例（必要に応じて）
+― data-theme="light" → preferred_color_scheme にするとダークモードにも対応
+― data-input-position="bottom" → top にすると入力欄が上に来る
+― data-lang="ja" → 日本語UIで表示されます
+
+
+## STEP 4：single.html の末尾で comments.html を読み込む
+
+下記のファイルを編集します。（ブログ記事表示用HTMLファイル）
+
+> my-blog/layouts/_default/single.html
+
+< /main > または < /article> の直前など、適切な場所に以下を追記：
+
+```go
+{{ partial "comments.html" . }}
+```
+
+※ PaperMod テーマでは main.html や single.html の構造が異なる可能性があります。
+
+見つからない場合は、PaperMod の場合、以下にあるので
+
+> themes/PaperMod/layouts/_default/single.html
+
+single.htmlファイルを以下へコピー（継承）します。
+
+> my-blog/layouts/_default/single.html
+
+**※Hugoは layouts/_default/ に同名ファイルがあると、テーマ内のファイルを上書きしてそちらを優先的に読み込みます。**
+
+
+
+## 🎯 確認
+
+1. hugo server でローカル確認
+2. コメント欄がページ下部に表示されるか
+3. 投稿には GitHub ログインが必要（動作確認には別アカウントでもOK）
+4. GitHub Discussionsにスレッドが生成されているか確認
+
 
 
 
