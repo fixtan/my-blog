@@ -76,8 +76,40 @@ if __name__ == "__main__":
 
 例外処理までつけてくれましたので、不具合があった時にも原因の特定が容易になります。
 
-これを pyinstaller コマンドでEXEします。
+
+## スクリプトの EXE化 と 利用方法
+
+AIが作成してくれたスクリプトを pyinstaller コマンドでEXEします。
 
 > pyinstaller --noconsole --onefile Python-png-to-webp-conv.py 
 
-<img src="/images/uploads/png-to-webp-conv.jpg" alt=""  loading="lazy" decoding="async" style="width:540px; height:auto; border:1px solid #ccc; border-radius:6px; " />
+<br>
+ダウンロードフォルダにショートカットを作成し、そこへ画像をドロップする事で、WebPへ変換可能になりました。<br>
+<br>
+ <a href="/images/uploads/png-to-webp-conv.jpg" target="_blank">
+<img src="/images/uploads/png-to-webp-conv.jpg" alt=""  loading="lazy" decoding="async" style="width:440px; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+画像ファイルサイズは、今回のケースで 820KB あったのが、WebPへの変換で 約50KBと大幅なサイズダウンになってます。
+
+
+実際作成した画像は、この記事の一番上に表示しています。
+
+最後にこの記事のリンクカードも作成してみます。
+
+```Go
+{ {< link-card
+    url="https://humanxai.info/posts/python-png-to-webp-conv/"
+    title="[Python] PNGからWebPへ変換 スクリプト 作成"
+    description="アイキャッチ画像のサイズダウン用にPythonで、画像変換スクリプトを作成したメモです。"
+    image="https://humanxai.info/images/uploads/python-png-to-webp-conv.webp"
+>} }
+```
+
+{{< link-card
+    url="https://humanxai.info/posts/python-png-to-webp-conv/"
+    title="[Python] PNGからWebPへ変換 スクリプト 作成"
+    description="アイキャッチ画像のサイズダウン用にPythonで、画像変換スクリプトを作成したメモです。"
+    image="https://humanxai.info/images/uploads/python-png-to-webp-conv.webp"
+>}}
