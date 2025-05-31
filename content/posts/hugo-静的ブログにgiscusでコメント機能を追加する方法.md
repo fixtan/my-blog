@@ -61,3 +61,15 @@ Githubのアカウントが必要になるので、その点がネックです�
 
 
 
+なぜDisqusではなくgiscusなのか（軽量・GitHub管理）
+
+GitHub Discussionsの有効化手順
+
+giscus.appでスクリプトを生成する方法
+
+Hugoへの組み込み方（partial + single.html）
+
+カスタマイズ（テーマ・カテゴリなど）
+
+コメントがどこに保存され、どう管理できるのか
+
