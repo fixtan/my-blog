@@ -93,3 +93,14 @@ Githubのアカウントが必要になるので、その点がネックです�
     description="GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects."
     image="https://github.githubassets.com/assets/github-logo-55c5b9a1fe52.png"
 >}}
+
+
+### giscus 公式サイトで必要情報を入力
+
+{{< link-card
+    url="https://giscus.app/"
+    title="giscus"
+    description="A comments widget built on GitHub Discussions."
+    image="https://opengraph.githubassets.com/4f866d5b634e7cd5422af77f8dbfb6d48dd288b7c5c18326544c1973210320ed/giscus/giscus"
+>}}
+
