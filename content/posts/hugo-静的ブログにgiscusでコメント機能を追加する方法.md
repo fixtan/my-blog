@@ -178,8 +178,10 @@ Githubのアカウントが必要になるので、その点がネックです�
 
 < /main > または < /article> の直前など、適切な場所に以下を追記：
 
+※{{を{ {にしてますので、半角スペースを削除してください。
+
 ```go
-{{ partial "comments.html" . }}
+{　{ partial "comments.html" . }　}
 ```
 
 ※ PaperMod テーマでは main.html や single.html の構造が異なる可能性があります。
