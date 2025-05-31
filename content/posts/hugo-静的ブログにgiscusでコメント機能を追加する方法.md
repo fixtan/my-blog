@@ -104,3 +104,156 @@ Githubのアカウントが必要になるので、その点がネックです�
     image="https://opengraph.githubassets.com/4f866d5b634e7cd5422af77f8dbfb6d48dd288b7c5c18326544c1973210320ed/giscus/giscus"
 >}}
 
+ページを開き、下記情報を入力：
+
+
+| 項目         | 設定例                              |
+| ---------- | -------------------------------- |
+| Repository | fixxtan/my-blog（あなたのGitHub）      |
+| Category   | General（Discussions内カテゴリ）        |
+| Mapping    | pathname（記事URLに連動）               |
+| Theme      | light または preferred_color_scheme |
+| Language   | ja（日本語対応）                        |
+
+
+必要情報入力すると下にスクリプトコードが表示されるのでコピーします。
+
+
+下記はサンプル
+
+
+```JavaScript
+<script src="https://giscus.app/client.js"
+        data-repo="fixxtan/my-blog"
+        data-repo-id="XXXXXXXXXX"
+        data-category="General"
+        data-category-id="XXXXXXXXXX"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ja"
+        crossorigin="anonymous"
+        async>
+</script>
+```
+
+
+## STEP 3：layouts/partials/comments.html を作成
+
+
+下記のHTMLファイルを編集
+
+
+> my-blog/layouts/partials/comments.html
+
+
+```html
+<section id="comments">
+  <h2>💬 コメント</h2>
+  <script src="https://giscus.app/client.js"
+          data-repo="fixxtan/my-blog"
+          data-repo-id="あなたのRepo ID"
+          data-category="General"
+          data-category-id="あなたのCategory ID"
+          data-mapping="pathname"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="light"
+          data-lang="ja"
+          crossorigin="anonymous"
+          async>
+  </script>
+</section>
+```
+
+
+※ Repo ID / Category ID は giscus.app に GitHub ログインすると自動取得できます。
+
+
+<https://giscus.app/ja>
+
+
+✅ カスタマイズ例（必要に応じて）
+― data-theme="light" → preferred_color_scheme にするとダークモードにも対応
+― data-input-position="bottom" → top にすると入力欄が上に来る
+― data-lang="ja" → 日本語UIで表示されます
+
+
+## STEP 4：single.html の末尾で comments.html を読み込む
+
+
+下記のファイルを編集します。（ブログ記事表示用HTMLファイル）
+
+
+> my-blog/layouts/_default/single.html
+
+
+< /main > または < /article> の直前など、適切な場所に以下を追記：
+
+
+
+
+```go
+｛｛ partial "comments.html" . ｝｝
+```
+
+
+※ PaperMod テーマでは main.html や single.html の構造が異なる可能性があります。
+
+
+見つからない場合は、PaperMod の場合、以下にあるので
+
+
+> themes/PaperMod/layouts/_default/single.html
+
+
+single.htmlファイルを以下へコピー（継承）します。
+
+
+> my-blog/layouts/_default/single.html
+
+
+**※Hugoは layouts/_default/ に同名ファイルがあると、テーマ内のファイルを上書きしてそちらを優先的に読み込みます。**
+
+
+## 🎯 確認
+
+
+1. hugo server でローカル確認
+2. コメント欄がページ下部に表示されるか
+3. 投稿には GitHub ログインが必要（動作確認には別アカウントでもOK）
+4. GitHub Discussionsにスレッドが生成されているか確認
+
+
+
+
+ <a href="/images/uploads/giscus-web-test.jpg" target="_blank">
+<img src="/images/uploads/giscus-web-test.jpg" alt="giscusを記事ページで動作確認"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+
+
+
+
+なぜDisqusではなくgiscusなのか（軽量・GitHub管理）
+
+
+GitHub Discussionsの有効化手順
+
+
+giscus.appでスクリプトを生成する方法
+
+
+Hugoへの組み込み方（partial + single.html）
+
+
+カスタマイズ（テーマ・カテゴリなど）
+
+
+コメントがどこに保存され、どう管理できるのか
+
+
