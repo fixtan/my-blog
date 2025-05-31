@@ -82,3 +82,66 @@ Githubのアカウントが必要になるので、その点がネックです�
 
 ## STEP 2：giscus.app でスクリプト生成（Hugo用にカスタマイズ）
 
+### giscusアプリをインストール
+
+
+ブログ用に作成したリポジトリを選択した方が無難だと思います。
+
+
+{{< link-card
+    url="https://github.com/apps/giscus"
+    title="Build software better, together"
+    description="GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects."
+    image="https://github.githubassets.com/assets/github-logo-55c5b9a1fe52.png"
+
+
+> }}
+
+
+### giscus 公式サイトで必要情報を入力
+
+
+{{< link-card
+    url="https://giscus.app/"
+    title="giscus"
+    description="A comments widget built on GitHub Discussions."
+    image="https://opengraph.githubassets.com/4f866d5b634e7cd5422af77f8dbfb6d48dd288b7c5c18326544c1973210320ed/giscus/giscus"
+
+
+> }}
+
+
+ページを開き、下記情報を入力：
+
+
+| 項目         | 設定例                              |
+| ---------- | -------------------------------- |
+| Repository | fixxtan/my-blog（あなたのGitHub）      |
+| Category   | General（Discussions内カテゴリ）        |
+| Mapping    | pathname（記事URLに連動）               |
+| Theme      | light または preferred_color_scheme |
+| Language   | ja（日本語対応）                        |
+
+
+必要情報入力すると下にスクリプトコードが表示されるのでコピーします。
+
+
+下記はサンプル
+
+
+```JavaScript
+<script src="https://giscus.app/client.js"
+        data-repo="fixxtan/my-blog"
+        data-repo-id="XXXXXXXXXX"
+        data-category="General"
+        data-category-id="XXXXXXXXXX"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ja"
+        crossorigin="anonymous"
+        async>
+</script>
+```
