@@ -86,11 +86,17 @@ Githubのアカウントが必要になるので、その点がネックです�
 </a>
 
 
+## STEP 2：giscus.app でスクリプト生成（Hugo用にカスタマイズ）
 
 
+** 公式サイト **
 
-
-
+{{< link-card
+    url="https://giscus.app/"
+    title="giscus"
+    description="A comments widget built on GitHub Discussions."
+    image="https://opengraph.githubassets.com/4f866d5b634e7cd5422af77f8dbfb6d48dd288b7c5c18326544c1973210320ed/giscus/giscus"
+>}}
 
 
 
