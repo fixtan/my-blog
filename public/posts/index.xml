@@ -6,7 +6,7 @@
     <description>Recent content in Posts on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 30 May 2025 15:49:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 May 2025 09:40:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[WebMSX] 自前でMSXサイトを作成</title>
@@ -16,11 +16,32 @@
       <description>WebMSXを活用しWEBサイトでMSXを動作させる方法の紹介</description>
     </item>
     <item>
+      <title>[Hugo] 静的ブログにgiscusでコメント機能を追加する方法</title>
+      <link>http://localhost:1313/posts/hugo-giscus/</link>
+      <pubDate>Sat, 31 May 2025 09:40:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-giscus/</guid>
+      <description>静的サイトジェネレーター Hugoにコメント機能をgiscusで実装する方法の紹介</description>
+    </item>
+    <item>
       <title>[NETLIFY] netlifyでのドメイン設定方法</title>
       <link>http://localhost:1313/posts/netlify-domain-settings/</link>
       <pubDate>Mon, 26 May 2025 08:18:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/netlify-domain-settings/</guid>
       <description>netlifyでのドメイン設定方法の紹介</description>
+    </item>
+    <item>
+      <title>[Python] PNGからWebPへ変換 スクリプト 作成</title>
+      <link>http://localhost:1313/posts/python-png-to-webp-conv/</link>
+      <pubDate>Sat, 31 May 2025 08:32:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/python-png-to-webp-conv/</guid>
+      <description>アイキャッチ画像のサイズダウン用にPythonで、画像変換スクリプトを作成したメモです。</description>
+    </item>
+    <item>
+      <title>[Hugo] リンクをカード風に表示する</title>
+      <link>http://localhost:1313/posts/hugo-link-card/</link>
+      <pubDate>Fri, 30 May 2025 15:49:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-link-card/</guid>
+      <description>Hugoのショートコードを使って、リンクをカード風に表示する方法の紹介。</description>
     </item>
     <item>
       <title>[自作PC] Thunderbolt AIC モニタが映らない トラブル＆解決方法</title>
@@ -106,13 +127,6 @@
       <pubDate>Sat, 24 May 2025 12:18:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/decapcms-error-01/</guid>
       <description>Netlify CMS/Decap CMSのカスタム中、ログインしようとするとエラーメッセージがでた際のトラブルTip</description>
-    </item>
-    <item>
-      <title>[Hugo] リンクをカード風に表示する</title>
-      <link>http://localhost:1313/posts/hugo-link-card/</link>
-      <pubDate>Fri, 30 May 2025 15:49:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo-link-card/</guid>
-      <description>Hugoのショートコードを使って、リンクをカード風に表示する方法の紹介。</description>
     </item>
     <item>
       <title>[Hugo] Hugoで未来記事を表示させるには？ </title>

@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="lainのAIと創作ブログ">
 
 
-  <meta property="og:image" content="http://localhost:1313/images/uploads/avatar.png">
+  <meta property="og:image" content="http://localhost:1313/images/uploads/hugo-link-card.png">
 
 
 
@@ -29,7 +29,7 @@
 <meta name="twitter:title" content="[Hugo] リンクをカード風に表示する">
 <meta name="twitter:description" content="Hugoのショートコードを使って、リンクをカード風に表示する方法の紹介。">
 
-  <meta name="twitter:image" content="http://localhost:1313/images/uploads/avatar.png">
+  <meta name="twitter:image" content="http://localhost:1313/images/uploads/hugo-link-card.png">
 
 
 </head>
@@ -118,11 +118,14 @@
     <div class="post-description">
       Hugoのショートコードを使って、リンクをカード風に表示する方法の紹介。
     </div>
-    <div class="post-meta"><span title='2025-05-30 15:49:00 +0000 UTC'>May 30, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
+    <div class="post-meta"><span title='2025-05-30 15:49:00 +0000 UTC'>May 30, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;lain
 
 </div>
   </header> 
-  <div class="post-content"><h2 id="はじめに">はじめに<a hidden class="anchor" aria-hidden="true" href="#はじめに">#</a></h2>
+  <div class="post-content"><center>
+<img src="http://localhost:1313/images/uploads/hugo-link-card.png" alt="Hugoのショートコードを使って、リンクをカード風に表示する方法の紹介。"  loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; " />
+</center>
+<h2 id="はじめに">はじめに<a hidden class="anchor" aria-hidden="true" href="#はじめに">#</a></h2>
 <p>サイトをOGPに対応させたことで、Twitterでリンクを貼る際に画像を含めたOGP情報を表示できるようにしました。</p>
 <p>それと同様に、ブログ記事内のURLに関してもカード風の表示にできないか試した際の備忘録メモです。</p>
 <h2 id="decap-cms-のリンクカード対応の有無">[Decap CMS] のリンクカード対応の有無<a hidden class="anchor" aria-hidden="true" href="#decap-cms-のリンクカード対応の有無">#</a></h2>
@@ -206,14 +209,89 @@ URL入力欄（https://example.com）<br>
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#a6e22e">div</span> <span style="color:#a6e22e">class</span>=<span style="color:#e6db74">&#34;link-card-thumb&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>      &lt;<span style="color:#a6e22e">img</span> <span style="color:#a6e22e">src</span>=<span style="color:#e6db74">&#34;{ { $img } }&#34;</span> <span style="color:#a6e22e">alt</span>=<span style="color:#e6db74">&#34;{ { $title } }&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">div</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#a6e22e">div</span> <span style="color:#a6e22e">class</span>=<span style="color:#e6db74">&#34;link-card-body&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#a6e22e">div</span> <span style="color:#a6e22e">class</span>=<span style="color:#e6db74">&#34;link-card-text&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>      &lt;<span style="color:#a6e22e">h3</span>&gt;{ { <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">title</span> } }&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">h3</span>&gt;
 </span></span><span style="display:flex;"><span>      &lt;<span style="color:#a6e22e">p</span>&gt;{ { <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">desc</span> } }&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">p</span>&gt;
 </span></span><span style="display:flex;"><span>      &lt;<span style="color:#a6e22e">span</span> <span style="color:#a6e22e">class</span>=<span style="color:#e6db74">&#34;link-card-url&#34;</span>&gt;{ { <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">url</span> } }&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">span</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">div</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">a</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">article</span>&gt;
-</span></span></code></pre></div><p>あとは、記事内に以下のような形式で貼り付ければ、自動でリンクカードが作成されます。</p>
+</span></span></code></pre></div><br>
+CSSファイルに以下を追記。<br>
+<p>PATH:  ** \assets\css\custom.css.html **</p>
+<pre tabindex="0"><code>/* リンクカード：ここから*/
+.link-card {
+  display: flex;
+  max-width: 500px;
+  height: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  margin: 1em 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s;
+}
+
+.link-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.link-card a {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-card-thumb {
+  flex: 0 0 120px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.link-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ← cover から変更 */
+  display: block;
+  background-color: #f8f8f8; /* 余白が出るときの背景対策 */
+}
+
+.link-card-text {
+  flex: 1;
+  padding: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.link-card-text h3 {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+  color: #333;
+}
+
+.link-card-text p {
+  margin: 0.5em 0 0.5em;
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 最大3行で切る */
+  -webkit-box-orient: vertical;
+}
+
+.link-card-url {
+  font-size: 0.75em;
+  color: #999;
+  margin-top: auto;
+}
+
+/* リンクカード：ここまで*/
+</code></pre><p>あとは、記事内に以下のような形式で貼り付ければ、自動でリンクカードが作成されます。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{ {&lt; <span style="color:#a6e22e">link</span><span style="color:#f92672">-</span><span style="color:#a6e22e">card</span> 
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span>=<span style="color:#e6db74">&#34;https://example.com&#34;</span> 
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">title</span>=<span style="color:#e6db74">&#34;外部記事のタイトル&#34;</span> 
@@ -397,6 +475,25 @@ if url:
 
   </footer>
 </article>
+
+<section id="comments">
+  <h2>💬 コメント</h2>
+    <script src="https://giscus.app/client.js"
+            data-repo="fixtan/my-blog"
+            data-repo-id="R_kgDOOsUH4A"
+            data-category="General"
+            data-category-id="DIC_kwDOOsUH4M4Cq1N9"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="preferred_color_scheme"
+            data-lang="ja"
+            crossorigin="anonymous"
+            async>
+    </script>
+</section>
 	</main>
     <script>
   document.addEventListener('DOMContentLoaded', function () {
