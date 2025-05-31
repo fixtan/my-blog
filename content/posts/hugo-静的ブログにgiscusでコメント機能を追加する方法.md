@@ -70,21 +70,15 @@ Githubのアカウントが必要になるので、その点がネックです�
 
 「Discussions」にチェックを入れて有効化する
 
-
  <a href="/images/uploads/github-discussions1.jpg" target="_blank">
 <img src="/images/uploads/github-discussions1.jpg" alt="GitHub Discussions を有効化"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 </a>
 
-
-
-
 ✅ GitHub Discussions が https://github.com/ユーザー名/リポジトリ/discussions で利用可能になります
-
 
 <a href="/images/uploads/github-discussions2.jpg" target="_blank">
 <img src="/images/uploads/github-discussions2.jpg" alt="https://github.com/ユーザー名/リポジトリ/discussionsで利用可能に"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 </a>
-
 
 ## STEP 2：giscus.app でスクリプト生成（Hugo用にカスタマイズ）
 
@@ -97,8 +91,8 @@ Githubのアカウントが必要になるので、その点がネックです�
     title="Build software better, together"
     description="GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects."
     image="https://github.githubassets.com/assets/github-logo-55c5b9a1fe52.png"
->}}
 
+> }}
 
 ### giscus 公式サイトで必要情報を入力
 
@@ -107,18 +101,18 @@ Githubのアカウントが必要になるので、その点がネックです�
     title="giscus"
     description="A comments widget built on GitHub Discussions."
     image="https://opengraph.githubassets.com/4f866d5b634e7cd5422af77f8dbfb6d48dd288b7c5c18326544c1973210320ed/giscus/giscus"
->}}
+
+> }}
 
 ページを開き、下記情報を入力：
 
-|項目|設定例|
-|---|---|
-|Repository|	fixxtan/my-blog（あなたのGitHub）|
-|Category|	General（Discussions内カテゴリ）|
-|Mapping|	pathname（記事URLに連動）|
-|Theme|	light または preferred_color_scheme|
-|Language|	ja（日本語対応）|
-
+| 項目         | 設定例                              |
+| ---------- | -------------------------------- |
+| Repository | fixxtan/my-blog（あなたのGitHub）      |
+| Category   | General（Discussions内カテゴリ）        |
+| Mapping    | pathname（記事URLに連動）               |
+| Theme      | light または preferred_color_scheme |
+| Language   | ja（日本語対応）                        |
 
 必要情報入力すると下にスクリプトコードが表示されるのでコピーします。
 
@@ -147,7 +141,6 @@ Githubのアカウントが必要になるので、その点がネックです�
 
 > my-blog/layouts/partials/comments.html
 
-
 ```html
 <section id="comments">
   <h2>💬 コメント</h2>
@@ -167,6 +160,7 @@ Githubのアカウントが必要になるので、その点がネックです�
   </script>
 </section>
 ```
+
 ※ Repo ID / Category ID は giscus.app に GitHub ログインすると自動取得できます。
 
 <https://giscus.app/ja>
@@ -175,7 +169,6 @@ Githubのアカウントが必要になるので、その点がネックです�
 ― data-theme="light" → preferred_color_scheme にするとダークモードにも対応
 ― data-input-position="bottom" → top にすると入力欄が上に来る
 ― data-lang="ja" → 日本語UIで表示されます
-
 
 ## STEP 4：single.html の末尾で comments.html を読み込む
 
@@ -201,8 +194,6 @@ single.htmlファイルを以下へコピー（継承）します。
 
 **※Hugoは layouts/_default/ に同名ファイルがあると、テーマ内のファイルを上書きしてそちらを優先的に読み込みます。**
 
-
-
 ## 🎯 確認
 
 1. hugo server でローカル確認
@@ -211,6 +202,9 @@ single.htmlファイルを以下へコピー（継承）します。
 4. GitHub Discussionsにスレッドが生成されているか確認
 
 
+ <a href="/images/uploads/giscus-web-test.jpg" target="_blank">
+<img src="/images/uploads/giscus-web-test.jpg" alt="giscusを記事ページで動作確認"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
 
 
 
