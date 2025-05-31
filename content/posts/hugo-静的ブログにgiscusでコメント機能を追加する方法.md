@@ -93,7 +93,5 @@ Githubのアカウントが必要になるので、その点がネックです�
     title="Build software better, together"
     description="GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects."
     image="https://github.githubassets.com/assets/github-logo-55c5b9a1fe52.png"
-
-
 > }}
 
