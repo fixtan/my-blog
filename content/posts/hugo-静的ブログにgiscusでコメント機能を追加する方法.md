@@ -249,7 +249,7 @@ single.htmlファイルを以下へコピー（継承）します。
 <img src="/images/uploads/hugo-giscus-management.jpg" alt="giscusの記事管理（GitHUB:discussions）"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 </a>
 
-{{< link-card url="https://humanxai.info/posts/hugo-giscus/" title="[Hugo] 静的ブログにgiscusでコメント機能を追加する方法" description="静的サイトジェネレーター Hugoにコメント機能をgiscusで実装する方法の紹介" image="https://humanxai.info/images/uploads/avatar.png" >}}
+{{< link-card url="https://humanxai.info/posts/hugo-giscus/" title="[Hugo] 静的ブログにgiscusでコメント機能を追加する方法" description="Hugoにコメント機能をgiscusで実装する方法の紹介" image="https://humanxai.info/images/uploads/hugo-giscus.webp" >}}
 
 
 
