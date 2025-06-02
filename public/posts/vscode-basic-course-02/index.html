@@ -118,7 +118,7 @@
     <div class="post-description">
       AIの指導による VSCode 基礎マスター講座 02 Prettier , Markdown All in One
     </div>
-    <div class="post-meta"><span title='2025-06-02 16:39:00 +0000 UTC'>June 2, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;lain
+    <div class="post-meta"><span title='2025-06-02 16:39:00 +0000 UTC'>June 2, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
 
 </div>
   </header> 
@@ -238,6 +238,109 @@
 <p>Markdown Preview Enhanced：Markdown のプレビュー機能を強化する拡張機能。</p>
 </li>
 </ul>
+<h2 id="おまけ-aiからの提案">おまけ: AIからの提案<a hidden class="anchor" aria-hidden="true" href="#おまけ-aiからの提案">#</a></h2>
+<p>settings.jsonに追記して、AIに見せると、改善案を教えてくれたのでその紹介です。</p>
+ <a href="http://localhost:1313/images/uploads/vscode-settings-json.jpg" target="_blank">
+<img src="http://localhost:1313/images/uploads/vscode-settings-json.jpg" alt="Markdown All in One（目次生成・補完）"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<p>✅ 評価と解説</p>
+<p>🔹 全体的にOKな点</p>
+<pre tabindex="0"><code>&#34;editor.minimap.enabled&#34;: false,
+&#34;security.workspace.trust.enabled&#34;: false,
+</code></pre><ul>
+<li>サイドのミニマップを非表示にする設定や、</li>
+<li>信頼されていないワークスペースの警告を無効化する設定もあり、操作の快適性が上がっています。</li>
+</ul>
+<p>🔹 Python設定</p>
+<pre tabindex="0"><code>&#34;[python]&#34;: {
+  &#34;editor.formatOnType&#34;: true
+}
+</code></pre><ul>
+<li>Pythonファイルでインデント時の自動フォーマットが有効。
+→ これは pylance や black を入れていると、さらに効果的になります。</li>
+</ul>
+<p>🔹 Markdown関連</p>
+<pre tabindex="0"><code>&#34;[markdown]&#34;: {
+  &#34;editor.formatOnSave&#34;: true,
+  &#34;editor.defaultFormatter&#34;: &#34;yzhang.markdown-all-in-one&#34;
+}
+</code></pre><ul>
+<li>Markdownファイルに対して、保存時のフォーマットが有効。</li>
+<li>フォーマッターも Markdown All in One に指定済でOKです！</li>
+</ul>
+<p>🔹 共通設定</p>
+<pre tabindex="0"><code>&#34;editor.wordWrap&#34;: &#34;on&#34;,
+&#34;editor.renderWhitespace&#34;: &#34;all&#34;
+</code></pre><ul>
+<li>行が長くなったときの自動折り返しが有効。</li>
+<li>半角スペースやタブを視覚的に表示（空白の見落とし防止に便利）。</li>
+</ul>
+<h3 id="-アドバイス改善の余地">💡 アドバイス（改善の余地）<a hidden class="anchor" aria-hidden="true" href="#-アドバイス改善の余地">#</a></h3>
+<p>現状でも十分素晴らしいのですが、もしもう少しだけ補足したい場合：</p>
+<ol>
+<li>&ldquo;editor.tabSize&rdquo; の追加（インデント幅）</li>
+</ol>
+<pre tabindex="0"><code>&#34;editor.tabSize&#34;: 2,
+</code></pre><ul>
+<li>MarkdownやHTMLでは 2 の方が見やすいケースも多いです（お好みで）。</li>
+</ul>
+<ol start="2">
+<li>&ldquo;files.trimTrailingWhitespace&rdquo; の追加（無駄な空白削除）</li>
+</ol>
+<pre tabindex="0"><code>&#34;files.trimTrailingWhitespace&#34;: true,
+</code></pre><ul>
+<li>行末の不要なスペースを自動で削除してくれます。</li>
+</ul>
+<ol start="3">
+<li>&ldquo;files.insertFinalNewline&rdquo;（末尾に改行を入れる）</li>
+</ol>
+<pre tabindex="0"><code>&#34;files.insertFinalNewline&#34;: true,
+</code></pre><ul>
+<li>UNIX系の慣習として、ファイル末尾に空行が1つあるのが一般的。</li>
+</ul>
+<p>✅ 現在の追加ポイントとその効果</p>
+<table>
+  <thead>
+      <tr>
+          <th>設定</th>
+          <th>内容</th>
+          <th>効果</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>&ldquo;editor.tabSize&rdquo;: 2</td>
+          <td>タブ幅を2スペースに</td>
+          <td>Markdown・HTML等の見た目がすっきり</td>
+      </tr>
+      <tr>
+          <td>&ldquo;files.trimTrailingWhitespace&rdquo;: true</td>
+          <td>行末の無駄な空白を削除</td>
+          <td>不要な空白を自動でクリーンアップ</td>
+      </tr>
+      <tr>
+          <td>&ldquo;files.insertFinalNewline&rdquo;: true</td>
+          <td>ファイル末尾に改行を追加</td>
+          <td>UNIX系の標準に準拠、Gitでの差分が安定</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="-次のステップステップ2-2候補">📘 次のステップ（ステップ2-2）候補<a hidden class="anchor" aria-hidden="true" href="#-次のステップステップ2-2候補">#</a></h2>
+<p>この勢いで、次のような内容に進むこともできます：</p>
+<h3 id="-ステップ2-2拡張機能ごとの便利な使い方">🔸 ステップ2-2：拡張機能ごとの便利な使い方<a hidden class="anchor" aria-hidden="true" href="#-ステップ2-2拡張機能ごとの便利な使い方">#</a></h3>
+<ul>
+<li>Markdown All in One の TOC（目次）自動生成</li>
+<li>Prettier のフォーマッタ切替や無視ルール（.prettierignore）の書き方</li>
+<li>Path Intellisense の効果的な使い方</li>
+</ul>
+<p>または</p>
+<h3 id="-ステップ3プロジェクト単位の-vscodesettingsjson-運用">🔸 ステップ3：プロジェクト単位の .vscode/settings.json 運用<a hidden class="anchor" aria-hidden="true" href="#-ステップ3プロジェクト単位の-vscodesettingsjson-運用">#</a></h3>
+<ul>
+<li>ユーザー全体の設定ではなく、プロジェクト単位で設定を切り分ける</li>
+<li>チームでの共有やCMS別設定などに便利</li>
+</ul>
+<br>
+<hr>
 
 
   </div>

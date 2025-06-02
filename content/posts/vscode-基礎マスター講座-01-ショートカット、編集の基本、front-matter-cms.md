@@ -20,7 +20,7 @@ image: /images/uploads/vscode-basic-course-01.webp
 
 <center>
 <a href="/images/uploads/vscode-basic-course-01.webp" target="_blank">
-<img src="/images/uploads/vscode-basic-course-01.webp" 
+<img src="/images/uploads/vscode-basic-course-01.webp"
      alt="[VSCode] 基礎マスター講座 01 : ショートカット、編集の基本、Front Matter CMS"
      style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>

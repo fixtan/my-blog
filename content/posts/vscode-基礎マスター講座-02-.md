@@ -127,3 +127,112 @@ VSCode の設定は、settings.json ファイルを編集することでカス�
 - markdownlint：Markdown の文法チェックを行う拡張機能。
 
 - Markdown Preview Enhanced：Markdown のプレビュー機能を強化する拡張機能。
+
+## おまけ: AIからの提案
+
+settings.jsonに追記して、AIに見せると、改善案を教えてくれたのでその紹介です。
+
+
+
+ <a href="/images/uploads/vscode-settings-json.jpg" target="_blank">
+<img src="/images/uploads/vscode-settings-json.jpg" alt="Markdown All in One（目次生成・補完）"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+
+✅ 評価と解説
+
+🔹 全体的にOKな点
+
+```
+"editor.minimap.enabled": false,
+"security.workspace.trust.enabled": false,
+```
+
+- サイドのミニマップを非表示にする設定や、
+- 信頼されていないワークスペースの警告を無効化する設定もあり、操作の快適性が上がっています。
+
+🔹 Python設定
+```
+"[python]": {
+  "editor.formatOnType": true
+}
+```
+- Pythonファイルでインデント時の自動フォーマットが有効。
+→ これは pylance や black を入れていると、さらに効果的になります。
+
+🔹 Markdown関連
+
+```
+"[markdown]": {
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+}
+```
+- Markdownファイルに対して、保存時のフォーマットが有効。
+- フォーマッターも Markdown All in One に指定済でOKです！
+
+🔹 共通設定
+
+```
+"editor.wordWrap": "on",
+"editor.renderWhitespace": "all"
+```
+- 行が長くなったときの自動折り返しが有効。
+- 半角スペースやタブを視覚的に表示（空白の見落とし防止に便利）。
+
+
+### 💡 アドバイス（改善の余地）
+
+現状でも十分素晴らしいのですが、もしもう少しだけ補足したい場合：
+
+1. "editor.tabSize" の追加（インデント幅）
+
+```
+"editor.tabSize": 2,
+```
+- MarkdownやHTMLでは 2 の方が見やすいケースも多いです（お好みで）。
+
+
+2. "files.trimTrailingWhitespace" の追加（無駄な空白削除）
+
+```
+"files.trimTrailingWhitespace": true,
+```
+- 行末の不要なスペースを自動で削除してくれます。
+
+3. "files.insertFinalNewline"（末尾に改行を入れる）
+```
+"files.insertFinalNewline": true,
+```
+- UNIX系の慣習として、ファイル末尾に空行が1つあるのが一般的。
+
+
+
+✅ 現在の追加ポイントとその効果
+| 設定                                 | 内容                     | 効果                                  |
+| ------------------------------------ | ------------------------ | ------------------------------------- |
+| "editor.tabSize": 2                  | タブ幅を2スペースに      | Markdown・HTML等の見た目がすっきり    |
+| "files.trimTrailingWhitespace": true | 行末の無駄な空白を削除   | 不要な空白を自動でクリーンアップ      |
+| "files.insertFinalNewline": true     | ファイル末尾に改行を追加 | UNIX系の標準に準拠、Gitでの差分が安定 |
+
+
+## 📘 次のステップ（ステップ2-2）候補
+
+この勢いで、次のような内容に進むこともできます：
+
+### 🔸 ステップ2-2：拡張機能ごとの便利な使い方
+- Markdown All in One の TOC（目次）自動生成
+- Prettier のフォーマッタ切替や無視ルール（.prettierignore）の書き方
+- Path Intellisense の効果的な使い方
+
+または
+
+### 🔸 ステップ3：プロジェクト単位の .vscode/settings.json 運用
+
+- ユーザー全体の設定ではなく、プロジェクト単位で設定を切り分ける
+- チームでの共有やCMS別設定などに便利
+
+<br>
+
+---
