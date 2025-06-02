@@ -1,0 +1,39 @@
+{
+  "contentFolder": "content",
+  "mediaFolder": "static/images/uploads",
+  "publicFolder": "/images/uploads",
+  "collections": [
+    {
+      "name": "記事",
+      "folder": "content/posts",
+      "format": "md",
+      "fields": [
+        { "name": "title", "type": "string" },
+        { "name": "slug", "type": "string" },
+        { "name": "summary", "type": "string" },
+        { "name": "description", "type": "string" },
+        { "name": "date", "type": "datetime" },
+        { "name": "draft", "type": "boolean" },
+        { "name": "author", "type": "string" },
+        { "name": "categories", "type": "list", "default": [] },
+        { "name": "tags", "type": "list", "default": [] },
+        { "name": "weight", "type": "number" },
+        { "name": "image", "type": "string" }
+      ]
+    },
+    {
+      "name": "注目プロジェクト",
+      "folder": "content/featured",
+      "format": "md",
+      "fields": [
+        { "name": "title", "type": "string" },
+        { "name": "date", "type": "datetime" },
+        { "name": "slug", "type": "string" },
+        { "name": "description", "type": "string" },
+        { "name": "weight", "type": "number" }
+      ]
+    }
+  ],
+  "frontmatter.preview.host": "http://localhost:1313",
+  "frontmatter.preview.port": 1313
+}

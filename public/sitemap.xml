@@ -46,6 +46,9 @@
     <loc>http://localhost:1313/posts/ai-dialogue-2025-05-30/</loc>
     <lastmod>2025-05-30T08:21:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/vscode-basic-course-01/</loc>
+    <lastmod>2025-06-01T08:55:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/hugo-404-favicon/</loc>
     <lastmod>2025-05-30T13:42:00+00:00</lastmod>
   </url><url>
@@ -70,6 +73,9 @@
     <loc>http://localhost:1313/posts/hugo-custom-article-future/</loc>
     <lastmod>2025-05-26T19:22:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/ai%E3%81%AF%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%8F%E7%94%9F%E3%81%8D%E6%96%B9%E3%81%A8%E9%96%A2%E4%BF%82%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B/</loc>
+    <lastmod>2025-05-25T16:10:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/hugo-template/</loc>
     <lastmod>2025-05-24T23:08:00+00:00</lastmod>
   </url><url>
@@ -92,7 +98,25 @@
     <lastmod>2025-05-15T01:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-05-31T09:40:00+00:00</lastmod>
+    <lastmod>2025-06-01T08:55:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-06-01T08:55:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-06-01T08:55:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-06-01T08:55:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/vscode/</loc>
+    <lastmod>2025-06-01T08:55:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E3%83%96%E3%83%AD%E3%82%B0/</loc>
+    <lastmod>2025-06-01T08:55:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E5%9F%BA%E7%A4%8E%E5%AD%A6%E7%BF%92/</loc>
+    <lastmod>2025-06-01T08:55:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/giscus/</loc>
     <lastmod>2025-05-31T09:40:00+00:00</lastmod>
@@ -101,15 +125,6 @@
     <lastmod>2025-05-31T09:40:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/javascript/</loc>
-    <lastmod>2025-05-31T09:40:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-05-31T09:40:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-05-31T09:40:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-05-31T09:40:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88/</loc>
@@ -202,9 +217,6 @@
     <loc>http://localhost:1313/tags/%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B0/</loc>
     <lastmod>2025-05-29T10:48:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E3%83%96%E3%83%AD%E3%82%B0/</loc>
-    <lastmod>2025-05-29T08:55:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/github/</loc>
     <lastmod>2025-05-28T20:02:00+00:00</lastmod>
   </url><url>
@@ -235,6 +247,9 @@
     <loc>http://localhost:1313/categories/netlify/</loc>
     <lastmod>2025-05-26T08:18:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/categories/%E3%81%9D%E3%81%AE%E4%BB%96/</loc>
+    <lastmod>2025-05-25T16:10:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</loc>
     <lastmod>2025-05-24T23:08:00+00:00</lastmod>
   </url><url>
@@ -255,5 +270,7 @@
   </url><url>
     <loc>http://localhost:1313/categories/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3/</loc>
     <lastmod>2025-05-22T16:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/test/</loc>
   </url>
 </urlset>

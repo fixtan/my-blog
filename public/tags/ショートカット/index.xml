@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ショートカット on lainのAIと創作ブログ</title>
+    <link>http://localhost:1313/tags/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88/</link>
+    <description>Recent content in ショートカット on lainのAIと創作ブログ</description>
+    <generator>Hugo -- 0.147.3</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 01 Jun 2025 08:55:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[VSCode] 基礎マスター講座 01 編集の基本</title>
+      <link>http://localhost:1313/posts/vscode-basic-course-01/</link>
+      <pubDate>Sun, 01 Jun 2025 08:55:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vscode-basic-course-01/</guid>
+      <description>AIの指導による VSCode 基礎マスター講座 01 編集の基本</description>
+    </item>
+  </channel>
+</rss>

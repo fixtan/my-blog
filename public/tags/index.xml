@@ -6,47 +6,61 @@
     <description>Recent content in Tags on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 31 May 2025 09:40:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Jun 2025 08:55:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ブログ</title>
+      <link>http://localhost:1313/tags/%E3%83%96%E3%83%AD%E3%82%B0/</link>
+      <pubDate>Sun, 01 Jun 2025 08:55:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E3%83%96%E3%83%AD%E3%82%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>基礎学習</title>
+      <link>http://localhost:1313/tags/%E5%9F%BA%E7%A4%8E%E5%AD%A6%E7%BF%92/</link>
+      <pubDate>Sun, 01 Jun 2025 08:55:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E5%9F%BA%E7%A4%8E%E5%AD%A6%E7%BF%92/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Giscus</title>
       <link>http://localhost:1313/tags/giscus/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 31 May 2025 09:40:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/giscus/</guid>
       <description></description>
     </item>
     <item>
       <title>JavaScript</title>
       <link>http://localhost:1313/tags/javascript/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 31 May 2025 09:40:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
       <title>コメント</title>
       <link>http://localhost:1313/tags/%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 31 May 2025 09:40:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88/</guid>
       <description></description>
     </item>
     <item>
       <title>PNG</title>
       <link>http://localhost:1313/tags/png/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 31 May 2025 08:32:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/png/</guid>
       <description></description>
     </item>
     <item>
       <title>WebP </title>
       <link>http://localhost:1313/tags/webp-/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 31 May 2025 08:32:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/webp-/</guid>
       <description></description>
     </item>
     <item>
       <title>画像変換</title>
       <link>http://localhost:1313/tags/%E7%94%BB%E5%83%8F%E5%A4%89%E6%8F%9B/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 31 May 2025 08:32:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E7%94%BB%E5%83%8F%E5%A4%89%E6%8F%9B/</guid>
       <description></description>
     </item>
@@ -209,13 +223,6 @@
       <link>http://localhost:1313/tags/%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B0/</link>
       <pubDate>Thu, 29 May 2025 10:48:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B0/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ブログ</title>
-      <link>http://localhost:1313/tags/%E3%83%96%E3%83%AD%E3%82%B0/</link>
-      <pubDate>Thu, 29 May 2025 08:55:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%83%96%E3%83%AD%E3%82%B0/</guid>
       <description></description>
     </item>
     <item>
