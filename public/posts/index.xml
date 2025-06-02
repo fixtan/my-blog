@@ -6,7 +6,7 @@
     <description>Recent content in Posts on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 31 May 2025 09:40:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Jun 2025 15:39:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[WebMSX] 自前でMSXサイトを作成</title>
@@ -70,6 +70,20 @@
       <pubDate>Thu, 29 May 2025 10:48:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/decapcms-custom-slug/</guid>
       <description>デフォルトで記事タイトルがURLになり長くなってしまう為、短くする方法の紹介</description>
+    </item>
+    <item>
+      <title>[VSCode] 基礎マスター講座 01 : ショートカット、編集の基本、Front Matter CMS</title>
+      <link>http://localhost:1313/posts/vscode-basic-course-01/</link>
+      <pubDate>Mon, 02 Jun 2025 15:39:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vscode-basic-course-01/</guid>
+      <description>AIの指導による VSCode 基礎マスター講座 01 編集,ショートカット、Front Matter CMS</description>
+    </item>
+    <item>
+      <title>[VSCode] 基礎マスター講座 02 : 拡張機能の活用と設定調整</title>
+      <link>http://localhost:1313/posts/vscode-basic-course-02/</link>
+      <pubDate>Mon, 02 Jun 2025 15:39:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vscode-basic-course-02/</guid>
+      <description>AIの指導による VSCode 基礎マスター講座 02 拡張機能の活用と設定調整</description>
     </item>
     <item>
       <title>[Hugo] OGP（Open Graph Protocol）対応方法 [SNS]</title>
@@ -191,6 +205,18 @@
       <pubDate>Thu, 15 May 2025 01:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/third/</guid>
       <description>&lt;p&gt;（本文はまだありません）&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/test/</guid>
+      <description>&lt;h1 id=&#34;はじめてのmarkdown&#34;&gt;はじめてのMarkdown&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;箇条書き1&lt;/li&gt;
+&lt;li&gt;箇条書き2&lt;/li&gt;
+&lt;li&gt;箇条書き3&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

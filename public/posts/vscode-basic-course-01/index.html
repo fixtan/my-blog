@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="description" content="AIの指導による VSCode 基礎マスター講座 01 編集の基本">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="description" content="AIの指導による VSCode 基礎マスター講座 01 編集,ショートカット、Front Matter CMS">
 <link rel="icon" href="http://localhost:1313/favicon.ico" type="image/x-icon">
 
 
@@ -15,21 +15,21 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
-<meta property="og:title" content="[VSCode] 基礎マスター講座 01 : ショートカット、編集の基本、Front Matter CMS"><meta property="og:description" content="AIの指導による VSCode 基礎マスター講座 01 編集の基本">
+<meta property="og:title" content="[VSCode] 基礎マスター講座 01 : ショートカット、編集の基本、Front Matter CMS"><meta property="og:description" content="AIの指導による VSCode 基礎マスター講座 01 編集,ショートカット、Front Matter CMS">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/posts/vscode-basic-course-01/">
 <meta property="og:site_name" content="lainのAIと創作ブログ">
 
 
-  <meta property="og:image" content="http://localhost:1313/images/uploads/decapcms-custom-01.png">
+  <meta property="og:image" content="http://localhost:1313/images/uploads/vscode-basic-course-01.webp">
 
 
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="[VSCode] 基礎マスター講座 01 : ショートカット、編集の基本、Front Matter CMS">
-<meta name="twitter:description" content="AIの指導による VSCode 基礎マスター講座 01 編集の基本">
+<meta name="twitter:description" content="AIの指導による VSCode 基礎マスター講座 01 編集,ショートカット、Front Matter CMS">
 
-  <meta name="twitter:image" content="http://localhost:1313/images/uploads/decapcms-custom-01.png">
+  <meta name="twitter:image" content="http://localhost:1313/images/uploads/vscode-basic-course-01.webp">
 
 
 </head>
@@ -116,38 +116,38 @@
       [VSCode] 基礎マスター講座 01 : ショートカット、編集の基本、Front Matter CMS
     </h1>
     <div class="post-description">
-      AIの指導による VSCode 基礎マスター講座 01 編集の基本
+      AIの指導による VSCode 基礎マスター講座 01 編集,ショートカット、Front Matter CMS
     </div>
-    <div class="post-meta"><span title='2025-06-01 08:55:00 +0000 UTC'>June 1, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
+    <div class="post-meta"><span title='2025-06-02 15:39:00 +0000 UTC'>June 2, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
 
 </div>
   </header> 
   <div class="post-content"><center>
-<a href="http://localhost:1313/images/uploads/" target="_blank">
-<img src="http://localhost:1313/images/uploads/" 
-     alt="【Decap CMS】content/posts 以外のディレクトリの記事を編集"
+<a href="http://localhost:1313/images/uploads/vscode-basic-course-01.webp" target="_blank">
+<img src="http://localhost:1313/images/uploads/vscode-basic-course-01.webp" 
+     alt="[VSCode] 基礎マスター講座 01 : ショートカット、編集の基本、Front Matter CMS"
      style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </a>
 </center>
 <h2 id="はじめに">はじめに<a hidden class="anchor" aria-hidden="true" href="#はじめに">#</a></h2>
-<p>[Decap CMS] によるネット環境での記事作成環境が整いつつあったのですが、CMS側のバグにより記事編集が思うようにできなくなった為、ローカル環境で、Hugoの記事作成をする環境を作成していて、VSCoddeで出来る事を知りました。</p>
-<p>CMSのバグについては別件でまとめていて、AIの方でも記事を1つ書いてくれましたので、同様の問題でお困りの方がおられましたら其方を参照ください。</p>
-<p>VSCodeで環境構築する際、AIの情報を聞いても不明瞭な点が結構あった為、VSCodeを一度ゼロから学ぼうと思い立ちAIに相談したところ、「VSCode基礎マスター講座」を開いてくれるとの事で、その学習内容を備忘録メモも兼ねて記事にしてみます。</p>
-<h2 id="-ステップ0前提確認">📘 ステップ0：前提確認<a hidden class="anchor" aria-hidden="true" href="#-ステップ0前提確認">#</a></h2>
+<p>[Decap CMS] によるネット環境での記事作成環境が整いつつあったのですが、CMS 側のバグにより記事編集が思うようにできなくなった為、ローカル環境で、Hugo の記事作成をする環境を作成していて、VSCodde で出来る事を知りました。</p>
+<p>CMS のバグについては別件でまとめていて、AI の方でも記事を 1 つ書いてくれましたので、同様の問題でお困りの方がおられましたら其方を参照ください。</p>
+<p>VSCode で環境構築する際、AI の情報を聞いても不明瞭な点が結構あった為、VSCode を一度ゼロから学ぼうと思い立ち AI に相談したところ、「VSCode 基礎マスター講座」を開いてくれるとの事で、その学習内容を備忘録メモも兼ねて記事にしてみます。</p>
+<h2 id="-ステップ-0前提確認">📘 ステップ 0：前提確認<a hidden class="anchor" aria-hidden="true" href="#-ステップ-0前提確認">#</a></h2>
 <h3 id="vscode-のインストール確認">VSCode のインストール確認<a hidden class="anchor" aria-hidden="true" href="#vscode-のインストール確認">#</a></h3>
 <p>※インストールずみなので割愛。</p>
-<h3 id="hugo-プロジェクトをvscodeで開ける状態か">Hugo プロジェクトをVSCodeで開ける状態か？<a hidden class="anchor" aria-hidden="true" href="#hugo-プロジェクトをvscodeで開ける状態か">#</a></h3>
-<p>まず、Front Matter CMSプラグインをインストールします。
+<h3 id="hugo-プロジェクトを-vscode-で開ける状態か">Hugo プロジェクトを VSCode で開ける状態か？<a hidden class="anchor" aria-hidden="true" href="#hugo-プロジェクトを-vscode-で開ける状態か">#</a></h3>
+<p>まず、Front Matter CMS プラグインをインストールします。
 拡張機能マーケットプレイスを開き
 <strong>「Front Matter CMS」</strong><br>
 と入力すると一番上に表示されるブルーのアイコンがそうです。</p>
 <p>次に、「Front Matter CMS」の設定ファイルを作成します。
-Hugoサーバーが起動する、ブログ記事のルートディレクトリに以下のフォルダ/ファイルを作成。</p>
+Hugo サーバーが起動する、ブログ記事のルートディレクトリに以下のフォルダ/ファイルを作成。</p>
 <p>[My-blog]<br>
-　└─[.frontmatter]<br>
-　　　　└─[config.json]<br></p>
+　 └─[.frontmatter]<br>
+　　　　 └─[config.json]<br></p>
 <p>次に[config.json]内に以下を記述。
-ほぼデフォルト設定のまま使ってますが、fieldsフィードはカスタムしてるので、その辺りは環境に合わせて変更してください。</p>
+ほぼデフォルト設定のまま使ってますが、fields フィードはカスタムしてるので、その辺りは環境に合わせて変更してください。</p>
 <pre tabindex="0"><code>{
   &#34;contentFolder&#34;: &#34;content&#34;,
   &#34;mediaFolder&#34;: &#34;static/images/uploads&#34;,
@@ -178,23 +178,29 @@ Hugoサーバーが起動する、ブログ記事のルートディレクトリ�
 </code></pre><p>重要なのは、
 &ldquo;frontmatter.preview.host&rdquo;: &ldquo;http://localhost:1313&rdquo;,
 &ldquo;frontmatter.preview.port&rdquo;: 1313
-の部分で、この記述がある事で、「Front Matter CMS」プラグインからHugoサーバーを起動できるようになります。</p>
-<p>ここまで出来たらVSCodeからＨugoサーバーを起動し、プレビュー表示して見ます。</p>
-<p>「Front Matter CMS」インストール完了後、VSCode左のアイコンリストに[FM]が表示されるのでクリック。</p>
+の部分で、この記述がある事で、「Front Matter CMS」プラグインから Hugo サーバーを起動できるようになります。</p>
+<p>ここまで出来たら VSCode からＨ ugo サーバーを起動し、プレビュー表示して見ます。</p>
+<p>「Front Matter CMS」インストール完了後、VSCode 左のアイコンリストに[FM]が表示されるのでクリック。</p>
 <p>次に、</p>
 <p>[コマンド] -&gt; [サーバーを起動]</p>
-<p>を実行すると、ターミナルが起動して、Hugoサーバーが動きます。</p>
-<p>もしエラーが出る場合は、エラーメッセージを参考にHugo側の設定を見直して下さい。</p>
-<p>VSCode左にあるアイコンから一番上の[エクスプローラー]を選択し、ブログフォルダのルートディレクトリを選択。
+<p>を実行すると、ターミナルが起動して、Hugo サーバーが動きます。</p>
+<p>もしエラーが出る場合は、エラーメッセージを参考に Hugo 側の設定を見直して下さい。</p>
+<p>VSCode 左にあるアイコンから一番上の[エクスプローラー]を選択し、ブログフォルダのルートディレクトリを選択。
 次に、[content]-[posts]の中から[.md]形式の記事を開きます。</p>
-<p>ただ、Hugoで記事を表示する際にCSSでカスタム設定してる場合、実際の記事画面とは異なる為、Hugoサーバーのプレビューウインドウを表示します。</p>
-<p>VSCode左にあるアイコンから[Front Matter CMS]を選択し、</p>
+<p>ただ、Hugo で記事を表示する際に CSS でカスタム設定してる場合、実際の記事画面とは異なる為、Hugo サーバーのプレビューウインドウを表示します。</p>
+<p>VSCode 左にあるアイコンから[Front Matter CMS]を選択し、</p>
 <p>[コマンド] -&gt; [プレビューを表示]</p>
-<p>を選択すると、画面右側に、Hugoサーバーのプレビューウインドウが表示されるので現在編集中の記事を選択すれば、実際の記事画面を見ながら作成する事が出来ます。</p>
-<h3 id="markdownプレビューctrlk-vの動作確認">Markdownプレビュー（Ctrl+K V）の動作確認<a hidden class="anchor" aria-hidden="true" href="#markdownプレビューctrlk-vの動作確認">#</a></h3>
-<p>記事をひらいた状態で「Ctrl+K、V」と入力すると、Markdownプレビューを開くことが出来きま、画面分割して表示すればプレビューを参照しつつ記事を書くことが出来ます。</p>
-<h2 id="-ステップ1編集の基本操作">📗 ステップ1：編集の基本操作<a hidden class="anchor" aria-hidden="true" href="#-ステップ1編集の基本操作">#</a></h2>
-<h3 id="vscode基礎マスター講座ステップ1編集の基本操作編">📝『VSCode基礎マスター講座』ステップ1：編集の基本操作編<a hidden class="anchor" aria-hidden="true" href="#vscode基礎マスター講座ステップ1編集の基本操作編">#</a></h3>
+<p>を選択すると、画面右側に、Hugo サーバーのプレビューウインドウが表示されるので現在編集中の記事を選択すれば、実際の記事画面を見ながら作成する事が出来ます。</p>
+ <a href="http://localhost:1313/images/uploads/vscode-hugo-view.jpg" target="_blank">
+<img src="http://localhost:1313/images/uploads/vscode-hugo-view.jpg" alt="Hugoサーバーのプレビューウインドウ"  loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<h3 id="markdown-プレビューctrlk-vの動作確認">Markdown プレビュー（Ctrl+K V）の動作確認<a hidden class="anchor" aria-hidden="true" href="#markdown-プレビューctrlk-vの動作確認">#</a></h3>
+<p>記事をひらいた状態で「Ctrl+K、V」と入力すると、Markdown プレビューを開くことが出来きま、画面分割して表示すればプレビューを参照しつつ記事を書くことが出来ます。</p>
+<a href="http://localhost:1313/images/uploads/vscode-markdown-view.jpg" target="_blank">
+<img src="http://localhost:1313/images/uploads/vscode-markdown-view.jpg" alt="Hugoサーバーのプレビューウインドウ"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<h2 id="-ステップ-1編集の基本操作">📗 ステップ 1：編集の基本操作<a hidden class="anchor" aria-hidden="true" href="#-ステップ-1編集の基本操作">#</a></h2>
+<h3 id="vscode-基礎マスター講座ステップ-1編集の基本操作編">📝『VSCode 基礎マスター講座』ステップ 1：編集の基本操作編<a hidden class="anchor" aria-hidden="true" href="#vscode-基礎マスター講座ステップ-1編集の基本操作編">#</a></h3>
 <p>まずは基礎的な操作から慣れていきましょう。<br>
 以下の操作を実際に行ってみてください。</p>
 <h4 id="-ファイルフォルダの基本操作左ペイン">① ファイル・フォルダの基本操作（左ペイン）<a hidden class="anchor" aria-hidden="true" href="#-ファイルフォルダの基本操作左ペイン">#</a></h4>
@@ -204,16 +210,16 @@ Hugoサーバーが起動する、ブログ記事のルートディレクトリ�
 </ul>
 <p><strong>手順</strong></p>
 <ol>
-<li>VSCodeの左ペインのファイルツリーで「content/posts」を右クリック。</li>
+<li>VSCode の左ペインのファイルツリーで「content/posts」を右クリック。</li>
 <li>「新しいファイル」を選択して、test.md と入力して作成。</li>
 </ol>
-<h4 id="-markdownファイルの編集とプレビュー">② Markdownファイルの編集とプレビュー<a hidden class="anchor" aria-hidden="true" href="#-markdownファイルの編集とプレビュー">#</a></h4>
+<h4 id="-markdown-ファイルの編集とプレビュー">② Markdown ファイルの編集とプレビュー<a hidden class="anchor" aria-hidden="true" href="#-markdown-ファイルの編集とプレビュー">#</a></h4>
 <ul>
-<li>Markdownを編集し、即座にプレビューする方法を習得します。</li>
+<li>Markdown を編集し、即座にプレビューする方法を習得します。</li>
 </ul>
 <p>手順</p>
 <ol>
-<li>新しく作ったtest.mdを開き、以下の内容を入力します。</li>
+<li>新しく作った test.md を開き、以下の内容を入力します。</li>
 </ol>
 <pre tabindex="0"><code># はじめてのMarkdown
 
@@ -224,11 +230,11 @@ Hugoサーバーが起動する、ブログ記事のルートディレクトリ�
 <li>プレビューを表示</li>
 </ol>
 <ul>
-<li>ショートカットキー：Ctrl+K → V（Windowsの場合）</li>
-<li>または右上のアイコンからMarkdownプレビューを表示。</li>
+<li>ショートカットキー：Ctrl+K → V（Windows の場合）</li>
+<li>または右上のアイコンから Markdown プレビューを表示。</li>
 </ul>
-<h4 id="-vscode基本ショートカット頻出ショートカット">③ VSCode基本ショートカット（頻出ショートカット）<a hidden class="anchor" aria-hidden="true" href="#-vscode基本ショートカット頻出ショートカット">#</a></h4>
-<p>VSCodeの効率を上げるために、最低限の基本ショートカットを覚えておきましょう。</p>
+<h4 id="-vscode-基本ショートカット頻出ショートカット">③ VSCode 基本ショートカット（頻出ショートカット）<a hidden class="anchor" aria-hidden="true" href="#-vscode-基本ショートカット頻出ショートカット">#</a></h4>
+<p>VSCode の効率を上げるために、最低限の基本ショートカットを覚えておきましょう。</p>
 <table>
   <thead>
       <tr>
@@ -241,7 +247,7 @@ Hugoサーバーが起動する、ブログ記事のルートディレクトリ�
       <tr>
           <td>コマンドパレット</td>
           <td>Ctrl+Shift+P</td>
-          <td>VSCodeのすべてのコマンドを検索・実行</td>
+          <td>VSCode のすべてのコマンドを検索・実行</td>
       </tr>
       <tr>
           <td>クイックオープン</td>
@@ -251,39 +257,39 @@ Hugoサーバーが起動する、ブログ記事のルートディレクトリ�
       <tr>
           <td>設定画面を開く</td>
           <td>Ctrl+,</td>
-          <td>VSCode設定画面を表示</td>
+          <td>VSCode 設定画面を表示</td>
       </tr>
       <tr>
           <td>ターミナルを開く</td>
           <td>Ctrl+@ または Ctrl+Shift+@</td>
-          <td>VSCode内に内蔵ターミナルを表示</td>
+          <td>VSCode 内に内蔵ターミナルを表示</td>
       </tr>
   </tbody>
 </table>
 <h2 id="-実践していただくことまとめ">📌 実践していただくこと（まとめ）<a hidden class="anchor" aria-hidden="true" href="#-実践していただくことまとめ">#</a></h2>
-<p>この3つを実際にやってみて、以下を報告していただけると次のステップに進みやすいです：</p>
+<p>この 3 つを実際にやってみて、以下を報告していただけると次のステップに進みやすいです：</p>
 <p>「test.md」ファイルの作成に成功したか？</p>
-<p>Markdownの内容を入力し、プレビュー表示が確認できたか？</p>
+<p>Markdown の内容を入力し、プレビュー表示が確認できたか？</p>
 <p>基本ショートカットが使えるかを試した感想や、特に覚えておきたいと感じたショートカットなど</p>
 <h2 id="問題点">問題点<a hidden class="anchor" aria-hidden="true" href="#問題点">#</a></h2>
-<p>ターミナルを開く	Ctrl+@ または Ctrl+Shift+@　が動作しない問題発生。</p>
-<p>環境は、OS：Windows11で、キーボードは、apple magickeyboard、Logicool G913TKLで２つとも動作しない。</p>
+<p>ターミナルを開く Ctrl+@ または Ctrl+Shift+@　が動作しない問題発生。</p>
+<p>環境は、OS：Windows11 で、キーボードは、apple magickeyboard、Logicool G913TKL で２つとも動作しない。</p>
 <h2 id="-ショートカットキー問題ターミナルを開くの解決法">🛠 ショートカットキー問題（ターミナルを開く）の解決法<a hidden class="anchor" aria-hidden="true" href="#-ショートカットキー問題ターミナルを開くの解決法">#</a></h2>
-<p>ご使用のキーボードがApple Magic KeyboardやLogicool G913TKLという特殊な環境のため、デフォルトのショートカットキーが機能しない可能性があります。</p>
-<h3 id="-対処方法別のショートカットキーを試す">⚙ 対処方法①（別のショートカットキーを試す）<a hidden class="anchor" aria-hidden="true" href="#-対処方法別のショートカットキーを試す">#</a></h3>
-<p>Windows環境では、VSCodeでターミナルを開く標準のショートカットは以下があります。</p>
+<p>ご使用のキーボードが Apple Magic Keyboard や Logicool G913TKL という特殊な環境のため、デフォルトのショートカットキーが機能しない可能性があります。</p>
+<h3 id="-対処方法-別のショートカットキーを試す">⚙ 対処方法 ①（別のショートカットキーを試す）<a hidden class="anchor" aria-hidden="true" href="#-対処方法-別のショートカットキーを試す">#</a></h3>
+<p>Windows 環境では、VSCode でターミナルを開く標準のショートカットは以下があります。</p>
 <p>Ctrl + `（バッククオート）</p>
 <p>一般的にはこのショートカットキーが推奨です。</p>
 <p>まずはこちらを試してみてください。</p>
-<h3 id="-対処方法ショートカットキーのカスタマイズ">⚙ 対処方法②（ショートカットキーのカスタマイズ）<a hidden class="anchor" aria-hidden="true" href="#-対処方法ショートカットキーのカスタマイズ">#</a></h3>
+<h3 id="-対処方法-ショートカットキーのカスタマイズ">⚙ 対処方法 ②（ショートカットキーのカスタマイズ）<a hidden class="anchor" aria-hidden="true" href="#-対処方法-ショートカットキーのカスタマイズ">#</a></h3>
 <p>もし、上記でも開かない場合、ショートカットキーを手動でカスタマイズできます。</p>
 <p>手順：</p>
 <p>Ctrl + Shift + P で 「コマンドパレット」 を開く。</p>
 <p>「keyboard shortcuts」と入力し、「基本設定: キーボード ショートカットを開く」を選択。</p>
 <p>検索バーで「ターミナルを開く」と入力し、「workbench.action.terminal.toggleTerminal」を探します。</p>
-<p>クリックして好きなキーの組み合わせに変更（例：Ctrl+Alt+Tなど）。</p>
+<p>クリックして好きなキーの組み合わせに変更（例：Ctrl+Alt+T など）。</p>
 <h3 id="-ショートカットキーの設定例推奨">💡 ショートカットキーの設定例（推奨）<a hidden class="anchor" aria-hidden="true" href="#-ショートカットキーの設定例推奨">#</a></h3>
-<p>以下の設定がWindowsで使いやすくおすすめです。</p>
+<p>以下の設定が Windows で使いやすくおすすめです。</p>
 <table>
   <thead>
       <tr>
@@ -314,15 +320,15 @@ Hugoサーバーが起動する、ブログ記事のルートディレクトリ�
     <ul class="post-tags">
       <li><a href="http://localhost:1313/tags/%E5%9F%BA%E7%A4%8E%E5%AD%A6%E7%BF%92/">基礎学習</a></li>
       <li><a href="http://localhost:1313/tags/front-matter-cms/">Front Matter CMS</a></li>
+      <li><a href="http://localhost:1313/tags/markdown/">Markdown</a></li>
       <li><a href="http://localhost:1313/tags/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88/">ショートカット</a></li>
       <li><a href="http://localhost:1313/tags/hugo/">Hugo</a></li>
-      <li><a href="http://localhost:1313/tags/markdown/">Markdown</a></li>
     </ul>
 
 <ul class="share-buttons">
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share [VSCode] 基礎マスター講座 01 : ショートカット、編集の基本、Front Matter CMS on x"
-            href="https://x.com/intent/tweet/?text=%5bVSCode%5d%20%e5%9f%ba%e7%a4%8e%e3%83%9e%e3%82%b9%e3%82%bf%e3%83%bc%e8%ac%9b%e5%ba%a7%2001%20%3a%20%e3%82%b7%e3%83%a7%e3%83%bc%e3%83%88%e3%82%ab%e3%83%83%e3%83%88%e3%80%81%e7%b7%a8%e9%9b%86%e3%81%ae%e5%9f%ba%e6%9c%ac%e3%80%81Front%20Matter%20CMS&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fvscode-basic-course-01%2f&amp;hashtags=%e5%9f%ba%e7%a4%8e%e5%ad%a6%e7%bf%92%2cFrontMatterCMS%2c%e3%82%b7%e3%83%a7%e3%83%bc%e3%83%88%e3%82%ab%e3%83%83%e3%83%88%2cHugo%2cMarkdown">
+            href="https://x.com/intent/tweet/?text=%5bVSCode%5d%20%e5%9f%ba%e7%a4%8e%e3%83%9e%e3%82%b9%e3%82%bf%e3%83%bc%e8%ac%9b%e5%ba%a7%2001%20%3a%20%e3%82%b7%e3%83%a7%e3%83%bc%e3%83%88%e3%82%ab%e3%83%83%e3%83%88%e3%80%81%e7%b7%a8%e9%9b%86%e3%81%ae%e5%9f%ba%e6%9c%ac%e3%80%81Front%20Matter%20CMS&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fvscode-basic-course-01%2f&amp;hashtags=%e5%9f%ba%e7%a4%8e%e5%ad%a6%e7%bf%92%2cFrontMatterCMS%2cMarkdown%2c%e3%82%b7%e3%83%a7%e3%83%bc%e3%83%88%e3%82%ab%e3%83%83%e3%83%88%2cHugo">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
