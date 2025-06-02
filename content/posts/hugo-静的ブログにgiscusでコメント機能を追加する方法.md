@@ -1,8 +1,8 @@
 ---
 title: "[Hugo] 静的ブログにgiscusでコメント機能を追加する方法"
 slug: hugo-giscus
-summary: 静的サイトジェネレーター Hugoにコメント機能をgiscusで実装する方法の紹介
-description: 静的サイトジェネレーター Hugoにコメント機能をgiscusで実装する方法の紹介
+summary: Hugoにコメント機能をgiscusで実装する方法の紹介
+description: Hugoにコメント機能をgiscusで実装する方法の紹介
 date: 2025-05-31T09:40:00.000Z
 draft: false
 author: lain
@@ -13,15 +13,19 @@ tags:
   - コメント
   - JavaScript
 weight: 3
-image: /images/uploads/avatar.png
+image: /images/uploads/hugo-giscus.webp
 ---
+<center>
+<img src="/images/uploads/hugo-giscus.webp" alt="Hugoにコメント機能をgiscusで実装する方法の紹介" loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</center>
+
 ## はじめに
 
 Hugoに以前から追加したかったコメント機能を追加してみましたのでその備忘録メモです。
 
 AIに相談したところ、いくつか選択候補を紹介してもらいましたが、一番お勧めっぽいgiscusをとりあえず導入して見ます。
 
-## giscus ってなに？
+## giscus について
 
 GitHub Discussions を使った軽量なコメントシステムで、Hugoのような静的なサイトにも導入する事が出来、Githubのアカウントがあれば簡単に使えてコメントも出来るようになります。
 
@@ -45,12 +49,12 @@ Githubのアカウントが必要になるので、その点がネックです�
 
 ## 🧩 コメントに関する課題と対策
 
-| 課題       | 解決策                                 |
-| -------- | ----------------------------------- |
-| スパム対策    | GitHubアカウント必須にする（giscus/utterances） |
-| モデレーション  | GitHub Discussions で管理              |
-| 管理負担     | 通知ON＋リンク付き一覧で簡単管理                   |
-| 静的表示との相性 | JSで読み込むので静的でも問題なし                   |
+| 課題             | 解決策                                          |
+| ---------------- | ----------------------------------------------- |
+| スパム対策       | GitHubアカウント必須にする（giscus/utterances） |
+| モデレーション   | GitHub Discussions で管理                       |
+| 管理負担         | 通知ON＋リンク付き一覧で簡単管理                |
+| 静的表示との相性 | JSで読み込むので静的でも問題なし                |
 
 ## 📌  Hugo + giscus 導入の流れ（概要）
 
@@ -64,7 +68,7 @@ Githubのアカウントが必要になるので、その点がネックです�
 
 対象のブログ用リポジトリ（例：fixxtan/my-blog）へアクセス
 
-> Settings → Features 
+> Settings → Features
 
 に進む
 
@@ -107,13 +111,13 @@ Githubのアカウントが必要になるので、その点がネックです�
 ページを開き、下記情報を入力：
 
 
-| 項目         | 設定例                              |
-| ---------- | -------------------------------- |
-| Repository | fixxtan/my-blog（あなたのGitHub）      |
-| Category   | General（Discussions内カテゴリ）        |
-| Mapping    | pathname（記事URLに連動）               |
+| 項目       | 設定例                              |
+| ---------- | ----------------------------------- |
+| Repository | fixxtan/my-blog（あなたのGitHub）   |
+| Category   | General（Discussions内カテゴリ）    |
+| Mapping    | pathname（記事URLに連動）           |
 | Theme      | light または preferred_color_scheme |
-| Language   | ja（日本語対応）                        |
+| Language   | ja（日本語対応）                    |
 
 
 必要情報入力すると下にスクリプトコードが表示されるのでコピーします。
@@ -122,7 +126,7 @@ Githubのアカウントが必要になるので、その点がネックです�
 下記はサンプル
 
 
-```JavaScript
+```
 <script src="https://giscus.app/client.js"
         data-repo="fixxtan/my-blog"
         data-repo-id="XXXXXXXXXX"
@@ -149,7 +153,7 @@ Githubのアカウントが必要になるので、その点がネックです�
 > my-blog/layouts/partials/comments.html
 
 
-```html
+```
 <section id="comments">
   <h2>💬 コメント</h2>
   <script src="https://giscus.app/client.js"
@@ -196,7 +200,7 @@ Githubのアカウントが必要になるので、その点がネックです�
 注意「｛」を半角の「{」に変換してください。
 
 
-```go
+```
 ｛｛ partial "comments.html" . ｝｝
 ```
 
@@ -232,7 +236,20 @@ single.htmlファイルを以下へコピー（継承）します。
 <img src="/images/uploads/giscus-web-test.jpg" alt="giscusを記事ページで動作確認"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 </a>
 
+## コメントの管理
 
+投稿された記事の管理は、GitHubのdiscussionsページで行えます。
+
+
+> https://github.com/（GitHubのID）/（リポジトリ名）/discussions
+
+
+
+ <a href="/images/uploads/hugo-giscus-management.jpg" target="_blank">
+<img src="/images/uploads/hugo-giscus-management.jpg" alt="giscusの記事管理（GitHUB:discussions）"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+{{< link-card url="https://humanxai.info/posts/hugo-giscus/" title="[Hugo] 静的ブログにgiscusでコメント機能を追加する方法" description="静的サイトジェネレーター Hugoにコメント機能をgiscusで実装する方法の紹介" image="https://humanxai.info/images/uploads/avatar.png" >}}
 
 
 

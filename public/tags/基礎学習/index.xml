@@ -15,12 +15,5 @@
       <guid>http://localhost:1313/posts/vscode-basic-course-01/</guid>
       <description>AIの指導による VSCode 基礎マスター講座 01 編集,ショートカット、Front Matter CMS</description>
     </item>
-    <item>
-      <title>[VSCode] 基礎マスター講座 02 : 拡張機能の活用と設定調整</title>
-      <link>http://localhost:1313/posts/vscode-basic-course-02/</link>
-      <pubDate>Mon, 02 Jun 2025 15:39:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/vscode-basic-course-02/</guid>
-      <description>AIの指導による VSCode 基礎マスター講座 02 拡張機能の活用と設定調整</description>
-    </item>
   </channel>
 </rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Developertool on lainのAIと創作ブログ</title>
+    <link>http://localhost:1313/tags/developertool/</link>
+    <description>Recent content in Developertool on lainのAIと創作ブログ</description>
+    <generator>Hugo -- 0.147.3</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 31 May 2025 13:07:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/developertool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Decap CMS × Duplicateバグ × IndexedDBの罠</title>
+      <link>http://localhost:1313/posts/decapcms-duplicate-indexeddb/</link>
+      <pubDate>Sat, 31 May 2025 13:07:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/decapcms-duplicate-indexeddb/</guid>
+      <description>Decap CMSで「Duplicate」でしか記事修正できなくなった問題の原因と修正方法</description>
+    </item>
+  </channel>
+</rss>

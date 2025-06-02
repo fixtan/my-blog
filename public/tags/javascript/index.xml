@@ -13,7 +13,7 @@
       <link>http://localhost:1313/posts/hugo-giscus/</link>
       <pubDate>Sat, 31 May 2025 09:40:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/hugo-giscus/</guid>
-      <description>静的サイトジェネレーター Hugoにコメント機能をgiscusで実装する方法の紹介</description>
+      <description>Hugoにコメント機能をgiscusで実装する方法の紹介</description>
     </item>
   </channel>
 </rss>

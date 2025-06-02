@@ -9,6 +9,13 @@
     <lastBuildDate>Mon, 02 Jun 2025 16:39:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Decap CMSとの格闘録 ― Duplicate問題とIndexedDBの残高の6時間</title>
+      <link>http://localhost:1313/posts/decapcms-bug-duplicate-indexeddb-bug/</link>
+      <pubDate>Sat, 31 May 2025 19:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/decapcms-bug-duplicate-indexeddb-bug/</guid>
+      <description>Decap CMSとの格闘録 ― Duplicate問題とIndexedDBの残高の6時間</description>
+    </item>
+    <item>
       <title>FramePackによるAIアニメーション</title>
       <link>http://localhost:1313/featured/project1/</link>
       <pubDate>Tue, 27 May 2025 22:01:00 +0000</pubDate>
@@ -44,6 +51,13 @@
       <description>FramePack-eichi を活用したAIアニメーションの制作事例と手順。</description>
     </item>
     <item>
+      <title>Decap CMS × Duplicateバグ × IndexedDBの罠</title>
+      <link>http://localhost:1313/posts/decapcms-duplicate-indexeddb/</link>
+      <pubDate>Sat, 31 May 2025 13:07:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/decapcms-duplicate-indexeddb/</guid>
+      <description>Decap CMSで「Duplicate」でしか記事修正できなくなった問題の原因と修正方法</description>
+    </item>
+    <item>
       <title>[WebMSX] 自前でMSXサイトを作成</title>
       <link>http://localhost:1313/posts/webmsx-hugo-netlify/</link>
       <pubDate>Wed, 28 May 2025 20:02:00 +0000</pubDate>
@@ -55,7 +69,7 @@
       <link>http://localhost:1313/posts/hugo-giscus/</link>
       <pubDate>Sat, 31 May 2025 09:40:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/hugo-giscus/</guid>
-      <description>静的サイトジェネレーター Hugoにコメント機能をgiscusで実装する方法の紹介</description>
+      <description>Hugoにコメント機能をgiscusで実装する方法の紹介</description>
     </item>
     <item>
       <title>[NETLIFY] netlifyでのドメイン設定方法</title>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="description" content="静的サイトジェネレーター Hugoにコメント機能をgiscusで実装する方法の紹介">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="description" content="Hugoにコメント機能をgiscusで実装する方法の紹介">
 <link rel="icon" href="http://localhost:1313/favicon.ico" type="image/x-icon">
 
 
@@ -15,21 +15,21 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
-<meta property="og:title" content="[Hugo] 静的ブログにgiscusでコメント機能を追加する方法"><meta property="og:description" content="静的サイトジェネレーター Hugoにコメント機能をgiscusで実装する方法の紹介">
+<meta property="og:title" content="[Hugo] 静的ブログにgiscusでコメント機能を追加する方法"><meta property="og:description" content="Hugoにコメント機能をgiscusで実装する方法の紹介">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/posts/hugo-giscus/">
 <meta property="og:site_name" content="lainのAIと創作ブログ">
 
 
-  <meta property="og:image" content="http://localhost:1313/images/uploads/avatar.png">
+  <meta property="og:image" content="http://localhost:1313/images/uploads/hugo-giscus.webp">
 
 
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="[Hugo] 静的ブログにgiscusでコメント機能を追加する方法">
-<meta name="twitter:description" content="静的サイトジェネレーター Hugoにコメント機能をgiscusで実装する方法の紹介">
+<meta name="twitter:description" content="Hugoにコメント機能をgiscusで実装する方法の紹介">
 
-  <meta name="twitter:image" content="http://localhost:1313/images/uploads/avatar.png">
+  <meta name="twitter:image" content="http://localhost:1313/images/uploads/hugo-giscus.webp">
 
 
 </head>
@@ -116,16 +116,19 @@
       [Hugo] 静的ブログにgiscusでコメント機能を追加する方法
     </h1>
     <div class="post-description">
-      静的サイトジェネレーター Hugoにコメント機能をgiscusで実装する方法の紹介
+      Hugoにコメント機能をgiscusで実装する方法の紹介
     </div>
     <div class="post-meta"><span title='2025-05-31 09:40:00 +0000 UTC'>May 31, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
 
 </div>
   </header> 
-  <div class="post-content"><h2 id="はじめに">はじめに<a hidden class="anchor" aria-hidden="true" href="#はじめに">#</a></h2>
+  <div class="post-content"><center>
+<img src="http://localhost:1313/images/uploads/hugo-giscus.webp" alt="Hugoにコメント機能をgiscusで実装する方法の紹介" loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</center>
+<h2 id="はじめに">はじめに<a hidden class="anchor" aria-hidden="true" href="#はじめに">#</a></h2>
 <p>Hugoに以前から追加したかったコメント機能を追加してみましたのでその備忘録メモです。</p>
 <p>AIに相談したところ、いくつか選択候補を紹介してもらいましたが、一番お勧めっぽいgiscusをとりあえず導入して見ます。</p>
-<h2 id="giscus-ってなに">giscus ってなに？<a hidden class="anchor" aria-hidden="true" href="#giscus-ってなに">#</a></h2>
+<h2 id="giscus-について">giscus について<a hidden class="anchor" aria-hidden="true" href="#giscus-について">#</a></h2>
 <p>GitHub Discussions を使った軽量なコメントシステムで、Hugoのような静的なサイトにも導入する事が出来、Githubのアカウントがあれば簡単に使えてコメントも出来るようになります。</p>
 <p>Githubのアカウントが必要になるので、その点がネックですが、匿名での投稿防止の他、セキュリティ管理も出来る為、安心して利用できるのがメリットです。<br>
 <br></p>
@@ -262,42 +265,42 @@
 </table>
 <p>必要情報入力すると下にスクリプトコードが表示されるのでコピーします。</p>
 <p>下記はサンプル</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://giscus.app/client.js&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">repo</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fixxtan/my-blog&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">repo</span><span style="color:#f92672">-</span><span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;XXXXXXXXXX&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">category</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;General&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">category</span><span style="color:#f92672">-</span><span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;XXXXXXXXXX&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">mapping</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pathname&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">reactions</span><span style="color:#f92672">-</span><span style="color:#a6e22e">enabled</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">emit</span><span style="color:#f92672">-</span><span style="color:#a6e22e">metadata</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">input</span><span style="color:#f92672">-</span><span style="color:#a6e22e">position</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bottom&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">theme</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;light&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ja&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">async</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
-</span></span></code></pre></div><h2 id="step-3layoutspartialscommentshtml-を作成">STEP 3：layouts/partials/comments.html を作成<a hidden class="anchor" aria-hidden="true" href="#step-3layoutspartialscommentshtml-を作成">#</a></h2>
+<pre tabindex="0"><code>&lt;script src=&#34;https://giscus.app/client.js&#34;
+        data-repo=&#34;fixxtan/my-blog&#34;
+        data-repo-id=&#34;XXXXXXXXXX&#34;
+        data-category=&#34;General&#34;
+        data-category-id=&#34;XXXXXXXXXX&#34;
+        data-mapping=&#34;pathname&#34;
+        data-reactions-enabled=&#34;1&#34;
+        data-emit-metadata=&#34;0&#34;
+        data-input-position=&#34;bottom&#34;
+        data-theme=&#34;light&#34;
+        data-lang=&#34;ja&#34;
+        crossorigin=&#34;anonymous&#34;
+        async&gt;
+&lt;/script&gt;
+</code></pre><h2 id="step-3layoutspartialscommentshtml-を作成">STEP 3：layouts/partials/comments.html を作成<a hidden class="anchor" aria-hidden="true" href="#step-3layoutspartialscommentshtml-を作成">#</a></h2>
 <p>下記のHTMLファイルを編集</p>
 <blockquote>
 <p>my-blog/layouts/partials/comments.html</p></blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;comments&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h2</span>&gt;💬 コメント&lt;/<span style="color:#f92672">h2</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://giscus.app/client.js&#34;</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">data-repo</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fixxtan/my-blog&#34;</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">data-repo-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;あなたのRepo ID&#34;</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">data-category</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;General&#34;</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">data-category-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;あなたのCategory ID&#34;</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">data-mapping</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pathname&#34;</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">data-reactions-enabled</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">data-emit-metadata</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">data-input-position</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bottom&#34;</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">data-theme</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;light&#34;</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">data-lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ja&#34;</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">async</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">section</span>&gt;
-</span></span></code></pre></div><p>※ Repo ID / Category ID は giscus.app に GitHub ログインすると自動取得できます。</p>
+<pre tabindex="0"><code>&lt;section id=&#34;comments&#34;&gt;
+  &lt;h2&gt;💬 コメント&lt;/h2&gt;
+  &lt;script src=&#34;https://giscus.app/client.js&#34;
+          data-repo=&#34;fixxtan/my-blog&#34;
+          data-repo-id=&#34;あなたのRepo ID&#34;
+          data-category=&#34;General&#34;
+          data-category-id=&#34;あなたのCategory ID&#34;
+          data-mapping=&#34;pathname&#34;
+          data-reactions-enabled=&#34;1&#34;
+          data-emit-metadata=&#34;0&#34;
+          data-input-position=&#34;bottom&#34;
+          data-theme=&#34;light&#34;
+          data-lang=&#34;ja&#34;
+          crossorigin=&#34;anonymous&#34;
+          async&gt;
+  &lt;/script&gt;
+&lt;/section&gt;
+</code></pre><p>※ Repo ID / Category ID は giscus.app に GitHub ログインすると自動取得できます。</p>
 <p><a href="https://giscus.app/ja">https://giscus.app/ja</a></p>
 <p>✅ カスタマイズ例（必要に応じて）
 ― data-theme=&ldquo;light&rdquo; → preferred_color_scheme にするとダークモードにも対応
@@ -309,8 +312,8 @@
 <p>my-blog/layouts/_default/single.html</p></blockquote>
 <p>&lt; /main &gt; または &lt; /article&gt; の直前など、適切な場所に以下を追記：</p>
 <p>注意「｛」を半角の「{」に変換してください。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">｛｛</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;comments.html&#34;</span> . <span style="color:#960050;background-color:#1e0010">｝｝</span>
-</span></span></code></pre></div><p>※ PaperMod テーマでは main.html や single.html の構造が異なる可能性があります。</p>
+<pre tabindex="0"><code>｛｛ partial &#34;comments.html&#34; . ｝｝
+</code></pre><p>※ PaperMod テーマでは main.html や single.html の構造が異なる可能性があります。</p>
 <p>見つからない場合は、PaperMod の場合、以下にあるので</p>
 <blockquote>
 <p>themes/PaperMod/layouts/_default/single.html</p></blockquote>
@@ -328,6 +331,30 @@
  <a href="http://localhost:1313/images/uploads/giscus-web-test.jpg" target="_blank">
 <img src="http://localhost:1313/images/uploads/giscus-web-test.jpg" alt="giscusを記事ページで動作確認"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 </a>
+<h2 id="コメントの管理">コメントの管理<a hidden class="anchor" aria-hidden="true" href="#コメントの管理">#</a></h2>
+<p>投稿された記事の管理は、GitHubのdiscussionsページで行えます。</p>
+<blockquote>
+<p><a href="https://github.com/">https://github.com/</a>（GitHubのID）/（リポジトリ名）/discussions</p></blockquote>
+ <a href="http://localhost:1313/images/uploads/hugo-giscus-management.jpg" target="_blank">
+<img src="http://localhost:1313/images/uploads/hugo-giscus-management.jpg" alt="giscusの記事管理（GitHUB:discussions）"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+
+
+
+<article class="link-card">
+  <a href="https://humanxai.info/posts/hugo-giscus/" target="_blank" rel="noopener">
+    <div class="link-card-thumb">
+      <img src="https://humanxai.info/images/uploads/avatar.png" alt="[Hugo] 静的ブログにgiscusでコメント機能を追加する方法">
+    </div>
+    <div class="link-card-text">
+      <h3>[Hugo] 静的ブログにgiscusでコメント機能を追加する方法</h3>
+      <p>静的サイトジェネレーター Hugoにコメント機能をgiscusで実装する方法の紹介</p>
+      <span class="link-card-url">https://humanxai.info/posts/hugo-giscus/</span>
+    </div>
+  </a>
+</article>
 
 
   </div>
