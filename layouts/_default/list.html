@@ -1,94 +1,91 @@
 {{ define "main" }}
-  <section class="hero">
-    <div class="hero-inner">
-      <h1 class="no-border">AIと創作の記録をここに。</h1>
-      <p class="blog-subtitle">「AIと人が、共に学び、創る場所」</p>
-      <p>学びと再出発の旅路へ。</p>
-    </div>
+<section class="hero">
+  <div class="hero-inner">
+    <h1 class="no-border">AIと創作の記録をここに。</h1>
+    <p class="blog-subtitle">「AIと人が、共に学び、創る場所」</p>
+    <p>学びと再出発の旅路へ。</p>
+  </div>
+</section>
+
+<div id="searchForm" role="search" class="search-bar-wrapper search-bar-form">
+  <input id="searchInput" type="text" placeholder="検索…" />
+  <select id="engineSwitch">
+    <option value="lunr">Lunr.js</option>
+    <option value="fuse">Fuse.js</option>
+  </select>
+</div>
+<ul id="searchResults" class="search-results"></ul>
+
+{{ partial "home-info.html" . }}
+{{/* すべての注目記事のBaseFileNameを取得 */}}
+{{ $highlighted := $.Site.Params.homeInfoParams.featured.items }}
+{{/* ✅featured記事の抽出とリンク記録 */}}
+{{/* 注目記事以外かつ Weight < 10のものだけを featured に */}}
+{{ $featured := first 3 (where (where .Site.RegularPages "Weight" "lt" 10) "File.BaseFileName" "not in" $highlighted)}}
+{{ $featuredLinks := slice }}
+{{ range $featured }}
+{{ $featuredLinks = $featuredLinks | append .RelPermalink }}
+{{ end }}
+
+<!-- ✅ おすすめ記事 -->
+<div class="section-block section-block--recommended">
+  <h2 class="section-heading section-heading--recommended">おすすめ記事</h2>
+  <section class="post-grid">
+    {{ range $featured }} {{ partial "post-card.html" . }} {{ end }}
+  </section>
+</div>
+
+<!-- ✅ 最新記事 -->
+<div class="section-block section-block--recent">
+  <h2 class="section-heading section-heading--recent">最新記事</h2>
+
+  <!-- 1. 通常記事を取得 -->
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ $posts = where $posts "Kind" "page" }}
+  {{ $posts = where $posts "Date" "ne" nil }}
+
+  {{/* 注目・おすすめ記事のURL一覧を除外 */}}
+  {{ $excludedLinks := $highlighted | append $featuredLinks }}
+  {{ $posts = where $posts "RelPermalink" "not in" $excludedLinks }}
+
+  <!-- 2. 日付順にソート -->
+  {{ $recent := sort $posts "Date" "desc" }}
+
+
+
+  {{ $paginator := .Paginate $recent }}
+  <section class="post-grid">
+    {{ range $paginator.Pages }} {{ partial "post-card.html" . }} {{ end }}
   </section>
 
-  <div id="searchForm" role="search" class="search-bar-wrapper search-bar-form">
-    <input id="searchInput" type="text" placeholder="検索…" />
-    <select id="engineSwitch">
-      <option value="lunr">Lunr.js</option>
-      <option value="fuse">Fuse.js</option>
-    </select>
-  </div>
-  <ul id="searchResults" class="search-results"></ul>
-
-  {{ partial "home-info.html" . }}
-
-  {{/* すべての注目記事のBaseFileNameを取得 */}}
-  {{ $highlighted := $.Site.Params.homeInfoParams.featured.items }}
-
-  {{/* ✅ featured記事の抽出とリンク記録 */}}
-  {{/* 注目記事以外かつ Weight < 10 のものだけを featured に */}}
-  {{ $featured := first 3 (where (where .Site.RegularPages "Weight" "lt" 10) "File.BaseFileName" "not in" $highlighted) }}
-  {{ $featuredLinks := slice }}
-  {{ range $featured }}
-    {{ $featuredLinks = $featuredLinks | append .RelPermalink }}
-  {{ end }}
-
-  <!-- ✅ おすすめ記事 -->
-  <div class="section-block section-block--recommended">
-    <h2 class="section-heading section-heading--recommended">おすすめ記事</h2>
-    <section class="post-grid">
-      {{ range $featured }}
-        {{ partial "post-card.html" . }}
-      {{ end }}
-    </section>
-  </div>
-
-  <!-- ✅ 最新記事 -->
-  <div class="section-block section-block--recent">
-    <h2 class="section-heading section-heading--recent">最新記事</h2>
-
-    <!-- ✅ おすすめ記事を weight で抽出 -->
-    {{ $featured := where .Site.RegularPages "Params.weight" "gt" 0 }}
-
-    <!-- ✅ 最新記事の一覧から除外してページネーション -->
-    {{ $posts := where .Site.RegularPages "Section" "posts" }}
-    {{ $recent := where $posts "Params.weight" "not in" (slice 1 2 3 4 5) }} <!-- weightが1〜5などのおすすめ -->
-
-    {{ $paginator := .Paginate $recent }}
-    <section class="post-grid">
-      {{ range $paginator.Pages }}
-        {{ partial "post-card.html" . }}
-      {{ end }}
-    </section>
-
-    <!-- ✅ ページネーションナビ -->
-    {{ if gt $paginator.TotalPages 1 }}
-      <nav class="pagination">
-        {{ with $paginator.First }}
-          <a class="page-link" href="{{ .URL }}">&laquo; 最初</a>
-        {{ end }}
-
-        {{ range $paginator.Pagers }}
-          <a class="page-number {{ if eq . $paginator }}active{{ end }}" href="{{ .URL }}">{{ .PageNumber }}</a>
-        {{ end }}
-
-        {{ with $paginator.Next }}
-          <a class="page-link" href="{{ .URL }}">次へ &raquo;</a>
-        {{ end }}
-      </nav>
+  <!-- ✅ ページネーションナビ -->
+  {{ if gt $paginator.TotalPages 1 }}
+  <nav class="pagination">
+    {{ with $paginator.First }}
+    <a class="page-link" href="{{ .URL }}">&laquo; 最初</a>
+    {{ end }} {{ range $paginator.Pagers }}
+    <a
+      class="page-number {{ if eq . $paginator }}active{{ end }}"
+      href="{{ .URL }}"
+      >{{ .PageNumber }}</a
+    >
+    {{ end }} {{ with $paginator.Next }}
+    <a class="page-link" href="{{ .URL }}">次へ &raquo;</a>
     {{ end }}
-  </div>
+  </nav>
+  {{ end }}
+</div>
 
-
-  <!-- ✅ カテゴリ別 -->
-  <div class="section-block--category">
+<!-- ✅ カテゴリ別 -->
+<div class="section-block--category">
   <h2 class="section-heading section-heading--category">カテゴリ別の記事</h2>
   {{ range $name, $pages := .Site.Taxonomies.categories }}
-    <h3 class="category-heading">{{ $name }}</h3>
-    <section class="post-grid">
-      {{ range $pages }}
-        {{ if not (in $featuredLinks .RelPermalink) }}
-          {{ partial "post-card.html" . }}
-        {{ end }}
-      {{ end }}
-    </section>
+  <h3 class="category-heading">{{ $name }}</h3>
+  <section class="post-grid">
+    {{ range $pages }} {{ if not (in $featuredLinks .RelPermalink) }} {{ partial
+    "post-card.html" . }} {{ end }} {{ end }}
+  </section>
   {{ end }}
-  </div>
+</div>
 
 {{ end }}

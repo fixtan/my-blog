@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/decapcms-bug-duplicate-indexeddb-bug/</loc>
-    <lastmod>2025-05-31T19:10:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/featured/project1/</loc>
     <lastmod>2025-05-27T22:01:00+00:00</lastmod>
   </url><url>
@@ -16,17 +13,11 @@
   </url><url>
     <loc>http://localhost:1313/featured/project5/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/decapcms-duplicate-indexeddb/</loc>
-    <lastmod>2025-05-31T13:07:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/webmsx-hugo-netlify/</loc>
     <lastmod>2025-05-28T20:02:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/hugo-giscus/</loc>
     <lastmod>2025-05-31T09:40:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/hugo-table-of-contents/</loc>
-    <lastmod>2025-06-03T07:30:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/netlify-domain-settings/</loc>
     <lastmod>2025-05-26T08:18:00+00:00</lastmod>
@@ -39,6 +30,9 @@
   </url><url>
     <loc>http://localhost:1313/posts/computer-trouble-thunderbolt4/</loc>
     <lastmod>2025-05-22T16:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/hugo-table-of-contents/</loc>
+    <lastmod>2025-06-03T07:30:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/decapcms-add-description/</loc>
     <lastmod>2025-05-30T13:07:00+00:00</lastmod>
@@ -61,6 +55,9 @@
     <loc>http://localhost:1313/posts/ai-dialogue-2025-05-30/</loc>
     <lastmod>2025-05-30T08:21:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/decapcms-duplicate-indexeddb/</loc>
+    <lastmod>2025-05-31T13:07:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/hugo-404-favicon/</loc>
     <lastmod>2025-05-30T13:42:00+00:00</lastmod>
   </url><url>
@@ -79,8 +76,11 @@
     <loc>http://localhost:1313/posts/decapcms-error-01/</loc>
     <lastmod>2025-05-24T12:18:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
-    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/posts/decapcms-bug-duplicate-indexeddb-bug/</loc>
+    <lastmod>2025-05-31T19:10:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about-me/</loc>
+    <lastmod>2025-05-16T16:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/hugo-custom-article-future/</loc>
     <lastmod>2025-05-26T19:22:00+00:00</lastmod>
@@ -318,7 +318,5 @@
   </url><url>
     <loc>http://localhost:1313/categories/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3/</loc>
     <lastmod>2025-05-22T16:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/test/</loc>
   </url>
 </urlset>

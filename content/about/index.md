@@ -1,6 +1,15 @@
 ---
 title: "自己紹介"
-date: 2025-05-16
+slug: about-me
+date: 2025-05-16T16:00:00.000Z
+draft: false
+author: lain
+image: /images/uploads/
+summary: 自己紹介
+categories:
+  - 
+tags:
+  - 
 weight: 10
 ---
 

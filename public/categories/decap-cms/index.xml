@@ -9,20 +9,6 @@
     <lastBuildDate>Sat, 31 May 2025 19:10:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/decap-cms/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Decap CMSとの格闘録 ― Duplicate問題とIndexedDBの残高の6時間</title>
-      <link>http://localhost:1313/posts/decapcms-bug-duplicate-indexeddb-bug/</link>
-      <pubDate>Sat, 31 May 2025 19:10:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/decapcms-bug-duplicate-indexeddb-bug/</guid>
-      <description>Decap CMSとの格闘録 ― Duplicate問題とIndexedDBの残高の6時間</description>
-    </item>
-    <item>
-      <title>Decap CMS × Duplicateバグ × IndexedDBの罠</title>
-      <link>http://localhost:1313/posts/decapcms-duplicate-indexeddb/</link>
-      <pubDate>Sat, 31 May 2025 13:07:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/decapcms-duplicate-indexeddb/</guid>
-      <description>Decap CMSで「Duplicate」でしか記事修正できなくなった問題の原因と修正方法</description>
-    </item>
-    <item>
       <title>[Decap CMS]  description を編集できるようにする</title>
       <link>http://localhost:1313/posts/decapcms-add-description/</link>
       <pubDate>Fri, 30 May 2025 13:07:00 +0000</pubDate>
@@ -37,6 +23,13 @@
       <description>デフォルトで記事タイトルがURLになり長くなってしまう為、短くする方法の紹介</description>
     </item>
     <item>
+      <title>Decap CMS × Duplicateバグ × IndexedDBの罠</title>
+      <link>http://localhost:1313/posts/decapcms-duplicate-indexeddb/</link>
+      <pubDate>Sat, 31 May 2025 13:07:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/decapcms-duplicate-indexeddb/</guid>
+      <description>Decap CMSで「Duplicate」でしか記事修正できなくなった問題の原因と修正方法</description>
+    </item>
+    <item>
       <title>[Decap CMS] ソートが機能しない問題</title>
       <link>http://localhost:1313/posts/decapcms-sort-trouble/</link>
       <pubDate>Thu, 29 May 2025 18:03:00 +0000</pubDate>
@@ -49,6 +42,13 @@
       <pubDate>Thu, 29 May 2025 08:55:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/decap-directory-edit/</guid>
       <description>Decap CMSでcontent/posts 以外のディレクトリ記事を編集する方法の紹介</description>
+    </item>
+    <item>
+      <title>Decap CMSとの格闘録 ― Duplicate問題とIndexedDBの残高の6時間</title>
+      <link>http://localhost:1313/posts/decapcms-bug-duplicate-indexeddb-bug/</link>
+      <pubDate>Sat, 31 May 2025 19:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/decapcms-bug-duplicate-indexeddb-bug/</guid>
+      <description>Decap CMSとの格闘録 ― Duplicate問題とIndexedDBの残高の6時間</description>
     </item>
   </channel>
 </rss>

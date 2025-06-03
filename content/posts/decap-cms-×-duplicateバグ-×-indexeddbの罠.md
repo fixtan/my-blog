@@ -13,7 +13,7 @@ tags:
   - IndexedDB
   - developertool
   - Chrome
-weight: 2
+weight: 9
 image: /images/uploads/decapcms-duplicate-indexeddb.webp
 ---
 <center>

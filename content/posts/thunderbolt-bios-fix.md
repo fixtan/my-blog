@@ -1,5 +1,5 @@
 ---
-title: "[自作PC] Thunderbolt AIC モニタが映らない トラブル＆解決方法"
+title: "[パソコン] Thunderbolt AIC モニタが映らない トラブル＆解決方法"
 slug: computer-trouble-Thunderbolt4
 date: 2025-05-22T16:00:00.000Z
 draft: false

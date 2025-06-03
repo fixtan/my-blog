@@ -12,7 +12,7 @@ tags:
   - 目次
   - Table of Contents： TOC
   - ブログ
-weight: 4
+weight: 6
 image: /images/uploads/hugo-table-of-contents.webp
 ---
 

@@ -16,18 +16,18 @@
       <description>Hugoにコメント機能をgiscusで実装する方法の紹介</description>
     </item>
     <item>
-      <title>[Hugo] 目次を自動生成し記事のサイド表示（Table of Contents： TOC）</title>
-      <link>http://localhost:1313/posts/hugo-table-of-contents/</link>
-      <pubDate>Tue, 03 Jun 2025 07:30:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo-table-of-contents/</guid>
-      <description>Hugo で目次を自動生成し記事のサイド表示（Table of Contents： TOC）の紹介</description>
-    </item>
-    <item>
       <title>[Hugo] リンクをカード風に表示する</title>
       <link>http://localhost:1313/posts/hugo-link-card/</link>
       <pubDate>Fri, 30 May 2025 15:49:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/hugo-link-card/</guid>
       <description>Hugoのショートコードを使って、リンクをカード風に表示する方法の紹介。</description>
+    </item>
+    <item>
+      <title>[Hugo] 目次を自動生成し記事のサイド表示（Table of Contents： TOC）</title>
+      <link>http://localhost:1313/posts/hugo-table-of-contents/</link>
+      <pubDate>Tue, 03 Jun 2025 07:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-table-of-contents/</guid>
+      <description>Hugo で目次を自動生成し記事のサイド表示（Table of Contents： TOC）の紹介</description>
     </item>
     <item>
       <title>[Hugo] 遅延読み込み (Lazy loading)  をテンプレートに追加</title>

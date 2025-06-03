@@ -12,7 +12,7 @@ tags:
   - Duplicate
   - IndexedDB
   - バグ
-weight: 1
+weight: 10
 image: /images/uploads/avatar.png
 ---
 # Decap CMSとの格闘録 ― Duplicate問題とIndexedDBの残高の6時間
