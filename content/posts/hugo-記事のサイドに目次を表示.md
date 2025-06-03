@@ -13,10 +13,12 @@ tags:
   - Table of Contents： TOC
   - ブログ
 weight: 4
-image: /images/uploads/
+image: /images/uploads/hugo-table-of-contents.webp
 ---
 
-
+<center>
+<img src="/images/uploads/hugo-table-of-contents.webp" alt="Hugo で目次を自動生成し記事のサイド表示（Table of Contents： TOC）の紹介" loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
+</center>
 
 ## はじめに
 
