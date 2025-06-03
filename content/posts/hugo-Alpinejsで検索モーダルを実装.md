@@ -13,11 +13,11 @@ tags:
   - Alpine.js
   - Fuse.js
 weight: 3
-image: /images/uploads/avatar.png
+image: /images/uploads/hugo-alpine_js-fuse_js.webp
 ---
 
 <center>
-  <img src="/images/uploads/avatar.png" alt=" Hugo × Alpine.js × Fuse.js：軽量な検索モーダルの作り方"
+  <img src="/images/uploads/hugo-alpine_js-fuse_js.webp" alt=" Hugo × Alpine.js × Fuse.js：軽量な検索モーダルの作り方"
    style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </center>
 
