@@ -217,6 +217,76 @@ settings.jsonに追記して、AIに見せると、改善案を教えてくれ�
 | "files.insertFinalNewline": true     | ファイル末尾に改行を追加 | UNIX系の標準に準拠、Gitでの差分が安定 |
 
 
+### 特定のファイルや拡張子（CSS）を無効にする方法
+
+ここまでの設定で、CSSファイルを編集すると、改行を省略して一行になってしまう問題が発生したのでその回避方法。
+
+
+#### ✅ 方法①：.prettierignore ファイルで除外する（最も簡単）
+
+プロジェクトのルート（my-blog/）に .prettierignore ファイルを作成し、以下のように書きます：
+```
+# Prettierに整形してほしくないファイルやフォルダ
+assets/css/custom.css
+assets/css/custom.css.html
+```
+これで Prettier が custom.css を無視します。
+
+
+#### ✅ 方法②：VSCode の settings.json に Prettier の除外ルールを追加
+
+> C:\Users\(USER-ID)\AppData\Roaming\Code\User\settings.json
+
+```
+"[css]": {
+  "editor.defaultFormatter": null
+}
+```
+これを settings.json に追加することで、CSSファイルだけ整形対象外になります。
+
+**🎯 補足：今後 .scss や .less にも対応する場合 **
+
+```
+"[scss]": {
+  "editor.defaultFormatter": null
+},
+"[less]": {
+  "editor.defaultFormatter": null
+}
+```
+
+
+#### ✅ 方法③：手動整形モードに切り替える（保存時整形を止める）
+
+```
+"editor.formatOnSave": false
+```
+ただし、これだとすべてのファイルで自動整形が無効になります。
+
+なので、①か②の方法の方が実用的です。
+
+#### 🔧 補足：現在の Prettier 設定ファイル（もし使っている場合）
+
+プロジェクトに .prettierrc や .prettierrc.json があれば、そこでも以下のように設定可能です：
+
+```
+{
+  "overrides": [
+    {
+      "files": "*.css",
+      "options": {
+        "parser": "css",
+        "printWidth": 9999
+      }
+    }
+  ]
+}
+```
+これは「1行にまとめるのを防ぐ」ためのハックですが、推奨は①か②です。
+
+
+
+
 ## 📘 次のステップ（ステップ2-2）候補
 
 この勢いで、次のような内容に進むこともできます：

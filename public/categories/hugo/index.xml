@@ -6,7 +6,7 @@
     <description>Recent content in Hugo on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 31 May 2025 09:40:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jun 2025 07:30:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Hugo] 静的ブログにgiscusでコメント機能を追加する方法</title>
@@ -14,6 +14,13 @@
       <pubDate>Sat, 31 May 2025 09:40:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/hugo-giscus/</guid>
       <description>Hugoにコメント機能をgiscusで実装する方法の紹介</description>
+    </item>
+    <item>
+      <title>[Hugo] 目次を自動生成し記事のサイド表示（Table of Contents： TOC）</title>
+      <link>http://localhost:1313/posts/hugo-table-of-contents/</link>
+      <pubDate>Tue, 03 Jun 2025 07:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-table-of-contents/</guid>
+      <description>Hugo で目次を自動生成し記事のサイド表示（Table of Contents： TOC）の紹介</description>
     </item>
     <item>
       <title>[Hugo] リンクをカード風に表示する</title>

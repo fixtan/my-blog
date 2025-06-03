@@ -6,7 +6,7 @@
 
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/custom.8aa9cdb7ed6cf950de1a20cbdf364c5d7fe0b26016c6eb2d06d1a808892dabae.css">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.6a988fda7dc4fc1f0c55f017c3a2d61bbc638b1f6eec07de180012f1c19ac3ee.css">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -108,21 +108,19 @@
 </header>
 <main class="main page">
 	  
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      [VSCode] 基礎マスター講座 02 : Prettier,Markdown All in One
-    </h1>
-    <div class="post-description">
-      AIの指導による VSCode 基礎マスター講座 02 Prettier , Markdown All in One
-    </div>
-    <div class="post-meta"><span title='2025-06-02 16:39:00 +0000 UTC'>June 2, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
+<div class="content-wrapper" style="display: flex; align-items: flex-start">
+  <article class="post-single">
+    <header class="post-header">
+      
+      <h1 class="post-title entry-hint-parent">
+        [VSCode] 基礎マスター講座 02 : Prettier,Markdown All in One
+      </h1>
+      <div class="post-description">AIの指導による VSCode 基礎マスター講座 02 Prettier , Markdown All in One</div>
+      <div class="post-meta"><span title='2025-06-02 16:39:00 +0000 UTC'>June 2, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
 
 </div>
-  </header> 
-  <div class="post-content"> <a href="http://localhost:1313/images/uploads/vscode-basic-course-02.webp" target="_blank">
+    </header> 
+    <div class="post-content"> <a href="http://localhost:1313/images/uploads/vscode-basic-course-02.webp" target="_blank">
 <img src="http://localhost:1313/images/uploads/vscode-basic-course-02.webp" alt="AIの指導による VSCode 基礎マスター講座 02 Prettier , Markdown All in One"  loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 </a>
 <h2 id="はじめに">はじめに<a hidden class="anchor" aria-hidden="true" href="#はじめに">#</a></h2>
@@ -325,6 +323,46 @@
       </tr>
   </tbody>
 </table>
+<h3 id="特定のファイルや拡張子cssを無効にする方法">特定のファイルや拡張子（CSS）を無効にする方法<a hidden class="anchor" aria-hidden="true" href="#特定のファイルや拡張子cssを無効にする方法">#</a></h3>
+<p>ここまでの設定で、CSSファイルを編集すると、改行を省略して一行になってしまう問題が発生したのでその回避方法。</p>
+<h4 id="-方法prettierignore-ファイルで除外する最も簡単">✅ 方法①：.prettierignore ファイルで除外する（最も簡単）<a hidden class="anchor" aria-hidden="true" href="#-方法prettierignore-ファイルで除外する最も簡単">#</a></h4>
+<p>プロジェクトのルート（my-blog/）に .prettierignore ファイルを作成し、以下のように書きます：</p>
+<pre tabindex="0"><code># Prettierに整形してほしくないファイルやフォルダ
+assets/css/custom.css
+assets/css/custom.css.html
+</code></pre><p>これで Prettier が custom.css を無視します。</p>
+<h4 id="-方法vscode-の-settingsjson-に-prettier-の除外ルールを追加">✅ 方法②：VSCode の settings.json に Prettier の除外ルールを追加<a hidden class="anchor" aria-hidden="true" href="#-方法vscode-の-settingsjson-に-prettier-の除外ルールを追加">#</a></h4>
+<blockquote>
+<p>C:\Users(USER-ID)\AppData\Roaming\Code\User\settings.json</p></blockquote>
+<pre tabindex="0"><code>&#34;[css]&#34;: {
+  &#34;editor.defaultFormatter&#34;: null
+}
+</code></pre><p>これを settings.json に追加することで、CSSファイルだけ整形対象外になります。</p>
+<p>**🎯 補足：今後 .scss や .less にも対応する場合 **</p>
+<pre tabindex="0"><code>&#34;[scss]&#34;: {
+  &#34;editor.defaultFormatter&#34;: null
+},
+&#34;[less]&#34;: {
+  &#34;editor.defaultFormatter&#34;: null
+}
+</code></pre><h4 id="-方法手動整形モードに切り替える保存時整形を止める">✅ 方法③：手動整形モードに切り替える（保存時整形を止める）<a hidden class="anchor" aria-hidden="true" href="#-方法手動整形モードに切り替える保存時整形を止める">#</a></h4>
+<pre tabindex="0"><code>&#34;editor.formatOnSave&#34;: false
+</code></pre><p>ただし、これだとすべてのファイルで自動整形が無効になります。</p>
+<p>なので、①か②の方法の方が実用的です。</p>
+<h4 id="-補足現在の-prettier-設定ファイルもし使っている場合">🔧 補足：現在の Prettier 設定ファイル（もし使っている場合）<a hidden class="anchor" aria-hidden="true" href="#-補足現在の-prettier-設定ファイルもし使っている場合">#</a></h4>
+<p>プロジェクトに .prettierrc や .prettierrc.json があれば、そこでも以下のように設定可能です：</p>
+<pre tabindex="0"><code>{
+  &#34;overrides&#34;: [
+    {
+      &#34;files&#34;: &#34;*.css&#34;,
+      &#34;options&#34;: {
+        &#34;parser&#34;: &#34;css&#34;,
+        &#34;printWidth&#34;: 9999
+      }
+    }
+  ]
+}
+</code></pre><p>これは「1行にまとめるのを防ぐ」ためのハックですが、推奨は①か②です。</p>
 <h2 id="-次のステップステップ2-2候補">📘 次のステップ（ステップ2-2）候補<a hidden class="anchor" aria-hidden="true" href="#-次のステップステップ2-2候補">#</a></h2>
 <p>この勢いで、次のような内容に進むこともできます：</p>
 <h3 id="-ステップ2-2拡張機能ごとの便利な使い方">🔸 ステップ2-2：拡張機能ごとの便利な使い方<a hidden class="anchor" aria-hidden="true" href="#-ステップ2-2拡張機能ごとの便利な使い方">#</a></h3>
@@ -343,15 +381,15 @@
 <hr>
 
 
-  </div>
+    </div>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/prettier/">Prettier</a></li>
-      <li><a href="http://localhost:1313/tags/markdown-all-in-one/">Markdown All in One</a></li>
-      <li><a href="http://localhost:1313/tags/markdownlint/">Markdownlint</a></li>
-      <li><a href="http://localhost:1313/tags/markdown-preview-enhanced/">Markdown Preview Enhanced</a></li>
-    </ul>
+    <footer class="post-footer">
+      <ul class="post-tags">
+        <li><a href="http://localhost:1313/tags/prettier/">Prettier</a></li>
+        <li><a href="http://localhost:1313/tags/markdown-all-in-one/">Markdown All in One</a></li>
+        <li><a href="http://localhost:1313/tags/markdownlint/">Markdownlint</a></li>
+        <li><a href="http://localhost:1313/tags/markdown-preview-enhanced/">Markdown Preview Enhanced</a></li>
+      </ul>
 
 <ul class="share-buttons">
     <li>
@@ -420,9 +458,38 @@
     </li>
 </ul>
 
-  </footer>
-</article>
+    </footer>
+  </article>
 
+  
+  <aside class="article-toc">
+    <nav class="toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#はじめに">はじめに</a></li>
+    <li><a href="#-ステップ-2拡張機能の活用と設定調整">🧭 ステップ 2：拡張機能の活用と設定調整</a>
+      <ul>
+        <li><a href="#1-prettierコード整形">1. Prettier（コード整形）</a></li>
+        <li><a href="#2-markdown-all-in-one目次生成補完">2. Markdown All in One（目次生成・補完）</a></li>
+        <li><a href="#3-settingsjson-の基本設定">3. settings.json の基本設定</a></li>
+      </ul>
+    </li>
+    <li><a href="#-次のステップ">✅ 次のステップ</a></li>
+    <li><a href="#おまけ-aiからの提案">おまけ: AIからの提案</a>
+      <ul>
+        <li><a href="#-アドバイス改善の余地">💡 アドバイス（改善の余地）</a></li>
+        <li><a href="#特定のファイルや拡張子cssを無効にする方法">特定のファイルや拡張子（CSS）を無効にする方法</a></li>
+      </ul>
+    </li>
+    <li><a href="#-次のステップステップ2-2候補">📘 次のステップ（ステップ2-2）候補</a>
+      <ul>
+        <li><a href="#-ステップ2-2拡張機能ごとの便利な使い方">🔸 ステップ2-2：拡張機能ごとの便利な使い方</a></li>
+        <li><a href="#-ステップ3プロジェクト単位の-vscodesettingsjson-運用">🔸 ステップ3：プロジェクト単位の .vscode/settings.json 運用</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></nav>
+  </aside>
+</div>
 <section id="comments">
   <h2>💬 コメント</h2>
     <script src="https://giscus.app/client.js"

@@ -216,7 +216,6 @@ svg path[d="M12 6H0l6-6z"] {
 
 
 /* ヒーロー画像 */
-/* ヒーロー画像 */
 .hero {
   background-image: url("{{ "images/header.jpg" | absURL }}");
   background-size: cover;
@@ -515,7 +514,7 @@ body.dark .share-buttons li a:hover {
   text-align: center;
   padding: 0 1rem;
   margin: 0.5rem auto 0.5rem;
-  
+
   display: -webkit-box;
   -webkit-line-clamp: 2;  /* 抜粋行数 */
   -webkit-box-orient: vertical;
@@ -742,7 +741,7 @@ body.dark .share-buttons li a:hover {
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.06);
   border-radius: 4px;
-} 
+}
 .section-block--recommended {
   background-color: #e8fdfa;  /* 同系色の淡い背景 */
   padding: 0.1rem 1.5rem 0.1rem 1.5rem ; /* padding: 1rem 1.5rem; */
@@ -772,7 +771,7 @@ body.dark .share-buttons li a:hover {
 
 
 /* カテゴリ別:タイトル装飾 */
-.section-heading--category { 
+.section-heading--category {
   background: #f5e6ff;              /* 背景を淡く紫に */
   border-left: 6px solid #8e44ad;   /* 縦線の強調 */
   padding: 0.6em 1em;
@@ -781,7 +780,7 @@ body.dark .share-buttons li a:hover {
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.06); /* 立体感 */
   border-radius: 4px;
-} 
+}
 /* カテゴリ別:背景装飾 */
 .section-block--category {
   background-color: #faf3ff;  /* カテゴリ全体を薄い背景で囲う */
@@ -948,3 +947,37 @@ body.dark .share-buttons li a:hover {
 
 /* リンクカード：ここまで*/
 
+/* ■■■ 記事ページの目次ブロック：ここから ■■■ */
+.content-wrapper {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.post-single {
+  flex: 1;
+  max-width: 700px;
+}
+
+.article-toc {
+  width: 260px;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  max-height: 80vh;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* モバイルで非表示にする */
+@media screen and (max-width: 768px) {
+  .article-toc {
+    display: none;
+  }
+}
+/* ■■■ 記事ページの目次ブロック：ここまで ■■■ */
