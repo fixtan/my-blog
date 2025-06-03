@@ -52,7 +52,7 @@ Alpine.jsは、静的なWebページや軽量なインタラクションを追�
 
 layouts/partials/footer.html の末尾に追加：
 
-```js
+```
 <!-- Alpine.js v3 CDN -->
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 ```
@@ -74,7 +74,7 @@ hugo server -D
 
 以下のHTMLを layouts/partials/search-modal.html に作成して保存してください：
 
-```html
+```
 <div x-data="{ open: false }">
   <!-- 検索トリガーボタン（虫眼鏡アイコン） -->
   <button @click="open = true" class="search-toggle" aria-label="Search">
@@ -135,7 +135,7 @@ hugo server -D
 ### Tailwind CSS クラスベースの確認
 
 前ステップで書いたHTMLのモーダル定義内に含まれていたこの部分：
-```html
+```
 <div
   x-show="open"
   x-transition
@@ -155,7 +155,7 @@ hugo server -D
 
 ### モーダルボックス部分
 
-```html
+```
 <div class="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-xl shadow-lg relative">
 ```
 
@@ -168,7 +168,7 @@ hugo server -D
 
 もし Tailwind CSS を使っていない環境であれば、次のようなCSSを custom.css に追記できます：
 
-```css
+```
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -205,7 +205,7 @@ hugo server -D
 
 Alpine.jsとFuse.jsを連携させて、インデックス（/index.json）を検索対象とする機能を実装します。
 
-```js
+```
 <script>
 document.addEventListener("alpine:init", () => {
   Alpine.data("searchModal", () => ({
@@ -278,7 +278,7 @@ layouts/partials/search-modal.html の中の、div class="modal-body" など、
 
 ### 追加するHTMLコード例
 
-```html
+```
 <!-- 検索結果表示 -->
 <ul class="search-results">
   <template x-for="result in results" :key="result.item.permalink">
@@ -305,7 +305,7 @@ layouts/partials/search-modal.html の中の、div class="modal-body" など、
 ### CSSによるスタイリング（後から調整）
 
 以下のようなクラスで、検索結果の見た目を整えることができます（例）：
-```css
+```
 .search-results {
   margin-top: 1rem;
   max-height: 60vh;
@@ -356,7 +356,7 @@ layouts/partials/search-modal.html の中の、div class="modal-body" など、
 以下のコードを assets/js/searchComponent.js に保存
 
 
-```js
+```
 function searchComponent() {
   return {
     searchQuery: "",
@@ -394,10 +394,10 @@ assets/js/ ではブラウザが直接読み込めないため、searchComponent
 
 **static/js/searchComponent.js** にコピーしてください。
 
-layouts/partials/search-modal.html の <script> に以下を追加：
+layouts/partials/search-modal.html の script に以下を追加：
 
 {{</* /raw */>}}
-```js
+```
 <script src="/js/searchComponent.js" defer></script>
 ```
 {{</* /raw */>}}
@@ -439,7 +439,7 @@ layouts/partials/search-modal.html の <script> に以下を追加：
 
 > \static\js\searchComponent.js
 
-```js
+```
 function searchComponent() {
   return {
     open: false,
