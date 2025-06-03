@@ -6,7 +6,7 @@
 
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/custom.8aa9cdb7ed6cf950de1a20cbdf364c5d7fe0b26016c6eb2d06d1a808892dabae.css">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.3521ef724991f15bfb5d1b66f535cb647aa474926bdb0a40866ee6df377f5d7a.css">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -108,21 +108,19 @@
 </header>
 <main class="main page">
 	  
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      [Hugo] 遅延読み込み (Lazy loading)  をテンプレートに追加
-    </h1>
-    <div class="post-description">
-      Hugo &#43; PaperMod テーマで画像の遅延読み込みを実装して表示速度を向上させる方法を紹介します。
-    </div>
-    <div class="post-meta"><span title='2025-05-30 11:09:00 +0000 UTC'>May 30, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;lain
+<div class="content-wrapper" style="display: flex; align-items: flex-start">
+  <article class="post-single">
+    <header class="post-header">
+      
+      <h1 class="post-title entry-hint-parent">
+        [Hugo] 遅延読み込み (Lazy loading)  をテンプレートに追加
+      </h1>
+      <div class="post-description">Hugo &#43; PaperMod テーマで画像の遅延読み込みを実装して表示速度を向上させる方法を紹介します。</div>
+      <div class="post-meta"><span title='2025-05-30 11:09:00 +0000 UTC'>May 30, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;lain
 
 </div>
-  </header> 
-  <div class="post-content"><center>
+    </header> 
+    <div class="post-content"><center>
 <img src="http://localhost:1313/images/uploads/hugo-lazy-loading.png" alt="[Hugo] 遅延読み込み (Lazy loading)  をテンプレートに追加" loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </center>
 <h2 id="はじめに">はじめに<a hidden class="anchor" aria-hidden="true" href="#はじめに">#</a></h2>
@@ -201,15 +199,15 @@ layouts/partials/li.html などを開いて、以下のような行を探して�
 }
 </code></pre>
 
-  </div>
+    </div>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0/">カスタム</a></li>
-      <li><a href="http://localhost:1313/tags/lazy-loading/">Lazy Loading</a></li>
-      <li><a href="http://localhost:1313/tags/%E9%81%85%E5%BB%B6%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF/">遅延読み込み</a></li>
-      <li><a href="http://localhost:1313/tags/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88/">テンプレート</a></li>
-    </ul>
+    <footer class="post-footer">
+      <ul class="post-tags">
+        <li><a href="http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0/">カスタム</a></li>
+        <li><a href="http://localhost:1313/tags/lazy-loading/">Lazy Loading</a></li>
+        <li><a href="http://localhost:1313/tags/%E9%81%85%E5%BB%B6%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF/">遅延読み込み</a></li>
+        <li><a href="http://localhost:1313/tags/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88/">テンプレート</a></li>
+      </ul>
 
 <ul class="share-buttons">
     <li>
@@ -278,9 +276,37 @@ layouts/partials/li.html などを開いて、以下のような行を探して�
     </li>
 </ul>
 
-  </footer>
-</article>
+    </footer>
+  </article>
 
+  
+  <aside class="article-toc">
+    <nav class="toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#はじめに">はじめに</a></li>
+    <li><a href="#hugo--papermodで-loadinglazy-を導入">Hugo + PaperModで loading=&ldquo;lazy&rdquo; を導入</a>
+      <ul>
+        <li><a href="#-layouts_default_markuprender-imagehtml-を新規作成">① layouts/_default/_markup/render-image.html を新規作成</a></li>
+        <li><a href="#-中身に以下を記述">② 中身に以下を記述</a></li>
+        <li><a href="#-通常の-img-タグにも反映させたい場合テーマのテンプレート内画像">③ 通常の img タグにも反映させたい場合（テーマのテンプレート内画像）</a></li>
+        <li><a href="#-ビルドして確認">④ ビルドして確認</a></li>
+        <li><a href="#補足webpなどの圧縮画像も活用する場合">補足：WebPなどの圧縮画像も活用する場合</a></li>
+      </ul>
+    </li>
+    <li><a href="#ブログのアイキャッチ画像に対応papermod">ブログのアイキャッチ画像に対応（PaperMod）</a>
+      <ul>
+        <li><a href="#対応すべき箇所カードuiでのアイキャッチ画像例おすすめ記事">対応すべき箇所：カードUIでのアイキャッチ画像（例：おすすめ記事）</a></li>
+        <li><a href="#-lihtml-や-featuredhtml-に-loadinglazy-を追加">① li.html や featured.html に loading=&ldquo;lazy&rdquo; を追加</a></li>
+        <li><a href="#-layouts_defaultbaseofhtml-や-singlehtml-などのヒーロー画像もチェック必要に応じて">② layouts/_default/baseof.html や single.html などのヒーロー画像もチェック（必要に応じて）</a></li>
+        <li><a href="#-反映確認">③ 反映確認</a></li>
+      </ul>
+    </li>
+    <li><a href="#post-cardhtml-のimgタグを編集">post-card.html のimgタグを編集</a></li>
+    <li><a href="#おまけcssで-lazy-img-を活かす">おまけ：CSSで .lazy-img を活かす</a></li>
+  </ul>
+</nav></nav>
+  </aside>
+</div>
 <section id="comments">
   <h2>💬 コメント</h2>
     <script src="https://giscus.app/client.js"
@@ -322,6 +348,7 @@ layouts/partials/li.html などを開いて、以下のような行を探して�
     });
   });
 </script>
+<script src="http://localhost:1313/js/scrollspy.js" defer></script>
 
 <script src="http://localhost:1313/js/lunr.min.js"></script>
 <script src="http://localhost:1313/js/lunr.stemmer.support.js"></script>

@@ -6,7 +6,7 @@
 
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/custom.8aa9cdb7ed6cf950de1a20cbdf364c5d7fe0b26016c6eb2d06d1a808892dabae.css">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.3521ef724991f15bfb5d1b66f535cb647aa474926bdb0a40866ee6df377f5d7a.css">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -108,21 +108,19 @@
 </header>
 <main class="main page">
 	  
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      [Hugo] 静的ブログにgiscusでコメント機能を追加する方法
-    </h1>
-    <div class="post-description">
-      Hugoにコメント機能をgiscusで実装する方法の紹介
-    </div>
-    <div class="post-meta"><span title='2025-05-31 09:40:00 +0000 UTC'>May 31, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
+<div class="content-wrapper" style="display: flex; align-items: flex-start">
+  <article class="post-single">
+    <header class="post-header">
+      
+      <h1 class="post-title entry-hint-parent">
+        [Hugo] 静的ブログにgiscusでコメント機能を追加する方法
+      </h1>
+      <div class="post-description">Hugoにコメント機能をgiscusで実装する方法の紹介</div>
+      <div class="post-meta"><span title='2025-05-31 09:40:00 +0000 UTC'>May 31, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
 
 </div>
-  </header> 
-  <div class="post-content"><center>
+    </header> 
+    <div class="post-content"><center>
 <img src="http://localhost:1313/images/uploads/hugo-giscus.webp" alt="Hugoにコメント機能をgiscusで実装する方法の紹介" loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </center>
 <h2 id="はじめに">はじめに<a hidden class="anchor" aria-hidden="true" href="#はじめに">#</a></h2>
@@ -357,14 +355,14 @@
 </article>
 
 
-  </div>
+    </div>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/giscus/">Giscus</a></li>
-      <li><a href="http://localhost:1313/tags/%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88/">コメント</a></li>
-      <li><a href="http://localhost:1313/tags/javascript/">JavaScript</a></li>
-    </ul>
+    <footer class="post-footer">
+      <ul class="post-tags">
+        <li><a href="http://localhost:1313/tags/giscus/">Giscus</a></li>
+        <li><a href="http://localhost:1313/tags/%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88/">コメント</a></li>
+        <li><a href="http://localhost:1313/tags/javascript/">JavaScript</a></li>
+      </ul>
 
 <ul class="share-buttons">
     <li>
@@ -433,9 +431,34 @@
     </li>
 </ul>
 
-  </footer>
-</article>
+    </footer>
+  </article>
 
+  
+  <aside class="article-toc">
+    <nav class="toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#はじめに">はじめに</a></li>
+    <li><a href="#giscus-について">giscus について</a></li>
+    <li><a href="#-giscus-の魅力">🧩 giscus の魅力</a></li>
+    <li><a href="#-giscus-のコメント管理方法">📝 giscus のコメント管理方法</a></li>
+    <li><a href="#-コメントに関する課題と対策">🧩 コメントに関する課題と対策</a></li>
+    <li><a href="#--hugo--giscus-導入の流れ概要">📌  Hugo + giscus 導入の流れ（概要）</a></li>
+    <li><a href="#step-1github-discussions-を有効化公開リポジトリ">STEP 1：GitHub Discussions を有効化（公開リポジトリ）</a></li>
+    <li><a href="#step-2giscusapp-でスクリプト生成hugo用にカスタマイズ">STEP 2：giscus.app でスクリプト生成（Hugo用にカスタマイズ）</a>
+      <ul>
+        <li><a href="#giscusアプリをインストール">giscusアプリをインストール</a></li>
+        <li><a href="#giscus-公式サイトで必要情報を入力">giscus 公式サイトで必要情報を入力</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-3layoutspartialscommentshtml-を作成">STEP 3：layouts/partials/comments.html を作成</a></li>
+    <li><a href="#step-4singlehtml-の末尾で-commentshtml-を読み込む">STEP 4：single.html の末尾で comments.html を読み込む</a></li>
+    <li><a href="#-確認">🎯 確認</a></li>
+    <li><a href="#コメントの管理">コメントの管理</a></li>
+  </ul>
+</nav></nav>
+  </aside>
+</div>
 <section id="comments">
   <h2>💬 コメント</h2>
     <script src="https://giscus.app/client.js"
@@ -477,6 +500,7 @@
     });
   });
 </script>
+<script src="http://localhost:1313/js/scrollspy.js" defer></script>
 
 <script src="http://localhost:1313/js/lunr.min.js"></script>
 <script src="http://localhost:1313/js/lunr.stemmer.support.js"></script>

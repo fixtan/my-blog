@@ -6,7 +6,7 @@
 
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/custom.8aa9cdb7ed6cf950de1a20cbdf364c5d7fe0b26016c6eb2d06d1a808892dabae.css">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.3521ef724991f15bfb5d1b66f535cb647aa474926bdb0a40866ee6df377f5d7a.css">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -108,18 +108,18 @@
 </header>
 <main class="main page">
 	  
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      [Decap CMS] Config Errors: &#39;collections[0].fields&#39; fields names must be unique
-    </h1>
-    <div class="post-meta"><span title='2025-05-24 12:18:00 +0000 UTC'>May 24, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
+<div class="content-wrapper" style="display: flex; align-items: flex-start">
+  <article class="post-single">
+    <header class="post-header">
+      
+      <h1 class="post-title entry-hint-parent">
+        [Decap CMS] Config Errors: &#39;collections[0].fields&#39; fields names must be unique
+      </h1>
+      <div class="post-meta"><span title='2025-05-24 12:18:00 +0000 UTC'>May 24, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
 
 </div>
-  </header> 
-  <div class="post-content"><center><img src="http://localhost:1313/images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-3-.png" width="80%"></center>
+    </header> 
+    <div class="post-content"><center><img src="http://localhost:1313/images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-3-.png" width="80%"></center>
 <p>Netlify CMSのカスタム中、ログインしようとするとエラーメッセージ。</p>
 <p><code>Error loading the CMS configuration Config Errors: 'collections[0].fields' fields names must be unique Check your config.yml file.</code>
 <br></p>
@@ -250,12 +250,12 @@ public_folder: &ldquo;/uploads&rdquo;</li>
 </code></pre><p>git push して、netlify でデプロイし無事解決しました。</p>
 
 
-  </div>
+    </div>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/decap-cms/">Decap CMS</a></li>
-    </ul>
+    <footer class="post-footer">
+      <ul class="post-tags">
+        <li><a href="http://localhost:1313/tags/decap-cms/">Decap CMS</a></li>
+      </ul>
 
 <ul class="share-buttons">
     <li>
@@ -324,9 +324,33 @@ public_folder: &ldquo;/uploads&rdquo;</li>
     </li>
 </ul>
 
-  </footer>
-</article>
+    </footer>
+  </article>
 
+  
+  <aside class="article-toc">
+    <nav class="toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因">原因</a></li>
+    <li><a href="#-どちらを残すべき">✨ どちらを残すべき？</a>
+      <ul>
+        <li><a href="#-1-コメントを追加しやすい">✅ 1. コメントを追加しやすい</a></li>
+        <li><a href="#-2-後でフィールドを増やしたいとき柔軟">✅ 2. 後でフィールドを増やしたいとき柔軟</a></li>
+        <li><a href="#-3-誤りに気付きやすい">✅ 3. 誤りに気付きやすい</a></li>
+        <li><a href="#-逆に短縮記法が向いてるのは">✅ 逆に短縮記法が向いてるのは？</a></li>
+      </ul>
+    </li>
+    <li><a href="#-実運用のおすすめスタイル">💡 実運用のおすすめスタイル</a></li>
+    <li><a href="#-まとめ">🎯 まとめ</a>
+      <ul>
+        <li><a href="#インデント記法">インデント記法</a></li>
+        <li><a href="#短縮記法">短縮記法</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></nav>
+  </aside>
+</div>
 <section id="comments">
   <h2>💬 コメント</h2>
     <script src="https://giscus.app/client.js"
@@ -368,6 +392,7 @@ public_folder: &ldquo;/uploads&rdquo;</li>
     });
   });
 </script>
+<script src="http://localhost:1313/js/scrollspy.js" defer></script>
 
 <script src="http://localhost:1313/js/lunr.min.js"></script>
 <script src="http://localhost:1313/js/lunr.stemmer.support.js"></script>

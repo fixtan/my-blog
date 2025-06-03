@@ -6,7 +6,7 @@
 
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/custom.8aa9cdb7ed6cf950de1a20cbdf364c5d7fe0b26016c6eb2d06d1a808892dabae.css">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.3521ef724991f15bfb5d1b66f535cb647aa474926bdb0a40866ee6df377f5d7a.css">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -108,21 +108,19 @@
 </header>
 <main class="main page">
 	  
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      [Hugo] リンクをカード風に表示する
-    </h1>
-    <div class="post-description">
-      Hugoのショートコードを使って、リンクをカード風に表示する方法の紹介。
-    </div>
-    <div class="post-meta"><span title='2025-05-30 15:49:00 +0000 UTC'>May 30, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;lain
+<div class="content-wrapper" style="display: flex; align-items: flex-start">
+  <article class="post-single">
+    <header class="post-header">
+      
+      <h1 class="post-title entry-hint-parent">
+        [Hugo] リンクをカード風に表示する
+      </h1>
+      <div class="post-description">Hugoのショートコードを使って、リンクをカード風に表示する方法の紹介。</div>
+      <div class="post-meta"><span title='2025-05-30 15:49:00 +0000 UTC'>May 30, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;lain
 
 </div>
-  </header> 
-  <div class="post-content"><center>
+    </header> 
+    <div class="post-content"><center>
 <img src="http://localhost:1313/images/uploads/hugo-link-card.png" alt="Hugoのショートコードを使って、リンクをカード風に表示する方法の紹介。"  loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; " />
 </center>
 <h2 id="はじめに">はじめに<a hidden class="anchor" aria-hidden="true" href="#はじめに">#</a></h2>
@@ -398,13 +396,13 @@ if url:
 </article>
 
 
-  </div>
+    </div>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%AB%E3%83%BC%E3%83%89/">リンクカード</a></li>
-      <li><a href="http://localhost:1313/tags/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%B3%E3%83%BC%E3%83%89/">ショートコード</a></li>
-    </ul>
+    <footer class="post-footer">
+      <ul class="post-tags">
+        <li><a href="http://localhost:1313/tags/%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%AB%E3%83%BC%E3%83%89/">リンクカード</a></li>
+        <li><a href="http://localhost:1313/tags/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%B3%E3%83%BC%E3%83%89/">ショートコード</a></li>
+      </ul>
 
 <ul class="share-buttons">
     <li>
@@ -473,9 +471,29 @@ if url:
     </li>
 </ul>
 
-  </footer>
-</article>
+    </footer>
+  </article>
 
+  
+  <aside class="article-toc">
+    <nav class="toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#はじめに">はじめに</a></li>
+    <li><a href="#decap-cms-のリンクカード対応の有無">[Decap CMS] のリンクカード対応の有無</a></li>
+    <li><a href="#代替策できること">代替策・できること</a></li>
+    <li><a href="#自作ショートコードでogpカード風リンクを作る例">自作ショートコードでOGPカード風リンクを作る（例）</a></li>
+    <li><a href="#外部サイトからogp情報を取得する方法">外部サイトからOGP情報を取得する方法</a>
+      <ul>
+        <li><a href="#方法decap-cms-カスタムウィジェット">方法①：Decap CMS カスタムウィジェット</a></li>
+        <li><a href="#方法2pythonスクリプトでogp情報を取得してショートコード化テンプレ提供">方法2：PythonスクリプトでOGP情報を取得してショートコード化（テンプレ提供）</a></li>
+      </ul>
+    </li>
+    <li><a href="#実装してみる">実装してみる</a></li>
+    <li><a href="#実行テスト">実行テスト</a></li>
+  </ul>
+</nav></nav>
+  </aside>
+</div>
 <section id="comments">
   <h2>💬 コメント</h2>
     <script src="https://giscus.app/client.js"
@@ -517,6 +535,7 @@ if url:
     });
   });
 </script>
+<script src="http://localhost:1313/js/scrollspy.js" defer></script>
 
 <script src="http://localhost:1313/js/lunr.min.js"></script>
 <script src="http://localhost:1313/js/lunr.stemmer.support.js"></script>

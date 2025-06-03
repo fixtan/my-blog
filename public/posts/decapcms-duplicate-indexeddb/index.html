@@ -6,7 +6,7 @@
 
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/custom.8aa9cdb7ed6cf950de1a20cbdf364c5d7fe0b26016c6eb2d06d1a808892dabae.css">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.3521ef724991f15bfb5d1b66f535cb647aa474926bdb0a40866ee6df377f5d7a.css">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -108,21 +108,19 @@
 </header>
 <main class="main page">
 	  
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      Decap CMS × Duplicateバグ × IndexedDBの罠
-    </h1>
-    <div class="post-description">
-      Decap CMSで「Duplicate」でしか記事修正できなくなった問題の原因と修正方法
-    </div>
-    <div class="post-meta"><span title='2025-05-31 13:07:00 +0000 UTC'>May 31, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
+<div class="content-wrapper" style="display: flex; align-items: flex-start">
+  <article class="post-single">
+    <header class="post-header">
+      
+      <h1 class="post-title entry-hint-parent">
+        Decap CMS × Duplicateバグ × IndexedDBの罠
+      </h1>
+      <div class="post-description">Decap CMSで「Duplicate」でしか記事修正できなくなった問題の原因と修正方法</div>
+      <div class="post-meta"><span title='2025-05-31 13:07:00 +0000 UTC'>May 31, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
 
 </div>
-  </header> 
-  <div class="post-content"><center>
+    </header> 
+    <div class="post-content"><center>
 <img src="http://localhost:1313/images/uploads/decapcms-duplicate-indexeddb.webp" alt=""  loading="lazy" decoding="async" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; " />
 </center>
 <h2 id="はじめに">はじめに<a hidden class="anchor" aria-hidden="true" href="#はじめに">#</a></h2>
@@ -320,15 +318,15 @@ F12 → DevTools を起動</p>
 <p>AIと対話しながらブログサイトを構築してますが、内部構造に精通してるので物凄く勉強になります。</p>
 
 
-  </div>
+    </div>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/duplicate/">Duplicate</a></li>
-      <li><a href="http://localhost:1313/tags/indexeddb/">IndexedDB</a></li>
-      <li><a href="http://localhost:1313/tags/developertool/">Developertool</a></li>
-      <li><a href="http://localhost:1313/tags/chrome/">Chrome</a></li>
-    </ul>
+    <footer class="post-footer">
+      <ul class="post-tags">
+        <li><a href="http://localhost:1313/tags/duplicate/">Duplicate</a></li>
+        <li><a href="http://localhost:1313/tags/indexeddb/">IndexedDB</a></li>
+        <li><a href="http://localhost:1313/tags/developertool/">Developertool</a></li>
+        <li><a href="http://localhost:1313/tags/chrome/">Chrome</a></li>
+      </ul>
 
 <ul class="share-buttons">
     <li>
@@ -397,9 +395,46 @@ F12 → DevTools を起動</p>
     </li>
 </ul>
 
-  </footer>
-</article>
+    </footer>
+  </article>
 
+  
+  <aside class="article-toc">
+    <nav class="toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#はじめに">はじめに</a></li>
+    <li><a href="#aiに相談してみた">AIに相談してみた</a>
+      <ul>
+        <li><a href="#-原因として考えられる主なパターン">✅ 原因として考えられる主なパターン</a></li>
+      </ul>
+    </li>
+    <li><a href="#対処方法">対処方法</a>
+      <ul>
+        <li><a href="#-1-configyml-の-collections-設定を確認">✅ 1. config.yml の collections: 設定を確認</a></li>
+        <li><a href="#-2-decap-cmsキャッシュのクリア">✅ 2. Decap CMSキャッシュのクリア</a></li>
+        <li><a href="#-3-netlifyのビルドキャッシュクリア">✅ 3. Netlifyのビルドキャッシュクリア</a></li>
+        <li><a href="#-4-gitリポジトリの状態と照合">✅ 4. Gitリポジトリの状態と照合</a></li>
+      </ul>
+    </li>
+    <li><a href="#-今後の再発防止策やや慎重に見積もって">✅ 今後の再発防止策（やや慎重に見積もって）</a></li>
+    <li><a href="#それでも直らず">それでも直らず</a></li>
+    <li><a href="#indexeddb-or-localstorage-のキャッシュ不整合">IndexedDB or LocalStorage のキャッシュ不整合</a>
+      <ul>
+        <li><a href="#-状況の整理">✅ 状況の整理</a></li>
+        <li><a href="#-原因decap-cms-のキャッシュの仕組み">✅ 原因：Decap CMS のキャッシュの仕組み</a></li>
+      </ul>
+    </li>
+    <li><a href="#-解決方法chromeでdecap-cmsのキャッシュ完全削除">✅ 解決方法：ChromeでDecap CMSのキャッシュ完全削除</a>
+      <ul>
+        <li><a href="#indexeddbは何を保存しているのか">IndexedDBは何を保存しているのか？</a></li>
+        <li><a href="#なぜidentifier_field-titleでは直らなかったのか">なぜidentifier_field: titleでは直らなかったのか？</a></li>
+        <li><a href="#トラブルの発生タイミング">トラブルの発生タイミング</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></nav>
+  </aside>
+</div>
 <section id="comments">
   <h2>💬 コメント</h2>
     <script src="https://giscus.app/client.js"
@@ -441,6 +476,7 @@ F12 → DevTools を起動</p>
     });
   });
 </script>
+<script src="http://localhost:1313/js/scrollspy.js" defer></script>
 
 <script src="http://localhost:1313/js/lunr.min.js"></script>
 <script src="http://localhost:1313/js/lunr.stemmer.support.js"></script>

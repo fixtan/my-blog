@@ -6,7 +6,7 @@
 
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/custom.8aa9cdb7ed6cf950de1a20cbdf364c5d7fe0b26016c6eb2d06d1a808892dabae.css">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.3521ef724991f15bfb5d1b66f535cb647aa474926bdb0a40866ee6df377f5d7a.css">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -108,18 +108,18 @@
 </header>
 <main class="main page">
 	  
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      [Decap CMS] ソートが機能しない問題
-    </h1>
-    <div class="post-meta"><span title='2025-05-29 18:03:00 +0000 UTC'>May 29, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;lain
+<div class="content-wrapper" style="display: flex; align-items: flex-start">
+  <article class="post-single">
+    <header class="post-header">
+      
+      <h1 class="post-title entry-hint-parent">
+        [Decap CMS] ソートが機能しない問題
+      </h1>
+      <div class="post-meta"><span title='2025-05-29 18:03:00 +0000 UTC'>May 29, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;lain
 
 </div>
-  </header> 
-  <div class="post-content"><center>
+    </header> 
+    <div class="post-content"><center>
 <img src="http://localhost:1313/images/uploads/decapcms-sort-trouble.png" alt="" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </center>
 <h2 id="はじめに">はじめに<a hidden class="anchor" aria-hidden="true" href="#はじめに">#</a></h2>
@@ -213,13 +213,13 @@ JavaScriptの Array.prototype.sort() に近い処理をしており、</p>
 <p>「すべての date を YYYY-MM-DD か YYYY-MM-DDTHH:mm:ss に揃えれば、文字列として安定にソートできる」</p></blockquote>
 
 
-  </div>
+    </div>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0/">カスタム</a></li>
-      <li><a href="http://localhost:1313/tags/%E3%82%BD%E3%83%BC%E3%83%88/">ソート</a></li>
-    </ul>
+    <footer class="post-footer">
+      <ul class="post-tags">
+        <li><a href="http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0/">カスタム</a></li>
+        <li><a href="http://localhost:1313/tags/%E3%82%BD%E3%83%BC%E3%83%88/">ソート</a></li>
+      </ul>
 
 <ul class="share-buttons">
     <li>
@@ -288,9 +288,23 @@ JavaScriptの Array.prototype.sort() に近い処理をしており、</p>
     </li>
 </ul>
 
-  </footer>
-</article>
+    </footer>
+  </article>
 
+  
+  <aside class="article-toc">
+    <nav class="toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#はじめに">はじめに</a></li>
+    <li><a href="#aiに相談">AIに相談</a></li>
+    <li><a href="#-原因と対策">✅ 原因と対策</a></li>
+    <li><a href="#日付をiso-8601形式に統一">日付をISO 8601形式に統一</a></li>
+    <li><a href="#githubのソートに関するトラブルtip">Githubのソートに関するトラブルTip</a></li>
+    <li><a href="#-decap-cmsのソートの裏側ざっくり技術構造">✅ Decap CMSのソートの裏側（ざっくり技術構造）</a></li>
+  </ul>
+</nav></nav>
+  </aside>
+</div>
 <section id="comments">
   <h2>💬 コメント</h2>
     <script src="https://giscus.app/client.js"
@@ -332,6 +346,7 @@ JavaScriptの Array.prototype.sort() に近い処理をしており、</p>
     });
   });
 </script>
+<script src="http://localhost:1313/js/scrollspy.js" defer></script>
 
 <script src="http://localhost:1313/js/lunr.min.js"></script>
 <script src="http://localhost:1313/js/lunr.stemmer.support.js"></script>

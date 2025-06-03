@@ -6,7 +6,7 @@
 
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/custom.8aa9cdb7ed6cf950de1a20cbdf364c5d7fe0b26016c6eb2d06d1a808892dabae.css">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.3521ef724991f15bfb5d1b66f535cb647aa474926bdb0a40866ee6df377f5d7a.css">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -108,18 +108,18 @@
 </header>
 <main class="main page">
 	  
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      [WebMSX] 自前でMSXサイトを作成
-    </h1>
-    <div class="post-meta"><span title='2025-05-28 20:02:00 +0000 UTC'>May 28, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
+<div class="content-wrapper" style="display: flex; align-items: flex-start">
+  <article class="post-single">
+    <header class="post-header">
+      
+      <h1 class="post-title entry-hint-parent">
+        [WebMSX] 自前でMSXサイトを作成
+      </h1>
+      <div class="post-meta"><span title='2025-05-28 20:02:00 +0000 UTC'>May 28, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
 
 </div>
-  </header> 
-  <div class="post-content"><center>
+    </header> 
+    <div class="post-content"><center>
   <img src="http://localhost:1313/images/uploads/i-catch_webmsx.png" alt="NetlifyのDNS設定" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px;" />
 </center>
 <h2 id="はじめに">はじめに<a hidden class="anchor" aria-hidden="true" href="#はじめに">#</a></h2>
@@ -328,15 +328,15 @@ mkdir ../webmsx-netlify/roms
 <p>検索で &ldquo;ROM&rdquo;, &ldquo;BAS&rdquo;, &ldquo;Homebrew&rdquo; などを入れて探すと見つかります。</p>
 
 
-  </div>
+    </div>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/webmsx/">WebMSX</a></li>
-      <li><a href="http://localhost:1313/tags/hugo/">Hugo</a></li>
-      <li><a href="http://localhost:1313/tags/github/">GitHub</a></li>
-      <li><a href="http://localhost:1313/tags/netlify/">Netlify</a></li>
-    </ul>
+    <footer class="post-footer">
+      <ul class="post-tags">
+        <li><a href="http://localhost:1313/tags/webmsx/">WebMSX</a></li>
+        <li><a href="http://localhost:1313/tags/hugo/">Hugo</a></li>
+        <li><a href="http://localhost:1313/tags/github/">GitHub</a></li>
+        <li><a href="http://localhost:1313/tags/netlify/">Netlify</a></li>
+      </ul>
 
 <ul class="share-buttons">
     <li>
@@ -405,9 +405,41 @@ mkdir ../webmsx-netlify/roms
     </li>
 </ul>
 
-  </footer>
-</article>
+    </footer>
+  </article>
 
+  
+  <aside class="article-toc">
+    <nav class="toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#はじめに">はじめに</a></li>
+    <li><a href="#手っ取り早く動かす方法">手っ取り早く動かす方法</a></li>
+    <li><a href="#目標webmsxを最小構成でホストする">🧩目標:WebMSXを最小構成でホストする</a></li>
+    <li><a href="#-スターター準備手順">🔨 スターター準備手順</a>
+      <ul>
+        <li><a href="#-リポジトリ作成">① リポジトリ作成</a></li>
+        <li><a href="#-コマンドでローカルセットアップ手動でも可">② コマンドでローカルセットアップ（手動でも可）</a></li>
+        <li><a href="#-indexhtml-の編集">③ index.html の編集</a></li>
+        <li><a href="#-netlifytoml-例ルートを指定したい場合">④ netlify.toml 例（ルートを指定したい場合）</a></li>
+      </ul>
+    </li>
+    <li><a href="#-デプロイ">🚀 デプロイ</a></li>
+    <li><a href="#問題発生">問題発生</a></li>
+    <li><a href="#改めて整理">改めて整理</a></li>
+    <li><a href="#完成">完成</a></li>
+    <li><a href="#iframe-ラッパーを-hugo-の-shortcode-にする埋め込み簡略化">iframe ラッパーを Hugo の shortcode にする（埋め込み簡略化）</a></li>
+    <li><a href="#-webmsxの読み込み形式について参考">📁 WebMSXの読み込み形式について（参考）</a></li>
+    <li><a href="#webmsxコードを貼り付ける方法">WebMSXコードを貼り付ける方法</a></li>
+    <li><a href="#余談著作権フリーのmsx向けromdisk素材">余談：著作権フリーのMSX向けROM・DISK素材</a>
+      <ul>
+        <li><a href="#-1-msxdev公式コンテスト作品">🕹 1. 【MSXdev】公式コンテスト作品</a></li>
+        <li><a href="#-2-msx-resource-centermrc">🗂 2. 【MSX Resource Center（MRC）】</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></nav>
+  </aside>
+</div>
 <section id="comments">
   <h2>💬 コメント</h2>
     <script src="https://giscus.app/client.js"
@@ -449,6 +481,7 @@ mkdir ../webmsx-netlify/roms
     });
   });
 </script>
+<script src="http://localhost:1313/js/scrollspy.js" defer></script>
 
 <script src="http://localhost:1313/js/lunr.min.js"></script>
 <script src="http://localhost:1313/js/lunr.stemmer.support.js"></script>

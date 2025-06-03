@@ -6,7 +6,7 @@
 
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/custom.6a988fda7dc4fc1f0c55f017c3a2d61bbc638b1f6eec07de180012f1c19ac3ee.css">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.3521ef724991f15bfb5d1b66f535cb647aa474926bdb0a40866ee6df377f5d7a.css">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -116,7 +116,7 @@
         [Hugo] 目次を自動生成し記事のサイド表示（Table of Contents： TOC）
       </h1>
       <div class="post-description">Hugo で目次を自動生成し記事のサイド表示（Table of Contents： TOC）の紹介</div>
-      <div class="post-meta"><span title='2025-06-03 07:30:00 +0000 UTC'>June 3, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
+      <div class="post-meta"><span title='2025-06-03 07:30:00 +0000 UTC'>June 3, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;lain
 
 </div>
     </header> 
@@ -259,9 +259,11 @@
   &lt;/section&gt;
 &lt;/main&gt;
 </code></pre><p>🎨 CSS例（Zenn風）</p>
-<pre tabindex="0"><code>.content-wrapper {
+<pre tabindex="0"><code>/* ■ 記事ページの目次ブロック：ここから */
+.content-wrapper {
   display: flex;
   gap: 2rem;
+  justify-content: space-between;
 }
 
 .post-single {
@@ -273,6 +275,7 @@
   width: 260px;
   position: sticky;
   top: 100px;
+  height: fit-content;
   max-height: 80vh;
   overflow-y: auto;
   font-size: 0.9rem;
@@ -280,8 +283,224 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-</code></pre>
+
+/* モバイルで非表示にする */
+@media screen and (max-width: 768px) {
+  .article-toc {
+    display: none;
+  }
+}
+/* ■ 記事ページの目次ブロック：ここまで*/
+</code></pre><p>余談で、昨日導入したPrettierの影響で、CSSファイルの改行コードが自動で無くなり表示がおかしくなったので、特定の拡張子やファイルを無効にする設定し、その内容に関して記事を追加でまとめました。</p>
+
+
+
+
+
+<article class="link-card">
+  <a href="https://humanxai.info/posts/vscode-basic-course-02/" target="_blank" rel="noopener">
+    <div class="link-card-thumb">
+      <img src="https://humanxai.info/images/uploads/vscode-basic-course-02.webp" alt="[VSCode] 基礎マスター講座 02 : Prettier,Markdown All in One">
+    </div>
+    <div class="link-card-text">
+      <h3>[VSCode] 基礎マスター講座 02 : Prettier,Markdown All in One</h3>
+      <p>AIの指導による VSCode 基礎マスター講座 02 Prettier , Markdown All in One</p>
+      <span class="link-card-url">https://humanxai.info/posts/vscode-basic-course-02/</span>
+    </div>
+  </a>
+</article>
+<h3 id="完成右側に目次を固定表示">完成：右側に目次を固定表示<a hidden class="anchor" aria-hidden="true" href="#完成右側に目次を固定表示">#</a></h3>
+<p>ここまでで、サイドに目次が表示されるようになりました。</p>
+<a href="http://localhost:1313/images/uploads/hugo-table-of-contents-completion01.jpg" target="_blank">
+<img src="http://localhost:1313/images/uploads/hugo-table-of-contents-completion01.jpg" alt=""  loading="lazy" decoding="async" style="max-width:70%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<h2 id="-次のステップスクロール連動ハイライトscrollspy">🎯 次のステップ：スクロール連動ハイライト（ScrollSpy）<a hidden class="anchor" aria-hidden="true" href="#-次のステップスクロール連動ハイライトscrollspy">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>ステップ</th>
+          <th>内容</th>
+          <th>難易度</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1. 目次リンクと本文見出しの <code>id</code> の対応を確認</td>
+          <td>Hugoが自動で処理済み</td>
+          <td>★☆☆</td>
+      </tr>
+      <tr>
+          <td>2. スクロール位置を JavaScript で監視</td>
+          <td><code>IntersectionObserver</code> API使用</td>
+          <td>★★☆</td>
+      </tr>
+      <tr>
+          <td>3. 対象の目次リンクに <code>.active</code> クラスを付与</td>
+          <td>CSSでハイライト表示</td>
+          <td>★★☆</td>
+      </tr>
+      <tr>
+          <td>4. CSSで <code>li.active &gt; a</code> に装飾適用</td>
+          <td>やりたい見た目に調整</td>
+          <td>★☆☆</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="-仕組みだけ先にご紹介概要">✅ 仕組みだけ先にご紹介（概要）<a hidden class="anchor" aria-hidden="true" href="#-仕組みだけ先にご紹介概要">#</a></h3>
+<pre tabindex="0"><code>// 1. すべての見出し要素を取得
+const sections = document.querySelectorAll(&#34;article h2, article h3&#34;);
+
+// 2. IntersectionObserverで監視
+const observer = new IntersectionObserver(
+  (entries) =&gt; {
+    entries.forEach((entry) =&gt; {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute(&#34;id&#34;);
+        document.querySelectorAll(&#34;.toc a&#34;).forEach((link) =&gt; {
+          link.classList.toggle(&#34;active&#34;, link.getAttribute(&#34;href&#34;) === `#${id}`);
+        });
+      }
+    });
+  },
+  {
+    rootMargin: &#34;-30% 0px -60% 0px&#34;,
+    threshold: 0.1,
+  }
+);
+
+// 3. 監視対象を登録
+sections.forEach((section) =&gt; observer.observe(section));
+</code></pre><p>🔸 CSS例</p>
+<pre tabindex="0"><code>.toc a.active {
+  font-weight: bold;
+  color: #007acc;
+  border-left: 3px solid #007acc;
+  padding-left: 0.5em;
+  background-color: #eef6fb;
+}
+</code></pre><h2 id="-scrollspyスクロール連動ハイライトの実装ガイド">🧭 ScrollSpy（スクロール連動ハイライト）の実装ガイド<a hidden class="anchor" aria-hidden="true" href="#-scrollspyスクロール連動ハイライトの実装ガイド">#</a></h2>
+<h3 id="-目的">✅ 目的<a hidden class="anchor" aria-hidden="true" href="#-目的">#</a></h3>
+<p>ページをスクロールすると、現在表示中の見出しに対応する目次リンクがハイライトされる</p>
+<h3 id="-ステップ1jsファイルの用意">🧩 ステップ1：JSファイルの用意<a hidden class="anchor" aria-hidden="true" href="#-ステップ1jsファイルの用意">#</a></h3>
+<h4 id="1-ファイルを作成">1. ファイルを作成<a hidden class="anchor" aria-hidden="true" href="#1-ファイルを作成">#</a></h4>
+<blockquote>
+<p>my-blog/static/js/scrollspy.js</p></blockquote>
+<p>というファイルを新規作成</p>
+<h4 id="2-以下のコードを貼り付け">2. 以下のコードを貼り付け<a hidden class="anchor" aria-hidden="true" href="#2-以下のコードを貼り付け">#</a></h4>
+<pre tabindex="0"><code>document.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; {
+  const sections = document.querySelectorAll(&#34;article h2, article h3&#34;);
+  const navLinks = document.querySelectorAll(&#34;.toc a&#34;);
+
+  const observer = new IntersectionObserver(
+    (entries) =&gt; {
+      entries.forEach((entry) =&gt; {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute(&#34;id&#34;);
+          navLinks.forEach((link) =&gt; {
+            link.classList.toggle(&#34;active&#34;, link.getAttribute(&#34;href&#34;) === `#${id}`);
+          });
+        }
+      });
+    },
+    {
+      rootMargin: &#34;-30% 0px -60% 0px&#34;, // 視野の上下オフセット
+      threshold: 0.1,
+    }
+  );
+
+  sections.forEach((section) =&gt; observer.observe(section));
+});
+</code></pre><h3 id="-ステップ2cssで-active-をハイライト">🎨 ステップ2：CSSで .active をハイライト<a hidden class="anchor" aria-hidden="true" href="#-ステップ2cssで-active-をハイライト">#</a></h3>
+<p>すでにある custom.css.html などのスタイルに以下を追加：</p>
+<pre tabindex="0"><code>.toc a.active {
+  font-weight: bold;
+  color: #007acc;
+  border-left: 3px solid #007acc;
+  padding-left: 0.5em;
+  background-color: #eef6fb;
+}
+</code></pre><h3 id="-ステップ3jsファイルをテンプレートに読み込む">🔗 ステップ3：JSファイルをテンプレートに読み込む<a hidden class="anchor" aria-hidden="true" href="#-ステップ3jsファイルをテンプレートに読み込む">#</a></h3>
+<p>layouts/partials/footer.html に以下を追記（またはすでにJSがある場合はその直後）</p>
+<pre tabindex="0"><code>&lt;script src=&#34;{{ &#34;js/scrollspy.js&#34; | relURL }}&#34; defer&gt;&lt;/script&gt;
+</code></pre><h3 id="-ステップ4hugo再起動--動作確認">🚀 ステップ4：Hugo再起動 &amp; 動作確認<a hidden class="anchor" aria-hidden="true" href="#-ステップ4hugo再起動--動作確認">#</a></h3>
+<pre tabindex="0"><code>hugo server
+</code></pre><ul>
+<li>目次がすでに表示されているページでスクロール</li>
+<li>表示範囲内の見出しに応じて、目次リンクがハイライトされる</li>
+</ul>
+<a href="http://localhost:1313/images/uploads/hugo-table-of-contents-completion02.jpg" target="_blank">
+<img src="http://localhost:1313/images/uploads/hugo-table-of-contents-completion02.jpg" alt="ScrollSpy（スクロール連動ハイライト）の実装ガイド"  loading="lazy" decoding="async" style="max-width:70%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<h3 id="-動作しないときのチェックポイント">🧪 動作しないときのチェックポイント<a hidden class="anchor" aria-hidden="true" href="#-動作しないときのチェックポイント">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>現象</th>
+          <th>確認ポイント</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>目次リンクが <code>.active</code> に切り替わらない</td>
+          <td><code>&lt;a href=&quot;#見出しid&quot;&gt;</code> が正しく生成されてるか（HTML確認）</td>
+      </tr>
+      <tr>
+          <td>JSが読み込まれていない</td>
+          <td>開発者ツールの Console にエラーが出ていないか？</td>
+      </tr>
+      <tr>
+          <td>何も起きない</td>
+          <td><code>console.log()</code> でデバッグしてイベント発火を確認</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="-javascriptのざっくり解説なるべくわかりやすく">🔍 JavaScriptのざっくり解説（なるべくわかりやすく）<a hidden class="anchor" aria-hidden="true" href="#-javascriptのざっくり解説なるべくわかりやすく">#</a></h3>
+<p>JSコードの中身を理解しておきたいとのことでしたので、ひとつずつ丁寧に分解してみます。</p>
+<h4 id="1-dom読み込みを待ってからスタート">🔸1. DOM読み込みを待ってからスタート<a hidden class="anchor" aria-hidden="true" href="#1-dom読み込みを待ってからスタート">#</a></h4>
+<pre tabindex="0"><code>document.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; {
+</code></pre><p>→ ページのHTML構造が全部読み込まれた後に中身の処理を実行するよ、という合図。</p>
+<h4 id="2-監視対象の要素を取得">🔸2. 監視対象の要素を取得<a hidden class="anchor" aria-hidden="true" href="#2-監視対象の要素を取得">#</a></h4>
+<pre tabindex="0"><code>const sections = document.querySelectorAll(&#34;article h2, article h3&#34;);
+</code></pre><p>→ 記事の中にある h2 や h3 をすべて取得。
+これが「どの見出しが表示されているか」を監視する対象。</p>
+<h4 id="3-目次リンクの一覧も取得">🔸3. 目次リンクの一覧も取得<a hidden class="anchor" aria-hidden="true" href="#3-目次リンクの一覧も取得">#</a></h4>
+<pre tabindex="0"><code>const navLinks = document.querySelectorAll(&#34;.toc a&#34;);
+</code></pre><p>→ .toc の中にある a タグ（目次のリンク）を全部拾っておく。</p>
+<h4 id="4-intersectionobserver交差監視">🔸4. IntersectionObserver（交差監視）<a hidden class="anchor" aria-hidden="true" href="#4-intersectionobserver交差監視">#</a></h4>
+<pre tabindex="0"><code>const observer = new IntersectionObserver((entries) =&gt; {
+  entries.forEach((entry) =&gt; {
+    if (entry.isIntersecting) {
+</code></pre><p>→ ブラウザに「スクロールで要素が画面内に入ったら教えて！」と頼む仕組み。</p>
+
+
+
+
+
+<article class="link-card">
+  <a href="https://qiita.com/takahashi-yoji/items/904ad0d96b59e0fc0cc7" target="_blank" rel="noopener">
+    <div class="link-card-thumb">
+      <img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1pbWFnZS1zdG9yZSUyRjAlMkYyNjI4MTIyJTJGY2VhOWEzNzQ2YjUwNTdhYzlkNTViODcyNDNiMGMzY2JiYjM5YTdmMSUyRnhfbGFyZ2UucG5nJTNGMTcwNzYxOTExNz9peGxpYj1yYi00LjAuMCZhcj0xJTNBMSZmaXQ9Y3JvcCZtYXNrPWVsbGlwc2UmZm09cG5nMzImcz03NTIzOTU0MmZiMzQwYTBjNzY1YjM1OWY0Yzc5YjgzOQ%26blend-x%3D120%26blend-y%3D462%26blend-w%3D90%26blend-h%3D90%26blend-mode%3Dnormal%26mark64%3DaHR0cHM6Ly9xaWl0YS1vcmdhbml6YXRpb24taW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1vcmdhbml6YXRpb24taW1hZ2UlMkYwNGQ1OGQ2ODY5NzIyNjI5ZDliODg4NzY3ZmE2MWMxMzgzZGZhNmIyJTJGb3JpZ2luYWwuanBnJTNGMTY4NzQxMjI4MD9peGxpYj1yYi00LjAuMCZ3PTQ0Jmg9NDQmZml0PWNyb3AmbWFzaz1jb3JuZXJzJmNvcm5lci1yYWRpdXM9OCZib3JkZXI9MiUyQ0ZGRkZGRiZmbT1wbmczMiZzPTM5NWEwNmZlN2JmNzViYTFiOWU5NTM1ODRhYTI2MzJh%26mark-x%3D186%26mark-y%3D515%26mark-w%3D40%26mark-h%3D40%26s%3Da46834547f42a4efc761c01425a91d58?ixlib=rb-4.0.0&amp;w=1200&amp;fm=jpg&amp;mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9SW50ZXJzZWN0aW9uT2JzZXJ2ZXIlRTMlODElQTglRTMlODElQUYlRUYlQkMlOUYmdHh0LWFsaWduPWxlZnQlMkN0b3AmdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT01NiZ0eHQtcGFkPTAmcz1mY2JjM2QxYjc0M2YwNDc5YmM3NGI3YjAzNjY0N2NkMQ&amp;mark-x=120&amp;mark-y=112&amp;blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDB0YWthaGFzaGkteW9qaSZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1wYWQ9MCZzPTRlNTllOWQ3YjljNDIyNzk4N2UwOTRlZjVmNzgxNDM4&amp;blend-x=242&amp;blend-y=454&amp;blend-w=838&amp;blend-h=46&amp;blend-fit=crop&amp;blend-crop=left%2Cbottom&amp;blend-mode=normal&amp;txt64=5qCq5byP5Lya56S-UmVsaWM&amp;txt-x=242&amp;txt-y=539&amp;txt-width=838&amp;txt-clip=end%2Cellipsis&amp;txt-color=%231E2121&amp;txt-font=Hiragino%20Sans%20W6&amp;txt-size=28&amp;s=a549425017d335439522f9dea1d08383" alt="IntersectionObserverとは？ - Qiita">
+    </div>
+    <div class="link-card-text">
+      <h3>IntersectionObserverとは？ - Qiita</h3>
+      <p>はじめにフッターまでスクロールした際に、画面の下部にあるボタンがフェードアウトするような実装をしました。scrollイベントだと、画面が動くたびにイベントが発火されるので、パフォーマンス的に良く…</p>
+      <span class="link-card-url">https://qiita.com/takahashi-yoji/items/904ad0d96b59e0fc0cc7</span>
+    </div>
+  </a>
+</article>
+<h4 id="5-どの目次リンクをハイライトするか判定">🔸5. どの目次リンクをハイライトするか判定<a hidden class="anchor" aria-hidden="true" href="#5-どの目次リンクをハイライトするか判定">#</a></h4>
+<pre tabindex="0"><code>const id = entry.target.getAttribute(&#34;id&#34;);
+navLinks.forEach((link) =&gt; {
+  link.classList.toggle(&#34;active&#34;, link.getAttribute(&#34;href&#34;) === `#${id}`);
+});
+</code></pre><p>→ 現在画面に映ってる見出しのIDと一致する目次リンクだけ .active を付ける。</p>
+<h4 id="6-最後に全部の見出しを監視開始">🔸6. 最後に全部の見出しを監視開始<a hidden class="anchor" aria-hidden="true" href="#6-最後に全部の見出しを監視開始">#</a></h4>
+<pre tabindex="0"><code>sections.forEach((section) =&gt; observer.observe(section));
+</code></pre><h4 id="-イメージとしては">💡 イメージとしては…<a hidden class="anchor" aria-hidden="true" href="#-イメージとしては">#</a></h4>
+<p>「画面に映った見出し」をトラッキングして、対応する目次に青い下線や背景色をつけてるだけです。</p>
+
 
     </div>
 
@@ -384,6 +603,23 @@
       <ul>
         <li><a href="#-articleの横に新しいブロック目次用を追加した方が理想的です">✅ articleの横に新しいブロック（目次用）を追加した方が理想的です</a></li>
         <li><a href="#-具体的な構成イメージ理想構造">🛠 具体的な構成イメージ（理想構造）</a></li>
+        <li><a href="#完成右側に目次を固定表示">完成：右側に目次を固定表示</a></li>
+      </ul>
+    </li>
+    <li><a href="#-次のステップスクロール連動ハイライトscrollspy">🎯 次のステップ：スクロール連動ハイライト（ScrollSpy）</a>
+      <ul>
+        <li><a href="#-仕組みだけ先にご紹介概要">✅ 仕組みだけ先にご紹介（概要）</a></li>
+      </ul>
+    </li>
+    <li><a href="#-scrollspyスクロール連動ハイライトの実装ガイド">🧭 ScrollSpy（スクロール連動ハイライト）の実装ガイド</a>
+      <ul>
+        <li><a href="#-目的">✅ 目的</a></li>
+        <li><a href="#-ステップ1jsファイルの用意">🧩 ステップ1：JSファイルの用意</a></li>
+        <li><a href="#-ステップ2cssで-active-をハイライト">🎨 ステップ2：CSSで .active をハイライト</a></li>
+        <li><a href="#-ステップ3jsファイルをテンプレートに読み込む">🔗 ステップ3：JSファイルをテンプレートに読み込む</a></li>
+        <li><a href="#-ステップ4hugo再起動--動作確認">🚀 ステップ4：Hugo再起動 &amp; 動作確認</a></li>
+        <li><a href="#-動作しないときのチェックポイント">🧪 動作しないときのチェックポイント</a></li>
+        <li><a href="#-javascriptのざっくり解説なるべくわかりやすく">🔍 JavaScriptのざっくり解説（なるべくわかりやすく）</a></li>
       </ul>
     </li>
   </ul>
@@ -431,6 +667,7 @@
     });
   });
 </script>
+<script src="http://localhost:1313/js/scrollspy.js" defer></script>
 
 <script src="http://localhost:1313/js/lunr.min.js"></script>
 <script src="http://localhost:1313/js/lunr.stemmer.support.js"></script>

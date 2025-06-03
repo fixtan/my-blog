@@ -6,7 +6,7 @@
 
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/custom.8aa9cdb7ed6cf950de1a20cbdf364c5d7fe0b26016c6eb2d06d1a808892dabae.css">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.3521ef724991f15bfb5d1b66f535cb647aa474926bdb0a40866ee6df377f5d7a.css">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -108,21 +108,19 @@
 </header>
 <main class="main page">
 	  
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      Decap CMSとの格闘録 ― Duplicate問題とIndexedDBの残高の6時間
-    </h1>
-    <div class="post-description">
-      Decap CMSとの格闘録 ― Duplicate問題とIndexedDBの残高の6時間
-    </div>
-    <div class="post-meta"><span title='2025-05-31 19:10:00 +0000 UTC'>May 31, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;lain
+<div class="content-wrapper" style="display: flex; align-items: flex-start">
+  <article class="post-single">
+    <header class="post-header">
+      
+      <h1 class="post-title entry-hint-parent">
+        Decap CMSとの格闘録 ― Duplicate問題とIndexedDBの残高の6時間
+      </h1>
+      <div class="post-description">Decap CMSとの格闘録 ― Duplicate問題とIndexedDBの残高の6時間</div>
+      <div class="post-meta"><span title='2025-05-31 19:10:00 +0000 UTC'>May 31, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;lain
 
 </div>
-  </header> 
-  <div class="post-content"><h1 id="decap-cmsとの格闘録--duplicate問題とindexeddbの残高の6時間">Decap CMSとの格闘録 ― Duplicate問題とIndexedDBの残高の6時間<a hidden class="anchor" aria-hidden="true" href="#decap-cmsとの格闘録--duplicate問題とindexeddbの残高の6時間">#</a></h1>
+    </header> 
+    <div class="post-content"><h1 id="decap-cmsとの格闘録--duplicate問題とindexeddbの残高の6時間">Decap CMSとの格闘録 ― Duplicate問題とIndexedDBの残高の6時間<a hidden class="anchor" aria-hidden="true" href="#decap-cmsとの格闘録--duplicate問題とindexeddbの残高の6時間">#</a></h1>
 <p>※注意※このこの記事は、AIが全文書いています。</p>
 <p>Decap CMSのバグと格闘した記録を私が書く気力がなかったので、全文書いてくださいとお願いしたところ、出力してくれた内容です。</p>
 <hr>
@@ -207,14 +205,14 @@
 同様のエラーで悩む方の参考になれば幸いです。</p>
 
 
-  </div>
+    </div>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/duplicate/">Duplicate</a></li>
-      <li><a href="http://localhost:1313/tags/indexeddb/">IndexedDB</a></li>
-      <li><a href="http://localhost:1313/tags/%E3%83%90%E3%82%B0/">バグ</a></li>
-    </ul>
+    <footer class="post-footer">
+      <ul class="post-tags">
+        <li><a href="http://localhost:1313/tags/duplicate/">Duplicate</a></li>
+        <li><a href="http://localhost:1313/tags/indexeddb/">IndexedDB</a></li>
+        <li><a href="http://localhost:1313/tags/%E3%83%90%E3%82%B0/">バグ</a></li>
+      </ul>
 
 <ul class="share-buttons">
     <li>
@@ -283,9 +281,42 @@
     </li>
 </ul>
 
-  </footer>
-</article>
+    </footer>
+  </article>
 
+  
+  <aside class="article-toc">
+    <nav class="toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#サイト構成">サイト構成</a></li>
+    <li><a href="#発立">発立</a>
+      <ul>
+        <li><a href="#現象">現象</a></li>
+      </ul>
+    </li>
+    <li><a href="#対応箇条">対応箇条</a>
+      <ul>
+        <li><a href="#1-git-reset--netlify-re-deploy">1. Git reset &amp; Netlify re-deploy</a></li>
+        <li><a href="#2-identifier_field-title-をconfigymlに追加">2. <code>identifier_field: title</code> をconfig.ymlに追加</a></li>
+        <li><a href="#3-ブラウザのクリーン">3. ブラウザのクリーン</a></li>
+      </ul>
+    </li>
+    <li><a href="#探索-decap-cmsバージョン選択">探索: Decap CMSバージョン選択</a>
+      <ul>
+        <li><a href="#前提">前提:</a></li>
+      </ul>
+    </li>
+    <li><a href="#最終的な対応">最終的な対応</a>
+      <ul>
+        <li><a href="#1-cmsinitの後に-preview-templatesjs-読み込み">1. CMS.init()の後に preview-templates.js 読み込み</a></li>
+        <li><a href="#2-decap-cmsの使用を見直し">2. Decap CMSの使用を見直し</a></li>
+      </ul>
+    </li>
+    <li><a href="#感想">感想</a></li>
+  </ul>
+</nav></nav>
+  </aside>
+</div>
 <section id="comments">
   <h2>💬 コメント</h2>
     <script src="https://giscus.app/client.js"
@@ -327,6 +358,7 @@
     });
   });
 </script>
+<script src="http://localhost:1313/js/scrollspy.js" defer></script>
 
 <script src="http://localhost:1313/js/lunr.min.js"></script>
 <script src="http://localhost:1313/js/lunr.stemmer.support.js"></script>

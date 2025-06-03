@@ -169,9 +169,11 @@ HTML例
 
 🎨 CSS例（Zenn風）
 ```
+/* ■ 記事ページの目次ブロック：ここから */
 .content-wrapper {
   display: flex;
   gap: 2rem;
+  justify-content: space-between;
 }
 
 .post-single {
@@ -183,6 +185,7 @@ HTML例
   width: 260px;
   position: sticky;
   top: 100px;
+  height: fit-content;
   max-height: 80vh;
   overflow-y: auto;
   font-size: 0.9rem;
@@ -190,7 +193,229 @@ HTML例
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* モバイルで非表示にする */
+@media screen and (max-width: 768px) {
+  .article-toc {
+    display: none;
+  }
+}
+/* ■ 記事ページの目次ブロック：ここまで*/
+```
+
+余談で、昨日導入したPrettierの影響で、CSSファイルの改行コードが自動で無くなり表示がおかしくなったので、特定の拡張子やファイルを無効にする設定し、その内容に関して記事を追加でまとめました。
+
+{{< link-card url="https://humanxai.info/posts/vscode-basic-course-02/" title="[VSCode] 基礎マスター講座 02 : Prettier,Markdown All in One" description="AIの指導による VSCode 基礎マスター講座 02 Prettier , Markdown All in One" image="https://humanxai.info/images/uploads/vscode-basic-course-02.webp" >}}
+
+
+### 完成：右側に目次を固定表示
+
+ここまでで、サイドに目次が表示されるようになりました。
+
+<a href="/images/uploads/hugo-table-of-contents-completion01.jpg" target="_blank">
+<img src="/images/uploads/hugo-table-of-contents-completion01.jpg" alt=""  loading="lazy" decoding="async" style="max-width:70%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+
+## 🎯 次のステップ：スクロール連動ハイライト（ScrollSpy）
+
+| ステップ                                      | 内容                           | 難易度 |
+| --------------------------------------------- | ------------------------------ | ------ |
+| 1. 目次リンクと本文見出しの `id` の対応を確認 | Hugoが自動で処理済み           | ★☆☆    |
+| 2. スクロール位置を JavaScript で監視         | `IntersectionObserver` API使用 | ★★☆    |
+| 3. 対象の目次リンクに `.active` クラスを付与  | CSSでハイライト表示            | ★★☆    |
+| 4. CSSで `li.active > a` に装飾適用           | やりたい見た目に調整           | ★☆☆    |
+
+
+### ✅ 仕組みだけ先にご紹介（概要）
+
+```
+// 1. すべての見出し要素を取得
+const sections = document.querySelectorAll("article h2, article h3");
+
+// 2. IntersectionObserverで監視
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute("id");
+        document.querySelectorAll(".toc a").forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+        });
+      }
+    });
+  },
+  {
+    rootMargin: "-30% 0px -60% 0px",
+    threshold: 0.1,
+  }
+);
+
+// 3. 監視対象を登録
+sections.forEach((section) => observer.observe(section));
+```
+
+🔸 CSS例
+```
+.toc a.active {
+  font-weight: bold;
+  color: #007acc;
+  border-left: 3px solid #007acc;
+  padding-left: 0.5em;
+  background-color: #eef6fb;
 }
 ```
 
+## 🧭 ScrollSpy（スクロール連動ハイライト）の実装ガイド
 
+
+### ✅ 目的
+
+ページをスクロールすると、現在表示中の見出しに対応する目次リンクがハイライトされる
+
+
+### 🧩 ステップ1：JSファイルの用意
+
+#### 1. ファイルを作成
+
+> my-blog/static/js/scrollspy.js
+
+というファイルを新規作成
+
+#### 2. 以下のコードを貼り付け
+
+```
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("article h2, article h3");
+  const navLinks = document.querySelectorAll(".toc a");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute("id");
+          navLinks.forEach((link) => {
+            link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+          });
+        }
+      });
+    },
+    {
+      rootMargin: "-30% 0px -60% 0px", // 視野の上下オフセット
+      threshold: 0.1,
+    }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+});
+```
+
+
+### 🎨 ステップ2：CSSで .active をハイライト
+
+すでにある custom.css.html などのスタイルに以下を追加：
+
+```
+.toc a.active {
+  font-weight: bold;
+  color: #007acc;
+  border-left: 3px solid #007acc;
+  padding-left: 0.5em;
+  background-color: #eef6fb;
+}
+```
+
+### 🔗 ステップ3：JSファイルをテンプレートに読み込む
+
+layouts/partials/footer.html に以下を追記（またはすでにJSがある場合はその直後）
+
+```
+<script src="{{ "js/scrollspy.js" | relURL }}" defer></script>
+```
+
+### 🚀 ステップ4：Hugo再起動 & 動作確認
+
+```
+hugo server
+```
+
+- 目次がすでに表示されているページでスクロール
+- 表示範囲内の見出しに応じて、目次リンクがハイライトされる
+
+
+<a href="/images/uploads/hugo-table-of-contents-completion02.jpg" target="_blank">
+<img src="/images/uploads/hugo-table-of-contents-completion02.jpg" alt="ScrollSpy（スクロール連動ハイライト）の実装ガイド"  loading="lazy" decoding="async" style="max-width:70%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+
+### 🧪 動作しないときのチェックポイント
+
+| 現象                                    | 確認ポイント                                              |
+| --------------------------------------- | --------------------------------------------------------- |
+| 目次リンクが `.active` に切り替わらない | `<a href="#見出しid">` が正しく生成されてるか（HTML確認） |
+| JSが読み込まれていない                  | 開発者ツールの Console にエラーが出ていないか？           |
+| 何も起きない                            | `console.log()` でデバッグしてイベント発火を確認          |
+
+
+### 🔍 JavaScriptのざっくり解説（なるべくわかりやすく）
+
+JSコードの中身を理解しておきたいとのことでしたので、ひとつずつ丁寧に分解してみます。
+
+#### 🔸1. DOM読み込みを待ってからスタート
+```
+document.addEventListener("DOMContentLoaded", () => {
+```
+→ ページのHTML構造が全部読み込まれた後に中身の処理を実行するよ、という合図。
+
+
+#### 🔸2. 監視対象の要素を取得
+
+```
+const sections = document.querySelectorAll("article h2, article h3");
+```
+
+→ 記事の中にある h2 や h3 をすべて取得。
+これが「どの見出しが表示されているか」を監視する対象。
+
+#### 🔸3. 目次リンクの一覧も取得
+
+```
+const navLinks = document.querySelectorAll(".toc a");
+```
+→ .toc の中にある a タグ（目次のリンク）を全部拾っておく。
+
+
+#### 🔸4. IntersectionObserver（交差監視）
+
+```
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+```
+→ ブラウザに「スクロールで要素が画面内に入ったら教えて！」と頼む仕組み。
+
+{{< link-card url="https://qiita.com/takahashi-yoji/items/904ad0d96b59e0fc0cc7" title="IntersectionObserverとは？ - Qiita" description="はじめにフッターまでスクロールした際に、画面の下部にあるボタンがフェードアウトするような実装をしました。scrollイベントだと、画面が動くたびにイベントが発火されるので、パフォーマンス的に良く…" image="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1pbWFnZS1zdG9yZSUyRjAlMkYyNjI4MTIyJTJGY2VhOWEzNzQ2YjUwNTdhYzlkNTViODcyNDNiMGMzY2JiYjM5YTdmMSUyRnhfbGFyZ2UucG5nJTNGMTcwNzYxOTExNz9peGxpYj1yYi00LjAuMCZhcj0xJTNBMSZmaXQ9Y3JvcCZtYXNrPWVsbGlwc2UmZm09cG5nMzImcz03NTIzOTU0MmZiMzQwYTBjNzY1YjM1OWY0Yzc5YjgzOQ%26blend-x%3D120%26blend-y%3D462%26blend-w%3D90%26blend-h%3D90%26blend-mode%3Dnormal%26mark64%3DaHR0cHM6Ly9xaWl0YS1vcmdhbml6YXRpb24taW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1vcmdhbml6YXRpb24taW1hZ2UlMkYwNGQ1OGQ2ODY5NzIyNjI5ZDliODg4NzY3ZmE2MWMxMzgzZGZhNmIyJTJGb3JpZ2luYWwuanBnJTNGMTY4NzQxMjI4MD9peGxpYj1yYi00LjAuMCZ3PTQ0Jmg9NDQmZml0PWNyb3AmbWFzaz1jb3JuZXJzJmNvcm5lci1yYWRpdXM9OCZib3JkZXI9MiUyQ0ZGRkZGRiZmbT1wbmczMiZzPTM5NWEwNmZlN2JmNzViYTFiOWU5NTM1ODRhYTI2MzJh%26mark-x%3D186%26mark-y%3D515%26mark-w%3D40%26mark-h%3D40%26s%3Da46834547f42a4efc761c01425a91d58?ixlib=rb-4.0.0&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9SW50ZXJzZWN0aW9uT2JzZXJ2ZXIlRTMlODElQTglRTMlODElQUYlRUYlQkMlOUYmdHh0LWFsaWduPWxlZnQlMkN0b3AmdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT01NiZ0eHQtcGFkPTAmcz1mY2JjM2QxYjc0M2YwNDc5YmM3NGI3YjAzNjY0N2NkMQ&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDB0YWthaGFzaGkteW9qaSZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1wYWQ9MCZzPTRlNTllOWQ3YjljNDIyNzk4N2UwOTRlZjVmNzgxNDM4&blend-x=242&blend-y=454&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&txt64=5qCq5byP5Lya56S-UmVsaWM&txt-x=242&txt-y=539&txt-width=838&txt-clip=end%2Cellipsis&txt-color=%231E2121&txt-font=Hiragino%20Sans%20W6&txt-size=28&s=a549425017d335439522f9dea1d08383" >}}
+
+#### 🔸5. どの目次リンクをハイライトするか判定
+
+```
+const id = entry.target.getAttribute("id");
+navLinks.forEach((link) => {
+  link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+});
+```
+→ 現在画面に映ってる見出しのIDと一致する目次リンクだけ .active を付ける。
+
+#### 🔸6. 最後に全部の見出しを監視開始
+
+```
+sections.forEach((section) => observer.observe(section));
+```
+
+#### 💡 イメージとしては…
+
+「画面に映った見出し」をトラッキングして、対応する目次に青い下線や背景色をつけてるだけです。
