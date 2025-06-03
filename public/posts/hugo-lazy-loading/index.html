@@ -6,7 +6,7 @@
 
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/custom.91c5dcf097a417ac5408b9be5178822a7b0dbe1ffe749766b4063c3066ce4a43.css">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.173fff4b735dff3982357b231f6886d3d72b29180e23151858bd8d8f1cb442bf.css">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -78,6 +78,64 @@
       </ul>
 
       
+      
+<div x-data="searchComponent()" x-init="init()" class="open false">
+  
+  <button @click="open = true" class="search-toggle" aria-label="Search">
+    🔍
+  </button>
+
+  
+  <div
+    x-show="open"
+    class="modal-overlay fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center"
+    x-transition
+    @keydown.escape.window="open = false"
+  >
+    <div
+      class="modal-box bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-xl shadow-lg relative"
+    >
+      
+      <button
+        @click="open = false"
+        class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 dark:hover:text-white"
+      >
+        ✕
+      </button>
+
+      
+      <input
+        type="text"
+        placeholder="検索語を入力..."
+        class="w-full px-4 py-2 border rounded focus:outline-none focus:ring"
+        x-model="searchQuery"
+        @input.debounce.300ms="search"
+        x-ref="searchInput"
+        @keydown.window.slash.prevent="open = true; $nextTick(() => $refs.searchInput.focus())"
+      />
+
+      
+      <ul class="search-results">
+        <template
+          x-for="result in results"
+          :key="result?.item?.permalink || result?.refIndex || result"
+        >
+          <li class="search-result" x-show="result?.item">
+            <a :href="result.item.permalink" class="search-result-link">
+              <h3 x-text="result.item.title"></h3>
+              <p x-text="result.item.summary"></p>
+            </a>
+          </li>
+        </template>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script src="http://localhost:1313/js/searchComponent.js" defer></script>
+
+
+      
       <div class="logo-switches">
         
         <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
@@ -102,7 +160,7 @@
         </button>
         
       </div>
-      
+
     </div>
   </nav>
 </header>
@@ -349,7 +407,10 @@ layouts/partials/li.html などを開いて、以下のような行を探して�
     });
   });
 </script>
+
 <script src="http://localhost:1313/js/scrollspy.js" defer></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 <script src="http://localhost:1313/js/lunr.min.js"></script>
 <script src="http://localhost:1313/js/lunr.stemmer.support.js"></script>

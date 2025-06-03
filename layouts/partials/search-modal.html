@@ -1,0 +1,55 @@
+<!-- ✅ Alpine.js のスコープを一つにする -->
+<div x-data="searchComponent()" x-init="init()" class="open false">
+  <!-- モーダルトリガー -->
+  <button @click="open = true" class="search-toggle" aria-label="Search">
+    🔍
+  </button>
+
+  <!-- モーダル本体 -->
+  <div
+    x-show="open"
+    class="modal-overlay fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center"
+    x-transition
+    @keydown.escape.window="open = false"
+  >
+    <div
+      class="modal-box bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-xl shadow-lg relative"
+    >
+      <!-- ✕ 閉じる -->
+      <button
+        @click="open = false"
+        class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 dark:hover:text-white"
+      >
+        ✕
+      </button>
+
+      <!-- 🔍 検索ボックス -->
+      <input
+        type="text"
+        placeholder="検索語を入力..."
+        class="w-full px-4 py-2 border rounded focus:outline-none focus:ring"
+        x-model="searchQuery"
+        @input.debounce.300ms="search"
+        x-ref="searchInput"
+        @keydown.window.slash.prevent="open = true; $nextTick(() => $refs.searchInput.focus())"
+      />
+
+      <!-- 🔎 検索結果 -->
+      <ul class="search-results">
+        <template
+          x-for="result in results"
+          :key="result?.item?.permalink || result?.refIndex || result"
+        >
+          <li class="search-result" x-show="result?.item">
+            <a :href="result.item.permalink" class="search-result-link">
+              <h3 x-text="result.item.title"></h3>
+              <p x-text="result.item.summary"></p>
+            </a>
+          </li>
+        </template>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script src="/js/searchComponent.js" defer></script>

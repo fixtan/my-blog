@@ -9,13 +9,6 @@
     <lastBuildDate>Mon, 02 Jun 2025 15:39:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[WebMSX] 自前でMSXサイトを作成</title>
-      <link>http://localhost:1313/posts/webmsx-hugo-netlify/</link>
-      <pubDate>Wed, 28 May 2025 20:02:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/webmsx-hugo-netlify/</guid>
-      <description>WebMSXを活用しWEBサイトでMSXを動作させる方法の紹介</description>
-    </item>
-    <item>
       <title>[Decap CMS]  description を編集できるようにする</title>
       <link>http://localhost:1313/posts/decapcms-add-description/</link>
       <pubDate>Fri, 30 May 2025 13:07:00 +0000</pubDate>
@@ -28,6 +21,13 @@
       <pubDate>Mon, 02 Jun 2025 15:39:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/vscode-basic-course-01/</guid>
       <description>AIの指導による VSCode 基礎マスター講座 01 編集,ショートカット、Front Matter CMS</description>
+    </item>
+    <item>
+      <title>[WebMSX] 自前でMSXサイトを作成</title>
+      <link>http://localhost:1313/posts/webmsx-hugo-netlify/</link>
+      <pubDate>Wed, 28 May 2025 20:02:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/webmsx-hugo-netlify/</guid>
+      <description>WebMSXを活用しWEBサイトでMSXを動作させる方法の紹介</description>
     </item>
   </channel>
 </rss>

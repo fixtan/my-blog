@@ -36,6 +36,9 @@
         {{ end }}
       </ul>
 
+      <!-- 検索用虫メガネアイコン -->
+      {{ partial "search-modal.html" . }}
+
       <!-- テーマ切り替えボタン -->
       <div class="logo-switches">
         {{ if not site.Params.disableThemeToggle }}
@@ -61,7 +64,7 @@
         </button>
         {{ end }}
       </div>
-      
+
     </div>
   </nav>
 </header>

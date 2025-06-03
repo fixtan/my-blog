@@ -6,7 +6,7 @@
     <description>Recent content on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 03 Jun 2025 07:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jun 2025 15:30:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FramePackによるAIアニメーション</title>
@@ -44,11 +44,11 @@
       <description>FramePack-eichi を活用したAIアニメーションの制作事例と手順。</description>
     </item>
     <item>
-      <title>[WebMSX] 自前でMSXサイトを作成</title>
-      <link>http://localhost:1313/posts/webmsx-hugo-netlify/</link>
-      <pubDate>Wed, 28 May 2025 20:02:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/webmsx-hugo-netlify/</guid>
-      <description>WebMSXを活用しWEBサイトでMSXを動作させる方法の紹介</description>
+      <title>[Hugo] Alpine.jsで検索モーダルを実装（Fuse.js対応）</title>
+      <link>http://localhost:1313/posts/hugo-alpine_js-fuse_js/</link>
+      <pubDate>Tue, 03 Jun 2025 15:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-alpine_js-fuse_js/</guid>
+      <description>Hugo × Alpine.js × Fuse.js：軽量な検索モーダルの作り方</description>
     </item>
     <item>
       <title>[Hugo] 静的ブログにgiscusでコメント機能を追加する方法</title>
@@ -197,6 +197,13 @@
       <pubDate>Sat, 31 May 2025 19:10:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/decapcms-bug-duplicate-indexeddb-bug/</guid>
       <description>Decap CMSとの格闘録 ― Duplicate問題とIndexedDBの残高の6時間</description>
+    </item>
+    <item>
+      <title>[WebMSX] 自前でMSXサイトを作成</title>
+      <link>http://localhost:1313/posts/webmsx-hugo-netlify/</link>
+      <pubDate>Wed, 28 May 2025 20:02:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/webmsx-hugo-netlify/</guid>
+      <description>WebMSXを活用しWEBサイトでMSXを動作させる方法の紹介</description>
     </item>
     <item>
       <title>自己紹介</title>
