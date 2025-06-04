@@ -1,0 +1,32 @@
+{{ define "main" }}
+  <div class="section-block--category">
+    <h2 class="section-heading section-heading--category">カテゴリ：{{ .Title }}</h2>
+
+    <section class="post-grid">
+      {{ range .Paginator.Pages }}
+        {{ partial "post-card.html" . }}
+      {{ end }}
+    </section>
+
+    <!-- ✅ ページネーションナビ -->
+    {{ $paginator := .Paginator }}
+    {{ if gt $paginator.TotalPages 1 }}
+      <nav class="pagination">
+        {{ with $paginator.First }}
+          <a class="page-link" href="{{ .URL }}">&laquo; 最初</a>
+        {{ end }}
+
+        {{ range $paginator.Pagers }}
+          <a class="page-number {{ if eq . $paginator }}active{{ end }}" href="{{ .URL }}">
+            {{ .PageNumber }}
+          </a>
+        {{ end }}
+
+        {{ with $paginator.Next }}
+          <a class="page-link" href="{{ .URL }}">次へ &raquo;</a>
+        {{ end }}
+      </nav>
+    {{ end }}
+
+  </div>
+{{ end }}

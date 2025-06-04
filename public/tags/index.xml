@@ -6,8 +6,29 @@
     <description>Recent content in Tags on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 03 Jun 2025 15:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Jun 2025 12:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>カテゴリ</title>
+      <link>http://localhost:1313/tags/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ナビゲーションバー</title>
+      <link>http://localhost:1313/tags/%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%90%E3%83%BC/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%90%E3%83%BC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>プルダウンメニュー</title>
+      <link>http://localhost:1313/tags/%E3%83%97%E3%83%AB%E3%83%80%E3%82%A6%E3%83%B3%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E3%83%97%E3%83%AB%E3%83%80%E3%82%A6%E3%83%B3%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Alpine.js</title>
       <link>http://localhost:1313/tags/alpine.js/</link>

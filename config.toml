@@ -59,7 +59,7 @@ theme = 'PaperMod'
     identifier = "about"
     name = "自己紹介"
     url = "/about/"
-    weight = 2
+    weight = 20
 
 [params.assets]
    customCSS = ["css/custom.css"]

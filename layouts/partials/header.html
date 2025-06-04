@@ -34,7 +34,27 @@
           </a>
         </li>
         {{ end }}
+
+
+        <!-- ✅ 追加：カテゴリドロップダウン -->
+        <li class="group relative">
+          <a href="#" class="nav-link">カテゴリ ▼</a>
+          <ul class="absolute left-0 hidden group-hover:block bg-white text-black shadow-md rounded p-2 z-50">
+          {{ $icons := site.Data.categoryIcons }}
+          {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+            <li>
+              <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">
+                {{ index $icons $name }}  {{ $name }} ({{ len $taxonomy }})
+              </a>
+            </li>
+          {{ end }}
+          </ul>
+        </li>
+
+
       </ul>
+
+
 
       <!-- 検索用虫メガネアイコン -->
       {{ partial "search-modal.html" . }}

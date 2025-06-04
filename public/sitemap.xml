@@ -22,6 +22,9 @@
     <loc>http://localhost:1313/posts/netlify-domain-settings/</loc>
     <lastmod>2025-05-26T08:18:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/hugo-navigation-add-category/</loc>
+    <lastmod>2025-06-04T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/python-png-to-webp-conv/</loc>
     <lastmod>2025-05-31T08:32:00+00:00</lastmod>
   </url><url>
@@ -109,25 +112,34 @@
     <loc>http://localhost:1313/posts/third/</loc>
     <lastmod>2025-05-15T01:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-06-04T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/hugo/</loc>
+    <lastmod>2025-06-04T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-06-04T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-06-04T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-06-04T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA/</loc>
+    <lastmod>2025-06-04T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%90%E3%83%BC/</loc>
+    <lastmod>2025-06-04T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E3%83%97%E3%83%AB%E3%83%80%E3%82%A6%E3%83%B3%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC/</loc>
+    <lastmod>2025-06-04T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/alpine.js/</loc>
     <lastmod>2025-06-03T15:30:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-06-03T15:30:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/fuse.js/</loc>
-    <lastmod>2025-06-03T15:30:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/hugo/</loc>
-    <lastmod>2025-06-03T15:30:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-06-03T15:30:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-06-03T15:30:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-06-03T15:30:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E6%A4%9C%E7%B4%A2%E3%83%A2%E3%83%BC%E3%83%80%E3%83%AB/</loc>
