@@ -24,3 +24,27 @@
 <script src="{{ "js/scrollspy.js" | relURL }}" defer></script>
 <!-- Alpine.js v3 CDN -->
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+{{- if not (.Param "hideFooter") }}
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      {{- if not site.Params.footer.hideCopyright }}
+        {{- if site.Copyright }}
+          {{ site.Copyright | markdownify }}
+        {{- else }}
+          &copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a>
+        {{- end }}
+      {{- end }}
+    </div>
+    <div class="footer-right">
+      <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+      </span>
+    </div>
+  </div>
+</footer>
+{{- end }}
