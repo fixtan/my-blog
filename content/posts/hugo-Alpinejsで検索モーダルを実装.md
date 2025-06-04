@@ -72,7 +72,7 @@ hugo server -D
 
 ### search-modal.htmlを作成
 
-以下のHTMLを layouts/partials/search-modal.html に作成して保存してください：
+以下のHTMLを layouts/partials/search-modal.html に作成して保存。
 
 ```
 <div x-data="{ open: false }">
@@ -123,10 +123,35 @@ hugo server -D
 - / キーでも開く機能付き（実用的！）
 
 
+### 表示テスト方法
+
+#### ① 表示場所の例（single.html or header.html）に以下を追加：
+
+
+```
+{{ partial "search-modal.html" . }}
+```
+※仮で layouts/_default/single.html に入れて試してもOKです。
+
+
+#### ② ブラウザで確認：
+
+- 🔍ボタンが表示されること
+- クリックでモーダルが開くこと
+- ESCキーや✕ボタンで閉じること
+- /キーでも開くか（日本語キーボードの場合は別キーが必要かも）
+
+<br>
+
+
+ <a href="/images/uploads/hugo-alpine_js-fuse_js-form.jpg" target="_blank">
+<img src="/images/uploads/hugo-alpine_js-fuse_js-form.jpg" alt="検索ボックス表示確認"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
 
 ## 3：CSSで背景ブラーや表示位置を調整
 
-### 目的
+**目的**
 
 - 背景をぼかして視覚的にモーダルであることを強調
 - ウインドウ中央に検索ボックスを固定
@@ -198,8 +223,14 @@ hugo server -D
 - ESCや✕ボタンで閉じられるか
 - 表示されたままスクロールできないこと（今後調整）
 
+<a href="/images/uploads/hugo-alpine_js-fuse_js-form2.jpg" target="_blank">
+<img src="/images/uploads/hugo-alpine_js-fuse_js-form2.jpg" alt="検索モーダル表示テスト"  loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
 
-##  4：Fuse.js を使って検索機能を追加（インデックス化＋検索表示）
+
+##  4：検索機能を追加（Fuse.js）
+
+Fuse.jsで検索機能を追加（インデックス化＋検索表示）
 
 検索処理の「JavaScriptロジックの中身の理解」(解説)
 
@@ -246,7 +277,7 @@ document.addEventListener("alpine:init", () => {
 
 上記のコードでは以下を行っています：
 
-✅ 主な処理内容
+### 主な処理内容
 
 | 処理                 | 説明                                                                              |
 | -------------------- | --------------------------------------------------------------------------------- |
@@ -255,7 +286,7 @@ document.addEventListener("alpine:init", () => {
 | `search()`           | 入力されたクエリ文字列を使って検索実行、結果を `results` に代入                   |
 
 
-✅ 補足ポイント
+### 補足ポイント
 - keys: ["title", "description", "content"]：検索対象のフィールドを指定（記事のタイトル・説明・本文）
 - threshold: 0.4：マッチの曖昧さ。数値を小さくするほど厳密に検索される
 - includeMatches: true：マッチ部分をハイライト表示したい場合に便利（今回は未使用）
@@ -265,14 +296,15 @@ document.addEventListener("alpine:init", () => {
 次のステップでは、results を .x-for でリスト表示させる必要があります。
 
 
-## 5：検索結果の表示（Alpine.js + Fuse.js）
+## 5：検索結果の表示
 
+Alpine.js + Fuse.jsで検索結果の表示。
 ここでは results 配列に入っている検索結果を、検索モーダルの中に一覧表示させます。
 Alpine.js の x-for ディレクティブを使って、result オブジェクトの情報をループで展開します。
 
-### 🔧 実装する場所
+### 実装する場所
 
-layouts/partials/search-modal.html の中の、div class="modal-body" など、
+layouts/partials/search-modal.html の中の、div class="modal-body" など。
 検索ボックスのすぐ下が理想的です。
 
 
@@ -302,7 +334,7 @@ layouts/partials/search-modal.html の中の、div class="modal-body" など、
 | `result.item.permalink`        | Hugo 側で用意したページURL                   |
 
 
-### CSSによるスタイリング（後から調整）
+### CSSによるスタイリング
 
 以下のようなクラスで、検索結果の見た目を整えることができます（例）：
 ```
@@ -335,6 +367,8 @@ layouts/partials/search-modal.html の中の、div class="modal-body" など、
   color: #666;
 }
 ```
+細かいデザインは後で調整するので、とりあえず動作確認用。
+
 
 ### 確認ポイント
 
@@ -344,14 +378,15 @@ layouts/partials/search-modal.html の中の、div class="modal-body" など、
 4. 各結果をクリックで記事に遷移できる
 
 
-## 6：検索ロジックと Alpine.js 連携（Fuse.js）
+## 6：検索ロジックと Alpine.js 連携
 
-### 目的
+検索ロジックと Alpine.js 連携（Fuse.js）
+
 - 検索インデックスを読み込む（index.json）
 - ユーザーの入力を元に Fuse.js で検索を実行
 - results に検索結果を保存し、Alpine.js 側で描画
 
-### 1. assets/js/searchComponent.js を新規作成
+### 1. searchComponent.js を作成
 
 以下のコードを assets/js/searchComponent.js に保存
 
@@ -388,7 +423,7 @@ function searchComponent() {
  検索対象キーは "title", "summary", "content" です。必要に応じてカスタマイズできます。
 
 
-### 2. 上記 JS を static/js/ に移動して読み込む
+### 2. JS を static/js/ に移動
 
 assets/js/ ではブラウザが直接読み込めないため、searchComponent.js を
 
@@ -396,22 +431,26 @@ assets/js/ ではブラウザが直接読み込めないため、searchComponent
 
 layouts/partials/search-modal.html の script に以下を追加：
 
-{{</* /raw */>}}
+
 ```
 <script src="/js/searchComponent.js" defer></script>
 ```
-{{</* /raw */>}}
 
 
-### 3. search-modal.html のルートに x-data="searchComponent()" を追加
+
+### 3. x-data="searchComponent()"
+
+search-modal.html のルートに x-data="searchComponent()" を追加
 
 ```
 <div x-data="searchComponent()" x-init="init()" class="open false">
 ```
 
-### 4. 検索欄に入力時に search() を発火させる
+### 4.  入力時 search() を発火
 
-<input> タグを以下のように変更します：
+検索欄に入力時に search() を発火させる
+
+input タグを以下のように変更します：
 
 ```
 <input
@@ -433,11 +472,11 @@ layouts/partials/search-modal.html の script に以下を追加：
 | `searchQuery` にバインド＋検索処理 | ✅ 済み |
 
 
-### トラブル対処（表示されない・動かない）
+### トラブル対処
 
-上手く動かなかったので、最終的に修正して以下で動くようになりました。
+上手く動かなかったので、修正。
 
-> \static\js\searchComponent.js
+ **\static\js\searchComponent.js**
 
 ```
 function searchComponent() {
@@ -471,7 +510,7 @@ function searchComponent() {
 
 ```
 
-> layouts\partials\search-modal.html
+**layouts\partials\search-modal.html**
 
 ```
 <!-- ✅ Alpine.js のスコープを一つにする -->
@@ -531,28 +570,324 @@ function searchComponent() {
 <script src="/js/searchComponent.js" defer></script>
 ```
 
+### 動作確認と課題
+
+AIの指示通りでは上手く行かない所があった為、修正し検索が機能するようになりました。
+
+<a href="/images/uploads/hugo-alpine_js-fuse_js-seach.jpg" target="_blank">
+<img src="/images/uploads/hugo-alpine_js-fuse_js-seach.jpg"
+         alt=""
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
 
 
+課題としては
 
+- CSSでデザイン修正
+- 検索モーダルが初回一瞬表示される問題
+- 検索結果のURLがすべてトップページへ飛ぶ
+- 検索ボックスのサイズ変更
+- アイキャッチ画像を表示してリンクカード風に
 
 
 ## 7：検索結果のスタイル調整
 
+HTML,CSSを修正して縦に並ぶリスト表示。
+下の画像をクリックするとgifアニメーションで実際の動作画面を確認できます。
+
+<a href="/images/uploads/hugo-alpine_js-fuse_js-seach2.gif" target="_blank">
+<img src="/images/uploads/hugo-alpine_js-fuse_js-seach2.gif"
+         alt="7：検索結果のスタイル調整"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+## 8：検索モーダルが一瞬表示される問題
+
+ページを開く際やリロード時に、一瞬だけ検索モーダルが表示される問題。
+
+x-cloak をモーダル全体に付けて初期チラ見えを防止します。
+
+モーダルウインドウの以下のDIVタグで一番外側を囲うようにします。
+
+PATH: layouts/partials/search-modal.html
+
+```
+<div x-data="{ open: false }" x-cloak>
+```
 
 
+CSSに以下を追加(x-cloak のCSS)
+```
+[x-cloak] {
+  display: none !important;
+}
+```
 
 
+## 9：検索結果のURLの修正
+
+検索結果のURLがすべてトップページへ飛ぶ問題の修正。
+
+**PATH: \layouts\partials\search-modal.html**
+
+```
+<!-- 元のコード -->
+<a :href="result.item.permalink" class="search-result-link">
+
+<!-- 修正後（index.jsonに"url"キーがある場合） -->
+<a :href="result.item.url" class="search-result-link">
+```
+
+ **※URLは、記事作成時のYAML Frontmatに依存**
+
+うちのサイトで index.jsonの出力形式は以下のようになってます。
+```
+[
+  {
+    "title": "[Hugo] Alpine.jsで検索モーダルを実装（Fuse.js対応）",
+    "summary": "Hugo × Alpine.js × Fuse.js：軽量な検索モーダルの作り方",
+    "url": "/posts/hugo-alpine_js-fuse_js/"
+  },
+  ...
+]
+```
 
 
-## Fuse.jsやLunr.jsとの比較
+## 10：検索結果にアイキャッチ画像を表示
 
-## コード解説（モーダル＋ブラー＋入力）
+検索結果にアイキャッチ画像（thumbnail）を追加するには
 
-## カスタマイズ例（背景色やサイズ変更）
+### 1. index.json修正
+
+index.json に image や thumbnail を含める
+
+layouts/_default/index.json（またはカスタム search.json）にて、以下のように .Params.image を出力するようテンプレートを編集します：
+
+```
+{{- $.Scratch.Set "index" slice -}}
+{{- range .Site.RegularPages -}}
+  {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) }}
+    {{- $.Scratch.Add "index" (dict
+      "title" .Title
+      "content" .Plain
+      "summary" .Summary
+      "url" .RelPermalink
+      "image" .Params.image
+    ) -}}
+  {{- end }}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}
+```
+これにより、Front Matter で image: /images/xxx.webp のように指定していれば、それが index.json に含まれます。
 
 
+### 2. 各記事の画像URL確認
 
-## 完成スクリーンショット／動作動画
+各記事の Front Matter に画像URLを追加
 
-## テンプレートのダウンロード or GitHubリンク
+たとえば、content/posts/xxxx.md の先頭に：
+
+```
+---
+title: "[HUGO] リンクをカード風に表示する"
+image: "/images/card/hugo-link-card.webp"
+...
+---
+```
+
+### 3. search-modal.html修正
+
+search-modal.html 側で画像を表示
+
+```
+<li class="search-result" x-show="result?.item">
+  <a :href="result.item.url" class="search-result-link">
+    <div class="search-result-card">
+      <img :src="result.item.image" class="search-result-thumb" alt="" />
+      <div class="search-result-content">
+        <h3 x-text="result.item.title"></h3>
+        <p x-text="result.item.summary"></p>
+      </div>
+    </div>
+  </a>
+</li>
+```
+
+CSS追加
+```
+.search-result-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.search-result-thumb {/* サムネ画像* /
+  width: 120px;
+  object-fit: contain;/* ← cover から変更 */
+  border-radius: 8px;
+  display: block;
+  background-color: #f8f8f8; /* 余白が出るときの背景対策 */
+}
+
+.search-result-content {
+  flex: 1;
+}
+
+.search-result-summary {
+  font-size: 0.9rem;
+  color: #555;
+}
+```
+
+### 動作確認
+
+<a href="/images/uploads/hugo-alpine_js-fuse_js-seach3.jpg" target="_blank">
+<img src="/images/uploads/hugo-alpine_js-fuse_js-seach3.jpg"
+         alt="検索結果にアイキャッチ画像を表示"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+## 11：検索ボックスのデザイン修正
+
+検索ボックスを .search-wrapper でラップ
+
+```
+<div
+  class="modal-box bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-2xl shadow-lg relative"
+>
+  <!-- 🔍 検索ボックス UI カスタマイズ -->
+  <div class="search-wrapper">
+    <div class="search-box-container">
+      <!-- 🔍アイコン -->
+      <span class="text-gray-500 dark:text-gray-300 mr-2">🔍</span>
+
+      <!-- 入力欄 -->
+      <input
+        type="text"
+        placeholder="検索語を入力..."
+        x-model="searchQuery"
+        @input.debounce.300ms="search"
+        x-ref="searchInput"
+        @keydown.window.slash.prevent="open = true; $nextTick(() => $refs.searchInput.focus())"
+      />
+
+      <!-- ✕ボタン -->
+      <button @click="searchQuery = ''; open = false">✕</button>
+    </div>
+  </div>
+```
+
+CSS
+```
+/* ■ モーダル検索ボックス：ここから  */
+.search-box-container {
+  display: flex;
+  align-items: center;
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.search-box-container input {
+  flex-grow: 1;
+  border: none;
+  background: transparent;
+  color: white;
+}
+
+.search-box-container button {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+}
+/* 独自調整する場合 */
+.search-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.search-wrapper input {
+  font-size: 1.125rem; /* text-lg */
+  padding: 0.75rem;
+}
+/* ■ モーダル検索ボックス：ここまで  */
+```
+
+表示確認
+
+<a href="/images/uploads/hugo-alpine_js-fuse_js-seach4..jpg" target="_blank">
+<img src="/images/uploads/hugo-alpine_js-fuse_js-seach4.jpg"
+         alt="検索ボックスのデザイン修正"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+## 12.モーダル外をクリックで閉じる
+
+現在の仕様だと、モーダル検索ウインドウが出た後、閉じる為には、バツボタンをクリックするか、キーボードの[ESC] か [/]を押す、若しくは、検索結果のリンクを踏む以外はウインドウを閉じる事が出来ない仕様になっています。
+
+モーダルウインドウを実装する場合、ウインドウ外をクリック or タップで画面を閉じる仕様がデフォルトだと思うのでこれを実装します。
+
+search-modal.htmlを編集します。
+
+[PATH] **layouts\partials\search-modal.html**
+
+```
+<div x-data="searchComponent()" x-init="init()" x-cloak>
+  <!-- トリガー -->
+  <button @click="open = true" class="search-toggle" aria-label="Search">
+    🔍
+  </button>
+
+  <!-- モーダル本体 -->
+  <div
+    x-show="open"
+    @click.self="open = false"
+    class="modal-overlay fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center"
+    x-transition
+    @keydown.escape.window="open = false"
+  >
+    <!-- モーダル本体：クリックしても閉じないように stop -->
+    <div
+      class="modal-box bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-2xl shadow-lg relative"
+      @click.stop
+    >
+    ...
+
+```
+
+| ディレクティブ         | 意味                                                                    |
+| ---------------------- | ----------------------------------------------------------------------- |
+| `@click.self="..."`    | **その要素自身**がクリックされた時だけ実行（＝中の要素は無視）          |
+| `@click.outside="..."` | **要素の“外側”がクリックされたときに実行**（ただし Alpine v3.10+ 限定） |
+
+
+これは「オーバーレイ自身がクリックされたとき（＝中の白いボックス以外）」に open = false を実行します。
+
+⚠ ただし .modal-box をクリックしたときに伝播を止めないと、意図しない閉じ方になるので @click.stop を .modal-box に追加する必要あり：
+```
+<div class="modal-box ..." @click.stop>
+```
+
+
+searchComponent.js の中で open を宣言する
+
+```
+function searchComponent() {
+  return {
+    open: false, // ← これを追加
+    searchQuery: "",
+    results: [],
+    init() {
+      // 初期化ロジック
+    },
+    search() {
+      // 検索処理
+    }
+  };
+}
+
+```
+
 

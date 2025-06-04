@@ -929,8 +929,10 @@ body.dark .share-buttons li a:hover {
 /* ■ 記事ページの目次ブロック：ここまで  */
 
 
+
+
 /* ■ モーダル検索ブロック：ここから  */
-.modal-overlay {
+.modal-overlay {/* モーダル本体：外枠 */
   position: fixed;
   inset: 0;
   z-index: 999;
@@ -941,7 +943,7 @@ body.dark .share-buttons li a:hover {
   justify-content: center;
 }
 
-.modal-box {
+.modal-box {/* 検索：外枠 */
   background: #fff;
   padding: 1.5rem;
   border-radius: 0.75rem;
@@ -950,35 +952,28 @@ body.dark .share-buttons li a:hover {
   box-shadow: 0 0 30px rgba(0,0,0,0.2);
   position: relative;
 }
-.search-modal {
-  position: fixed;
-  top: 10%; /* 上から10%の位置に変更 */
-  left: 50%;
-  transform: translate(-50%, 0); /* 横中央に */
-  z-index: 1001;
-  background: white;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
 
-.search-results-wrapper {
+.search-results-wrapper { /* 検索結果:親 */
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  padding: 0; /* 念のため追加 */
+  padding: 10px 0px 0px 0px;*/ /* 念のため追加 */
 }
-.search-results {
+.search-results {/* 検索結果:子 */
+  width: 99%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 0 1rem; /* 左右に狭めた padding（または 0） */
+  padding: 10px 1rem 10px 10px; /* 左右に狭めた padding（または 0） */
   max-height: 65vh;
   overflow-y: auto;
+  @apply bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-4 my-2;
+  @apply transition hover:bg-gray-200 dark:hover:bg-gray-700;
+  display: block;
 }
 
-.search-result-item {
-  width: 100%;
+.search-result-item {/* 検索結果:子：リスト */
+  width: 90%;
   background: #fff;
   border-radius: 0.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -1002,15 +997,103 @@ body.dark .share-buttons li a:hover {
   margin-bottom: 0.3rem;
 }
 
+.search-result-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+}
+.search-result-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+.search-result-thumb {/* サムネ画像 */
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 4px;
+  margin-right: 1rem;
+  background-color: #f5f5f5;
+}
+
+.search-result-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.search-result-content h3 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+  color: #333;
+}
+.search-result-content p {
+  font-size: 0.875rem;
+  margin: 0;
+  color: #666;
+}
+
 .search-result-summary {
   font-size: 0.9rem;
   color: #555;
 }
+.read-more {
+  font-size: 0.75rem;
+  color: #007acc;
+  margin-top: 0.5rem;
+}
+.read-more:hover {
+  text-decoration: underline;
+}
+/* ■ モーダル検索ブロック：ここまで  */
 
+
+
+/* リロード時、検索モーダルが一瞬表示される問題対策用  */
 [x-cloak] {
   display: none !important;
 }
 
 
 
-/* ■ モーダル検索ブロック：ここまで  */
+/* ■ モーダル検索ボックス：ここから  */
+.search-box-container {
+  display: flex;
+  align-items: center;
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.search-box-container input {
+  flex-grow: 1;
+  border: none;
+  background: transparent;
+  color: white;
+}
+
+.search-box-container button {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+}
+/* 独自調整する場合 */
+.search-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.search-wrapper input {
+  font-size: 1.125rem; /* text-lg */
+  padding: 0.75rem;
+}
+/* ■ モーダル検索ボックス：ここまで  */

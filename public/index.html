@@ -7,7 +7,7 @@
 
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/custom.a6412e46e513137041b3ed49a3dcb9a752c14cf80c8cac8666b011cbcb79ada9.css">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.2773552b3ad093ca7c883a8d7e759f67b1bf70f608ee8a22fa57c955d0b3aaf6.css">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -79,63 +79,76 @@
       </ul>
 
       
-      <div x-data="{ open: false }" x-cloak>
+      <div x-data="searchComponent()" x-init="init()" x-cloak>
   
-  <div x-data="searchComponent()" x-init="init()" class="open false">
-    
-    <button @click="open = true" class="search-toggle" aria-label="Search">
-      🔍
-    </button>
+  <button @click="open = true" class="search-toggle" aria-label="Search">
+    🔍
+  </button>
 
+  
+  <div
+    x-show="open"
+    @click.self="open = false"
+    class="modal-overlay fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center"
+    x-transition
+    @keydown.escape.window="open = false"
+  >
     
     <div
-      x-show="open"
-      class="modal-overlay fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center"
-      x-transition
-      @keydown.escape.window="open = false"
+      class="modal-box bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-2xl shadow-lg relative"
+      @click.stop
     >
-      <div
-        class="modal-box bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-xl shadow-lg relative"
-      >
-        
-        <button
-          @click="open = false"
-          class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 dark:hover:text-white"
-        >
-          ✕
-        </button>
+      
+      <div class="search-wrapper">
+        <div class="search-box-container">
+          
+          <span class="text-gray-500 dark:text-gray-300 mr-2">🔍</span>
 
-        
-        <input
-          type="text"
-          placeholder="検索語を入力..."
-          class="w-full px-4 py-2 border rounded focus:outline-none focus:ring"
-          x-model="searchQuery"
-          @input.debounce.300ms="search"
-          x-ref="searchInput"
-          @keydown.window.slash.prevent="open = true; $nextTick(() => $refs.searchInput.focus())"
-        />
+          
+          <input
+            type="text"
+            placeholder="検索語を入力..."
+            x-model="searchQuery"
+            @input.debounce.300ms="search"
+            x-ref="searchInput"
+            @keydown.window.slash.prevent="open = true; $nextTick(() => $refs.searchInput.focus())"
+          />
 
-        
-        <div class="search-results-wrapper">
-          <ul class="search-results">
-            <template
-              x-for="result in results"
-              :key="result?.item?.permalink || result?.refIndex || result"
-            >
-              <li class="search-result" x-show="result?.item">
-                <a :href="result.item.url" class="search-result-link">
-                  <h3 x-text="result.item.title"></h3>
-                  <p x-text="result.item.summary"></p>
-                </a>
-              </li>
-            </template>
-          </ul>
+          
+          <button @click="searchQuery = ''; open = false">✕</button>
         </div>
+      </div>
+
+      
+      <div class="search-results-wrapper">
+        <ul class="search-results">
+          <template
+            x-for="result in results"
+            :key="result?.item?.permalink || result?.refIndex || result"
+          >
+            <li class="search-result" x-show="result?.item">
+              <a :href="result.item.url" class="search-result-link">
+                <div class="search-result-card">
+                  <img
+                    :src="result.item.image"
+                    class="search-result-thumb"
+                    alt=""
+                  />
+                  <div class="search-result-content">
+                    <h3 x-text="result.item.title"></h3>
+                    <p x-text="result.item.summary"></p>
+                    <span class="read-more">→ 続きを読む</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </template>
+        </ul>
       </div>
     </div>
   </div>
 </div>
+
 <script src="http://localhost:1313/js/searchComponent.js" defer></script>
 
 
@@ -178,14 +191,11 @@
   </div>
 </section>
 
-<div id="searchForm" role="search" class="search-bar-wrapper search-bar-form">
-  <input id="searchInput" type="text" placeholder="検索…" />
-  <select id="engineSwitch">
-    <option value="lunr">Lunr.js</option>
-    <option value="fuse">Fuse.js</option>
-  </select>
-</div>
-<ul id="searchResults" class="search-results"></ul>
+
+
+
+
+
 
 <div class="home-info">
   <div class="container">
@@ -530,6 +540,7 @@
     </script>
   </div>
 </div>
+
 
 
 

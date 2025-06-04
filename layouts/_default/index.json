@@ -6,6 +6,7 @@
       "content" .Plain
       "summary" .Summary
       "url" .RelPermalink
+      "image" .Params.image
     ) -}}
   {{- end }}
 {{- end -}}

@@ -7,16 +7,20 @@
   </div>
 </section>
 
-<div id="searchForm" role="search" class="search-bar-wrapper search-bar-form">
+<!-- ■検索フォーム（旧） -->
+<!--div id="searchForm" role="search" class="search-bar-wrapper search-bar-form">
   <input id="searchInput" type="text" placeholder="検索…" />
   <select id="engineSwitch">
     <option value="lunr">Lunr.js</option>
     <option value="fuse">Fuse.js</option>
   </select>
-</div>
-<ul id="searchResults" class="search-results"></ul>
+</div-->
+<!--■検索結果をリスト表示 -->
+<!--ul id="searchResults" class="search-results"></ul-->
 
+<!-- ■注目プロジェクト-->
 {{ partial "home-info.html" . }}
+
 {{/* すべての注目記事のBaseFileNameを取得 */}}
 {{ $highlighted := $.Site.Params.homeInfoParams.featured.items }}
 {{/* ✅featured記事の抽出とリンク記録 */}}
