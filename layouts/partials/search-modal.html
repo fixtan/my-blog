@@ -1,8 +1,13 @@
 <div x-data="searchComponent()" x-init="init()" x-cloak>
   <!-- トリガー -->
-  <button @click="open = true" class="search-toggle" aria-label="Search">
+  <a
+    href="#"
+    @click.prevent="open = true"
+    class="search-toggle"
+    aria-label="Search"
+  >
     🔍
-  </button>
+  </a>
 
   <!-- モーダル本体 -->
   <div

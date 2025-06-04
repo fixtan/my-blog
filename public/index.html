@@ -7,7 +7,7 @@
 
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/custom.2773552b3ad093ca7c883a8d7e759f67b1bf70f608ee8a22fa57c955d0b3aaf6.css">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.da2b4fec204e3d476f0fdfcc6a3f70cf9d18670e0ef028f52043670dc0d220f1.css">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -81,9 +81,14 @@
       
       <div x-data="searchComponent()" x-init="init()" x-cloak>
   
-  <button @click="open = true" class="search-toggle" aria-label="Search">
+  <a
+    href="#"
+    @click.prevent="open = true"
+    class="search-toggle"
+    aria-label="Search"
+  >
     🔍
-  </button>
+  </a>
 
   
   <div
