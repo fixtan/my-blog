@@ -191,48 +191,5 @@
       <guid>http://localhost:1313/posts/hugo-template/</guid>
       <description>使用中のテンプレートリスト確認方法</description>
     </item>
-    <item>
-      <title>CMS からテスト投稿２</title>
-      <link>http://localhost:1313/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</link>
-      <pubDate>Wed, 21 May 2025 17:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/cms-%E3%81%8B%E3%82%89%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF%EF%BC%92/</guid>
-      <description>&lt;p&gt;Draft　テスト投稿&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Decap CMS導入テスト投稿</title>
-      <link>http://localhost:1313/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</link>
-      <pubDate>Wed, 21 May 2025 01:01:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/decap-cms%E5%B0%8E%E5%85%A5%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</guid>
-      <description>&lt;p&gt;日本語入力テスト。&lt;/p&gt;
-&lt;p&gt;問題なく入力できるようです。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>ダミー記事12</title>
-      <link>http://localhost:1313/posts/first/</link>
-      <pubDate>Sat, 17 May 2025 00:01:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/first/</guid>
-      <description>&lt;p&gt;（本文はまだありません）&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>はじめての投稿</title>
-      <link>http://localhost:1313/posts/first-post/</link>
-      <pubDate>Sat, 17 May 2025 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/first-post/</guid>
-      <description>&lt;p&gt;こんにちは、これは私の最初のHugo記事です！&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Second</title>
-      <link>http://localhost:1313/posts/second/</link>
-      <pubDate>Thu, 15 May 2025 17:11:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/second/</guid>
-      <description>&lt;p&gt;テスト&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>３つ目の投稿</title>
-      <link>http://localhost:1313/posts/third/</link>
-      <pubDate>Thu, 15 May 2025 01:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/third/</guid>
-      <description>&lt;p&gt;（本文はまだありません）&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>

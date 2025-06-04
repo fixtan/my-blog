@@ -415,10 +415,24 @@
       <description></description>
     </item>
     <item>
-      <title>Decap CMS</title>
-      <link>http://localhost:1313/tags/decap-cms/</link>
+      <title>Collections</title>
+      <link>http://localhost:1313/tags/collections/</link>
       <pubDate>Sat, 24 May 2025 12:18:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/decap-cms/</guid>
+      <guid>http://localhost:1313/tags/collections/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Config.yml</title>
+      <link>http://localhost:1313/tags/config.yml/</link>
+      <pubDate>Sat, 24 May 2025 12:18:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/config.yml/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ERROR</title>
+      <link>http://localhost:1313/tags/error/</link>
+      <pubDate>Sat, 24 May 2025 12:18:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/error/</guid>
       <description></description>
     </item>
     <item>

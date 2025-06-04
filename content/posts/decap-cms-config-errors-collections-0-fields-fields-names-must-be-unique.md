@@ -8,9 +8,11 @@ author: lain
 image: /images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-3-.png
 summary: Netlify CMS/Decap CMSのカスタム中、ログインしようとするとエラーメッセージがでた際のトラブルTip
 categories:
-  - ブログ
-tags:
   - Decap CMS
+tags:
+  - ERROR
+  - collections
+  - config.yml
 weight: 9
 ---
 <center><img src="/images/uploads/はてなブログ　アイキャッチ画像　はてブ　blog-3-.png" width="80%"></center>
@@ -54,7 +56,7 @@ collections:
       - { label: "カテゴリ", name: "categories", widget: "list", required: false, default: ["その他"] }
       - { label: "タグ", name: "tags", widget: "list", required: false }
       - { label: "本文", name: "body", widget: "markdown" }
-      
+
       - label: "カテゴリ"
         name: "categories"
         widget: "list"

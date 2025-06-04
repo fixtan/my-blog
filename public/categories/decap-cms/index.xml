@@ -44,6 +44,13 @@
       <description>Decap CMSでcontent/posts 以外のディレクトリ記事を編集する方法の紹介</description>
     </item>
     <item>
+      <title>[Decap CMS] Config Errors: &#39;collections[0].fields&#39; fields names must be unique</title>
+      <link>http://localhost:1313/posts/decapcms-error-01/</link>
+      <pubDate>Sat, 24 May 2025 12:18:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/decapcms-error-01/</guid>
+      <description>Netlify CMS/Decap CMSのカスタム中、ログインしようとするとエラーメッセージがでた際のトラブルTip</description>
+    </item>
+    <item>
       <title>Decap CMSとの格闘録 ― Duplicate問題とIndexedDBの残高の6時間</title>
       <link>http://localhost:1313/posts/decapcms-bug-duplicate-indexeddb-bug/</link>
       <pubDate>Sat, 31 May 2025 19:10:00 +0000</pubDate>
