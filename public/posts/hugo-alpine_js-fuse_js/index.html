@@ -904,7 +904,7 @@ image: &#34;/images/card/hugo-link-card.webp&#34;
          alt="検索ボックスのデザイン修正"
         loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 </a>
-<h2 id="12モーダル外をクリックで閉じる">12.モーダル外をクリックで閉じる<a hidden class="anchor" aria-hidden="true" href="#12モーダル外をクリックで閉じる">#</a></h2>
+<h2 id="12モーダル外をクリックで閉じる">12：モーダル外をクリックで閉じる<a hidden class="anchor" aria-hidden="true" href="#12モーダル外をクリックで閉じる">#</a></h2>
 <p>現在の仕様だと、モーダル検索ウインドウが出た後、閉じる為には、バツボタンをクリックするか、キーボードの[ESC] か [/]を押す、若しくは、検索結果のリンクを踏む以外はウインドウを閉じる事が出来ない仕様になっています。</p>
 <p>モーダルウインドウを実装する場合、ウインドウ外をクリック or タップで画面を閉じる仕様がデフォルトだと思うのでこれを実装します。</p>
 <p>search-modal.htmlを編集します。</p>
@@ -964,7 +964,66 @@ image: &#34;/images/card/hugo-link-card.webp&#34;
     }
   };
 }
-</code></pre>
+</code></pre><h2 id="13配布用パッケージ">13：配布用パッケージ<a hidden class="anchor" aria-hidden="true" href="#13配布用パッケージ">#</a></h2>
+<p>ここまでAIと協力して作成してきましたが、AIからの提案で、今回の「モーダル＋検索UIを再利用できるコンポーネント風に分離する設計もご提案できるとの事だったので2日かけて作ってきたものを、共有したいと思います。</p>
+<h3 id="再利用できるメリット">再利用できるメリット<a hidden class="anchor" aria-hidden="true" href="#再利用できるメリット">#</a></h3>
+<ul>
+<li>別のプロジェクトでもコピペだけで使える</li>
+<li>テーマの更新で影響を受けにくくなる</li>
+<li>分離されたのでメンテナンスが楽</li>
+<li>設定だけ変えればカスタマイズも簡単になる</li>
+</ul>
+<h3 id="再利用化の方向性">再利用化の方向性<a hidden class="anchor" aria-hidden="true" href="#再利用化の方向性">#</a></h3>
+<blockquote>
+<p>/layouts/partials/<br>
+└── search-modal.html    ← コアHTML＋最低限の変数<br>
+<br>
+/static/js/<br>
+└── fuse-search.js       ← searchComponent() を汎用化（例：インデックスパスやUIクラス名を引数に）<br>
+<br>
+/assets/css/<br>
+└── fuse-search.css      ← 専用スタイルだけ別に抽出<br>
+<br>
+/config.toml or params/<br>
+└── [params.fuseSearch]  ← オプション設定（テーマ変数やホットキー指定など）<br></p></blockquote>
+<h3 id="ダウンロード">ダウンロード<a hidden class="anchor" aria-hidden="true" href="#ダウンロード">#</a></h3>
+<p>以下のリンクからダウンロードできます。</p>
+<a href="http://localhost:1313/download/fuse-search-template.zip">
+**📦 fuse-search-template.zip
+</a>
+<br>
+<br>
+<table>
+  <thead>
+      <tr>
+          <th>ファイル名</th>
+          <th>説明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>search-modal.html</code></td>
+          <td>Hugo 部品パーシャル（Alpine.jsで制御）</td>
+      </tr>
+      <tr>
+          <td><code>searchComponent.js</code></td>
+          <td>Fuse.jsでインデックス検索を実行</td>
+      </tr>
+      <tr>
+          <td><code>fuse-search.css</code></td>
+          <td>スタイル（検索ボックス・結果カードなど）</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="免責事項">免責事項<a hidden class="anchor" aria-hidden="true" href="#免責事項">#</a></h3>
+<p>本テンプレートは、HugoとAlpine.jsおよびFuse.jsを用いた検索モーダルUIの実装を支援する目的で無償公開しています。
+ご自由にダウンロード・改変・再配布していただけますが、以下の点についてあらかじめご理解とご了承をお願いします。</p>
+<p>本テンプレートを利用したことによるいかなる不具合・損害についても、作者および提供者は責任を負いません。</p>
+<p>環境やテーマの構成によっては、想定通りに動作しない場合があります。</p>
+<p>本テンプレートの内容は将来予告なく変更されることがあります。</p>
+<p>クレジット表記は任意ですが、引用や紹介の際は元記事URLをご記載いただけると嬉しいです。</p>
+<p>このテンプレートが、あなたのHugoサイト開発に少しでもお役立ちできれば幸いです。</p>
+
 
     </div>
 
@@ -1111,7 +1170,15 @@ image: &#34;/images/card/hugo-link-card.webp&#34;
       </ul>
     </li>
     <li><a href="#11検索ボックスのデザイン修正">11：検索ボックスのデザイン修正</a></li>
-    <li><a href="#12モーダル外をクリックで閉じる">12.モーダル外をクリックで閉じる</a></li>
+    <li><a href="#12モーダル外をクリックで閉じる">12：モーダル外をクリックで閉じる</a></li>
+    <li><a href="#13配布用パッケージ">13：配布用パッケージ</a>
+      <ul>
+        <li><a href="#再利用できるメリット">再利用できるメリット</a></li>
+        <li><a href="#再利用化の方向性">再利用化の方向性</a></li>
+        <li><a href="#ダウンロード">ダウンロード</a></li>
+        <li><a href="#免責事項">免責事項</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></nav>
   </aside>
