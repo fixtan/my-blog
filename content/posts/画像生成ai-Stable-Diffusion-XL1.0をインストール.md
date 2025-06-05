@@ -1,5 +1,5 @@
 ---
-title: "[画像生成AI] Stable Diffusion XL（SDXL）1.0をインストール"
+title: "[画像生成AI] Stable Diffusion XL（SDXL）1.0 インストール"
 slug: generative-AI_Stable-Diffusion-XL1_0-install
 summary: "[画像生成AI] Stable Diffusion XL（SDXL）1.0のインストール方法"
 description: "[画像生成AI] Stable Diffusion XL（SDXL）1.0のインストール方法"

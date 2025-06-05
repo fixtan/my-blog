@@ -14,3 +14,12 @@ weight: 1
 image: /images/uploads/noimage.jpg
 link: /posts/framepack-intro/
 ---
+
+
+## はじめに
+
+2000年前後、独学で学んだ技術、C言語、JAVA、JavaApplet、Perl、PHP、Viusal C++などで製作したアプリの紹介。
+
+当時流行ってた、PerlによるCGI作品を多数制作したほか、Windowsアプリケーション開発に非常に興味があったので、Win32APIや、MFCで多数のアプリを制作。
+製作していたアプリ紹介。
+
