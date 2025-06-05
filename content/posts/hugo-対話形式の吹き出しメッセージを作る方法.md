@@ -9,12 +9,12 @@ author: lain
 categories:
   - Human x AI
 tags:
-  - オープンダイアローグ
-  - 対話
-  - AI対話
-  - 自己探求
-  - エッセイ
-  - バイブコーディング
+  - 吹き出しメッセージ
+  - Goテンプレート
+  - chat bubble
+  - カスタム
+  - CSS
+  - HTML
 weight: 10
 image: /images/uploads/hugo-chat-bubble.webp
 ---
