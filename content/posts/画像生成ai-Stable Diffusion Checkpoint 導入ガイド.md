@@ -60,8 +60,10 @@ PythonやGitがよく分からなくても基本は手順通りにコマンド�
 
 従来のStable Diffusion同様、グラフィックボードは、VRAM 6GB以上を必要としますので、RTX3060以上のGPUが必要です。
 
-Pythonは、3.10.6が安定動作する報告がありますので、このバージョンがおすすめです。
-※Python 3.11 や 3.12 では起動しない or 拡張機能が動作しない可能性あり
+公式には Python 3.10 を推奨。3.11 以上では起動に失敗することがあります。
+「webui-user.bat」から Python バージョンを指定したい場合は「venv」環境を事前に構築しておくと安心。
+
+
 
 
 ## 2. インストール手順（初期セットアップ）
@@ -213,7 +215,7 @@ stable-diffusion-webuiへ移動し、ファイル確認
 </a>
 
 
-### 3.2 画像生成テスト
+### 3.2. 画像生成テスト
 
 ここまでで、動作環境が整ったので、実際に画像を作成して見ます。
 
@@ -264,6 +266,15 @@ artist name, ugly, ugly face, mutated hands, low res, bad anatomy, bad eyes, blu
 </a>
 
 
+### 3-3. 追加モデル導入方法
+
+Civitai などで気になるモデル（拡張子：.safetensors または .ckpt）をダウンロードし、
+「stable-diffusion-webui/models/Stable-diffusion/」に配置。
+
+再起動後に [左上のドロップダウン] から選択できます。
+
+
+
 ## 4. 推奨拡張機能（Optional）
 
 - ControlNet
@@ -276,16 +287,35 @@ artist name, ugly, ugly face, mutated hands, low res, bad anatomy, bad eyes, blu
 ## 5. よくあるトラブルと対処法
 
 - Pythonバージョンが違う → webui-user.bat 実行前に確認
-
 - VRAM不足 → --medvram オプション追加
-
 - 黒い画面のまま進まない → launch.py 実行ログ確認
+- RuntimeError: "LayerNormKernelImpl" ...（NVIDIAドライバ不一致）
+- launch.pyが止まる→管理者権限での実行 or セキュリティソフトの影響
+- 起動後にページが開かない→ファイアウォール例外やポート競合
 
 
 ## 6. おわりに（まとめ）
 
 - Checkpoint版は最も情報が多く、初心者に最適
-
 - 複雑なことをしない限り、初期設定だけで十分動く
-
 - 今後は「LoRA」「Prompt」「ControlNet」などの活用を予定
+
+
+## 次のステップ
+
+-  [LoRAモデルの導入と使い方（CivitaiなどでDL→配置）]
+-  [ControlNetの導入＆使い方（ポーズ制御やポーズ変換）]
+-  [生成画像をFramePackへ渡して動画にする方法]
+-  [Promptベースの画像生成 Tips（呪文例やNegative Promptの考え方）]
+-  [FramePack連携：生成した画像を動画へ落とし込む流れ]
+
+
+<!--
+## 小ネタとして記事化してもよさそうな内容
+
+webui-user.bat によく使う起動オプション一覧（例：--medvram や --xformers）
+
+「automatic1111」が何を意味するか？ → GitHub名だが由来も面白いかも
+
+outputs/ フォルダの整理方法（生成画像の保存先と管理）
+-->

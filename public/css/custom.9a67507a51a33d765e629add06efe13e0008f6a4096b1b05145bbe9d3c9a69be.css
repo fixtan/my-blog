@@ -217,7 +217,7 @@ svg path[d="M12 6H0l6-6z"] {
 
 /* ヒーロー画像 */
 .hero {
-  background-image: url("{{ "images/header.jpg" | absURL }}");
+  background-image: url("http://localhost:1313/images/header.jpg");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -1183,7 +1183,7 @@ body.dark .share-buttons li a:hover {
   }
 }
 
-/* ページタグの装飾  */
+/* ページタグの総直  */
 .post-tags {
   margin-top: 1rem;
   font-size: 0.9rem;
