@@ -1,0 +1,9 @@
+{{ $speaker := .Get "speaker" }}
+{{ $icon := .Get "icon" }}
+
+<div class="chat-row {{ $speaker }}">
+  <div class="chat-icon">{{ $icon }}</div>
+  <div class="chat-bubble {{ $speaker }}-bubble">
+    {{ .Inner | markdownify }}
+  </div>
+</div>

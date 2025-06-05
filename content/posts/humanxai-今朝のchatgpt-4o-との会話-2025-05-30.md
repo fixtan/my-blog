@@ -1,11 +1,11 @@
 ---
-title: "[AI] ChatGPTとの対話  (2025/05/30)"
+title: "[Human x AI] ChatGPT(4o)との対話録 「ぞうきん」河野進 (著) (2025/05/30)"
 slug: ai-dialogue-2025-05-30
+summary: "[Human x AI] ChatGPT(4o)との対話録 「ぞうきん」河野進 (著) (2025/05/30)"
+description: "[Human x AI] ChatGPT(4o)との対話録「ぞうきん」河野進 (著) (2025/05/30)"
 date: 2025-05-30T08:21:00.000Z
 draft: false
 author: lain
-image: /images/uploads/ai-dialogue-2025-05-30.png
-summary: ChatGPT(4o)とたまに会話をしてるのですが、その内容の一部を公開してみます
 categories:
   - Human x AI 対話録
 tags:
@@ -15,12 +15,14 @@ tags:
   - 自己探求
   - エッセイ
 weight: 8
+image: /images/uploads/ai-dialogue-2025-05-30.png
 ---
 
 <center>
-<img src="/images/uploads/ai-dialogue-2025-05-30.png" alt="" style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; " />
+<img src="/images/uploads/ai-dialogue-2025-05-30.png"
+     alt="ChatGPT(4o)との対話録 「ぞうきん」河野進 (著) (2025/05/30)"
+     style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; " />
 </center>
-
 
 
 私の会話：

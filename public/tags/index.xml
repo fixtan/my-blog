@@ -6,40 +6,82 @@
     <description>Recent content in Tags on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 05 Jun 2025 13:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Jun 2025 07:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI対話</title>
+      <link>http://localhost:1313/tags/ai%E5%AF%BE%E8%A9%B1/</link>
+      <pubDate>Fri, 30 May 2025 08:21:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ai%E5%AF%BE%E8%A9%B1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>エッセイ</title>
+      <link>http://localhost:1313/tags/%E3%82%A8%E3%83%83%E3%82%BB%E3%82%A4/</link>
+      <pubDate>Fri, 30 May 2025 08:21:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E3%82%A8%E3%83%83%E3%82%BB%E3%82%A4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>オープンダイアローグ</title>
+      <link>http://localhost:1313/tags/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%83%BC%E3%82%B0/</link>
+      <pubDate>Fri, 30 May 2025 08:21:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%83%BC%E3%82%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>バイブコーディング</title>
+      <link>http://localhost:1313/tags/%E3%83%90%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E3%83%90%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>対話</title>
+      <link>http://localhost:1313/tags/%E5%AF%BE%E8%A9%B1/</link>
+      <pubDate>Fri, 30 May 2025 08:21:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E5%AF%BE%E8%A9%B1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>自己探求</title>
+      <link>http://localhost:1313/tags/%E8%87%AA%E5%B7%B1%E6%8E%A2%E6%B1%82/</link>
+      <pubDate>Fri, 30 May 2025 08:21:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E8%87%AA%E5%B7%B1%E6%8E%A2%E6%B1%82/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Checkpoint</title>
       <link>http://localhost:1313/tags/checkpoint/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 05 Jun 2025 13:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/checkpoint/</guid>
       <description></description>
     </item>
     <item>
       <title>Stable Diffusion</title>
       <link>http://localhost:1313/tags/stable-diffusion/</link>
-      <pubDate>Tue, 27 May 2025 22:01:00 +0000</pubDate>
+      <pubDate>Thu, 05 Jun 2025 13:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/stable-diffusion/</guid>
       <description></description>
     </item>
     <item>
       <title>インストール</title>
       <link>http://localhost:1313/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 05 Jun 2025 13:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/</guid>
       <description></description>
     </item>
     <item>
       <title>環境構築</title>
       <link>http://localhost:1313/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 05 Jun 2025 13:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</guid>
       <description></description>
     </item>
     <item>
       <title>SDXL 1.0</title>
       <link>http://localhost:1313/tags/sdxl-1.0/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 05 Jun 2025 12:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/sdxl-1.0/</guid>
       <description></description>
     </item>
@@ -345,41 +387,6 @@
       <description></description>
     </item>
     <item>
-      <title>AI対話</title>
-      <link>http://localhost:1313/tags/ai%E5%AF%BE%E8%A9%B1/</link>
-      <pubDate>Fri, 30 May 2025 08:21:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ai%E5%AF%BE%E8%A9%B1/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>エッセイ</title>
-      <link>http://localhost:1313/tags/%E3%82%A8%E3%83%83%E3%82%BB%E3%82%A4/</link>
-      <pubDate>Fri, 30 May 2025 08:21:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%82%A8%E3%83%83%E3%82%BB%E3%82%A4/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>オープンダイアローグ</title>
-      <link>http://localhost:1313/tags/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%83%BC%E3%82%B0/</link>
-      <pubDate>Fri, 30 May 2025 08:21:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%83%BC%E3%82%B0/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>対話</title>
-      <link>http://localhost:1313/tags/%E5%AF%BE%E8%A9%B1/</link>
-      <pubDate>Fri, 30 May 2025 08:21:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E5%AF%BE%E8%A9%B1/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>自己探求</title>
-      <link>http://localhost:1313/tags/%E8%87%AA%E5%B7%B1%E6%8E%A2%E6%B1%82/</link>
-      <pubDate>Fri, 30 May 2025 08:21:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E8%87%AA%E5%B7%B1%E6%8E%A2%E6%B1%82/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>ソート</title>
       <link>http://localhost:1313/tags/%E3%82%BD%E3%83%BC%E3%83%88/</link>
       <pubDate>Thu, 29 May 2025 18:03:00 +0000</pubDate>
@@ -496,20 +503,6 @@
       <link>http://localhost:1313/tags/thunderbolt/</link>
       <pubDate>Thu, 22 May 2025 16:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/thunderbolt/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>XL（SDXL）</title>
-      <link>http://localhost:1313/tags/xlsdxl/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/xlsdxl/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>XL（SDXL）1</title>
-      <link>http://localhost:1313/tags/xlsdxl1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/xlsdxl1/</guid>
       <description></description>
     </item>
   </channel>
