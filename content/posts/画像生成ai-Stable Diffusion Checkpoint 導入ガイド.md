@@ -9,8 +9,8 @@ author: lain
 categories:
   - 画像生成AI
 tags:
-  - SDXL 1.0
   - Stable Diffusion
+  - Checkpoint
   - インストール
   - 環境構築
 weight: 10

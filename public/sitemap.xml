@@ -104,13 +104,13 @@
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-06-05T13:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/checkpoint/</loc>
+    <lastmod>2025-06-05T13:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2025-06-05T13:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-06-05T13:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/sdxl-1.0/</loc>
     <lastmod>2025-06-05T13:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/stable-diffusion/</loc>
@@ -127,6 +127,9 @@
   </url><url>
     <loc>http://localhost:1313/categories/%E7%94%BB%E5%83%8F%E7%94%9F%E6%88%90ai/</loc>
     <lastmod>2025-06-05T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/sdxl-1.0/</loc>
+    <lastmod>2025-06-05T12:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/hugo/</loc>
     <lastmod>2025-06-04T12:00:00+00:00</lastmod>
