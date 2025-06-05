@@ -1,7 +1,16 @@
 ---
-title: "FramePackによるAIアニメーション"
-image: "/images/noimage.jpg"
-description: "FramePack-eichi を活用したAIアニメーションの制作事例と手順。"
-link: "/posts/framepack-intro/"
+title: レトロ技術と自分史
+date: 2025-05-27T22:01:00.000Z
+draft: false
+author: lain
+summary: ネット黎明期の頃に製作したアプリ紹介など
+description: ネット黎明期の頃に製作したアプリ紹介など
+categories:
+  - 過去作
+tags:
+  - 自分史
+  - ネット黎明期
 weight: 1
+image: /images/uploads/noimage.jpg
+link: /posts/framepack-intro/
 ---

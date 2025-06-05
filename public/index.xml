@@ -9,18 +9,18 @@
     <lastBuildDate>Wed, 04 Jun 2025 12:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>FramePackによるAIアニメーション</title>
+      <title>FramePack-eichiによるAIアニメーション</title>
       <link>http://localhost:1313/featured/project1/</link>
       <pubDate>Tue, 27 May 2025 22:01:00 +0000</pubDate>
       <guid>http://localhost:1313/featured/project1/</guid>
       <description>FramePack-eichi を活用したAIアニメーションの制作事例と手順。</description>
     </item>
     <item>
-      <title>FramePackによるAIアニメーション</title>
+      <title>レトロ技術と自分史</title>
       <link>http://localhost:1313/featured/project2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 27 May 2025 22:01:00 +0000</pubDate>
       <guid>http://localhost:1313/featured/project2/</guid>
-      <description>FramePack-eichi を活用したAIアニメーションの制作事例と手順。</description>
+      <description>ネット黎明期の頃に製作したアプリ紹介など</description>
     </item>
     <item>
       <title>FramePackによるAIアニメーション</title>
