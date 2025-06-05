@@ -10,17 +10,16 @@ categories:
   - Human x AI
 tags:
   - オープンダイアローグ
-  - 対話
   - AI対話
   - 自己探求
   - エッセイ
   - バイブコーディング
 weight: 10
-image: /images/uploads/
+image: /images/uploads/ai-dialogue-2025-06-06.webp
 ---
 
 <center>
-<img src="/images/uploads/"
+<img src="/images/uploads/ai-dialogue-2025-06-06.webp"
      alt=""
      style="max-width:80%; height:auto; border:1px solid #ccc; border-radius:6px; " />
 </center>

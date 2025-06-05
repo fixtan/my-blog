@@ -80,18 +80,18 @@
       <description>hugo のデフォルト機能であるページネーション機能を実装した備忘録的メモです</description>
     </item>
     <item>
+      <title>[Hugo] Hugoで使われているテンプレートを確認する方法</title>
+      <link>http://localhost:1313/posts/hugo-template/</link>
+      <pubDate>Sat, 24 May 2025 23:08:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-template/</guid>
+      <description>[Hugo] 使用中のテンプレートリスト確認方法</description>
+    </item>
+    <item>
       <title>[Hugo] Hugoで未来記事を表示させるには？ </title>
       <link>http://localhost:1313/posts/hugo-custom-article-future/</link>
       <pubDate>Mon, 26 May 2025 19:22:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/hugo-custom-article-future/</guid>
       <description>Hugoで未来記事を表示させる方法の紹介（config.toml）</description>
-    </item>
-    <item>
-      <title>[Hugo] Hugoで使われているテンプレートを確認する方法</title>
-      <link>http://localhost:1313/posts/hugo-template/</link>
-      <pubDate>Sat, 24 May 2025 23:08:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo-template/</guid>
-      <description>使用中のテンプレートリスト確認方法</description>
     </item>
   </channel>
 </rss>

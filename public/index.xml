@@ -6,7 +6,7 @@
     <description>Recent content on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 06 Jun 2025 07:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Jun 2025 09:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FramePack-eichiによるAIアニメーション</title>
@@ -199,6 +199,13 @@
       <description>Netlify CMS/Decap CMSのカスタム中、ログインしようとするとエラーメッセージがでた際のトラブルTip</description>
     </item>
     <item>
+      <title>[Hugo] 記事に吹き出しメッセージを作る（Goテンプレート）</title>
+      <link>http://localhost:1313/posts/hugo-chat-bubble/</link>
+      <pubDate>Fri, 06 Jun 2025 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-chat-bubble/</guid>
+      <description>Hugoで記事に吹き出しメッセージを作る方法の紹介（Goテンプレート）</description>
+    </item>
+    <item>
       <title>[Human x AI] ChatGPTとの対話録 バイブコーディングについて (2025/06/06)</title>
       <link>http://localhost:1313/posts/ai-dialogue-2025-06-06/</link>
       <pubDate>Fri, 06 Jun 2025 07:00:00 +0000</pubDate>
@@ -241,18 +248,18 @@
       <description>自己紹介</description>
     </item>
     <item>
+      <title>[Hugo] Hugoで使われているテンプレートを確認する方法</title>
+      <link>http://localhost:1313/posts/hugo-template/</link>
+      <pubDate>Sat, 24 May 2025 23:08:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-template/</guid>
+      <description>[Hugo] 使用中のテンプレートリスト確認方法</description>
+    </item>
+    <item>
       <title>[Hugo] Hugoで未来記事を表示させるには？ </title>
       <link>http://localhost:1313/posts/hugo-custom-article-future/</link>
       <pubDate>Mon, 26 May 2025 19:22:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/hugo-custom-article-future/</guid>
       <description>Hugoで未来記事を表示させる方法の紹介（config.toml）</description>
-    </item>
-    <item>
-      <title>[Hugo] Hugoで使われているテンプレートを確認する方法</title>
-      <link>http://localhost:1313/posts/hugo-template/</link>
-      <pubDate>Sat, 24 May 2025 23:08:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo-template/</guid>
-      <description>使用中のテンプレートリスト確認方法</description>
     </item>
   </channel>
 </rss>
