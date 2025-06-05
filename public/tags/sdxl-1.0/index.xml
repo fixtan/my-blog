@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SDXL 1.0 on lainのAIと創作ブログ</title>
+    <link>http://localhost:1313/tags/sdxl-1.0/</link>
+    <description>Recent content in SDXL 1.0 on lainのAIと創作ブログ</description>
+    <generator>Hugo -- 0.147.3</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 05 Jun 2025 12:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sdxl-1.0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[画像生成AI] Stable Diffusion XL（SDXL）1.0 インストール</title>
+      <link>http://localhost:1313/posts/generative-ai_stable-diffusion-xl1_0-install/</link>
+      <pubDate>Thu, 05 Jun 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/generative-ai_stable-diffusion-xl1_0-install/</guid>
+      <description>[画像生成AI] Stable Diffusion XL（SDXL）1.0のインストール方法</description>
+    </item>
+  </channel>
+</rss>

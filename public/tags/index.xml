@@ -9,6 +9,34 @@
     <lastBuildDate>Thu, 05 Jun 2025 12:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>SDXL 1.0</title>
+      <link>http://localhost:1313/tags/sdxl-1.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/sdxl-1.0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stable Diffusion</title>
+      <link>http://localhost:1313/tags/stable-diffusion/</link>
+      <pubDate>Tue, 27 May 2025 22:01:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/stable-diffusion/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>インストール</title>
+      <link>http://localhost:1313/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>環境構築</title>
+      <link>http://localhost:1313/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>カテゴリ</title>
       <link>http://localhost:1313/tags/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA/</link>
       <pubDate>Wed, 04 Jun 2025 12:00:00 +0000</pubDate>
@@ -394,13 +422,6 @@
       <description></description>
     </item>
     <item>
-      <title>Stable Diffusion</title>
-      <link>http://localhost:1313/tags/stable-diffusion/</link>
-      <pubDate>Tue, 27 May 2025 22:01:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/stable-diffusion/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>ネット黎明期</title>
       <link>http://localhost:1313/tags/%E3%83%8D%E3%83%83%E3%83%88%E9%BB%8E%E6%98%8E%E6%9C%9F/</link>
       <pubDate>Tue, 27 May 2025 22:01:00 +0000</pubDate>
@@ -468,6 +489,20 @@
       <link>http://localhost:1313/tags/thunderbolt/</link>
       <pubDate>Thu, 22 May 2025 16:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/thunderbolt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>XL（SDXL）</title>
+      <link>http://localhost:1313/tags/xlsdxl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/xlsdxl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>XL（SDXL）1</title>
+      <link>http://localhost:1313/tags/xlsdxl1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/xlsdxl1/</guid>
       <description></description>
     </item>
   </channel>

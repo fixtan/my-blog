@@ -6,7 +6,7 @@
     <description>Recent content in ナビゲーションバー on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 05 Jun 2025 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Jun 2025 12:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%90%E3%83%BC/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Hugo] ナビゲーションにカテゴリを追加し専用ページを作成</title>
@@ -14,13 +14,6 @@
       <pubDate>Wed, 04 Jun 2025 12:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/hugo-navigation-add-category/</guid>
       <description>Hugo でナビゲーションにカテゴリを追加し専用ページを作成する方法</description>
-    </item>
-    <item>
-      <title>[画像生成AI] Stable Diffusion XL（SDXL）1.0 インストール</title>
-      <link>http://localhost:1313/posts/generative-ai_stable-diffusion-xl1_0-install/</link>
-      <pubDate>Thu, 05 Jun 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/generative-ai_stable-diffusion-xl1_0-install/</guid>
-      <description>[画像生成AI] Stable Diffusion XL（SDXL）1.0のインストール方法</description>
     </item>
   </channel>
 </rss>

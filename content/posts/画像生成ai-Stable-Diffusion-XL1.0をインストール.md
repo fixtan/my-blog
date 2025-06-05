@@ -9,9 +9,10 @@ author: lain
 categories:
   - 画像生成AI
 tags:
-  - ナビゲーションバー
-  - プルダウンメニュー
-  - カテゴリ
+  - SDXL 1.0
+  - Stable Diffusion
+  - インストール
+  - 環境構築
 weight: 10
 image: /images/uploads/generative-AI_Stable-Diffusion-XL1_0-install.webp
 ---
