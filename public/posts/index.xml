@@ -6,7 +6,7 @@
     <description>Recent content in Posts on lainのAIと創作ブログ</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 04 Jun 2025 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Jun 2025 12:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Hugo] Alpine.jsで検索モーダルを実装（Fuse.js対応）</title>
@@ -162,6 +162,13 @@
       <pubDate>Sat, 24 May 2025 12:18:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/decapcms-error-01/</guid>
       <description>Netlify CMS/Decap CMSのカスタム中、ログインしようとするとエラーメッセージがでた際のトラブルTip</description>
+    </item>
+    <item>
+      <title>[画像生成AI] Stable Diffusion XL（SDXL）1.0をインストール</title>
+      <link>http://localhost:1313/posts/generative-ai_stable-diffusion-xl1_0-install/</link>
+      <pubDate>Thu, 05 Jun 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/generative-ai_stable-diffusion-xl1_0-install/</guid>
+      <description>[画像生成AI] Stable Diffusion XL（SDXL）1.0のインストール方法</description>
     </item>
     <item>
       <title>Decap CMSとの格闘録 ― Duplicate問題とIndexedDBの残高の6時間</title>
