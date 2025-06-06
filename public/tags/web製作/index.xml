@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>WEB製作 on lainのAIと創作ブログ</title>
+    <link>http://localhost:1313/tags/web%E8%A3%BD%E4%BD%9C/</link>
+    <description>Recent content in WEB製作 on lainのAIと創作ブログ</description>
+    <generator>Hugo -- 0.147.3</generator>
+    <language>ja</language>
+    <atom:link href="http://localhost:1313/tags/web%E8%A3%BD%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

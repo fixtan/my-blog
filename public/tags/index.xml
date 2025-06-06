@@ -23,6 +23,13 @@
       <description></description>
     </item>
     <item>
+      <title>Cursor</title>
+      <link>http://localhost:1313/tags/cursor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/cursor/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Goテンプレート</title>
       <link>http://localhost:1313/tags/go%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -37,10 +44,31 @@
       <description></description>
     </item>
     <item>
+      <title>Vibe Coding</title>
+      <link>http://localhost:1313/tags/vibe-coding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/vibe-coding/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>カスタム</title>
       <link>http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0/</link>
       <pubDate>Fri, 30 May 2025 11:09:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>バイブコーディング</title>
+      <link>http://localhost:1313/tags/%E3%83%90%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E3%83%90%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>入門講座</title>
+      <link>http://localhost:1313/tags/%E5%85%A5%E9%96%80%E8%AC%9B%E5%BA%A7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E5%85%A5%E9%96%80%E8%AC%9B%E5%BA%A7/</guid>
       <description></description>
     </item>
     <item>
@@ -69,13 +97,6 @@
       <link>http://localhost:1313/tags/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%83%BC%E3%82%B0/</link>
       <pubDate>Fri, 30 May 2025 08:21:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%83%BC%E3%82%B0/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>バイブコーディング</title>
-      <link>http://localhost:1313/tags/%E3%83%90%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%83%90%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0/</guid>
       <description></description>
     </item>
     <item>
@@ -538,6 +559,13 @@
       <link>http://localhost:1313/tags/thunderbolt/</link>
       <pubDate>Thu, 22 May 2025 16:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/thunderbolt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WEB製作</title>
+      <link>http://localhost:1313/tags/web%E8%A3%BD%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/web%E8%A3%BD%E4%BD%9C/</guid>
       <description></description>
     </item>
   </channel>

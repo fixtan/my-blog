@@ -7,7 +7,7 @@ date: 2025-05-30T08:21:00.000Z
 draft: false
 author: lain
 categories:
-  - Human x AI 対話録
+  - Human x AI
 tags:
   - オープンダイアローグ
   - 対話
