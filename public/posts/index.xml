@@ -114,18 +114,18 @@
       <description>[Human x AI] ChatGPT(4o)との対話録「ぞうきん」河野進 (著) (2025/05/30)</description>
     </item>
     <item>
+      <title>[Vibe Coding] バイブコーディング × Cursor 入門講座 00 (ガイダンス)</title>
+      <link>http://localhost:1313/posts/vibe_coding-cursor-practice/</link>
+      <pubDate>Fri, 06 Jun 2025 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vibe_coding-cursor-practice/</guid>
+      <description>バイブコーディング × Cursor 入門講座(ガイダンス)</description>
+    </item>
+    <item>
       <title>[Vibe Coding] バイブコーディング × Cursor 入門講座 01 (Cursorの導入と基本操作)</title>
       <link>http://localhost:1313/posts/vibe_coding-cursor-practice01/</link>
       <pubDate>Fri, 06 Jun 2025 09:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/vibe_coding-cursor-practice01/</guid>
       <description>バイブコーディング × Cursor 入門講座 01 (Cursorの導入と基本操作)</description>
-    </item>
-    <item>
-      <title>[Vibe Coding] バイブコーディング × Cursor 入門講座(ガイダンス)</title>
-      <link>http://localhost:1313/posts/vibe_coding-cursor-practice/</link>
-      <pubDate>Fri, 06 Jun 2025 09:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/vibe_coding-cursor-practice/</guid>
-      <description>バイブコーディング × Cursor 入門講座(ガイダンス)</description>
     </item>
     <item>
       <title>Decap CMS × Duplicateバグ × IndexedDBの罠</title>
