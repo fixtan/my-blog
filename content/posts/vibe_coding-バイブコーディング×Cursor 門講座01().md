@@ -1,7 +1,7 @@
 ---
 title: "[Vibe Coding] バイブコーディング × Cursor 入門講座 01 (Cursorの導入と基本操作)"
 slug: vibe_coding-cursor-practice01
-date: 2025-06-06T9:00:00.000Z
+date: 2025-06-06T16:00:00.000Z
 summary: "バイブコーディング × Cursor 入門講座 01 (Cursorの導入と基本操作)"
 description: "バイブコーディング × Cursor 入門講座 01 (Cursorの導入と基本操作)"
 draft: false
@@ -298,13 +298,187 @@ AIがレスポンスすれば 連携完了！
 ### ③ .md ファイルで要件を作る（次回以降で詳しく）
 
 ```
-# Webアプリの要件
+# ToDoアプリの要件定義
 
-## ログインページ
-- ユーザー名とパスワード
-- エラーメッセージ表示
+## 機能
+- タスクを追加できる
+- タスクを削除できる
+- タスクの完了状態を切り替えられる
+
+## UI
+- 入力フォーム（テキストボックス＋追加ボタン）
+- タスクリスト（各タスクに完了チェック＋削除ボタン）
+
+## 技術スタック
+- HTML / CSS / JavaScript（Vanilla）
 ```
 このようなMarkdown要件から、プロトタイプを生成可能。
+
+<a href="/images/uploads/vibe_coding-cursor-practice01-cursor-md01.jpg">
+<img src="/images/uploads/vibe_coding-cursor-practice01-cursor-md01.jpg"
+         alt=".md ファイルで要件を作る 01"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<br>
+WEB(Hugo)用に作成した、my-blogフォルダ内に、cursorフォルダを作り、その中にtodo-spec.mdを作成。
+ファイル作成後に画面左下にgit云々のメッセージがあり、cursorがGIT用に作られたフォルダである事を感知したようです。
+
+#### ✅ 確認まとめ
+| 項目                  | 状態                                                |
+| --------------------- | --------------------------------------------------- |
+| `todo-spec.md` の構成 | Markdown構文も見出しも適切 ✅                        |
+| 保存場所              | `my-blog/cursor/` → ローカル環境での管理にも最適 ✅  |
+| Git連携               | CursorがGitリポジトリを自動認識（メッセージ表示） ✅ |
+| エディタ右側のAI      | プロンプト応答も確認済み ✅                          |
+
+
+
+#### 🔹3. 要件定義をAIに読ませて構造化する
+
+Markdownファイルを「プロンプトの前提知識（コンテキスト）」として与えた上で、AIに以下のように指示
+
+1. 右のAIチャットエリア下部の ＋ Add Context をクリック
+todo-spec.md を選択（またはドラッグで追加）
+
+2. チャット欄に入力
+
+```
+この要件定義をもとに、ToDoアプリのHTML/CSS/JS構造を提案してください。
+まず、全体構成を箇条書きで提示し、その後にベースコードを作ってください。
+```
+
+補足：
+
+- 構造を最初に提示させることで、コード生成の見通しが立ちやすくなります。
+- 生成されたコードは、Cursor内で直接実行・修正・再指示が可能です。
+
+
+
+<a href="/images/uploads/vibe_coding-cursor-practice01-cursor-md02.jpg">
+<img src="/images/uploads/vibe_coding-cursor-practice01-cursor-md02.jpg"
+         alt=".md ファイルで要件を作る 02"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<br>
+<a href="/images/uploads/vibe_coding-cursor-practice01-cursor-md03.jpg">
+<img src="/images/uploads/vibe_coding-cursor-practice01-cursor-md03.jpg"
+         alt=".md ファイルで要件を作る 03"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<br>
+
+mdファイル選択後、プロンプトを投げるとコードを自動生成。
+
+<a href="/images/uploads/vibe_coding-cursor-practice01-cursor-md04.jpg">
+<img src="/images/uploads/vibe_coding-cursor-practice01-cursor-md04.jpg"
+         alt=".md ファイルで要件を作る 04"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<br>
+
+現在の状況
+- todo-spec.md に要件定義 → AIが正しく解釈して構成を理解
+- チャットウィンドウ右側で：
+  - app.js（JavaScript）
+  - index.html（HTML）
+  - style.css（CSS）
+- それぞれのコードが提示されており、ChatGPTのように自然な説明付きで表示
+
+次にできること（おすすめ順）
+1. ファイルへ自動反映（Apply）
+  - 各コードブロックの上部にある「Apply to todo-spec.md」などのボタンを押すと、コードを選択したファイルや新規ファイルに挿入可能。
+
+2. プロジェクト構造を作る
+  - 同じフォルダに以下を作成：
+
+```
+index.html
+style.css
+app.js
+```
+  - 提案されたコードをコピペまたはApplyで配置。
+
+3. Live Serverなどで動作確認
+  - HTMLをブラウザで開いて、実際にToDoアプリを操作してみる。
+
+4. AIへのフィードバック or 改修依頼
+
+  - 右側チャットに以下のように入力：
+
+```
+チェックしたタスクはリストの一番下に移動するようにして。
+```
+または
+```
+削除ボタンをもっと目立たせてください（CSS変更）
+```
+
+初めてで不慣れな為、3つのファイルは、手動でコピペして作成・動作を確認。
+index.htmlファイルをChromeにドロップした結果。
+
+<a href="/images/uploads/vibe_coding-cursor-practice01-cursor-md05.jpg">
+<img src="/images/uploads/vibe_coding-cursor-practice01-cursor-md05.jpg"
+         alt=".md ファイルで要件を作る 05"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<br>
+
+<a href="/images/uploads/vibe_coding-cursor-practice01-cursor-md06.jpg">
+<img src="/images/uploads/vibe_coding-cursor-practice01-cursor-md06.jpg"
+         alt=".md ファイルで要件を作る 06"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<br>
+
+
+ #### バイブコーディングの本質
+
+- 🎯 要件定義 → 自然文で伝える
+- ⚙️ AIが設計・実装 → ファイルに展開
+- 🔁 ユーザーが操作しながら微修正・拡張を指示
+
+ここまでで、第一歩をクリア。
+
+
+###　操作ミス
+
+「Apply to todo-spec.md」を押すと、緑色の入力ボックスが表示される。
+
+<a href="/images/uploads/vibe_coding-cursor-practice01-cursor-md05-1.jpg">
+<img src="/images/uploads/vibe_coding-cursor-practice01-cursor-md05-1.jpg"
+         alt=".md ファイルで要件を作る 06"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<br>
+
+緑色の枠は「AI提案のコードをこの位置に挿入するプレビュー」。
+
+今の状態
+- Apply to todo-spec.md を押したことで、挿入対象ファイルが todo-spec.md に指定されてしまった。
+- つまり、「index.html のコードを todo-spec.md に貼り付けようとしている状態」です。
+- これは誤りです。HTMLやCSS、JSは .md（マークダウン）に貼るのではなく、それぞれの専用ファイルを作成すべきです。
+
+正しい手順（今後の流れ）
+1. プロジェクトフォルダに以下のファイルを新規作成
+  - index.html
+  - style.css
+  - app.js
+
+2. それぞれのコードをコピー＆ペースト
+
+  - Cursorの右側チャットウィンドウに表示されたコードブロックからコピー。
+  - 対応するファイルへ貼り付け。
+
+3. または：
+  - コードブロック右上にある … から Apply to file を選んで、目的のファイル（例：index.html）を選択。
+
+
+ 操作の補足
+- 緑のボックスは「仮挿入」状態です。
+- クリックで確定挿入、またはキャンセル可能。
+- 間違ったファイルを指定してしまったら、コードブロック右上のボタン（Apply to file）を再度選び直すことで回避できます。
+
+
 
 ## 1-4. 日本語でも使えるの？
 
