@@ -12,10 +12,12 @@ tags:
   - Vibe Coding
   - 入門講座
   - Cursor
+  - OpenAI
+  - Markdown
+  - 要件定義
 weight: 9
 image: /images/uploads/vibe_coding-cursor-practice01.webp
 ---
-
 
 <center>
 <img src="/images/uploads/vibe_coding-cursor-practice01.webp"
@@ -492,6 +494,60 @@ index.htmlファイルをChromeにドロップした結果。
 | 綺麗なデザインで | `Card UIを使ったモダンなデザインでお願いします` |
 
 
+### 日本語化
+
+メニュー:「View」→「Command Palette」<br>
+※ ショートカット（コマンドパレット）: (Ctrl+Shift+P)
+
+<a href="/images/uploads/vibe_coding-cursor-practice01-language01.jpg">
+<img src="/images/uploads/vibe_coding-cursor-practice01-language01.jpg"
+         alt="cursor 日本語化 01"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+リストから「Configure Display Language」を選択。
+
+<a href="/images/uploads/vibe_coding-cursor-practice01-language02.jpg">
+<img src="/images/uploads/vibe_coding-cursor-practice01-language02.jpg"
+         alt="cursor 日本語化 02"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+日本語が表示されない場合。
+
+<a href="/images/uploads/vibe_coding-cursor-practice01-language03.jpg">
+<img src="/images/uploads/vibe_coding-cursor-practice01-language03.jpg"
+         alt="cursor 日本語化 03"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+コマンドパレット (Ctrl+Shift+P)　→　「install extensions」
+
+<a href="/images/uploads/vibe_coding-cursor-practice01-language04.jpg">
+<img src="/images/uploads/vibe_coding-cursor-practice01-language04.jpg"
+         alt="cursor 日本語化 04"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+VSCodeの拡張機能のインストールと同じ画面が開くので「japanese」と入力し表示された物をインストール。
+
+<a href="/images/uploads/vibe_coding-cursor-practice01-language05.jpg">
+<img src="/images/uploads/vibe_coding-cursor-practice01-language05.jpg"
+         alt="cursor 日本語化 05"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+インストール後、コマンドパレットから、「Configure Display Language」を選択すると日本語が表示され適用。
+
+<a href="/images/uploads/vibe_coding-cursor-practice01-language06.jpg">
+<img src="/images/uploads/vibe_coding-cursor-practice01-language06.jpg"
+         alt="cursor 日本語化 06"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+
+
 ## よく使うショートカット
 
 | 操作内容               | ショートカット（Win/Mac）    |
@@ -514,14 +570,3 @@ Cursorはただのエディタではなく、
 - UI/UX調整
 
 などの全てをAIパートナーと共に行う新しい開発体験を提供します。
-
-
-## 次回
-
-🧾 2. Markdownで要件定義を書く
-
-に進みます。
-Cursorの“核”ともいえる要件ドキュメント作りに踏み込んでいきましょう。
-
-準備OKになったらいつでもどうぞ。お待ちしています！
-
