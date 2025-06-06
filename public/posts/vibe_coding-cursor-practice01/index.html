@@ -281,7 +281,7 @@
         [Vibe Coding] バイブコーディング × Cursor 入門講座 01 (Cursorの導入と基本操作)
       </h1>
       <div class="post-description">バイブコーディング × Cursor 入門講座 01 (Cursorの導入と基本操作)</div>
-      <div class="post-meta"><span title='2025-06-06 09:00:00 +0000 UTC'>June 6, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;lain
+      <div class="post-meta"><span title='2025-06-06 09:00:00 +0000 UTC'>June 6, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
 
 </div>
     </header> 
@@ -406,11 +406,203 @@
 <ol start="2">
 <li>起動後、VSCodeそっくりな画面が立ち上がるはずです</li>
 </ol>
-<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-install07.jpg" target="_blank">
-<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-install07.jpg"
-         alt="Cursor インストール 07"
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-install08.jpg" target="_blank">
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-install08.jpg"
+         alt="Cursor インストール 08"
         loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 </a>
+<p>サインアップ</p>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-install09.jpg" target="_blank">
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-install09.jpg"
+         alt="Cursor インストール 09"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<h4 id="import-from-vs-codeかskip-and-continue何方を選ぶか">「Import from VS Code」か「Skip and continue」何方を選ぶか？<a hidden class="anchor" aria-hidden="true" href="#import-from-vs-codeかskip-and-continue何方を選ぶか">#</a></h4>
+<p>【おすすめ】Import from VS Code（VSCodeから設定を引き継ぐ）</p>
+<ul>
+<li>キーバインド（ショートカット）</li>
+<li>拡張機能</li>
+<li>テーマ（カラースキーム）</li>
+<li>ユーザー設定（settings.json）</li>
+</ul>
+<p>➡ VSCodeに慣れている方には最適です。
+そのまま「Import from VS Code」をクリックして問題ありません。</p>
+<p>🔸 Skip and continue（真っさらな状態から始める）</p>
+<ul>
+<li>最小構成で起動したいとき用</li>
+<li>拡張機能や設定をゼロから組み直したいときに</li>
+</ul>
+<p>➡ VSCodeの設定を一切持ち込みたくない場合はこちらを選びます。</p>
+<h4 id="-今後に影響する">🚀 今後に影響する？<a hidden class="anchor" aria-hidden="true" href="#-今後に影響する">#</a></h4>
+<ul>
+<li>後からでも設定や拡張機能はカスタマイズ可能です。</li>
+<li>今の段階では「Import from VS Code」で大丈夫です。</li>
+</ul>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-install10.jpg" target="_blank">
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-install10.jpg"
+         alt="Cursor インストール 10"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<h2 id="1-2-openai-apiキーの設定">1-2. OpenAI APIキーの設定<a hidden class="anchor" aria-hidden="true" href="#1-2-openai-apiキーの設定">#</a></h2>
+<p>CursorはChatGPTのAPIキーを使ってAIとやり取りします。</p>
+<p>インストール後、OpenAI APIキーの入力が出なかった場合は、以下の手順で手動設定できます。</p>
+<h3 id="openai-apiキーの入力手順手動">OpenAI APIキーの入力手順（手動）<a hidden class="anchor" aria-hidden="true" href="#openai-apiキーの入力手順手動">#</a></h3>
+<ol>
+<li>画面右上の歯車アイコン（⚙）をクリック</li>
+</ol>
+<ul>
+<li>→ メニューから Settings を選択</li>
+</ul>
+<ol start="2">
+<li>左側の「Models」→「API  Keys」</li>
+</ol>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-settings01.jpg" target="_blank">
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-settings01.jpg"
+         alt="Cursor 設定 APIキー 01"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-settings02.jpg" target="_blank">
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-settings02.jpg"
+         alt="Cursor 設定 APIキー 02"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<h3 id="step-1openaiのapiキーを取得">Step 1：OpenAIのAPIキーを取得<a hidden class="anchor" aria-hidden="true" href="#step-1openaiのapiキーを取得">#</a></h3>
+<p>👉 <a href="https://platform.openai.com/account/api-keys">https://platform.openai.com/account/api-keys</a></p>
+<p>名前は「Cursor」にしました。</p>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-apikey.jpg" target="_blank">
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-apikey.jpg"
+         alt="Cursor 設定 OpenAI API KEY "
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<h3 id="step-2cursor起動時に表示されるapiキーを入力画面にコピペ">Step 2：Cursor起動時に表示される「APIキーを入力」画面にコピペ<a hidden class="anchor" aria-hidden="true" href="#step-2cursor起動時に表示されるapiキーを入力画面にコピペ">#</a></h3>
+<p>入力後は保存されるので次回から不要です</p>
+<blockquote>
+<p>✅ GPT-4（gpt-4-0125-previewなど）にも対応しています（料金に注意）</p></blockquote>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-apikey2.jpg" target="_blank">
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-apikey2.jpg"
+         alt="Cursor 設定 OpenAI API KEY 2"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<h4 id="補足cursorのapiキー保存挙動">補足：CursorのAPIキー保存挙動<a hidden class="anchor" aria-hidden="true" href="#補足cursorのapiキー保存挙動">#</a></h4>
+<ul>
+<li>「Verify」で正常に通過すれば、内部的に保存されています。</li>
+<li>設定画面を閉じて再度開くと セキュリティの都合上「空」に見えるだけ です。</li>
+<li>実際には ~/.cursor ディレクトリなどのローカル設定にキーが保存されています。</li>
+</ul>
+<h4 id="動作確認の方法簡単テスト">動作確認の方法（簡単テスト）<a hidden class="anchor" aria-hidden="true" href="#動作確認の方法簡単テスト">#</a></h4>
+<p>右上の New Chat に
+　　📝「このエディタで何ができますか？」
+　　など入力して送信</p>
+<p>AIがレスポンスすれば 連携完了！</p>
+<p>チャット画面がない場合は以下。</p>
+<ol>
+<li>View -&gt; Open View</li>
+<li>New Chat</li>
+</ol>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-newchat1.jpg" target="_blank">
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-newchat1.jpg"
+         alt="Cursor チャット動作テスト1"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<br>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-newchat2.jpg" target="_blank">
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-newchat2.jpg"
+         alt="Cursor チャット動作テスト2"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<br>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-newchat3.jpg" target="_blank">
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice01-cursor-newchat3.jpg"
+         alt="Cursor チャット動作テスト3"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<br>
+<h2 id="1-3-最初に試すおすすめ操作">1-3. 最初に試すおすすめ操作<a hidden class="anchor" aria-hidden="true" href="#1-3-最初に試すおすすめ操作">#</a></h2>
+<h3 id="-コードにコメントを打ってaiに書いてもらう">① コードにコメントを打って、AIに書いてもらう<a hidden class="anchor" aria-hidden="true" href="#-コードにコメントを打ってaiに書いてもらう">#</a></h3>
+<pre tabindex="0"><code>// create a responsive navigation bar
+</code></pre><p>これだけで、AIがナビゲーションバーを生成します。</p>
+<h3 id="-チャットから直接依頼する">② チャットから直接依頼する<a hidden class="anchor" aria-hidden="true" href="#-チャットから直接依頼する">#</a></h3>
+<ul>
+<li>
+<p>右下または右サイドバーにある「Chat」ボタンを押す</p>
+</li>
+<li>
+<p>「3つのカードを並べて、ホバーで色が変わるデザインにして」などと書く</p>
+</li>
+</ul>
+<h3 id="-md-ファイルで要件を作る次回以降で詳しく">③ .md ファイルで要件を作る（次回以降で詳しく）<a hidden class="anchor" aria-hidden="true" href="#-md-ファイルで要件を作る次回以降で詳しく">#</a></h3>
+<pre tabindex="0"><code># Webアプリの要件
+
+## ログインページ
+- ユーザー名とパスワード
+- エラーメッセージ表示
+</code></pre><p>このようなMarkdown要件から、プロトタイプを生成可能。</p>
+<h2 id="1-4-日本語でも使えるの">1-4. 日本語でも使えるの？<a hidden class="anchor" aria-hidden="true" href="#1-4-日本語でも使えるの">#</a></h2>
+<p>はい、日本語でも十分動作します。</p>
+<p>ただし、プロンプトの精度を高めたい時は以下のように調整するとベター：</p>
+<table>
+  <thead>
+      <tr>
+          <th>× あいまい指示</th>
+          <th>○ 改善されたプロンプト</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ボタンを設置して</td>
+          <td><code>右上に「ログイン」ボタンを追加してください。</code></td>
+      </tr>
+      <tr>
+          <td>綺麗なデザインで</td>
+          <td><code>Card UIを使ったモダンなデザインでお願いします</code></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="よく使うショートカット">よく使うショートカット<a hidden class="anchor" aria-hidden="true" href="#よく使うショートカット">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>操作内容</th>
+          <th>ショートカット（Win/Mac）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>AIチャット起動</td>
+          <td><code>Cmd/Ctrl + Shift + L</code></td>
+      </tr>
+      <tr>
+          <td>インラインでAI呼び出し</td>
+          <td><code>Cmd/Ctrl + I</code></td>
+      </tr>
+      <tr>
+          <td>コードに対するAI編集</td>
+          <td><code>Cmd/Ctrl + J</code>（範囲選択後）</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="今後の展開">今後の展開<a hidden class="anchor" aria-hidden="true" href="#今後の展開">#</a></h2>
+<p>Cursorはただのエディタではなく、</p>
+<ul>
+<li>
+<p>コーディング補助</p>
+</li>
+<li>
+<p>リファクタリング</p>
+</li>
+<li>
+<p>テスト</p>
+</li>
+<li>
+<p>UI/UX調整</p>
+</li>
+</ul>
+<p>などの全てをAIパートナーと共に行う新しい開発体験を提供します。</p>
+<h2 id="次回">次回<a hidden class="anchor" aria-hidden="true" href="#次回">#</a></h2>
+<p>🧾 2. Markdownで要件定義を書く</p>
+<p>に進みます。
+Cursorの“核”ともいえる要件ドキュメント作りに踏み込んでいきましょう。</p>
+<p>準備OKになったらいつでもどうぞ。お待ちしています！</p>
 
 
     </div>
@@ -509,6 +701,24 @@
         <li><a href="#step-3インストールして起動">Step 3：インストールして起動</a></li>
       </ul>
     </li>
+    <li><a href="#1-2-openai-apiキーの設定">1-2. OpenAI APIキーの設定</a>
+      <ul>
+        <li><a href="#openai-apiキーの入力手順手動">OpenAI APIキーの入力手順（手動）</a></li>
+        <li><a href="#step-1openaiのapiキーを取得">Step 1：OpenAIのAPIキーを取得</a></li>
+        <li><a href="#step-2cursor起動時に表示されるapiキーを入力画面にコピペ">Step 2：Cursor起動時に表示される「APIキーを入力」画面にコピペ</a></li>
+      </ul>
+    </li>
+    <li><a href="#1-3-最初に試すおすすめ操作">1-3. 最初に試すおすすめ操作</a>
+      <ul>
+        <li><a href="#-コードにコメントを打ってaiに書いてもらう">① コードにコメントを打って、AIに書いてもらう</a></li>
+        <li><a href="#-チャットから直接依頼する">② チャットから直接依頼する</a></li>
+        <li><a href="#-md-ファイルで要件を作る次回以降で詳しく">③ .md ファイルで要件を作る（次回以降で詳しく）</a></li>
+      </ul>
+    </li>
+    <li><a href="#1-4-日本語でも使えるの">1-4. 日本語でも使えるの？</a></li>
+    <li><a href="#よく使うショートカット">よく使うショートカット</a></li>
+    <li><a href="#今後の展開">今後の展開</a></li>
+    <li><a href="#次回">次回</a></li>
   </ul>
 </nav></nav>
   </aside>
