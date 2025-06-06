@@ -9,10 +9,9 @@ author: lain
 categories:
   - バイブコーディング
 tags:
-  - バイブコーディング
   - Vibe Coding
-  - Cursor
   - 入門講座
+  - Cursor
 weight: 9
 image: /images/uploads/vibe_coding-cursor-practice.webp
 ---
