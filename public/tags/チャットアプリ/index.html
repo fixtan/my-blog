@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="description" content="Human × AI の対話を通じて、AI活用やブログ制作、技術実験の軌跡を記録しています。">
+<link rel="icon" href="http://localhost:1313/favicon.ico" type="image/x-icon">
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/custom.ea1dec6214e893a4a3d48354dfb2fc61413c287033b721c49dd85fcf68dad0cc.css">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<meta property="og:title" content="チャットアプリ"><meta property="og:description" content="Human × AI の対話を通じて、AI活用やブログ制作、技術実験の軌跡を記録しています。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/tags/%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA/">
+<meta property="og:site_name" content="lainのAIと創作ブログ">
+
+
+  <meta property="og:image" content="http://localhost:1313/images/default-ogp.png">
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="チャットアプリ">
+<meta name="twitter:description" content="Human × AI の対話を通じて、AI活用やブログ制作、技術実験の軌跡を記録しています。">
+
+  <meta name="twitter:image" content="http://localhost:1313/images/default-ogp.png">
+
+
+</head>
+
+<body class="list" id="top"><header class="header">
+  <nav class="nav">
+    
+    <div class="logo">
+      <a href="http://localhost:1313/" accesskey="h" title="lainのAIと創作ブログ">
+        <img src="http://localhost:1313/images/logo-icon.png" alt="logo" class="logo-image" loading="lazy">
+        lainのAIと創作ブログ
+      </a>
+    </div>
+
+    
+    <div class="nav-right">
+      <ul id="menu">
+        
+        
+        
+        
+        
+        <li>
+          <a href="http://localhost:1313/" title="ホーム"
+            >
+            <span>
+              ホーム
+            </span>
+            
+          </a>
+        </li>
+        
+        
+        
+        
+        <li>
+          <a href="http://localhost:1313/about/" title="自己紹介"
+            >
+            <span>
+              自己紹介
+            </span>
+            
+          </a>
+        </li>
+        
+
+
+        
+        <li class="group relative">
+          <a href="#" class="nav-link">カテゴリ ▼</a>
+          <ul class="absolute left-0 hidden group-hover:block bg-white text-black shadow-md rounded p-2 z-50">
+          
+          
+            <li>
+              <a href="http://localhost:1313/categories/ai/">
+                🤖  ai (1)
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://localhost:1313/categories/decap-cms/">
+                🗂️  decap cms (7)
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://localhost:1313/categories/hugo/">
+                🛠️  hugo (12)
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://localhost:1313/categories/human-x-ai/">
+                  human x ai (3)
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://localhost:1313/categories/msx/">
+                💾  msx (1)
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://localhost:1313/categories/netlify/">
+                🚀  netlify (1)
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://localhost:1313/categories/python/">
+                🐍  python (1)
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://localhost:1313/categories/vscode/">
+                📝  vscode (2)
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://localhost:1313/categories/%E3%83%90%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0/">
+                  バイブコーディング (4)
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://localhost:1313/categories/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3/">
+                💻  パソコン (1)
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://localhost:1313/categories/%E7%94%BB%E5%83%8F%E7%94%9F%E6%88%90ai/">
+                🌄  画像生成ai (2)
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://localhost:1313/categories/%E9%81%8E%E5%8E%BB%E4%BD%9C/">
+                  過去作 (1)
+              </a>
+            </li>
+          
+          </ul>
+        </li>
+
+
+      </ul>
+
+
+
+      
+      <div x-data="searchComponent()" x-init="init()" x-cloak>
+  
+  <a
+    href="#"
+    @click.prevent="open = true"
+    class="search-toggle"
+    aria-label="Search"
+  >
+    🔍
+  </a>
+
+  
+  <div
+    x-show="open"
+    @click.self="open = false"
+    class="modal-overlay fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center"
+    x-transition
+    @keydown.escape.window="open = false"
+  >
+    
+    <div
+      class="modal-box bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-2xl shadow-lg relative"
+      @click.stop
+    >
+      
+      <div class="search-wrapper">
+        <div class="search-box-container">
+          
+          <span class="text-gray-500 dark:text-gray-300 mr-2">🔍</span>
+
+          
+          <input
+            type="text"
+            placeholder="検索語を入力..."
+            x-model="searchQuery"
+            @input.debounce.300ms="search"
+            x-ref="searchInput"
+            @keydown.window.slash.prevent="open = true; $nextTick(() => $refs.searchInput.focus())"
+          />
+
+          
+          <button @click="searchQuery = ''; open = false">✕</button>
+        </div>
+      </div>
+
+      
+      <div class="search-results-wrapper">
+        <ul class="search-results">
+          <template
+            x-for="result in results"
+            :key="result?.item?.permalink || result?.refIndex || result"
+          >
+            <li class="search-result" x-show="result?.item">
+              <a :href="result.item.url" class="search-result-link">
+                <div class="search-result-card">
+                  <img
+                    :src="result.item.image"
+                    class="search-result-thumb"
+                    alt=""
+                  />
+                  <div class="search-result-content">
+                    <h3 x-text="result.item.title"></h3>
+                    <p x-text="result.item.summary"></p>
+                    <span class="read-more">→ 続きを読む</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="http://localhost:1313/js/searchComponent.js" defer></script>
+
+
+      
+      <div class="logo-switches">
+        
+        <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        
+      </div>
+
+    </div>
+  </nav>
+</header>
+<main class="main page">
+	  
+  <div class="section-block--category">
+    <h2 class="section-heading section-heading--category">カテゴリ：チャットアプリ</h2>
+
+    <section class="post-grid">
+      
+        <article class="post-card">
+  <a href="http://localhost:1313/posts/vibe_coding-cursor-practice03/" class="full-link" aria-label="[Vibe Coding] バイブコーディング × Cursor 入門講座 03 (Webで動くチャットUIを作る)"></a>
+
+  <div class="thumb-wrapper">
+    
+    <img
+      src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice03.webp"
+      alt="[Vibe Coding] バイブコーディング × Cursor 入門講座 03 (Webで動くチャットUIを作る)"
+      class="post-thumb"
+      loading="lazy"
+      decoding="async"
+    />
+    
+  </div>
+
+  <h3 class="post-title">
+    <a href="http://localhost:1313/posts/vibe_coding-cursor-practice03/">[Vibe Coding] バイブコーディング × Cursor 入門講座 03 (Webで動くチャットUIを作る)</a>
+  </h3>
+
+  <p class="post-date">
+    2025-06-07 | lain
+  </p>
+
+  
+  <p class="summary">バイブコーディング × Cursor 入門講座 03 「Webで動くチャットUIを作る」─ 静的サイトでもリアルに動く！AI対話UIのはじめかた</p>
+  
+
+  <div class="meta-wrapper">
+    
+      <p class="post-meta">
+        カテゴリ：
+        
+          <a class="tag" href="http://localhost:1313/categories/%E3%83%90%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0/">バイブコーディング</a> 
+        
+      </p>
+    
+    
+    <p class="post-meta">
+      タグ： <span class="tag">#Vibe Coding</span><span class="tag">#入門講座</span><span class="tag">#Cursor</span><span class="tag">#OpenAI</span><span class="tag">#チャットアプリ</span><span class="tag">#ChatGPT</span>
+    </p>
+    
+  </div>
+</article>
+
+      
+    </section>
+
+    
+    
+    
+
+  </div>
+
+	</main>
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: { slidesPerView: 1.2 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }
+    });
+  });
+</script>
+
+<script src="http://localhost:1313/js/scrollspy.js" defer></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+          &copy; 2025 <a href="http://localhost:1313/">lainのAIと創作ブログ</a>
+    </div>
+    <div class="footer-right">
+      <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="http://localhost:1313/js/lunr.min.js"></script>
+<script src="http://localhost:1313/js/lunr.stemmer.support.js"></script>
+<script src="http://localhost:1313/js/tinyseg.js"></script>
+<script src="http://localhost:1313/js/lunr.ja.js"></script>
+<script src="http://localhost:1313/js/fuse.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById('searchInput');
+  const engineSwitch = document.getElementById('engineSwitch');
+  const results = document.getElementById('searchResults');
+  if (!input || !engineSwitch || !results) return;
+
+  fetch("http:\/\/localhost:1313\/index.json")
+    .then(response => response.json())
+    .then(data => {
+      const lunrIndex = lunr(function () {
+        this.use(lunr.ja);
+        this.field('title');
+        this.field('content');
+        this.ref('url');
+        data.forEach(doc => this.add(doc));
+      });
+
+      const fuseIndex = new Fuse(data, {
+        keys: ['title', 'content', 'summary'],
+        includeScore: true,
+        threshold: 0.4,
+        useExtendedSearch: true
+      });
+
+      input.addEventListener('input', () => {
+        const query = input.value.trim();
+        const engine = engineSwitch.value;
+        let hits = [];
+
+        if (!query) {
+          results.innerHTML = '';
+          return;
+        }
+
+        if (engine === 'lunr') {
+          hits = lunrIndex.search(query).map(hit =>
+            data.find(d => d.url === hit.ref)
+          );
+        } else if (engine === 'fuse') {
+          hits = fuseIndex.search(query).map(hit => hit.item);
+        }
+
+        results.innerHTML = '';
+        hits.forEach(item => {
+          if (!item) return;
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="${item.url}">${item.title}</a>`;
+          results.appendChild(li);
+        });
+      });
+    });
+});
+</script>
+
+</body>
+
+</html>

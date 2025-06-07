@@ -59,6 +59,9 @@
     <loc>http://localhost:1313/posts/ai-dialogue-2025-05-30/</loc>
     <lastmod>2025-05-30T08:21:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/vibe_coding-cursor-practice03/</loc>
+    <lastmod>2025-06-07T12:01:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/vibe_coding-cursor-practice02/</loc>
     <lastmod>2025-06-07T07:00:00+00:00</lastmod>
   </url><url>
@@ -117,33 +120,39 @@
     <lastmod>2025-05-26T19:22:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-06-07T07:00:00+00:00</lastmod>
+    <lastmod>2025-06-07T12:01:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/chatgpt/</loc>
+    <lastmod>2025-06-07T12:01:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cursor/</loc>
-    <lastmod>2025-06-07T07:00:00+00:00</lastmod>
+    <lastmod>2025-06-07T12:01:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-06-07T07:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/markdown/</loc>
-    <lastmod>2025-06-07T07:00:00+00:00</lastmod>
+    <lastmod>2025-06-07T12:01:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/openai/</loc>
-    <lastmod>2025-06-07T07:00:00+00:00</lastmod>
+    <lastmod>2025-06-07T12:01:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-06-07T07:00:00+00:00</lastmod>
+    <lastmod>2025-06-07T12:01:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-06-07T07:00:00+00:00</lastmod>
+    <lastmod>2025-06-07T12:01:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/vibe-coding/</loc>
-    <lastmod>2025-06-07T07:00:00+00:00</lastmod>
+    <lastmod>2025-06-07T12:01:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA/</loc>
+    <lastmod>2025-06-07T12:01:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/%E3%83%90%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0/</loc>
-    <lastmod>2025-06-07T07:00:00+00:00</lastmod>
+    <lastmod>2025-06-07T12:01:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E5%85%A5%E9%96%80%E8%AC%9B%E5%BA%A7/</loc>
+    <lastmod>2025-06-07T12:01:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/markdown/</loc>
     <lastmod>2025-06-07T07:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E5%BF%9C%E7%94%A8/</loc>
