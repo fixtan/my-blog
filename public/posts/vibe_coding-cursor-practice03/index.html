@@ -537,7 +537,7 @@ const sendButton = document.querySelector(&#39;button.bg-blue-500&#39;);
 <blockquote>
 <p><a href="https://platform.openai.com/api-keys">Open AI - API keys</a><br>
 <a href="https://platform.openai.com/api-keys">https://platform.openai.com/api-keys</a></p></blockquote>
-<h4 id="githubを使う場合の注意点">GitHubを使う場合の注意点<a hidden class="anchor" aria-hidden="true" href="#githubを使う場合の注意点">#</a></h4>
+<h3 id="githubを使う場合の注意点">GitHubを使う場合の注意点<a hidden class="anchor" aria-hidden="true" href="#githubを使う場合の注意点">#</a></h3>
 <p>ここまでの流れはgitコマンドを使い、定期的にgitHub上にデータをpushしています。</p>
 <p>Cursorで作成したindex.htmlファイルは、ローカル環境で動かす前提で進めますが、もし同じようにGithubを利用の元で進めていく場合、APIキーを保存するファイルを公開しないようにしてください。</p>
 <p>リポジトリを非公開設定にするか、若しくは、.gitignore に除外パスを追加してください。</p>
@@ -765,6 +765,7 @@ async function fetchChatGPTResponse(message) {
     <li><a href="#3-openai-apiを使ったチャットの実装ローカル限定">3. OpenAI APIを使ったチャットの実装（ローカル限定）</a>
       <ul>
         <li><a href="#目的-2">目的</a></li>
+        <li><a href="#githubを使う場合の注意点">GitHubを使う場合の注意点</a></li>
         <li><a href="#1openai-apiキーを取得">1：OpenAI APIキーを取得</a></li>
         <li><a href="#2fetchchatgptresponse-関数を-indexhtml-に追加">2：fetchChatGPTResponse 関数を index.html に追加</a></li>
         <li><a href="#3送信ボタンにapi呼び出しを組み込む">3：送信ボタンにAPI呼び出しを組み込む</a></li>

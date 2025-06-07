@@ -295,7 +295,7 @@ APIキーは、公式サイトで確認できます。
 > <a href="https://platform.openai.com/api-keys">Open AI - API keys</a><br>
 > https://platform.openai.com/api-keys
 
-#### GitHubを使う場合の注意点
+### GitHubを使う場合の注意点
 
 ここまでの流れはgitコマンドを使い、定期的にgitHub上にデータをpushしています。
 
