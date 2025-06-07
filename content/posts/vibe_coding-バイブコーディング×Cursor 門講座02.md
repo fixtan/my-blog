@@ -410,6 +410,135 @@ Cursor の特徴
 
 
 
+## 5. 実践：ミニWebアプリを作ってみる
+
+目的：実用的なWebアプリをバイブコーディングで構築し、Cursorの活用力をさらに高める。
+
+### どのアプリを作る
+候補：
+
+- ✅ ToDoアプリ（基本形／復習）
+- 💬 吹き出しUIチャット（対話録表示に応用）
+- ⏰ タイマー／アラーム（setTimeout/setInterval）
+- 🖼 画像ギャラリー（CSSグリッド × JavaScript切替）
+
+今回は、**「吹き出しチャットUI」**のリッチバージョンを選び、以下のような機能強化を試してみましょう
+
+
+###  1：要件定義（Markdownで構造化）
+
+```
+# 吹き出しチャットUI（改良版）
+
+## 機能
+- ユーザーとAIの対話形式を再現する
+- アイコン・色・位置で会話を判別できる
+- スマホでもレスポンシブ対応
+- 会話はHTML側で記述（動的処理なし）
+
+## レイアウト
+- 左：AI（🤖）
+- 右：ユーザー（🧑‍💻）
+- 吹き出しに影／丸みを加える
+
+## スタイル
+- モダンな配色（明暗対応）
+- 各キャラクターに固有の背景色
+- CSSアニメーション（任意）
+
+## 構成ファイル
+- index.html
+- style.css
+```
+
+<a href="/images/uploads/vibe_coding-cursor-practice02-make_app01.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice02-make_app01.jpg"
+         alt=" Cursor 実践：ミニWebアプリ:要件定義（Markdownで構造化）"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+### 2：生成→確認→Live Serverで確認
+
+Cursorで生成 → コード確認・Live Serverで動作確認
+チャット欄に以下を入力：
+```
+このchatui-spec.mdに従ってHTML/CSSでUIを作ってください。
+```
+
+
+<a href="/images/uploads/vibe_coding-cursor-practice02-make_app02.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice02-make_app02.jpg"
+         alt="Cursor 実践：ミニWebアプリ:生成→確認→Live Serverで確認"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+<br />
+<a href="/images/uploads/vibe_coding-cursor-practice02-make_app03.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice02-make_app03.jpg"
+         alt="Cursor 実践：ミニWebアプリ:生成→確認→Live Serverで確認2"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+生成されたファイルをLive Serverで確認。違和感やミスがあれば、具体的な修正点を再指示してみましょう。<br />
+（例：「ユーザー側の吹き出しの背景が濃すぎるので薄くして」など）。
+
+
+
+<a href="/images/uploads/vibe_coding-cursor-practice02-make_app04.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice02-make_app04.jpg"
+         alt="Cursor 実践：ミニWebアプリ:生成→確認→Live Serverで確認3"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+
+### 3：仕上げとコード理解
+
+- HTML構造のブロック単位の説明を依頼
+- CSSの変数化やMedia Queryの追加など、応用的な改善を依頼
+
+
+<a href="/images/uploads/vibe_coding-cursor-practice02-make_app05.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice02-make_app05.jpg"
+         alt="Cursor 実践：ミニWebアプリ:HTML構造のブロック単位の説明を依頼"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+- より高度なテーマにしたい場合は Tailwind CSS 対応や、モーダル表示への変更もOK
+
+<a href="/images/uploads/vibe_coding-cursor-practice02-make_app06.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice02-make_app06.jpg"
+         alt="Cursor 実践：ミニWebアプリ:Tailwind CSS 対応、モーダル表示へ変更"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+Tailwind CSS対応と、モーダル表示への変更した物をLive Serverで確認。
+
+
+<a href="/images/uploads/vibe_coding-cursor-practice02-make_app07.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice02-make_app07.jpg"
+          alt="Cursor 実践：ミニWebアプリ:Tailwind CSS対応と、モーダル表示への変更した物をLive Serverで確認"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+
+<a href="/images/uploads/vibe_coding-cursor-practice02-make_app08.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice02-make_app08.jpg"
+         alt="Cursor 実践：ミニWebアプリ:Tailwind CSS対応と、モーダル表示への変更した物をLive Serverで確認2"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+### 補足記事として使える小テーマ（例）
+
+- 吹き出しUIをゼロからAIと作る方法（Cursor活用）
+- 会話型ブログ記事のUIを実装するならこのCSS
+- バイブコーディングで学ぶCSS設計入門
+
+
 
 ## 4. バイブコーディングが活きる開発ジャンル
 

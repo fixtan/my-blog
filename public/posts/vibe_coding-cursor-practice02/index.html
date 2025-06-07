@@ -281,7 +281,7 @@
         [Vibe Coding] バイブコーディング × Cursor 入門講座 02 (実践の次へ ─ 応用・連携・理解)
       </h1>
       <div class="post-description">バイブコーディング × Cursor 入門講座 02 (実践の次へ ─ 応用・連携・理解を深める)</div>
-      <div class="post-meta"><span title='2025-06-07 07:00:00 +0000 UTC'>June 7, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
+      <div class="post-meta"><span title='2025-06-07 07:00:00 +0000 UTC'>June 7, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;lain
 
 </div>
     </header> 
@@ -644,6 +644,101 @@
       </tr>
   </tbody>
 </table>
+<h2 id="5-実践ミニwebアプリを作ってみる">5. 実践：ミニWebアプリを作ってみる<a hidden class="anchor" aria-hidden="true" href="#5-実践ミニwebアプリを作ってみる">#</a></h2>
+<p>目的：実用的なWebアプリをバイブコーディングで構築し、Cursorの活用力をさらに高める。</p>
+<h3 id="どのアプリを作る">どのアプリを作る<a hidden class="anchor" aria-hidden="true" href="#どのアプリを作る">#</a></h3>
+<p>候補：</p>
+<ul>
+<li>✅ ToDoアプリ（基本形／復習）</li>
+<li>💬 吹き出しUIチャット（対話録表示に応用）</li>
+<li>⏰ タイマー／アラーム（setTimeout/setInterval）</li>
+<li>🖼 画像ギャラリー（CSSグリッド × JavaScript切替）</li>
+</ul>
+<p>今回は、**「吹き出しチャットUI」**のリッチバージョンを選び、以下のような機能強化を試してみましょう</p>
+<h3 id="1要件定義markdownで構造化">1：要件定義（Markdownで構造化）<a hidden class="anchor" aria-hidden="true" href="#1要件定義markdownで構造化">#</a></h3>
+<pre tabindex="0"><code># 吹き出しチャットUI（改良版）
+
+## 機能
+- ユーザーとAIの対話形式を再現する
+- アイコン・色・位置で会話を判別できる
+- スマホでもレスポンシブ対応
+- 会話はHTML側で記述（動的処理なし）
+
+## レイアウト
+- 左：AI（🤖）
+- 右：ユーザー（🧑‍💻）
+- 吹き出しに影／丸みを加える
+
+## スタイル
+- モダンな配色（明暗対応）
+- 各キャラクターに固有の背景色
+- CSSアニメーション（任意）
+
+## 構成ファイル
+- index.html
+- style.css
+</code></pre><a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-make_app01.jpg" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-make_app01.jpg"
+         alt=" Cursor 実践：ミニWebアプリ:要件定義（Markdownで構造化）"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<h3 id="2生成確認live-serverで確認">2：生成→確認→Live Serverで確認<a hidden class="anchor" aria-hidden="true" href="#2生成確認live-serverで確認">#</a></h3>
+<p>Cursorで生成 → コード確認・Live Serverで動作確認
+チャット欄に以下を入力：</p>
+<pre tabindex="0"><code>このchatui-spec.mdに従ってHTML/CSSでUIを作ってください。
+</code></pre><a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-make_app02.jpg" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-make_app02.jpg"
+         alt="Cursor 実践：ミニWebアプリ:生成→確認→Live Serverで確認"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<br />
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-make_app03.jpg" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-make_app03.jpg"
+         alt="Cursor 実践：ミニWebアプリ:生成→確認→Live Serverで確認2"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<p>生成されたファイルをLive Serverで確認。違和感やミスがあれば、具体的な修正点を再指示してみましょう。<br />
+（例：「ユーザー側の吹き出しの背景が濃すぎるので薄くして」など）。</p>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-make_app04.jpg" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-make_app04.jpg"
+         alt="Cursor 実践：ミニWebアプリ:生成→確認→Live Serverで確認3"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<h3 id="3仕上げとコード理解">3：仕上げとコード理解<a hidden class="anchor" aria-hidden="true" href="#3仕上げとコード理解">#</a></h3>
+<ul>
+<li>HTML構造のブロック単位の説明を依頼</li>
+<li>CSSの変数化やMedia Queryの追加など、応用的な改善を依頼</li>
+</ul>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-make_app05.jpg" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-make_app05.jpg"
+         alt="Cursor 実践：ミニWebアプリ:HTML構造のブロック単位の説明を依頼"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<ul>
+<li>より高度なテーマにしたい場合は Tailwind CSS 対応や、モーダル表示への変更もOK</li>
+</ul>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-make_app06.jpg" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-make_app06.jpg"
+         alt="Cursor 実践：ミニWebアプリ:Tailwind CSS 対応、モーダル表示へ変更"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<p>Tailwind CSS対応と、モーダル表示への変更した物をLive Serverで確認。</p>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-make_app07.jpg" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-make_app07.jpg"
+          alt="Cursor 実践：ミニWebアプリ:Tailwind CSS対応と、モーダル表示への変更した物をLive Serverで確認"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-make_app08.jpg" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-make_app08.jpg"
+         alt="Cursor 実践：ミニWebアプリ:Tailwind CSS対応と、モーダル表示への変更した物をLive Serverで確認2"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<h3 id="補足記事として使える小テーマ例">補足記事として使える小テーマ（例）<a hidden class="anchor" aria-hidden="true" href="#補足記事として使える小テーマ例">#</a></h3>
+<ul>
+<li>吹き出しUIをゼロからAIと作る方法（Cursor活用）</li>
+<li>会話型ブログ記事のUIを実装するならこのCSS</li>
+<li>バイブコーディングで学ぶCSS設計入門</li>
+</ul>
 <h2 id="4-バイブコーディングが活きる開発ジャンル">4. バイブコーディングが活きる開発ジャンル<a hidden class="anchor" aria-hidden="true" href="#4-バイブコーディングが活きる開発ジャンル">#</a></h2>
 <p>目的：今後どんなことに応用できそうか、視野を広げる。</p>
 <h3 id="markdown--webui制作ブログ連携">Markdown × WebUI制作（ブログ連携）<a hidden class="anchor" aria-hidden="true" href="#markdown--webui制作ブログ連携">#</a></h3>
@@ -786,6 +881,15 @@
         <li><a href="#tips途中でエラーが出たら">Tips：途中でエラーが出たら？</a></li>
         <li><a href="#補足cursorの強み">補足：Cursorの強み</a></li>
         <li><a href="#まとめ">まとめ</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-実践ミニwebアプリを作ってみる">5. 実践：ミニWebアプリを作ってみる</a>
+      <ul>
+        <li><a href="#どのアプリを作る">どのアプリを作る</a></li>
+        <li><a href="#1要件定義markdownで構造化">1：要件定義（Markdownで構造化）</a></li>
+        <li><a href="#2生成確認live-serverで確認">2：生成→確認→Live Serverで確認</a></li>
+        <li><a href="#3仕上げとコード理解">3：仕上げとコード理解</a></li>
+        <li><a href="#補足記事として使える小テーマ例">補足記事として使える小テーマ（例）</a></li>
       </ul>
     </li>
     <li><a href="#4-バイブコーディングが活きる開発ジャンル">4. バイブコーディングが活きる開発ジャンル</a>
