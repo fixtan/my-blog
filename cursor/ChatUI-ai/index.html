@@ -72,8 +72,8 @@
             <!-- 入力エリア -->
             <div class="p-4 border-t bg-gray-50 rounded-b-lg">
                 <div class="flex space-x-2">
-                    <input type="text" placeholder="メッセージを入力..." class="flex-1 rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-500">
-                    <button class="bg-blue-500 hover:bg-blue-600 text-white rounded-lg px-4 py-2 transition-colors duration-300">
+                    <input type="text" id="messageInput" placeholder="メッセージを入力..." class="flex-1 rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-500">
+                    <button id="sendButton" class="bg-blue-500 hover:bg-blue-600 text-white rounded-lg px-4 py-2 transition-colors duration-300">
                         送信
                     </button>
                 </div>
@@ -87,11 +87,62 @@
         const chatModal = document.getElementById('chatModal');
         const closeButton = document.getElementById('closeButton');
         const chatContainer = document.getElementById('chatContainer');
+        const inputField = document.getElementById('messageInput');
+        const sendButton = document.getElementById('sendButton');
+
+        // メッセージ追加関数
+        function addMessage(sender, text) {
+            const container = document.createElement('div');
+            container.className = `flex items-start ${sender === 'user' ? 'justify-end' : 'justify-start'} space-x-2 message-animation`;
+
+            const bubble = document.createElement('div');
+            bubble.className = `${sender === 'user' ? 'bg-green-50' : 'bg-blue-50'} rounded-lg p-3 max-w-[70%] shadow-sm`;
+            bubble.innerHTML = `<p class="text-gray-800">${text}</p>`;
+
+            const icon = document.createElement('div');
+            icon.className = 'flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center';
+            icon.classList.add(sender === 'user' ? 'bg-green-100' : 'bg-blue-100');
+            icon.textContent = sender === 'user' ? '🧑‍💻' : '🤖';
+
+            if (sender === 'user') {
+                container.appendChild(bubble);
+                container.appendChild(icon);
+            } else {
+                container.appendChild(icon);
+                container.appendChild(bubble);
+            }
+
+            chatContainer.appendChild(container);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        // メッセージ送信処理
+        function sendMessage() {
+            const text = inputField.value.trim();
+            if (text !== '') {
+                addMessage('user', text);
+                inputField.value = '';
+
+                // 疑似的なAIレスポンス（1秒後に返信）
+                setTimeout(() => {
+                    addMessage('ai', `「${text}」に関する情報を検索しています…`);
+                }, 1000);
+            }
+        }
+
+        // 送信ボタンクリックイベント
+        sendButton.addEventListener('click', sendMessage);
+
+        // Enterキーで送信
+        inputField.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
 
         chatButton.addEventListener('click', () => {
             chatModal.classList.remove('hidden');
             chatModal.classList.add('flex');
-            // チャットコンテナを最下部にスクロール
             chatContainer.scrollTop = chatContainer.scrollHeight;
         });
 

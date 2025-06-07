@@ -212,6 +212,60 @@ function addMessage(sender, text) {
 
 これをCursorへドロップしこのファイルを元に実装してくださいと要求。
 
+```
+@chatui-js-spec.md
+
+このMarkdownで要件定義された機能を index.html に追加してください。
+現在のUIはTailwind CSSベースでモーダル表示になっています。
+
+- ユーザーの入力を取得し送信
+- メッセージの表示を左右で分ける
+- 疑似AI返信（1秒後に返信）
+- メッセージが追加されたら下にスクロール
+- すでにあるHTML構造に組み込んでください（ファイルは index.html）
+```
+
+
+<a href="/images/uploads/vibe_coding-cursor-practice03-request03.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice03-request03.jpg"
+         alt="Cursor:Webで動くチャットUIを作る: Markdownで要件定義された機能を index.html に追加 1"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+<br />
+
+<a href="/images/uploads/vibe_coding-cursor-practice03-request04.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice03-request04.jpg"
+         alt="Cursor:Webで動くチャットUIを作る: Markdownで要件定義された機能を index.html に追加 2"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+<br />
+
+<a href="/images/uploads/vibe_coding-cursor-practice03-request05.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice03-request05.jpg"
+         alt="Cursor:Webで動くチャットUIを作る: Markdownで要件定義された機能を index.html に追加 3"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+完成したものをGIFアニメ化。
+
+<a href="/images/uploads/vibe_coding-cursor-practice03-request05.gif" >
+<img src="/images/uploads/vibe_coding-cursor-practice03-request05.gif"
+         alt="Cursor:Webで動くチャットUIを作る: Markdownで要件定義された機能を index.html に追加(完成品)"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+📌 メモ
+- Cursorは @ファイル名 を入れることで対象ファイルをスコープできます。
+- Apply to index.html でコードが直接提案されるので、Accept でそのまま挿入可能です。
+- 途中で不要な変更が入った場合は「Reject」や「編集して適用」も可能です。
+
+補足Tips（さらに便利）
+- Enterキー送信の実装 も後で追記依頼できます（「Enterでも送信できるようにしてください」）。
+- 擬似返信は setTimeout を使ってるので、後から fetch() 経由でChatGPT APIに差し替え可能です。
+
 
 
 

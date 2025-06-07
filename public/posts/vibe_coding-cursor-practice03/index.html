@@ -470,6 +470,50 @@ const sendButton = document.querySelector(&#39;button.bg-blue-500&#39;);
 <blockquote>
 <p><strong>MarkDown-File</strong>: <a href="http://localhost:1313/download/chatui-js-spec.md">chatui-js-spec.md</a></p></blockquote>
 <p>これをCursorへドロップしこのファイルを元に実装してくださいと要求。</p>
+<pre tabindex="0"><code>@chatui-js-spec.md
+
+このMarkdownで要件定義された機能を index.html に追加してください。
+現在のUIはTailwind CSSベースでモーダル表示になっています。
+
+- ユーザーの入力を取得し送信
+- メッセージの表示を左右で分ける
+- 疑似AI返信（1秒後に返信）
+- メッセージが追加されたら下にスクロール
+- すでにあるHTML構造に組み込んでください（ファイルは index.html）
+</code></pre><a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice03-request03.jpg" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice03-request03.jpg"
+         alt="Cursor:Webで動くチャットUIを作る: Markdownで要件定義された機能を index.html に追加 1"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<br />
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice03-request04.jpg" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice03-request04.jpg"
+         alt="Cursor:Webで動くチャットUIを作る: Markdownで要件定義された機能を index.html に追加 2"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<br />
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice03-request05.jpg" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice03-request05.jpg"
+         alt="Cursor:Webで動くチャットUIを作る: Markdownで要件定義された機能を index.html に追加 3"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<p>完成したものをGIFアニメ化。</p>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice03-request05.gif" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice03-request05.gif"
+         alt="Cursor:Webで動くチャットUIを作る: Markdownで要件定義された機能を index.html に追加(完成品)"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<p>📌 メモ</p>
+<ul>
+<li>Cursorは @ファイル名 を入れることで対象ファイルをスコープできます。</li>
+<li>Apply to index.html でコードが直接提案されるので、Accept でそのまま挿入可能です。</li>
+<li>途中で不要な変更が入った場合は「Reject」や「編集して適用」も可能です。</li>
+</ul>
+<p>補足Tips（さらに便利）</p>
+<ul>
+<li>Enterキー送信の実装 も後で追記依頼できます（「Enterでも送信できるようにしてください」）。</li>
+<li>擬似返信は setTimeout を使ってるので、後から fetch() 経由でChatGPT APIに差し替え可能です。</li>
+</ul>
 <p>テキスト入力欄・送信ボタン・Enterキーで送信</p>
 <p>自動スクロール・メッセージ追加</p>
 <p>入力欄リセット・バリデーション</p>
