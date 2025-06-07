@@ -554,6 +554,8 @@
 <li>「Apply」ボタンを押すと、自動的に新規ファイルとして追加される</li>
 <li>エディタに自動で挿入されたら即編集可能</li>
 </ul>
+<p>※補足
+昨日、同じ要件でmdを作成し、cursorへ投げていた為、すでに作成済みのファイルが３つあったので）、それを感知し、レスポンシブデザインへとやや機能を自動で拡張してくれたようです。</p>
 <a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-ai_dev02.jpg" >
 <img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-ai_dev02.jpg"
          alt="cursor: Markdownで定義 → コード提案 → Apply"
@@ -567,13 +569,13 @@
 </ul>
 <a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-ai_dev03.jpg" >
 <img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-ai_dev03.jpg"
-         alt=""
+         alt="cursor:Live Server で確認"
         loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 </a>
 <br>
 <a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-ai_dev04.jpg" >
 <img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-ai_dev04.jpg"
-         alt=""
+         alt="cursor: Live Server → Cheome"
         loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 </a>
 <h3 id="5-修正依頼のコツ">5. 修正依頼のコツ<a hidden class="anchor" aria-hidden="true" href="#5-修正依頼のコツ">#</a></h3>
@@ -582,12 +584,23 @@
 <li>例：スマホで表示崩れるから、flexじゃなくgridに変えて</li>
 <li>→ AIが差分のみ提案してくれる</li>
 </ul>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-ai_dev05.jpg" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-ai_dev05.jpg"
+         alt="cursor: 修正依頼"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
 <h3 id="tips途中でエラーが出たら">Tips：途中でエラーが出たら？<a hidden class="anchor" aria-hidden="true" href="#tips途中でエラーが出たら">#</a></h3>
 <ul>
 <li>そのまま「このエラーを直して」と伝えるとAIが対応してくれる</li>
 <li>わからない場合は「どこを直せばいい？」と聞くのもOK</li>
 <li>追加機能も随時指示できる（例：「並び替え機能を追加して」）</li>
 </ul>
+<p>意図的にjsファイル名を変更してエラーを発生させて、エラーを直してと伝えましたが、CSSを修正され、JSのエラーに気づかなかったので、developertoolのエラーメッセージを伝えると修正してくれました。</p>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-ai_dev06error-fix.jpg" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice02-ai_dev06error-fix.jpg"
+         alt="cursor: 途中でエラーが出たら？"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
 <h3 id="補足cursorの強み">補足：Cursorの強み<a hidden class="anchor" aria-hidden="true" href="#補足cursorの強み">#</a></h3>
 <ul>
 <li>ファイル構成を見て最適なファイルにコードを追加してくれる</li>

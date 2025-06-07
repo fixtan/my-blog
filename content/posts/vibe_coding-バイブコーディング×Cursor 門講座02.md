@@ -323,6 +323,9 @@ Cursor の特徴
 - 「Apply」ボタンを押すと、自動的に新規ファイルとして追加される
 - エディタに自動で挿入されたら即編集可能
 
+※補足
+昨日、同じ要件でmdを作成し、cursorへ投げていた為、すでに作成済みのファイルが３つあったので）、それを感知し、レスポンシブデザインへとやや機能を自動で拡張してくれたようです。
+
 
 <a href="/images/uploads/vibe_coding-cursor-practice02-ai_dev02.jpg" >
 <img src="/images/uploads/vibe_coding-cursor-practice02-ai_dev02.jpg"
@@ -340,7 +343,7 @@ Cursor の特徴
 
 <a href="/images/uploads/vibe_coding-cursor-practice02-ai_dev03.jpg" >
 <img src="/images/uploads/vibe_coding-cursor-practice02-ai_dev03.jpg"
-         alt=""
+         alt="cursor:Live Server で確認"
         loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 </a>
 
@@ -348,7 +351,7 @@ Cursor の特徴
 
 <a href="/images/uploads/vibe_coding-cursor-practice02-ai_dev04.jpg" >
 <img src="/images/uploads/vibe_coding-cursor-practice02-ai_dev04.jpg"
-         alt=""
+         alt="cursor: Live Server → Cheome"
         loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 </a>
 
@@ -359,11 +362,31 @@ Cursor の特徴
 - 例：スマホで表示崩れるから、flexじゃなくgridに変えて
 - → AIが差分のみ提案してくれる
 
+
+<a href="/images/uploads/vibe_coding-cursor-practice02-ai_dev05.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice02-ai_dev05.jpg"
+         alt="cursor: 修正依頼"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+
 ### Tips：途中でエラーが出たら？
 
 - そのまま「このエラーを直して」と伝えるとAIが対応してくれる
 - わからない場合は「どこを直せばいい？」と聞くのもOK
 - 追加機能も随時指示できる（例：「並び替え機能を追加して」）
+
+意図的にjsファイル名を変更してエラーを発生させて、エラーを直してと伝えましたが、CSSを修正され、JSのエラーに気づかなかったので、developertoolのエラーメッセージを伝えると修正してくれました。
+
+
+<a href="/images/uploads/vibe_coding-cursor-practice02-ai_dev06error-fix.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice02-ai_dev06error-fix.jpg"
+         alt="cursor: 途中でエラーが出たら？"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
 
 
 ### 補足：Cursorの強み
