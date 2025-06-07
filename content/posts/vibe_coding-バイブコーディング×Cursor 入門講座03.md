@@ -14,7 +14,8 @@ tags:
   - Cursor
   - OpenAI
   - チャットアプリ
-  - ChatGPT
+  - .gitignore
+  - .git/info/exclude
 weight: 9
 image: /images/uploads/vibe_coding-cursor-practice03.webp
 ---
@@ -422,7 +423,59 @@ sendButton.addEventListener('click', async () => {
 });
 ```
 
-###
+
+新たに　chatui-js2-spec.md　を作成し、要件定義を作成して送信。
+
+
+<a href="/images/uploads/vibe_coding-cursor-practice03-apikey04.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice03-apikey04.jpg"
+         alt=""
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+<a href="/images/uploads/vibe_coding-cursor-practice03-apikey05.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice03-apikey05.jpg"
+         alt=""
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+取得したAPIキーを貼り付けて動作チェック。
+
+
+
+## Error Code 429
+
+上手く行くかに見えたのですが、何度やっても429エラーになるようです。
+
+<a href="/images/uploads/vibe_coding-cursor-practice03-apikey06.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice03-apikey06.jpg"
+         alt=""
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+developertoolのエラーメッセージをCursorへ貼り付けて見ましたが、OpenAI側でアクセスをはじかれてる以上、修正する事は困難で、エラーメッセージを日本語化して修正されたのみでした。
+
+<a href="/images/uploads/vibe_coding-cursor-practice03-apikey07.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice03-apikey07.jpg"
+         alt=""
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+OpenAIのステータス画面を見るも過剰なアクセスがあった痕跡はなく、なによりCursorとAPIキーを使った通信処理は問題なく動いてるので、ChatGPTに聞くもセキュリティ上の問題ではないかとの事。
+
+
+以下、ChatGPTのメッセージ：
+
+>**補足：セキュリティの話**<br />
+>Cursorはサーバー経由で安全にAPI呼び出しをしているため、うまく通るのです。<br />
+>あなたのコードのように 完全なフロントエンド（＝index.htmlのみ）では、CORS制限やレート制限のトリガーにされる可能性が高いです。
+>
+>本格運用するなら Node.js + Express や Cloudflare Workers などを使って、APIキーをサーバーで隠蔽する必要があります。
+
+ここで、行き詰ったので一旦終了？
+
+上手く行くと思ったのですが、なかなか難しいですね。
 
 
 ## 4. Hugoとの統合（オプション）

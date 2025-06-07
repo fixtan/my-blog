@@ -119,10 +119,13 @@
     <loc>http://localhost:1313/posts/hugo-custom-article-future/</loc>
     <lastmod>2025-05-26T19:22:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/tags/.git/info/exclude/</loc>
     <lastmod>2025-06-07T12:01:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/chatgpt/</loc>
+    <loc>http://localhost:1313/tags/.gitignore/</loc>
+    <lastmod>2025-06-07T12:01:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-06-07T12:01:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cursor/</loc>
@@ -424,5 +427,7 @@
   </url><url>
     <loc>http://localhost:1313/categories/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3/</loc>
     <lastmod>2025-05-22T16:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/chatgpt/</loc>
   </url>
 </urlset>
