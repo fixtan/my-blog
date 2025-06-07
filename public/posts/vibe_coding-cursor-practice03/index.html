@@ -281,7 +281,7 @@
         [Vibe Coding] バイブコーディング × Cursor 入門講座 03 (Webで動くチャットUIを作る)
       </h1>
       <div class="post-description">バイブコーディング × Cursor 入門講座 03 「Webで動くチャットUIを作る」─ 静的サイトでもリアルに動く！AI対話UIのはじめかた</div>
-      <div class="post-meta"><span title='2025-06-07 12:01:00 +0000 UTC'>June 7, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
+      <div class="post-meta"><span title='2025-06-07 12:01:00 +0000 UTC'>June 7, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;lain
 
 </div>
     </header> 
@@ -514,13 +514,113 @@ const sendButton = document.querySelector(&#39;button.bg-blue-500&#39;);
 <li>Enterキー送信の実装 も後で追記依頼できます（「Enterでも送信できるようにしてください」）。</li>
 <li>擬似返信は setTimeout を使ってるので、後から fetch() 経由でChatGPT APIに差し替え可能です。</li>
 </ul>
-<p>テキスト入力欄・送信ボタン・Enterキーで送信</p>
-<p>自動スクロール・メッセージ追加</p>
-<p>入力欄リセット・バリデーション</p>
-<h2 id="3-chatgpt-apiとの連携構想段階でもok">3. ChatGPT APIとの連携（構想段階でもOK）<a hidden class="anchor" aria-hidden="true" href="#3-chatgpt-apiとの連携構想段階でもok">#</a></h2>
-<p>fetchでPOSTリクエストを送る</p>
-<p>APIキーの扱い（セキュリティの注意点）</p>
-<p>応答メッセージの取得・表示</p>
+<p>ここまでの流れ：</p>
+<blockquote>
+<ul>
+<li>テキスト入力欄・送信ボタン・Enterキーで送信</li>
+<li>自動スクロール・メッセージ追加</li>
+<li>入力欄リセット・バリデーション</li>
+</ul></blockquote>
+<h2 id="3-openai-apiを使ったチャットの実装ローカル限定">3. OpenAI APIを使ったチャットの実装（ローカル限定）<a hidden class="anchor" aria-hidden="true" href="#3-openai-apiを使ったチャットの実装ローカル限定">#</a></h2>
+<h3 id="目的-2">目的<a hidden class="anchor" aria-hidden="true" href="#目的-2">#</a></h3>
+<ul>
+<li>ChatGPT APIを使って、実際にAIが応答するチャットUIをローカル環境で動かす</li>
+<li>APIキーをHTMLに埋め込む形はローカルのみで使用</li>
+<li>公開用にはコードとGIFアニメーションのみ掲載し、キーは非公開</li>
+</ul>
+<p>静的サイトでOpenAI APIを使ったチャットの実装する場合、セキュリティ問題として、APIキーの隠ぺいが難しい為、
+とりあえずこのセクションではローカル環境前提で動作する所まで実装してみます。</p>
+<p>くれぐれも、ここでやった内容をサーバに上げて一般公開しないようにしてください。</p>
+<p>index.htmlファイル内にAPIキーを記載したまま公開するのは非常に危険です。</p>
+<p>もし誤って公開してしまった場合は、APIを削除すれば悪用されません。</p>
+<p>APIキーは、公式サイトで確認できます。</p>
+<blockquote>
+<p><a href="https://platform.openai.com/api-keys">Open AI - API keys</a><br>
+<a href="https://platform.openai.com/api-keys">https://platform.openai.com/api-keys</a></p></blockquote>
+<h4 id="注意点">注意点<a hidden class="anchor" aria-hidden="true" href="#注意点">#</a></h4>
+<p>余談ですが、ここまでの開発の流れはgitコマンドで定期的にgitHub上にデータを送信しています。</p>
+<p>ローカル環境で動かす前提で進めますが、もし同じようにGithubへアップロードを前提で進めていく場合、APIキーを保存するファイルを公開設定でpushしないようにしてください。</p>
+<p>リポジトリを非公開設定にするか、若しくは、.gitignore に除外パスを追加してください。</p>
+<p>うちは、ルートディレクトリにcursorを作り、その中にChatUI-aiフォルダを作りプロジェクトを管理してるのでこの場合、以下になります。</p>
+<p><strong>.gitignore</strong></p>
+<blockquote>
+<p>cursor/ChatUI-ai/</p></blockquote>
+<h3 id="1openai-apiキーを取得">1：OpenAI APIキーを取得<a hidden class="anchor" aria-hidden="true" href="#1openai-apiキーを取得">#</a></h3>
+<ol>
+<li>
+<p>以下のURLからOpenAIの公式サイトにアクセス<br>
+👉 <a href="https://platform.openai.com/account/api-keys">https://platform.openai.com/account/api-keys</a></p>
+</li>
+<li>
+<p>ログイン後、「Create new secret key」ボタンをクリック</p>
+</li>
+</ol>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice03-apikey01.jpg" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice03-apikey01.jpg"
+         alt="Cursor:Webで動くチャットUIを作る:OpenAI APIキーを取得 01"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice03-apikey02.jpg" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice03-apikey02.jpg"
+         alt="Cursor:Webで動くチャットUIを作る:OpenAI APIキーを取得 02"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<ol start="3">
+<li>表示されたAPIキーをコピー（一度しか表示されません！）</li>
+</ol>
+<a href="http://localhost:1313/images/uploads/vibe_coding-cursor-practice03-apikey03.jpg" >
+<img src="http://localhost:1313/images/uploads/vibe_coding-cursor-practice03-apikey03.jpg"
+         alt="Cursor:Webで動くチャットUIを作る:OpenAI APIキーを取得 03"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+<ol start="4">
+<li>テキストエディタなどに一時保存しておきます（sk-XXXX&hellip;）</li>
+</ol>
+<h3 id="2fetchchatgptresponse-関数を-indexhtml-に追加">2：fetchChatGPTResponse 関数を index.html に追加<a hidden class="anchor" aria-hidden="true" href="#2fetchchatgptresponse-関数を-indexhtml-に追加">#</a></h3>
+<pre tabindex="0"><code>&lt;script&gt;
+const OPENAI_API_KEY = &#34;sk-XXXX...&#34;; // ←取得したキーをここにペースト（ローカル限定）
+
+async function fetchChatGPTResponse(message) {
+  const res = await fetch(&#34;https://api.openai.com/v1/chat/completions&#34;, {
+    method: &#34;POST&#34;,
+    headers: {
+      &#34;Authorization&#34;: `Bearer ${OPENAI_API_KEY}`,
+      &#34;Content-Type&#34;: &#34;application/json&#34;
+    },
+    body: JSON.stringify({
+      model: &#34;gpt-3.5-turbo&#34;,
+      messages: [{ role: &#34;user&#34;, content: message }]
+    })
+  });
+
+  const data = await res.json();
+  return data.choices?.[0]?.message?.content || &#34;No response&#34;;
+}
+&lt;/script&gt;
+</code></pre><h3 id="3送信ボタンにapi呼び出しを組み込む">3：送信ボタンにAPI呼び出しを組み込む<a hidden class="anchor" aria-hidden="true" href="#3送信ボタンにapi呼び出しを組み込む">#</a></h3>
+<p>既存の sendButton.addEventListener(&lsquo;click&rsquo;, &hellip;) の中に以下を追加：</p>
+<pre tabindex="0"><code>sendButton.addEventListener(&#39;click&#39;, async () =&gt; {
+  const text = inputField.value.trim();
+  if (text !== &#39;&#39;) {
+    addMessage(&#39;user&#39;, text);
+    inputField.value = &#39;&#39;;
+
+    // 一時的に「Thinking...」を表示
+    addMessage(&#39;ai&#39;, &#39;Thinking...&#39;);
+
+    try {
+      const reply = await fetchChatGPTResponse(text);
+      // 「Thinking...」を最後のバブルに置き換える
+      const lastBubble = document.querySelectorAll(&#39;.ai-bubble:last-child&#39;)[0];
+      if (lastBubble) lastBubble.innerHTML = reply;
+    } catch (error) {
+      const lastBubble = document.querySelectorAll(&#39;.ai-bubble:last-child&#39;)[0];
+      if (lastBubble) lastBubble.innerHTML = &#34;⚠️ エラーが発生しました&#34;;
+      console.error(error);
+    }
+  }
+});
+</code></pre><h3></h3>
 <h2 id="4-hugoとの統合オプション">4. Hugoとの統合（オプション）<a hidden class="anchor" aria-hidden="true" href="#4-hugoとの統合オプション">#</a></h2>
 <p>/static/内に配置してブログ上で動作させる方法</p>
 <p>Hugo shortcodeで埋め込み表示する構想</p>
@@ -648,7 +748,15 @@ const sendButton = document.querySelector(&#39;button.bg-blue-500&#39;);
         <li><a href="#実装ステップindexhtmlに直接記述">実装ステップ（index.htmlに直接記述）</a></li>
       </ul>
     </li>
-    <li><a href="#3-chatgpt-apiとの連携構想段階でもok">3. ChatGPT APIとの連携（構想段階でもOK）</a></li>
+    <li><a href="#3-openai-apiを使ったチャットの実装ローカル限定">3. OpenAI APIを使ったチャットの実装（ローカル限定）</a>
+      <ul>
+        <li><a href="#目的-2">目的</a></li>
+        <li><a href="#1openai-apiキーを取得">1：OpenAI APIキーを取得</a></li>
+        <li><a href="#2fetchchatgptresponse-関数を-indexhtml-に追加">2：fetchChatGPTResponse 関数を index.html に追加</a></li>
+        <li><a href="#3送信ボタンにapi呼び出しを組み込む">3：送信ボタンにAPI呼び出しを組み込む</a></li>
+        <li></li>
+      </ul>
+    </li>
     <li><a href="#4-hugoとの統合オプション">4. Hugoとの統合（オプション）</a></li>
     <li><a href="#5-振り返りと今後の可能性">5. 振り返りと今後の可能性</a></li>
     <li><a href="#-備考並行してまとめると良い内容別記事や付録にしてもok">✍️ 備考：並行してまとめると良い内容（別記事や付録にしてもOK）</a></li>

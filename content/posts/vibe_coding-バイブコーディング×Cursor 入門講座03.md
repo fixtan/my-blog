@@ -267,20 +267,140 @@ function addMessage(sender, text) {
 - 擬似返信は setTimeout を使ってるので、後から fetch() 経由でChatGPT APIに差し替え可能です。
 
 
+ここまでの流れ：
+>- テキスト入力欄・送信ボタン・Enterキーで送信
+>- 自動スクロール・メッセージ追加
+>- 入力欄リセット・バリデーション
 
 
-テキスト入力欄・送信ボタン・Enterキーで送信
+## 3. OpenAI APIを使ったチャットの実装（ローカル限定）
 
-自動スクロール・メッセージ追加
+### 目的
 
-入力欄リセット・バリデーション
+- ChatGPT APIを使って、実際にAIが応答するチャットUIをローカル環境で動かす
+- APIキーをHTMLに埋め込む形はローカルのみで使用
+- 公開用にはコードとGIFアニメーションのみ掲載し、キーは非公開
 
-## 3. ChatGPT APIとの連携（構想段階でもOK）
-fetchでPOSTリクエストを送る
+静的サイトでOpenAI APIを使ったチャットの実装する場合、セキュリティ問題として、APIキーの隠ぺいが難しい為、
+とりあえずこのセクションではローカル環境前提で動作する所まで実装してみます。
 
-APIキーの扱い（セキュリティの注意点）
+くれぐれも、ここでやった内容をサーバに上げて一般公開しないようにしてください。
 
-応答メッセージの取得・表示
+index.htmlファイル内にAPIキーを記載したまま公開するのは非常に危険です。
+
+もし誤って公開してしまった場合は、APIを削除すれば悪用されません。
+
+APIキーは、公式サイトで確認できます。
+
+> <a href="https://platform.openai.com/api-keys">Open AI - API keys</a><br>
+> https://platform.openai.com/api-keys
+
+#### 注意点
+
+余談ですが、ここまでの開発の流れはgitコマンドで定期的にgitHub上にデータを送信しています。
+
+ローカル環境で動かす前提で進めますが、もし同じようにGithubへアップロードを前提で進めていく場合、APIキーを保存するファイルを公開設定でpushしないようにしてください。
+
+リポジトリを非公開設定にするか、若しくは、.gitignore に除外パスを追加してください。
+
+うちは、ルートディレクトリにcursorを作り、その中にChatUI-aiフォルダを作りプロジェクトを管理してるのでこの場合、以下になります。
+
+**.gitignore**
+
+> cursor/ChatUI-ai/
+
+
+
+
+
+### 1：OpenAI APIキーを取得
+
+1. 以下のURLからOpenAIの公式サイトにアクセス<br>
+👉 https://platform.openai.com/account/api-keys
+
+2. ログイン後、「Create new secret key」ボタンをクリック
+
+
+<a href="/images/uploads/vibe_coding-cursor-practice03-apikey01.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice03-apikey01.jpg"
+         alt="Cursor:Webで動くチャットUIを作る:OpenAI APIキーを取得 01"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+<a href="/images/uploads/vibe_coding-cursor-practice03-apikey02.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice03-apikey02.jpg"
+         alt="Cursor:Webで動くチャットUIを作る:OpenAI APIキーを取得 02"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+3. 表示されたAPIキーをコピー（一度しか表示されません！）
+
+<a href="/images/uploads/vibe_coding-cursor-practice03-apikey03.jpg" >
+<img src="/images/uploads/vibe_coding-cursor-practice03-apikey03.jpg"
+         alt="Cursor:Webで動くチャットUIを作る:OpenAI APIキーを取得 03"
+        loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
+</a>
+
+
+4. テキストエディタなどに一時保存しておきます（sk-XXXX...）
+
+
+### 2：fetchChatGPTResponse 関数を index.html に追加
+
+```
+<script>
+const OPENAI_API_KEY = "sk-XXXX..."; // ←取得したキーをここにペースト（ローカル限定）
+
+async function fetchChatGPTResponse(message) {
+  const res = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${OPENAI_API_KEY}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "user", content: message }]
+    })
+  });
+
+  const data = await res.json();
+  return data.choices?.[0]?.message?.content || "No response";
+}
+</script>
+```
+
+### 3：送信ボタンにAPI呼び出しを組み込む
+
+既存の sendButton.addEventListener('click', ...) の中に以下を追加：
+
+```
+sendButton.addEventListener('click', async () => {
+  const text = inputField.value.trim();
+  if (text !== '') {
+    addMessage('user', text);
+    inputField.value = '';
+
+    // 一時的に「Thinking...」を表示
+    addMessage('ai', 'Thinking...');
+
+    try {
+      const reply = await fetchChatGPTResponse(text);
+      // 「Thinking...」を最後のバブルに置き換える
+      const lastBubble = document.querySelectorAll('.ai-bubble:last-child')[0];
+      if (lastBubble) lastBubble.innerHTML = reply;
+    } catch (error) {
+      const lastBubble = document.querySelectorAll('.ai-bubble:last-child')[0];
+      if (lastBubble) lastBubble.innerHTML = "⚠️ エラーが発生しました";
+      console.error(error);
+    }
+  }
+});
+```
+
+###
+
 
 ## 4. Hugoとの統合（オプション）
 /static/内に配置してブログ上で動作させる方法
