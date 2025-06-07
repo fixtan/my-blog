@@ -308,6 +308,7 @@ Cursorで作成したindex.htmlファイルは、ローカル環境で動かす�
 **.gitignore**
 
 > /cursor/ChatUI-ai/
+> /cursor/ChatUI-ai/*
 
 
 既に、cursor/ChatUI-ai/をpush済みでトラッキングを継続するような場合、Git による追跡を解除してください。
