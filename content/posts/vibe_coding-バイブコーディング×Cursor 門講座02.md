@@ -531,38 +531,18 @@ Tailwind CSS対応と、モーダル表示への変更した物をLive Serverで
         loading="lazy" decoding="async" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:6px; box-shadow: 5px 5px 10px #666" />
 </a>
 
+### 4：動作サンプル
 
 以下のURLで製作したサンプルを確認できます。
 
 {{< link-card url="https://humanxai.info/sample/chatui/" title="Cursor 実践：ミニWebアプリ" description="吹き出しUIチャット（対話録表示に応用）" image="/images/thumb1.jpg" >}}
 
 
-### 補足記事として使える小テーマ（例）
+## 6. 次回予告
 
-- 吹き出しUIをゼロからAIと作る方法（Cursor活用）
-- 会話型ブログ記事のUIを実装するならこのCSS
-- バイブコーディングで学ぶCSS設計入門
+次は、
 
+**「バイブコーディング × Cursor 入門講座 03：Webで動くチャットUIを作る」**<br />
+静的サイトでもリアルに動く！AI対話UIのはじめかた
 
-
-## 4. バイブコーディングが活きる開発ジャンル
-
-目的：今後どんなことに応用できそうか、視野を広げる。
-
-### Markdown × WebUI制作（ブログ連携）
-
-### CSSデザイン設計（Hugoテーマ開発への応用）
-
-### 教育・技術ドキュメントとの統合
-
-### AIによるプロトタイピング（LP、作品ページ）
-
-## 5. Hugoとの連携アイデアを考える
-
-目的：今までの技術を活かしたプロジェクトに展開する。
-
-### Cursorで作ったコードをHugoの layouts や shortcodes に転用
-
-### Markdownで要件定義 → Hugo記事化 のワークフロー整備
-
-### Hugo記事制作のテンプレート生成にAIを使う流れの構想
+を予定しています。
