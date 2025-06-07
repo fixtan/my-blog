@@ -26,7 +26,7 @@ image: /images/uploads/vibe_coding-cursor-practice03.webp
 </center>
 
 
-## 0. はじめに
+## はじめに
 
 ### これまでの振り返りと目標
 
@@ -42,7 +42,7 @@ image: /images/uploads/vibe_coding-cursor-practice03.webp
 
 目標としては、ChatGPT（OpenAI）とAPI接続によるAI対話化まで進めていく予定です。<br>
 
-技術的な面で挫折した場合は、ストップするかもしれませんが、失敗事例としても参考になると思いますのでそのまま公開予定です。
+技術的な面で挫折した場合も、失敗事例としても参考になると思いますのでそのまま公開する予定です。
 
 
 ## 1. HTML/CSSによるチャットUIの再設計
