@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チャットUI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <!-- チャットボタン -->
+    <button id="chatButton" class="fixed bottom-6 right-6 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-4 shadow-lg transition-all duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+        </svg>
+    </button>
+
+    <!-- チャットモーダル -->
+    <div id="chatModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4 max-h-[80vh] flex flex-col">
+            <!-- ヘッダー -->
+            <div class="p-4 border-b flex justify-between items-center bg-gray-50 rounded-t-lg">
+                <h2 class="text-xl font-semibold text-gray-800">チャット</h2>
+                <button id="closeButton" class="text-gray-500 hover:text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- チャットコンテナ -->
+            <div class="flex-1 overflow-y-auto p-4 space-y-4">
+                <!-- AIのメッセージ -->
+                <div class="flex items-start space-x-2">
+                    <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                        🤖
+                    </div>
+                    <div class="bg-blue-50 rounded-lg p-3 max-w-[70%] shadow-sm">
+                        <p class="text-gray-800">こんにちは！AIアシスタントです。何かお手伝いできることはありますか？</p>
+                    </div>
+                </div>
+
+                <!-- ユーザーのメッセージ -->
+                <div class="flex items-start justify-end space-x-2">
+                    <div class="bg-green-50 rounded-lg p-3 max-w-[70%] shadow-sm">
+                        <p class="text-gray-800">はい、チャットUIのデザインについて教えてください。</p>
+                    </div>
+                    <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                        🧑‍💻
+                    </div>
+                </div>
+
+                <!-- AIのメッセージ -->
+                <div class="flex items-start space-x-2">
+                    <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                        🤖
+                    </div>
+                    <div class="bg-blue-50 rounded-lg p-3 max-w-[70%] shadow-sm">
+                        <p class="text-gray-800">このチャットUIは、Tailwind CSSを使用したモダンなデザインで、モーダル表示になっています。AIは左側、ユーザーは右側に配置され、それぞれのメッセージは吹き出しで表示されます。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 入力エリア -->
+            <div class="p-4 border-t bg-gray-50 rounded-b-lg">
+                <div class="flex space-x-2">
+                    <input type="text" placeholder="メッセージを入力..." class="flex-1 rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-500">
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white rounded-lg px-4 py-2 transition-colors duration-300">
+                        送信
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // モーダルの制御
+        const chatButton = document.getElementById('chatButton');
+        const chatModal = document.getElementById('chatModal');
+        const closeButton = document.getElementById('closeButton');
+
+        chatButton.addEventListener('click', () => {
+            chatModal.classList.remove('hidden');
+            chatModal.classList.add('flex');
+        });
+
+        closeButton.addEventListener('click', () => {
+            chatModal.classList.add('hidden');
+            chatModal.classList.remove('flex');
+        });
+
+        // モーダル外クリックで閉じる
+        chatModal.addEventListener('click', (e) => {
+            if (e.target === chatModal) {
+                chatModal.classList.add('hidden');
+                chatModal.classList.remove('flex');
+            }
+        });
+    </script>
+</body>
+</html>
