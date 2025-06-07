@@ -119,8 +119,16 @@ UIの強化ポイント：
 
 ### 補足
 
-Tailwindはクラス名が多くなりやすいので、class="..."の中の記述が煩雑になったら「このクラス整理して」と頼むのも有効です。
+Tailwind CSS の導入メモ
 
+現在はCDNで読み込んでいます：
+```
+<script src="https://cdn.tailwindcss.com"></script>
+```
+
+これで開発初期の高速プロトタイピングには十分ですが、ビルド最適化（本番用）には PostCSS などを使ったビルド型導入が望ましいです（今はCDNでOKです）。
+
+Tailwindはクラス名が多くなりやすいので、class="..."の中の記述が煩雑になったら「このクラス整理して」と頼むのも有効です。
 
 
 ### 完成サンプル（参考）
@@ -131,18 +139,82 @@ Tailwindはクラス名が多くなりやすいので、class="..."の中の記�
 <https://humanxai.info/sample/chatui/>
 
 
-### 補足（Tailwind CSS の導入メモ）
-
-現在はCDNで読み込んでいます：
-```
-<script src="https://cdn.tailwindcss.com"></script>
-```
-
-これで開発初期の高速プロトタイピングには十分ですが、ビルド最適化（本番用）には PostCSS などを使ったビルド型導入が望ましいです（今はCDNでOKです）。
 
 
 
 ## 2. JavaScriptによるチャット入力処理の実装
+
+### 目的
+
+- ユーザーがメッセージを入力 → 送信 → 画面に表示されるまでの一連のフローを実装
+- 擬似的にAIの返信も生成して表示（後でChatGPT APIに差し替え可能な構造）
+
+### 実装ステップ（index.htmlに直接記述）
+
+以下の追加・変更を行ってください：
+
+#### ステップ1：inputとbuttonを取得
+
+```
+const inputField = document.querySelector('input[type="text"]');
+const sendButton = document.querySelector('button.bg-blue-500');
+```
+
+#### ステップ2：イベントで送信処理
+
+```
+sendButton.addEventListener('click', () => {
+    const text = inputField.value.trim();
+    if (text !== '') {
+        addMessage('user', text);
+        inputField.value = '';
+
+        // 疑似的なAIレスポンス（2秒後に返信）
+        setTimeout(() => {
+            addMessage('ai', `「${text}」に関する情報を検索しています…`);
+        }, 1000);
+    }
+});
+```
+
+#### ステップ3：メッセージ表示関数
+
+```
+function addMessage(sender, text) {
+    const container = document.createElement('div');
+    container.className = `flex items-start ${sender === 'user' ? 'justify-end' : 'justify-start'} space-x-2 message-animation`;
+
+    const bubble = document.createElement('div');
+    bubble.className = `${sender === 'user' ? 'bg-green-50' : 'bg-blue-50'} rounded-lg p-3 max-w-[70%] shadow-sm`;
+    bubble.innerHTML = `<p class="text-gray-800">${text}</p>`;
+
+    const icon = document.createElement('div');
+    icon.className = 'flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center';
+    icon.classList.add(sender === 'user' ? 'bg-green-100' : 'bg-blue-100');
+    icon.textContent = sender === 'user' ? '🧑‍💻' : '🤖';
+
+    if (sender === 'user') {
+        container.appendChild(bubble);
+        container.appendChild(icon);
+    } else {
+        container.appendChild(icon);
+        container.appendChild(bubble);
+    }
+
+    chatContainer.appendChild(container);
+}
+```
+
+
+一連の実装方法をマークダウン形式で作成しました。
+
+> **MarkDown-File**: <a href="/download/chatui-js-spec.md">chatui-js-spec.md</a>
+
+これをCursorへドロップしこのファイルを元に実装してくださいと要求。
+
+
+
+
 テキスト入力欄・送信ボタン・Enterキーで送信
 
 自動スクロール・メッセージ追加

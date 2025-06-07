@@ -281,7 +281,7 @@
         [Vibe Coding] バイブコーディング × Cursor 入門講座 03 (Webで動くチャットUIを作る)
       </h1>
       <div class="post-description">バイブコーディング × Cursor 入門講座 03 「Webで動くチャットUIを作る」─ 静的サイトでもリアルに動く！AI対話UIのはじめかた</div>
-      <div class="post-meta"><span title='2025-06-07 12:01:00 +0000 UTC'>June 7, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;lain
+      <div class="post-meta"><span title='2025-06-07 12:01:00 +0000 UTC'>June 7, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;lain
 
 </div>
     </header> 
@@ -409,16 +409,67 @@
 <li>Tailwindのクラス適用はCursorが得意：一括置換・追加処理も迅速です。</li>
 </ul>
 <h3 id="補足">補足<a hidden class="anchor" aria-hidden="true" href="#補足">#</a></h3>
+<p>Tailwind CSS の導入メモ</p>
+<p>現在はCDNで読み込んでいます：</p>
+<pre tabindex="0"><code>&lt;script src=&#34;https://cdn.tailwindcss.com&#34;&gt;&lt;/script&gt;
+</code></pre><p>これで開発初期の高速プロトタイピングには十分ですが、ビルド最適化（本番用）には PostCSS などを使ったビルド型導入が望ましいです（今はCDNでOKです）。</p>
 <p>Tailwindはクラス名が多くなりやすいので、class=&quot;&hellip;&ldquo;の中の記述が煩雑になったら「このクラス整理して」と頼むのも有効です。</p>
 <h3 id="完成サンプル参考">完成サンプル（参考）<a hidden class="anchor" aria-hidden="true" href="#完成サンプル参考">#</a></h3>
 <p>すでに構築済みの /static/sample/chatui/ のスタイルをベースに、次は /chatui-ai/ に発展させていきます。</p>
 <p>💡公開済みデモ：
 <a href="https://humanxai.info/sample/chatui/">https://humanxai.info/sample/chatui/</a></p>
-<h3 id="補足tailwind-css-の導入メモ">補足（Tailwind CSS の導入メモ）<a hidden class="anchor" aria-hidden="true" href="#補足tailwind-css-の導入メモ">#</a></h3>
-<p>現在はCDNで読み込んでいます：</p>
-<pre tabindex="0"><code>&lt;script src=&#34;https://cdn.tailwindcss.com&#34;&gt;&lt;/script&gt;
-</code></pre><p>これで開発初期の高速プロトタイピングには十分ですが、ビルド最適化（本番用）には PostCSS などを使ったビルド型導入が望ましいです（今はCDNでOKです）。</p>
 <h2 id="2-javascriptによるチャット入力処理の実装">2. JavaScriptによるチャット入力処理の実装<a hidden class="anchor" aria-hidden="true" href="#2-javascriptによるチャット入力処理の実装">#</a></h2>
+<h3 id="目的-1">目的<a hidden class="anchor" aria-hidden="true" href="#目的-1">#</a></h3>
+<ul>
+<li>ユーザーがメッセージを入力 → 送信 → 画面に表示されるまでの一連のフローを実装</li>
+<li>擬似的にAIの返信も生成して表示（後でChatGPT APIに差し替え可能な構造）</li>
+</ul>
+<h3 id="実装ステップindexhtmlに直接記述">実装ステップ（index.htmlに直接記述）<a hidden class="anchor" aria-hidden="true" href="#実装ステップindexhtmlに直接記述">#</a></h3>
+<p>以下の追加・変更を行ってください：</p>
+<h4 id="ステップ1inputとbuttonを取得">ステップ1：inputとbuttonを取得<a hidden class="anchor" aria-hidden="true" href="#ステップ1inputとbuttonを取得">#</a></h4>
+<pre tabindex="0"><code>const inputField = document.querySelector(&#39;input[type=&#34;text&#34;]&#39;);
+const sendButton = document.querySelector(&#39;button.bg-blue-500&#39;);
+</code></pre><h4 id="ステップ2イベントで送信処理">ステップ2：イベントで送信処理<a hidden class="anchor" aria-hidden="true" href="#ステップ2イベントで送信処理">#</a></h4>
+<pre tabindex="0"><code>sendButton.addEventListener(&#39;click&#39;, () =&gt; {
+    const text = inputField.value.trim();
+    if (text !== &#39;&#39;) {
+        addMessage(&#39;user&#39;, text);
+        inputField.value = &#39;&#39;;
+
+        // 疑似的なAIレスポンス（2秒後に返信）
+        setTimeout(() =&gt; {
+            addMessage(&#39;ai&#39;, `「${text}」に関する情報を検索しています…`);
+        }, 1000);
+    }
+});
+</code></pre><h4 id="ステップ3メッセージ表示関数">ステップ3：メッセージ表示関数<a hidden class="anchor" aria-hidden="true" href="#ステップ3メッセージ表示関数">#</a></h4>
+<pre tabindex="0"><code>function addMessage(sender, text) {
+    const container = document.createElement(&#39;div&#39;);
+    container.className = `flex items-start ${sender === &#39;user&#39; ? &#39;justify-end&#39; : &#39;justify-start&#39;} space-x-2 message-animation`;
+
+    const bubble = document.createElement(&#39;div&#39;);
+    bubble.className = `${sender === &#39;user&#39; ? &#39;bg-green-50&#39; : &#39;bg-blue-50&#39;} rounded-lg p-3 max-w-[70%] shadow-sm`;
+    bubble.innerHTML = `&lt;p class=&#34;text-gray-800&#34;&gt;${text}&lt;/p&gt;`;
+
+    const icon = document.createElement(&#39;div&#39;);
+    icon.className = &#39;flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center&#39;;
+    icon.classList.add(sender === &#39;user&#39; ? &#39;bg-green-100&#39; : &#39;bg-blue-100&#39;);
+    icon.textContent = sender === &#39;user&#39; ? &#39;🧑‍💻&#39; : &#39;🤖&#39;;
+
+    if (sender === &#39;user&#39;) {
+        container.appendChild(bubble);
+        container.appendChild(icon);
+    } else {
+        container.appendChild(icon);
+        container.appendChild(bubble);
+    }
+
+    chatContainer.appendChild(container);
+}
+</code></pre><p>一連の実装方法をマークダウン形式で作成しました。</p>
+<blockquote>
+<p><strong>MarkDown-File</strong>: <a href="http://localhost:1313/download/chatui-js-spec.md">chatui-js-spec.md</a></p></blockquote>
+<p>これをCursorへドロップしこのファイルを元に実装してくださいと要求。</p>
 <p>テキスト入力欄・送信ボタン・Enterキーで送信</p>
 <p>自動スクロール・メッセージ追加</p>
 <p>入力欄リセット・バリデーション</p>
@@ -545,10 +596,14 @@
         <li><a href="#理由とメリット">理由とメリット：</a></li>
         <li><a href="#補足">補足</a></li>
         <li><a href="#完成サンプル参考">完成サンプル（参考）</a></li>
-        <li><a href="#補足tailwind-css-の導入メモ">補足（Tailwind CSS の導入メモ）</a></li>
       </ul>
     </li>
-    <li><a href="#2-javascriptによるチャット入力処理の実装">2. JavaScriptによるチャット入力処理の実装</a></li>
+    <li><a href="#2-javascriptによるチャット入力処理の実装">2. JavaScriptによるチャット入力処理の実装</a>
+      <ul>
+        <li><a href="#目的-1">目的</a></li>
+        <li><a href="#実装ステップindexhtmlに直接記述">実装ステップ（index.htmlに直接記述）</a></li>
+      </ul>
+    </li>
     <li><a href="#3-chatgpt-apiとの連携構想段階でもok">3. ChatGPT APIとの連携（構想段階でもOK）</a></li>
     <li><a href="#4-hugoとの統合オプション">4. Hugoとの統合（オプション）</a></li>
     <li><a href="#5-振り返りと今後の可能性">5. 振り返りと今後の可能性</a></li>
