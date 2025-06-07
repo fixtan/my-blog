@@ -532,6 +532,11 @@ Tailwind CSS対応と、モーダル表示への変更した物をLive Serverで
 </a>
 
 
+以下のURLで製作したサンプルを確認できます。
+
+{{< link-card url="https://humanxai.info/sample/chatui/" title="Cursor 実践：ミニWebアプリ" description="吹き出しUIチャット（対話録表示に応用）" image="/images/thumb1.jpg" >}}
+
+
 ### 補足記事として使える小テーマ（例）
 
 - 吹き出しUIをゼロからAIと作る方法（Cursor活用）
