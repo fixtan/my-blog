@@ -295,21 +295,35 @@ APIキーは、公式サイトで確認できます。
 > <a href="https://platform.openai.com/api-keys">Open AI - API keys</a><br>
 > https://platform.openai.com/api-keys
 
-#### 注意点
+#### GitHubを使う場合の注意点
 
-余談ですが、ここまでの開発の流れはgitコマンドで定期的にgitHub上にデータを送信しています。
+ここまでの流れはgitコマンドを使い、定期的にgitHub上にデータをpushしています。
 
-ローカル環境で動かす前提で進めますが、もし同じようにGithubへアップロードを前提で進めていく場合、APIキーを保存するファイルを公開設定でpushしないようにしてください。
+Cursorで作成したindex.htmlファイルは、ローカル環境で動かす前提で進めますが、もし同じようにGithubを利用の元で進めていく場合、APIキーを保存するファイルを公開しないようにしてください。
 
 リポジトリを非公開設定にするか、若しくは、.gitignore に除外パスを追加してください。
 
-うちは、ルートディレクトリにcursorを作り、その中にChatUI-aiフォルダを作りプロジェクトを管理してるのでこの場合、以下になります。
+うちは、ルートディレクトリにcursorを作り、その中にChatUI-aiフォルダを作りプロジェクトを管理しており、この場合は以下になります。
 
 **.gitignore**
 
 > cursor/ChatUI-ai/
 
 
+既に、cursor/ChatUI-ai/をpush済みでトラッキングを継続するような場合、Git による追跡を解除してください。
+
+> git rm -r --cached cursor/ChatUI-ai/
+
+--cached を付けることで、ローカルには残しつつ、Gitの追跡だけ外します。
+
+その後、git pushして.gitignoreファイルの設定が反映されているか確認。
+
+> git commit -m "Stop tracking ChatUI-ai for security reasons"<br>
+> git push
+
+今後は .gitignore が有効になります。
+
+この操作を行った後であれば、cursor/ChatUI-ai/ 以下に新しいファイルを置いても、GitHubには反映されません。
 
 
 

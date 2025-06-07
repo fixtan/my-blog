@@ -537,14 +537,24 @@ const sendButton = document.querySelector(&#39;button.bg-blue-500&#39;);
 <blockquote>
 <p><a href="https://platform.openai.com/api-keys">Open AI - API keys</a><br>
 <a href="https://platform.openai.com/api-keys">https://platform.openai.com/api-keys</a></p></blockquote>
-<h4 id="注意点">注意点<a hidden class="anchor" aria-hidden="true" href="#注意点">#</a></h4>
-<p>余談ですが、ここまでの開発の流れはgitコマンドで定期的にgitHub上にデータを送信しています。</p>
-<p>ローカル環境で動かす前提で進めますが、もし同じようにGithubへアップロードを前提で進めていく場合、APIキーを保存するファイルを公開設定でpushしないようにしてください。</p>
+<h4 id="githubを使う場合の注意点">GitHubを使う場合の注意点<a hidden class="anchor" aria-hidden="true" href="#githubを使う場合の注意点">#</a></h4>
+<p>ここまでの流れはgitコマンドを使い、定期的にgitHub上にデータをpushしています。</p>
+<p>Cursorで作成したindex.htmlファイルは、ローカル環境で動かす前提で進めますが、もし同じようにGithubを利用の元で進めていく場合、APIキーを保存するファイルを公開しないようにしてください。</p>
 <p>リポジトリを非公開設定にするか、若しくは、.gitignore に除外パスを追加してください。</p>
-<p>うちは、ルートディレクトリにcursorを作り、その中にChatUI-aiフォルダを作りプロジェクトを管理してるのでこの場合、以下になります。</p>
+<p>うちは、ルートディレクトリにcursorを作り、その中にChatUI-aiフォルダを作りプロジェクトを管理しており、この場合は以下になります。</p>
 <p><strong>.gitignore</strong></p>
 <blockquote>
 <p>cursor/ChatUI-ai/</p></blockquote>
+<p>既に、cursor/ChatUI-ai/をpush済みでトラッキングを継続するような場合、Git による追跡を解除してください。</p>
+<blockquote>
+<p>git rm -r &ndash;cached cursor/ChatUI-ai/</p></blockquote>
+<p>&ndash;cached を付けることで、ローカルには残しつつ、Gitの追跡だけ外します。</p>
+<p>その後、git pushして.gitignoreファイルの設定が反映されているか確認。</p>
+<blockquote>
+<p>git commit -m &ldquo;Stop tracking ChatUI-ai for security reasons&rdquo;<br>
+git push</p></blockquote>
+<p>今後は .gitignore が有効になります。</p>
+<p>この操作を行った後であれば、cursor/ChatUI-ai/ 以下に新しいファイルを置いても、GitHubには反映されません。</p>
 <h3 id="1openai-apiキーを取得">1：OpenAI APIキーを取得<a hidden class="anchor" aria-hidden="true" href="#1openai-apiキーを取得">#</a></h3>
 <ol>
 <li>
